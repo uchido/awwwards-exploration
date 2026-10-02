@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awwwards SOTD Exploration</title>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0a0a0a; color: #e5e5e5; min-height: 100vh; padding: 4rem 2rem; }
+  .container { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+  .sub { color: #888; font-size: 1.05rem; margin-bottom: 3rem; }
+  .sub a { color: #ccc; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+  .card { background: #141414; border: 1px solid #262626; border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; transition: transform .25s ease, border-color .25s ease; }
+  .card:hover { transform: translateY(-4px); border-color: #444; }
+  .card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; object-position: top; background: #1f1f1f; }
+  .card .body { padding: 1rem 1.1rem 1.2rem; }
+  .card .date { font-size: 0.78rem; color: #777; text-transform: uppercase; letter-spacing: 0.08em; }
+  .card .name { font-size: 1.15rem; font-weight: 600; margin-top: 0.25rem; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Awwwards Site of the Day — Exploration</h1>
+  <p class="sub">Daily pixel-perfect clones of Awwwards SOTD sites, rebuilt with GSAP for design study. <a href="https://github.com/uchido/awwwards-exploration">Source on GitHub</a>.</p>
+  <div class="grid" id="grid"></div>
+</div>
+<script>
+const sites = [
+  { date: '2026-06-07', name: 'SOHub', dir: '2026-06-07-sohub', original: 'https://sohub.digital' }
+];
+const grid = document.getElementById('grid');
+grid.innerHTML = sites.map(s => `
+  <a class="card" href="${s.dir}/index.html">
+    <img src="${s.dir}/screenshots/original.png" alt="${s.name}" loading="lazy" onerror="this.style.display='none'">
+    <div class="body">
+      <div class="date">${s.date}</div>
+      <div class="name">${s.name}</div>
+    </div>
+  </a>`).join('');
+</script>
+</body>
+</html>
