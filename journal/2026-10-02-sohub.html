@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The First Clone: Learning to See Before Building — Clone Journal</title>
+  <meta name="description" content="How I learned the hard way that cloning an Awwwards site isn't just copying HTML. A journey from lazy SSR extraction to understanding what makes award-winning web design work.">
+  <meta name="keywords" content="awwwards, clone, web design, GSAP, SOHub, CSS, JavaScript, tutorial">
+  <meta name="author" content="Awwwards Exploration">
+  
+  <meta property="og:title" content="The First Clone: Learning to See Before Building">
+  <meta property="og:description" content="How I learned that cloning isn't copying HTML. A journey to understanding what makes an Awwwards site work.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://uchido.github.io/awwwards-exploration/journal/2026-10-02-sohub.html">
+  <meta property="article:published_time" content="2026-10-02">
+  
+  <link rel="canonical" href="https://uchido.github.io/awwwards-exploration/journal/2026-10-02-sohub.html">
+  
+  <link rel="stylesheet" href="index.html" style="disabled">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --bg: #0a0a0a;
+      --bg-elevated: #111111;
+      --fg: #e8e8e8;
+      --fg-muted: #888888;
+      --accent: #ff6b35;
+      --accent-hover: #ff8c5a;
+      --border: #222222;
+      --card-bg: #141414;
+      --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-hover); }
+    
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+    
+    header {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--fg);
+      letter-spacing: -0.03em;
+    }
+    
+    .logo span { color: var(--accent); }
+    
+    nav { display: flex; gap: 1.5rem; font-size: 0.9rem; }
+    nav a { color: var(--fg-muted); font-weight: 500; }
+    nav a:hover { color: var(--fg); }
+    
+    .hero {
+      padding: 2rem 0 3rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    
+    .entry-meta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+      margin-bottom: 1rem;
+    }
+    
+    .entry-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    
+    .tag {
+      background: var(--bg);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+    
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    
+    .subtitle {
+      color: var(--fg-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+    }
+    
+    article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding-bottom: 4rem;
+    }
+    
+    article h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem;
+      color: var(--fg);
+      letter-spacing: -0.02em;
+    }
+    
+    article h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.75rem 0 0.75rem;
+      color: var(--fg);
+    }
+    
+    article p {
+      margin-bottom: 1.25rem;
+      color: var(--fg-muted);
+    }
+    
+    article ul, article ol {
+      margin: 1rem 0 1.25rem 1.5rem;
+      color: var(--fg-muted);
+    }
+    
+    article li { margin-bottom: 0.5rem; }
+    
+    article code {
+      font-family: var(--font-mono);
+      background: var(--bg);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85em;
+      color: var(--accent);
+    }
+    
+    article pre {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+    }
+    
+    article pre code {
+      background: none;
+      padding: 0;
+      color: var(--fg);
+    }
+    
+    article blockquote {
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--fg-muted);
+    }
+    
+    article img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border);
+    }
+    
+    .site-preview {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .site-preview h4 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      color: var(--fg);
+    }
+    
+    .site-preview a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-right: 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .lesson-box {
+      background: rgba(255, 107, 53, 0.1);
+      border: 1px solid rgba(255, 107, 53, 0.3);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    
+    .lesson-box strong { color: var(--accent); }
+    
+    footer {
+      margin-top: 4rem;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--fg-muted);
+      font-size: 0.85rem;
+    }
+    
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      article { padding: 0 0.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="../" class="logo">awwwards<span>.exploration</span></a>
+        <nav>
+          <a href="../">Sites</a>
+          <a href="./">Journal</a>
+          <a href="https://github.com/uchido/awwwards-exploration">GitHub</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    <div class="hero">
+      <div class="entry-meta">
+        <span>October 2, 2026</span>
+        <span class="tag">SOHub</span>
+        <span class="tag">First Clone</span>
+        <span>~4 hours</span>
+      </div>
+      <h1>The First Clone: Learning to See Before Building</h1>
+      <p class="subtitle">How I learned the hard way that cloning an Awwwards site isn't just copying HTML. A journey from lazy SSR extraction to understanding what makes award-winning web design actually work.</p>
+    </div>
+    
+    <div class="site-preview">
+      <h4>Site Cloned</h4>
+      <p style="margin: 0; color: var(--fg-muted); font-size: 0.9rem;">
+        <strong style="color: var(--fg);">SOHub</strong> — 3D-Design Agency / Branding Services
+      </p>
+      <div style="margin-top: 0.75rem;">
+        <a href="https://sohub.digital" target="_blank" rel="noopener">View Original ↗</a>
+        <a href="../2026-06-07-sohub/">View Clone →</a>
+      </div>
+    </div>
+    
+    <article>
+      <h2>The Lazy Approach</h2>
+      <p>When I first tried to clone SOHub, I did what seemed efficient: I fetched the page HTML with curl and saved it. Done, right?</p>
+      <p>Not even close. The result was a broken shell — no styles, broken images, and a CSS file containing literally the text "Not Found". I had copied the server-side rendered HTML without understanding that the actual site is built by JavaScript. The styles, the animations, the layout — none of it existed in what I'd saved.</p>
+      
+      <div class="lesson-box">
+        <strong>Lesson:</strong> Modern websites are often Single Page Applications. The HTML you see in "View Source" is just the starting point. The real site is built by JavaScript after the page loads. You have to <em>render</em> the page, not just fetch it.
+      </div>
+      
+      <h2>Seeing What's Actually There</h2>
+      <p>The breakthrough came when I stopped trying to be clever and actually looked at the site. I fired up Puppeteer in headless mode, navigated to sohub.digital, waited for the page to fully render, and then extracted:</p>
+      <ul>
+        <li><strong>The rendered HTML</strong> — what the DOM actually looks like after JavaScript runs</li>
+        <li><strong>Computed CSS rules</strong> — every style that applies, extracted from <code>document.styleSheets</code></li>
+        <li><strong>Image URLs</strong> — all the actual asset sources from the rendered <code>&lt;img&gt;</code> tags</li>
+        <li><strong>A full-page screenshot</strong> — 1920×9953 pixels of the complete page for visual reference</li>
+      </ul>
+      <p>This gave me ground truth. Not what I thought the site should be, but what it actually is.</p>
+      
+      <h2>Understanding Before Coding</h2>
+      <p>With real data in hand, I could finally understand the design:</p>
+      <ul>
+        <li><strong>Color palette:</strong> <code>#f0f6f8</code> (cream white), <code>#0c1016</code> (near black), <code>#a5abad</code> (grey), <code>#d9e0e3</code> (soft grey), <code>#1e232c</code> (dark grey)</li>
+        <li><strong>Typography:</strong> Inter for body text, Publica Play for the hero wordmark</li>
+        <li><strong>Layout:</strong> Asymmetric hero with a giant lowercase "sohub" word at 35vw, a floating 3D robot render overlapping it, and the tagline "Your story builds our history."</li>
+        <li><strong>Sections:</strong> Work grid (6 projects), Services (4 rounded dark blocks), floating chair section, CTA, and footer with 3D capsule element</li>
+        <li><strong>Animations:</strong> Letter-by-letter reveal on the hero word, scroll parallax on the robot and chair, smooth clip-path menu transition</li>
+      </ul>
+      
+      <h2>Building From Understanding</h2>
+      <p>Now I could actually build. Not copy — <em>rebuild</em>. I wrote the HTML structure from scratch, matching the semantic meaning of each section. I extracted design tokens from the CSS and created a proper stylesheet. I implemented GSAP animations based on what the motion felt like, not by copying animation code.</p>
+      <p>The key difference: I understood <em>why</em> each element existed. The hero word is huge because it's the brand. The robot overlaps it because that creates visual tension. The service blocks use different background colors to distinguish them while maintaining the dark theme. These aren't arbitrary choices — they're design decisions I had to see before I could recreate.</p>
+      
+      <h2>The Assets Problem</h2>
+      <p>One more lesson: assets aren't always where you think. My first attempts to download images from <code>sohub.digital/_next/image/</code> returned 84-byte error pages. The actual images were served from Sanity CDN (<code>cdn.sanity.io</code>). I had to find the real URLs from the rendered DOM, not assume based on the page structure.</p>
+      <p>Downloaded and verified: homeRender.png (344KB robot), careerChair.png (297KB), footerElem.png (123KB), and all 6 project images (115-146KB each). Real files, real dimensions, no placeholders.</p>
+      
+      <h2>What I'd Do Differently</h2>
+      <p>The original site has an interactive 3D hero — the robot responds to mouse movement and has WebGL effects. My clone uses a static PNG with GSAP parallax. That's an approximation, not a full recreation. For a true pixel-perfect clone, I'd need to:</p>
+      <ul>
+        <li>Extract the 3D model from the Three.js scene or recreate it</li>
+        <li>Implement the mouse-tracking interaction</li>
+        <li>Add the subtle particle effects in the background</li>
+      </ul>
+      <p>But for learning purposes, this approach captures the <em>design language</em> — the spacing, typography, motion rhythm, and visual hierarchy. That's what matters for understanding why this site won an Awwwards.</p>
+      
+      <h2>The Pipeline</h2>
+      <p>This first clone took about 4 hours of manual work. Now it's automated: every day at 10:00 WITA, a script runs that captures the current Awwwards Site of the Day, extracts the same ground truth I gathered manually, and rebuilds it using OpenCode free models with GSAP animations. Each clone gets its own journal entry like this one, documenting what was learned.</p>
+      <p>The goal isn't to steal designs — it's to understand them. Every Awwwards site teaches something about modern web development. By rebuilding them, we internalize those lessons.</p>
+      
+      <h2>Key Takeaways</h2>
+      <ol>
+        <li><strong>Render, don't fetch.</strong> Modern sites are built by JavaScript. You need a headless browser to see what's actually there.</li>
+        <li><strong>Extract ground truth.</strong> Computed styles, rendered DOM, actual asset URLs, full screenshots — these are your reference materials.</li>
+        <li><strong>Understand before building.</strong> Know why each design decision was made. Typography scale, color palette, motion language — these are intentional.</li>
+        <li><strong>Approximate when needed.</strong> Not every feature needs pixel-perfect recreation. Focus on the design language, not every technical detail.</li>
+        <li><strong>Document the process.</strong> The mistakes are as valuable as the successes. Writing them down helps avoid repeating them.</li>
+      </ol>
+    </article>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p><a href="./">← Back to Journal</a></p>
+      <p style="margin-top: 1rem;">&copy; 2026 Awwwards Exploration</p>
+    </div>
+  </footer>
+</body>
+</html>

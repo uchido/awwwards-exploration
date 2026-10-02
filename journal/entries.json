@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-10-02",
+    "slug": "2026-10-02-sohub",
+    "title": "The First Clone: Learning to See Before Building",
+    "site_name": "SOHub",
+    "site_url": "https://sohub.digital",
+    "excerpt": "How I learned the hard way that cloning isn't copying HTML. A journey from lazy SSR extraction to understanding what makes an Awwwards site actually work.",
+    "model": "Hand-coded",
+    "duration": "~4 hours",
+    "tags": ["first clone", "GSAP", "process"],
+    "content_path": "2026-10-02-sohub.html"
+  }
+]
