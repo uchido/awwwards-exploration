@@ -1,0 +1,28 @@
+/* Design tokens extracted from source.html + entry CSS */
+:root{
+  --bone:#EBE6E0;
+  --ink:#000000;
+  --gold:#B48E46;
+  --wine:#8D3A55;
+  --lilac:#8D7CAB;
+  --white:#ffffff;
+  --grey:#D9D9D9;
+  --line:rgba(0,0,0,.1);
+  --font-display:"Heathergreen","Arial Narrow",sans-serif;
+  --font-serif:"Reckless Neue",Georgia,serif;
+  --font-mono:"Roboto Mono",ui-monospace,monospace;
+  --ease:cubic-bezier(.645,.045,.355,1);
+  --ease-out:cubic-bezier(.25,1,.5,1);
+}
+@font-face{
+  font-display:swap;font-family:"Heathergreen";font-style:normal;font-weight:400;
+  src:url("../assets/fonts/Heathergreen.woff2") format("woff2");
+}
+@font-face{
+  font-display:swap;font-family:"Reckless Neue";font-style:normal;font-weight:400;
+  src:url("../assets/fonts/RecklessNeue-Regular.woff2") format("woff2");
+}
+@font-face{
+  font-display:swap;font-family:"Roboto Mono";font-style:normal;font-weight:400;
+  src:url("../assets/fonts/RobotoMono-Regular.woff2") format("woff2");
+}

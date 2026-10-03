@@ -1,0 +1,73 @@
+/* Hero — faithful to reference screenshot */
+#hero{
+  min-height:100vh;min-height:100svh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:8vh 27px 16vh;position:relative;text-align:center;
+}
+.hero-title{width:100%;display:flex;align-items:center;justify-content:center;gap:2.2vw}
+.hero-word{
+  font-family:var(--font-display);text-transform:uppercase;
+  font-size:min(200px,23.7vh,13vw);line-height:1.02;white-space:nowrap;
+  display:flex;gap:.35em;overflow:hidden;
+}
+.hero-word.right{position:relative;flex-direction:column;overflow:visible}
+.hero-word .w-split{display:inline-block;transform:translateY(110%)}
+.powered{
+  position:absolute;left:0;bottom:88%;
+  font-family:var(--font-mono);font-size:min(10px,1.18vh);line-height:1.3;
+  text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;
+}
+.powered b{font-weight:400}
+
+/* Panoramic pill — the aerial strip */
+.hero-pill{
+  position:relative;flex:0 1 auto;
+  width:min(50vw,127.96vh);min-width:280px;
+  aspect-ratio:1080/210;align-self:center;
+  border-radius:18px;overflow:hidden;background:#0e0e0c;
+  transform:scaleX(0);transform-origin:center;
+}
+.pill-img{position:absolute;inset:0}
+.pill-img img{width:100%;height:100%;object-fit:cover}
+
+/* Explore map hidden inside pill until Discover */
+#map{position:absolute;inset:0;opacity:0;pointer-events:none;cursor:grab}
+body.exploring #map{opacity:1;pointer-events:all}
+body.exploring .pill-img{opacity:0}
+#mapInner{position:absolute;left:50%;top:50%;width:130%;height:220%;transform:translate(-50%,-50%) scale(1);will-change:transform}
+#mapImg{width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+#mapShade{position:absolute;inset:0;background:transparent;transition:background .6s;pointer-events:none}
+body.night #mapShade{background:rgba(8,10,40,.55)}
+body.past #mapImg{filter:grayscale(1) sepia(.25) contrast(1.02)}
+
+/* Discover pill button */
+.button-with-circle{
+  --width:0px;
+  display:inline-flex;align-items:center;gap:14px;
+  background:#000;color:var(--bone);border-radius:999px;
+  padding:9px 9px 9px 26px;margin-top:9vh;
+  font-family:var(--font-mono);font-size:14px;letter-spacing:.06em;
+  position:relative;transition:transform .35s var(--ease-out);
+}
+.button-with-circle:hover{transform:scale(1.04)}
+.button-with-circle.small{margin-top:18px;font-size:12px}
+.button-circle-w{display:inline-flex}
+.button-circle{width:26px;height:26px;border-radius:50%;background:var(--bone);position:relative;display:block}
+.button-circle::after{content:"";position:absolute;left:50%;top:50%;width:6px;height:6px;border-radius:50%;background:#000;transform:translate(-50%,-50%)}
+.button-with-circle.clicked .button-circle{animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(.7)}}
+
+.hero-desc{
+  position:absolute;left:50%;bottom:64px;transform:translateX(-50%);
+  font-size:24px;line-height:28px;letter-spacing:-.009em;max-width:395px;
+}
+.hero-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.14em;opacity:.55}
+body.exploring .hero-desc,body.exploring .hero-hint{opacity:0;pointer-events:none}
+
+@media (max-width:767px){
+  .hero-title{flex-direction:column;gap:8px}
+  .hero-word{font-size:19vw;justify-content:center}
+  .hero-pill{width:100%;aspect-ratio:330/150}
+  .hero-desc{font-size:17px;line-height:22px;bottom:70px;padding:0 20px}
+  .powered{position:static;margin-bottom:-6px}
+}
