@@ -1,0 +1,100 @@
+/* LPAS clone — base tokens, reset, grid, header/nav, footer */
+:root{
+  --bg:#ffffff;
+  --ink:#262626;
+  --ink-soft:#595656;
+  --muted:#747474;
+  --faint:#a3a3a3;
+  --line:rgba(38,38,38,.14);
+  --line-light:rgba(255,255,255,.28);
+  --off-black:#262626;
+  --slate:#d6d6d6;
+  --wash:#f8f8f8;
+  --housing:rgb(98,86,83);
+  --interiors:rgb(146,84,52);
+  --higher:rgb(201,211,223);
+  --civic:rgb(112,117,105);
+  --commercial:rgb(227,193,170);
+  --pad:clamp(1.6rem,3vw,4rem);
+  --font:"Aeonik",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:62.5%;scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{
+  font-family:var(--font);
+  font-weight:400;
+  font-size:1.6rem;
+  line-height:135%;
+  letter-spacing:0;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--ink);color:#fff}
+
+/* type scale (from original main.css) */
+.font-3XL{font-weight:400;line-height:100%;letter-spacing:0;font-size:clamp(4.6rem,.25rem + 5.6640625vw,7.5rem)}
+.font-XXL{font-weight:400;line-height:110%;font-size:clamp(4.4rem,.2857rem + 5.357vw,5.6rem)}
+.font-XL{font-weight:400;line-height:115%;font-size:clamp(2.8rem,1rem + 2.4vw,4rem)}
+.font-L{font-weight:400;font-size:clamp(2.2rem,1.4rem + 1.2vw,2.8rem);line-height:120%}
+.font-M{font-size:1.9rem;line-height:130%}
+.font-S{font-size:1.4rem;line-height:140%;letter-spacing:.01em}
+.font-XS{font-size:1.15rem;line-height:140%;letter-spacing:.04em;text-transform:uppercase}
+
+.wrap{padding-left:var(--pad);padding-right:var(--pad);max-width:176rem;margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:1rem}
+.dot{width:.7rem;height:.7rem;border-radius:50%;background:currentColor;display:inline-block}
+
+/* ---------- preloader ---------- */
+.preloader{position:fixed;inset:0;z-index:200;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:3rem;transition:transform .9s cubic-bezier(.76,0,.24,1)}
+.preloader.done{transform:translateY(-101%)}
+.preloader__words{display:flex;gap:3rem;overflow:hidden}
+.preloader__words span{font-size:clamp(4rem,8vw,7rem);line-height:1;opacity:0;transform:translateY(110%);display:inline-block}
+.preloader__words span.on{opacity:1;transform:none;transition:all .5s cubic-bezier(.2,.6,.2,1)}
+.preloader__words span b{font-weight:600}
+.preloader__bar{width:min(32rem,60vw);height:1px;background:rgba(255,255,255,.25);position:relative}
+.preloader__bar i{position:absolute;inset:0;background:#fff;transform-origin:left;transform:scaleX(0);display:block}
+.preloader__thumb{width:min(42rem,70vw);aspect-ratio:16/9;overflow:hidden;border-radius:2px;opacity:.85}
+.preloader__thumb img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- header ---------- */
+.site-head{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.8rem var(--pad);color:#fff;mix-blend-mode:normal;transition:transform .45s ease,background .3s,color .3s}
+.site-head.solid{color:var(--ink)}
+.site-head.solid .menu-btn{border-color:rgba(38,38,38,.3)}
+.site-head.hide{transform:translateY(-110%)}
+.logo{font-weight:600;font-size:1.7rem;letter-spacing:.14em}
+.logo small{display:block;font-weight:400;font-size:.95rem;letter-spacing:.22em;opacity:.7}
+.menu-btn{display:flex;align-items:center;gap:1rem;border:1px solid rgba(255,255,255,.5);border-radius:99px;padding:.8rem 1.6rem;font-size:1.25rem;letter-spacing:.08em;text-transform:uppercase}
+.menu-btn .mdot{width:.8rem;height:.8rem;border-radius:50%;background:currentColor;transition:transform .3s}
+.menu-btn:hover .mdot{transform:scale(1.6)}
+.menu-btn .close-t{display:none}
+body.nav-open .menu-btn .close-t{display:inline}
+body.nav-open .menu-btn .menu-t{display:none}
+
+/* fullscreen nav */
+.nav-overlay{position:fixed;inset:0;z-index:90;background:#141414;color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;padding:10rem var(--pad) 4rem;clip-path:inset(0 0 100% 0);transition:clip-path .7s cubic-bezier(.76,0,.24,1);overflow:auto}
+body.nav-open .nav-overlay{clip-path:inset(0 0 0% 0)}
+.nav-overlay h4{font-size:1.2rem;text-transform:uppercase;letter-spacing:.14em;opacity:.55;margin-bottom:1.2rem;font-weight:400}
+.nav-big{list-style:none;display:flex;flex-direction:column;gap:.2rem}
+.nav-big a{font-size:clamp(3rem,5vw,5.2rem);line-height:1.05;display:inline-block;transition:opacity .25s,transform .25s}
+.nav-big a:hover{opacity:.55;transform:translateX(1rem)}
+.nav-cols{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-content:start}
+.nav-cols ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.nav-cols a{opacity:.85}
+.nav-cols a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.nav-contact{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:2rem;border-top:1px solid var(--line-light);padding-top:2rem;margin-top:1rem}
+.nav-contact p{font-size:1.35rem;opacity:.8;line-height:1.6}
+@media(max-width:820px){.nav-overlay{grid-template-columns:1fr}.nav-cols{grid-template-columns:1fr 1fr}}
+
+/* reveal helpers */
+[data-reveal]{opacity:0;transform:translateY(4rem)}
+.no-js [data-reveal]{opacity:1;transform:none}
+
+/* cursor blob */
+.blob{position:fixed;z-index:120;width:9rem;height:9rem;border-radius:50%;background:#fff;color:#111;display:flex;align-items:center;justify-content:center;font-size:1.2rem;letter-spacing:.06em;text-transform:uppercase;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.6);transition:opacity .25s}
+.blob.show{opacity:1}

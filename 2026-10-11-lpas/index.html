@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LPAS — Architecture and Interiors (Study Clone)</title>
+<meta name="description" content="Clear Process. Creative Results. Human-centered. Always Curious. Static design-study clone of lpas.com homepage.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__words" id="preWords">
+    <span><b>L</b>isten</span>
+    <span><b>P</b>lan</span>
+    <span><b>A</b>nalyze</span>
+    <span><b>S</b>hape</span>
+  </div>
+  <div class="preloader__thumb"><img src="assets/hero-poster.jpg" alt=""></div>
+  <div class="preloader__bar"><i id="preBar"></i></div>
+</div>
+
+<div class="blob" id="blob">Explore</div>
+
+<header class="site-head" id="siteHead">
+  <a class="logo" href="#" aria-label="LPAS home">LPAS<small>ARCHITECTURE + INTERIORS</small></a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navOverlay">
+    <span class="menu-t">Menu</span><span class="close-t">Close</span><span class="mdot"></span>
+  </button>
+</header>
+
+<nav class="nav-overlay" id="navOverlay" aria-label="Main navigation">
+  <div>
+    <h4>Our Focus</h4>
+    <ul class="nav-big">
+      <li><a href="#markets">Housing</a></li>
+      <li><a href="#markets">Interiors</a></li>
+      <li><a href="#markets">Higher Education</a></li>
+      <li><a href="#markets">Civic</a></li>
+      <li><a href="#markets">Commercial</a></li>
+    </ul>
+  </div>
+  <div class="nav-cols">
+    <div><h4>Explore our</h4><ul class="font-M"><li><a href="#work">Portfolio</a></li></ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="#latest">Latest Updates</a></li>
+      <li><a href="#intro">About</a></li>
+      <li><a href="#footer">Culture</a></li>
+      <li><a href="#footer">Careers</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul></div>
+    <div class="nav-contact">
+      <p><b>Sacramento</b><br>723 S Street, Suite 150<br>Sacramento, CA 95811<br>916 443 0335</p>
+      <p><b>Oakland</b><br>10 Clay Street, Suite 250<br>Oakland, CA 94607<br>415 213 0335</p>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__bg"><img id="heroBg" src="assets/hero-poster.jpg" alt="LPAS studio interior with glass facade"></div>
+    <div class="hero__shade"></div>
+    <div class="hero__inner">
+      <div class="hero__meta font-XS" data-hero-fade>
+        <span>Architecture + Interiors</span>
+        <span>A Market-Focused Approach</span>
+        <span class="scroll-hint">Swipe up to explore · Scroll to explore <span class="arr">↓</span></span>
+      </div>
+      <h1 class="font-3XL" aria-label="We're a process driven architecture and interior design studio">
+        <span class="line-mask"><span>We&rsquo;re a process driven</span></span>
+        <span class="line-mask"><span>architecture and interior</span></span>
+        <span class="line-mask"><span>design studio <button class="eye" id="eyeBtn" aria-label="Hover for other content">◉</button></span></span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- MARKETS -->
+  <section class="markets" id="markets" aria-label="Markets">
+    <article class="market" data-market="housing">
+      <div class="market__panel">
+        <div class="market__subs"><a href="#work">Affordable Housing</a><a href="#work">Student Housing</a><a href="#work">Market Rate Housing</a><a href="#work">Senior Housing</a></div>
+        <h2 class="market__title">Housing</h2>
+        <p class="market__sub">Residential<br>Housing</p>
+        <p class="market__count">1 / 5</p>
+        <img class="market__thumb" src="assets/market-housing.jpg" alt="">
+      </div>
+      <a class="market__img" href="#work" data-blob aria-label="Explore Housing"><img src="assets/market-housing.jpg" alt="Housing — The Emery"></a>
+    </article>
+    <article class="market" data-market="interiors">
+      <div class="market__panel">
+        <div class="market__subs"><a href="#work">Workplace</a><a href="#work">Amenity</a></div>
+        <h2 class="market__title">Interiors</h2>
+        <p class="market__sub">Design for<br>everyday life</p>
+        <p class="market__count">2 / 5</p>
+        <img class="market__thumb" src="assets/market-interiors.jpg" alt="">
+      </div>
+      <a class="market__img" href="#work" data-blob aria-label="Explore Interiors"><img src="assets/market-interiors.jpg" alt="Interiors project"></a>
+    </article>
+    <article class="market" data-market="higher">
+      <div class="market__panel">
+        <div class="market__subs"><a href="#work">Academic</a><a href="#work">Student Life</a></div>
+        <h2 class="market__title">Higher Education</h2>
+        <p class="market__sub">Architecture for<br>academic community</p>
+        <p class="market__count">3 / 5</p>
+        <img class="market__thumb" src="assets/market-highered.jpg" alt="">
+      </div>
+      <a class="market__img" href="#work" data-blob aria-label="Explore Higher Education"><img src="assets/market-highered.jpg" alt="Higher education building"></a>
+    </article>
+    <article class="market" data-market="civic">
+      <div class="market__panel">
+        <div class="market__subs"><a href="#work">Public Safety</a><a href="#work">Civic Centers</a></div>
+        <h2 class="market__title">Civic</h2>
+        <p class="market__sub">Architecture in<br>service</p>
+        <p class="market__count">4 / 5</p>
+        <img class="market__thumb" src="assets/market-civic.jpg" alt="">
+      </div>
+      <a class="market__img" href="#work" data-blob aria-label="Explore Civic"><img src="assets/market-civic.jpg" alt="Civic building"></a>
+    </article>
+    <article class="market" data-market="commercial">
+      <div class="market__panel">
+        <div class="market__subs"><a href="#work">Healthcare</a><a href="#work">Office</a></div>
+        <h2 class="market__title">Commercial</h2>
+        <p class="market__sub">Design for<br>business value</p>
+        <p class="market__count">5 / 5</p>
+        <img class="market__thumb" src="assets/market-commercial.jpg" alt="">
+      </div>
+      <a class="market__img" href="#work" data-blob aria-label="Explore Commercial"><img src="assets/market-commercial.jpg" alt="Commercial building at dusk"></a>
+    </article>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro" id="intro">
+    <h2 class="font-XXL" id="introTitle">Clear Process. Creative Results. Human Centered. Always Curious.</h2>
+    <p class="intro__tag">Listen. Plan. Analyze. Shape.</p>
+    <div class="intro__grid">
+      <p data-reveal>At LPAS, we design with people at the center and purpose at every turn. We believe great architecture starts by listening, truly listening, to the communities, students, families, and leaders who will live, learn, and grow in the spaces we create. Our process is open, honest, and relentlessly collaborative.</p>
+      <p data-reveal><a class="btn-arrow" href="#work">More about us <span class="circ">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="work__head">
+      <h2 class="font-L" data-reveal>A selection of our work</h2>
+      <p data-reveal><a class="btn-arrow" href="#work">All projects <span class="circ">→</span></a></p>
+    </div>
+    <div class="work__filters font-XS" data-reveal>
+      <b>See our focus cases</b>
+      <a href="#work">Housing<sup>30</sup></a>
+      <a href="#work">Interiors<sup>17</sup></a>
+      <a href="#work">Higher Education<sup>13</sup></a>
+      <a href="#work">Civic<sup>6</sup></a>
+      <a href="#work">Commercial<sup>9</sup></a>
+    </div>
+    <div class="proj-grid">
+      <article class="proj" data-reveal><div class="proj__img"><img src="assets/proj-laspositas.jpg" alt="Las Positas College Academic Support Building"></div><div class="proj__cap"><h3>Las Positas College Academic Support Building</h3><p>Livermore, CA</p></div></article>
+      <article class="proj" data-reveal><div class="proj__img"><img src="assets/proj-prospera.jpg" alt="Prospera at Fiddyment Ranch"></div><div class="proj__cap"><h3>Prospera at Fiddyment Ranch</h3><p>Roseville, CA</p></div></article>
+      <article class="proj" data-reveal><div class="proj__img"><img src="assets/proj-ucdavis.jpg" alt="UC Davis Health Folsom Medical Care Clinic"></div><div class="proj__cap"><h3>UC Davis Health Folsom Medical Care Clinic</h3><p>Folsom, CA</p></div></article>
+      <article class="proj" data-reveal><div class="proj__img"><img src="assets/proj-frederic.jpg" alt="The Frederic"></div><div class="proj__cap"><h3>The Frederic</h3><p>Sacramento, CA</p></div></article>
+      <article class="proj" data-reveal><div class="proj__img"><img src="assets/proj-chp.jpg" alt="California Highway Patrol Truckee Field Office"></div><div class="proj__cap"><h3>California Highway Patrol Truckee Field Office</h3><p>Truckee, CA</p></div></article>
+      <article class="proj" data-reveal><div class="proj__img"><img src="assets/proj-emery.jpg" alt="The Emery"></div><div class="proj__cap"><h3>The Emery</h3><p>Emeryville, CA</p></div></article>
+    </div>
+  </section>
+
+  <!-- LATEST -->
+  <section class="latest" id="latest">
+    <h2 data-reveal>Latest updates</h2>
+    <div class="news" id="newsList">
+      <a class="news__row" href="#latest" data-reveal><span class="src">Instagram · 24 Sep 2026</span><span class="txt">It was a big day for LPAS at the Sacramento Business Journal's Best Real Estate Projects awards — three LPAS projects recognized.</span><span class="date">09.24.26</span><span class="go">→</span></a>
+      <a class="news__row" href="#latest" data-reveal><span class="src">Instagram · 21 May 2026</span><span class="txt">Pleasant Grove Apartments received Affordable Housing Development of the Year in Roseville, California.</span><span class="date">05.21.26</span><span class="go">→</span></a>
+      <a class="news__row" href="#latest" data-reveal><span class="src">Instagram · 12 May 2026</span><span class="txt">LPAS will be at the DBIA-WPR 2026 Education Summit &amp; Awards May 17–20 in Scottsdale. Say hello!</span><span class="date">05.12.26</span><span class="go">→</span></a>
+      <a class="news__row" href="#latest" data-reveal><span class="src">Instagram · 26 Mar 2026</span><span class="txt">We'll be at the Tradeline College &amp; University Facilities 2026 Conference March 30–31.</span><span class="date">03.26.26</span><span class="go">→</span></a>
+      <a class="news__row" href="#latest" data-reveal><span class="src">Instagram · 17 Mar 2026</span><span class="txt">We'll be at the Housing California Annual Conference this week — let's connect!</span><span class="date">03.17.26</span><span class="go">→</span></a>
+      <a class="news__row" href="#latest" data-reveal><span class="src">Instagram · 13 Mar 2026</span><span class="txt">Our new website is live — process front and center, from first conversation through construction.</span><span class="date">03.13.26</span><span class="go">→</span></a>
+    </div>
+    <p style="margin-top:1.6rem" data-reveal><a class="btn-arrow" href="#latest">All news <span class="circ">→</span></a></p>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="footer__hero">
+    <img id="footerBg" src="assets/footer-contact.jpg" alt="LPAS contact — courtyard housing">
+    <div class="footer__hero-inner">
+      <div><h4>Our Focus</h4><ul class="footer__big">
+        <li><a href="#markets">Housing</a></li>
+        <li><a href="#markets">Interiors</a></li>
+        <li><a href="#markets">Higher Education</a></li>
+        <li><a href="#markets">Civic</a></li>
+        <li><a href="#markets">Commercial</a></li>
+      </ul></div>
+      <div class="footer__explore"><h4>Explore our</h4><ul class="footer__big"><li><a href="#work">Portfolio</a></li></ul></div>
+      <div class="footer__cards">
+        <p><b>Sacramento</b><br>723 S Street, Suite 150<br>Sacramento, CA 95811<br>916 443 0335 · E-mail</p>
+        <p><b>Oakland</b><br>10 Clay Street, Suite 250<br>Oakland, CA 94607<br>415 213 0335 · E-mail</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bar">
+    <nav><a href="#markets">Housing</a><a href="#markets">Interiors</a><a href="#markets">Higher Education</a><a href="#markets">Civic</a><a href="#markets">Commercial</a><a href="#work">Portfolio</a><a href="#latest">Latest</a><a href="#intro">About</a><a href="#footer">Contact</a></nav>
+    <a class="to-top" href="#top" id="toTop">Back to top <span>↑</span></a>
+    <div class="copy"><span>© 2026 LPAS Architecture. All rights reserved. — Design-study clone for education only.</span><span>Website by Naam (original) · Clone: static HTML/CSS/JS</span></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
