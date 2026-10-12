@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Nick Ho — Dutch Racing Driver | Porsche Carrera Cup</title>
+<meta name="description" content="21-year-old racing driver from Rotterdam competing in Porsche Carrera Cup Deutschland. 17 career podiums, 14 circuits raced."/>
+<link rel="icon" href="assets/favicon.png"/>
+<link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/animations.css"/>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor">Drag</div>
+
+<div class="loader" id="loader"><div class="loader__num" id="loadNum">98</div><div class="loader__bar" id="loadBar"></div></div>
+<div class="loader__cover" id="loadCover"></div>
+
+<nav class="nav" id="nav">
+  <img class="nav__logo" src="assets/logo.png" alt="Nick Ho logo"/>
+  <div class="nav__links">
+    <a href="#about">About</a><a href="#history">History</a><a href="#media">Media</a>
+    <a href="#calendar">Calendar</a><a href="#contact">Contact</a>
+  </div>
+  <div style="display:flex;gap:.7rem;align-items:center">
+    <a class="btn" href="#contact" style="padding:.8em 1.3em">Become partner</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</nav>
+<div class="menu" id="menu">
+  <button class="menu__close" id="menuClose">CLOSE ✕</button>
+  <a href="#about">About</a><a href="#history">History</a><a href="#media">Media</a>
+  <a href="#calendar">Calendar</a><a href="#contact">Contact</a>
+  <p class="text-small" style="margin-top:2rem;color:#fff">nick@nickho-motorsports.nl — Rotterdam, NL</p>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__stage" id="stage">
+    <div class="hero__layer hero__layer--bg" data-depth="6"></div>
+    <div class="hero__layer hero__layer--car" data-depth="14"></div>
+    <img class="hero__driver" id="driver" src="assets/hero-driver.avif" alt="Nick Ho racing driver" data-depth="26"/>
+  </div>
+  <div class="hero__gradient"></div>
+  <div class="grid-lines"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero__num">98</div>
+  <div class="hero__content">
+    <div>
+      <div class="hero__meta">
+        <div class="hero__stat"><b data-count="98">0</b><span>Car number</span></div>
+        <div class="hero__stat"><b data-count="17">0</b><span>Career podiums</span></div>
+        <div class="hero__stat"><b data-count="14">0</b><span>Circuits raced</span></div>
+      </div>
+      <h1 class="hero__title" id="heroTitle">NICK HO</h1>
+      <p class="text-small" style="max-width:44ch;opacity:.8;margin-top:1rem">For me, racing is about more than chasing speed, it's about chasing my limits. Every lap is a test. Not just of the car, but of myself.</p>
+    </div>
+    <div class="hero__side">
+      <p><b>Rotterdam</b><br/>The Netherlands</p>
+      <p style="margin-top:.8rem"><b>10+</b> Years in motorsport<br/><b>21</b> Years old</p>
+      <p class="eyebrow" style="margin-top:1rem">Every lap is a test. Not just of the car, but of myself.</p>
+    </div>
+  </div>
+  <div class="hero__bottom">
+    <span>Scroll — Porsche Carrera Cup DE 2026</span>
+    <span>Next race &nbsp;<span class="countdown" id="countdown">00:00:00:00</span></span>
+  </div>
+</section>
+
+<div class="marquee"><div class="marquee__track" id="marquee">
+  <span>Porsche Carrera Cup Deutschland — Nick Ho — #98 — Rotterdam —&nbsp;</span>
+  <span>Porsche Carrera Cup Deutschland — Nick Ho — #98 — Rotterdam —&nbsp;</span>
+</div></div>
+
+<!-- ABOUT -->
+<section class="about container" id="about">
+  <span class="tag reveal">About</span>
+  <h2 class="about__big reveal" style="font-family:var(--font-head);text-transform:uppercase;margin-top:1rem">21-year-old student & racing driver chasing limits in Porsche Carrera Cup.</h2>
+  <div class="about__grid">
+    <div class="about__card reveal"><b data-count="10">0</b>+ Years in motorsport<p class="text-small">From karting at a young age to GT machinery.</p></div>
+    <div class="about__card reveal"><b data-count="17">0</b> Career podiums<p class="text-small">X30 Senior Champion GK4 2021, Sprint Challenge winner.</p></div>
+    <div class="about__card reveal"><b data-count="14">0</b> Circuits raced<p class="text-small">Assen, Zandvoort, Spa, Red Bull Ring & more.</p></div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="sponsors container">
+  <p class="eyebrow reveal" style="text-align:center;margin-bottom:2rem">Driver sponsors</p>
+  <div class="sponsor-grid">
+    <div class="sponsor reveal">McDonald's<small>Partner</small></div>
+    <div class="sponsor reveal">BORING<small>Partner</small></div>
+    <div class="sponsor reveal">GP Elite<small>Racing team</small></div>
+    <div class="sponsor reveal">OKIMI<small>Partner</small></div>
+    <div class="sponsor reveal">MEUS<small>Logistics</small></div>
+    <div class="sponsor reveal">Porsche<small>Motorsport</small></div>
+    <div class="sponsor reveal">Erasmus<small>University</small></div>
+    <div class="sponsor reveal">DTM<small>Series</small></div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section class="history" id="history">
+  <div class="history__sticky"><img id="historyImg" src="assets/img1.avif" alt="Nick Ho history"/></div>
+  <div class="history__list">
+    <span class="tag">History</span>
+    <div class="chapter"><span class="eyebrow">2015 — 2020</span><h2>The Foundation</h2><p>Nick Ho, a 21-year-old student of International Business at Erasmus University Rotterdam, began his motorsport journey at a young age. Starting with karting, he built racecraft lap by lap.</p></div>
+    <div class="chapter"><span class="eyebrow">2021</span><h2>First Victories</h2><p>In 2021, Nick became champion in the X30 Senior class of the GK4 Kart Series, showcasing consistency and speed. His first title — super.</p></div>
+    <div class="chapter"><span class="eyebrow">2023 — 2024</span><h2>Proving Speed</h2><p>Transition to sprint racing in the Porsche Sprint Challenge Benelux. Driving a Porsche Cayman 718 GT4, he dominated his class, winning every race entered.</p></div>
+    <div class="chapter"><span class="eyebrow">2025</span><h2>Going International</h2><p>Multiple overall podiums and a first race win in Porsche Carrera Cup Benelux — including victory at Assen on Racing Day. A breakthrough moment.</p></div>
+    <div class="chapter"><span class="eyebrow">2026</span><h2>Pole Position</h2><p>Next step: Porsche Carrera Cup Deutschland — one of the most competitive one-make series in the world. Rookie pole position target.</p></div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section class="media" id="media">
+  <div class="container media__head">
+    <h2 class="reveal">Media &<br/>articles</h2>
+    <span class="eyebrow">← drag →</span>
+  </div>
+  <div class="container"><div class="media__row" id="mediaRow" data-cursor>
+    <article class="mcard"><img src="assets/race1.avif" alt="Assen win"/><div><span class="tag">Race</span><h3>Autocoureur Nick Ho boekt eerste overwinning in Porsche Carrera Cup Benelux! "Mega start"</h3></div></article>
+    <article class="mcard"><img src="assets/race2.avif" alt="Assen"/><div><span class="tag">Race</span><h3>Nick Ho pakt zege tijdens de Racing Day op Assen</h3></div></article>
+    <article class="mcard"><img src="assets/race3.avif" alt="Podium"/><div><span class="tag">Podium</span><h3>Autocoureur Nick Ho pakt knap podium in Porsche Carrera Cup Benelux</h3></div></article>
+    <article class="mcard"><img src="assets/porsche.avif" alt="Porsche"/><div><span class="tag">Interview</span><h3>Nick Ho combineert een carrière in de autosport met zijn studie Bedrijfskunde</h3></div></article>
+    <article class="mcard"><img src="assets/thumb.avif" alt="Karting"/><div><span class="tag">Karting</span><h3>Kampioen Nick Ho (16) blikt terug op succesvol seizoen in GK4: "Mijn eerste titel, super"</h3></div></article>
+  </div></div>
+</section>
+
+<!-- CALENDAR -->
+<section class="agenda" id="calendar">
+  <div class="container" style="text-align:center">
+    <span class="tag reveal">Race calendar 2026</span>
+    <img class="agenda__car reveal" id="agendaCar" src="assets/car-color.avif" alt="Porsche race car"/>
+  </div>
+  <div class="container" style="margin-top:2rem" id="races">
+    <div class="race reveal"><span class="date">APR 18</span><b>Race 1 — WEC Imola</b><span class="pill">Imola</span></div>
+    <div class="race reveal"><span class="date">MAY 09</span><b>Race 2 — DTM Red Bull Ring</b><span class="pill">Spielberg</span></div>
+    <div class="race reveal"><span class="date">MAY 30</span><b>Race 3 — GT Open Spa</b><span class="pill">Spa</span></div>
+    <div class="race reveal"><span class="date">JUN 13</span><b>Race 4 — DTM Zandvoort</b><span class="pill">Zandvoort</span></div>
+    <div class="race reveal"><span class="date">JUL 04</span><b>Race 5 — DTM Lausitzring</b><span class="pill">Lausitz</span></div>
+    <div class="race reveal"><span class="date">JUL 25</span><b>Race 6 — Circuit Zandvoort</b><span class="pill">Zandvoort</span></div>
+    <div class="race reveal"><span class="date">AUG 15</span><b>Race 7 — DTM Nürburgring</b><span class="pill">Nürburg</span></div>
+    <div class="race reveal"><span class="date">SEP 05</span><b>Race 3 — Ricardo Tormo</b><span class="pill">Valencia</span></div>
+    <div class="race reveal"><span class="date">SEP 26</span><b>Race 4 — Barcelona-Catalunya</b><span class="pill">Barcelona</span></div>
+    <div class="race reveal"><span class="date">OCT 10</span><b>Race 8 — DTM Hockenheim</b><span class="pill">Hockenheim</span></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <p class="eyebrow">Partnerships</p>
+    <h2 class="reveal">Want to know more about the championships I compete in?</h2>
+    <p style="margin:1rem 0 2rem">Download the 2026 sponsor guide.</p>
+    <a class="btn btn--dark" href="#" onclick="return false">Download sponsorguide 2026</a>
+  </div>
+</section>
+
+<div class="checker"></div>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <span class="tag">Gallery</span>
+  <h2 class="big-outline reveal" style="font-size:clamp(3rem,10vw,9rem)">Gallery</h2>
+  <img class="main reveal" id="galMain" src="assets/img2.avif" alt="Gallery main"/>
+  <div class="gal-row">
+    <img src="assets/img1.avif" alt="g1"/><img src="assets/img2.avif" alt="g2"/>
+    <img src="assets/img3.avif" alt="g3"/><img src="assets/race1.avif" alt="g4"/>
+    <img src="assets/porsche.avif" alt="g5"/>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <p class="eyebrow" style="color:var(--yellow)">Contact</p>
+    <h2 class="reveal">CON<span>T</span>ACT</h2>
+    <div class="footer__grid">
+      <form id="contactForm">
+        <div class="field"><label class="eyebrow">Name</label><input required placeholder="Your name"/></div>
+        <div class="field"><label class="eyebrow">Email</label><input required type="email" placeholder="you@mail.com"/></div>
+        <div class="field"><label class="eyebrow">Message</label><textarea rows="4" placeholder="Hi Nick…"></textarea></div>
+        <button class="btn" type="submit">Submit</button>
+        <p class="text-small" id="formMsg" style="margin-top:.8rem;color:var(--yellow)"></p>
+      </form>
+      <div>
+        <p class="eyebrow">Direct</p>
+        <p style="margin:1rem 0"><a href="mailto:nick@nickho-motorsports.nl">nick@nickho-motorsports.nl</a><br/><a href="tel:+31683630988">+31 6 83 63 09 88</a></p>
+        <p class="eyebrow">Follow</p>
+        <p style="margin:1rem 0"><a href="https://www.instagram.com/nickho_98" target="_blank" rel="noopener">Instagram ↗</a><br/><a href="https://www.linkedin.com/in/nick-ho-042054327/" target="_blank" rel="noopener">LinkedIn ↗</a></p>
+        <p class="eyebrow">Menu</p>
+        <p style="margin:1rem 0"><a href="#about">About</a> · <a href="#history">History</a> · <a href="#calendar">Calendar</a> · <a href="#gallery">Gallery</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Nick Ho Motorsports — study clone</span>
+      <span>Web credits — Disclaimer & Privacy</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>

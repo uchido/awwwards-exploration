@@ -1,0 +1,12 @@
+/* animations: hovers, image zoom, chapter progress, menu */
+[data-tilt]{transition:transform .3s ease-out}
+.mcard img,.gal-row img{will-change:transform}
+.chapter{opacity:.25;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.chapter.active{opacity:1;transform:none}
+.race{transition:background .3s,padding .3s}
+.race:hover{background:rgba(254,214,10,.08);padding-left:1rem}
+.sponsor{transition:transform .35s cubic-bezier(.2,1,.3,1),background .3s}
+.sponsor:hover{transform:translateY(-6px) rotate(-1deg);background:#000;color:var(--yellow)}
+.hero__title span{display:inline-block}
+.checker{height:26px;background:repeating-conic-gradient(#000 0 25%,#fff 0 50%) 0 0/26px 26px}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--yellow);width:0;z-index:120}

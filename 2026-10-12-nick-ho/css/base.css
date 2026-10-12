@@ -1,0 +1,56 @@
+/* ============ Nick Ho clone — base: tokens, reset, type ============ */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --yellow:#fed60a;
+  --black:#0b0b0b;
+  --black-2:#131313;
+  --white:#f5f3ee;
+  --white-pure:#ffffff;
+  --grey:#8a8a8a;
+  --line:rgba(255,255,255,.14);
+  --line-dark:rgba(0,0,0,.14);
+  --font-head:'Anton',Arial,sans-serif;
+  --font-body:'Inter',Helvetica,Arial,sans-serif;
+  --pad:clamp(1rem,3vw,3rem);
+  --ease:cubic-bezier(.7,0,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto;font-size:clamp(13px,1.05vw,18px)}
+html.lenis,html.lenis body{height:auto}
+body{
+  font-family:var(--font-body);
+  background:var(--white);
+  color:var(--black);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--yellow);color:#000}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
+h1,h2,h3{font-family:var(--font-head);text-transform:uppercase;font-weight:400;line-height:.92;letter-spacing:-.01em}
+.text-small{font-size:.82rem;line-height:1.5}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.container{max-width:1600px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.grid-lines{position:absolute;inset:0;display:grid;grid-template-columns:repeat(6,1fr);pointer-events:none;z-index:1}
+.grid-lines span{border-left:1px solid var(--line)}
+.grid-lines span:last-child{border-right:1px solid var(--line)}
+section{position:relative}
+.btn{
+  display:inline-flex;align-items:center;gap:.7em;
+  background:var(--yellow);color:#000;font-weight:700;font-size:.82rem;
+  letter-spacing:.06em;text-transform:uppercase;
+  padding:1em 1.6em;border-radius:100px;position:relative;overflow:hidden;
+  transition:transform .35s var(--ease);
+}
+.btn:hover{transform:scale(1.04)}
+.btn--dark{background:#000;color:var(--yellow)}
+.btn--ghost{background:transparent;border:1px solid currentColor}
+.tag{display:inline-block;background:var(--yellow);color:#000;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.45em .9em;border-radius:3px}
+.big-outline{
+  font-family:var(--font-head);text-transform:uppercase;line-height:.85;white-space:nowrap;
+  color:transparent;-webkit-text-stroke:1px rgba(0,0,0,.16);
+}
+.big-outline--light{-webkit-text-stroke:1px rgba(255,255,255,.22)}
+.reveal{opacity:0;transform:translateY(50px)}
