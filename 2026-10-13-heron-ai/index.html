@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Heron AI | Works inside your design tools</title>
+<meta name="description" content="Heron sees your model, spots problems, and suggests fixes as you design. When you approve, it makes the edit itself, all without leaving the software you already use."/>
+<link rel="icon" href="assets/logo-sketch.svg" type="image/svg+xml"/>
+<link rel="stylesheet" href="css/fonts.css"/>
+<link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-top"><span>Heron AI — Loading</span><span>Designed by Bearplus</span></div>
+  <div class="loader-mid"><div class="loader-pct" id="loadPct">0%</div></div>
+  <div class="loader-bar"><span id="loadBar"></span></div>
+  <div class="loader-tasks mono" id="loadTask">001 Initialize core system</div>
+  <div class="loader-bot"><span>Welcome to Heron AI</span><span>X: 1131 PX — Y: 1131 PX</span></div>
+</div>
+
+<header class="site-head" id="siteHead">
+  <div class="bar" style="max-width:1720px;margin:0 auto">
+    <a class="brand" href="#" aria-label="Heron AI home">
+      <svg viewBox="0 0 34 39" fill="none" aria-hidden="true"><path d="M1.3 28.2l5.1 2.9 5.37 3.18 4.29 2.48V19.75l-4.95-2.86-5.37-3.1L1.3 11.22v16.97Zm26.7-14.6v6.12l-6.68 3.86v-6.13l-3.96 2.3v17l3.96-2.3v-6.26L28 24.39v6.14l4.11-2.34V11.22L28 13.6ZM1.95 10.09l4.44 2.57 5.37 3.1 4.95 2.86 3.97-2.3-4.31-2.53-5.27-3.13-4.04-2.33-5.11 1.76Z" stroke="#282828" stroke-width="1.4"/></svg>
+      HERON AI
+    </a>
+    <div style="display:flex;align-items:stretch">
+      <nav class="nav" id="nav">
+        <a href="#product">Product</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About</a>
+        <a class="hot" href="#contact">Contact us <span class="arr">→</span></a>
+      </nav>
+      <button class="menu-btn" id="menuBtn">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-frame">
+    <span class="corner c-tl">+</span><span class="corner c-tr">+</span>
+    <span class="corner c-bl">+</span><span class="corner c-br">+</span>
+    <div class="ruler-x"></div>
+    <div class="ruler-y l"></div><div class="ruler-y r"></div>
+    <div class="hero-stage">
+      <div class="hero-coord" style="top:1rem;left:4rem"><span>X: 1131 PX</span><span>Y: 1131 PX</span></div>
+      <img src="assets/hero-building.webp" alt="Black and white architectural sketch of a modern concrete building" data-hero/>
+      <div class="hero-hint">Click and drag your mouse to see violations</div>
+    </div>
+    <div class="hero-bottom">
+      <div class="hero-title"><h1 data-lines>An AI agent that works inside your design tools</h1></div>
+      <div class="hero-sub">
+        Heron reviews your model, identifies issues, and proposes solutions. Upon approval, it edits automatically. This concept crafted by <a href="#">Bearplus agency</a>, the award-winning design agency.
+      </div>
+      <a class="hero-more" href="#product"><span>Discover<br/>more</span><span class="arr">→</span></a>
+    </div>
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="mq">
+      <span>◍ Faster iterations</span><span>◍ Fewer mistakes</span><span>◍ Less busywork</span><b>◍ Faster iterations</b><span>◍ Fewer mistakes</span><span>◍ Less busywork</span>
+      <span>◍ Faster iterations</span><span>◍ Fewer mistakes</span><span>◍ Less busywork</span><b>◍ Faster iterations</b><span>◍ Fewer mistakes</span><span>◍ Less busywork</span>
+    </div></div>
+  </div>
+</section>
+
+<div class="strip reveal">The repetitive parts of modelling shouldn't eat your day. Heron handles the fiddly, manual work so you can stay focused on the design, not the software.</div>
+
+<!-- PROBLEMS -->
+<section class="block" id="product">
+  <div class="sec-head">
+    <div><p class="kicker">Problems</p><h2 class="reveal">Your design tools do what you tell them, nothing more</h2></div>
+    <p class="reveal">Design software is powerful but passive. It waits for every instruction, gives no advice, and can't act on its own — so all the repetitive work stays on you.</p>
+  </div>
+  <div class="prob">
+    <div class="prob-item reveal"><span class="n">[01]</span><span class="tag">Manual</span><h3>Every change is on you</h3><p>You make each edit by hand, one at a time, even the ones you've done a hundred times before.</p></div>
+    <div class="prob-item reveal"><span class="n">[02]</span><span class="tag">Disjointed</span><h3>AI help sits outside your model</h3><p>Generic AI tools can't see your project, so you keep copying, pasting, and re-explaining context.</p></div>
+    <div class="prob-item reveal"><span class="n">[03]</span><span class="tag">Blind</span><h3>Nothing watches for problems</h3><p>Issues sit quietly in your model until you happen to spot them — if you spot them at all.</p></div>
+    <div class="prob-item reveal"><span class="n">[04]</span><span class="tag">Slow</span><h3>Small tasks pile up into lost days</h3><p>The fiddly work that fills your week is exactly the work software should be doing for you.</p></div>
+  </div>
+</section>
+
+<!-- VIOLATIONS -->
+<section class="block" id="violations">
+  <div class="sec-head">
+    <div><p class="kicker">Live check</p><h2 class="reveal">Right there with you, for the whole design</h2></div>
+    <p class="reveal">Heron runs inside the design software you already use. Select a violation to see how it reads your model — every action shown first, nothing without your say-so. Works with Revit, Rhino, ArchiCAD, SketchUp.</p>
+  </div>
+  <div class="viol">
+    <div class="viol-tabs" id="violTabs">
+      <button class="viol-tab active" data-i="0"><span class="code">IBC 1015.3</span><p><b>Guardrail required</b> — fall protection for low window sills.</p><span>→</span></button>
+      <button class="viol-tab" data-i="1"><span class="code">IBC 1011.11</span><p><b>Handrails required</b> — stair and ramp edge protection.</p><span>→</span></button>
+      <button class="viol-tab" data-i="2"><span class="code">IBC 1017.2</span><p><b>Exit travel distance</b> — assembly limit 75 ft without sprinklers.</p><span>→</span></button>
+      <button class="viol-tab" data-i="3"><span class="code">A117.1 §604</span><p><b>Accessible toilet clearance</b> — 60″ turning radius required.</p><span>→</span></button>
+    </div>
+    <div class="viol-view">
+      <img id="violImg" src="assets/solution-chat.jpg" alt="Heron flagging a violation in the model"/>
+      <div class="alert" id="violAlert"><b id="violCode">IBC 1015.3 — Guardrail required.</b> <span id="violTxt">Low sill detected on level 02. Heron suggests adding a 42″ guard. Approve to apply the edit directly in your model.</span></div>
+      <div style="display:flex;gap:1rem">
+        <button class="btn" id="approveBtn"><span>Approve fix</span><i>→</i></button>
+        <button class="btn" id="dismissBtn"><span>Dismiss</span><i>→</i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="block" id="resources">
+  <div class="sec-head">
+    <div><p class="kicker">Product</p><h2 class="reveal">Your model. Your tools. Connected.</h2></div>
+    <p class="reveal">Understands your geometry and intent. Suggests fixes while you work. Edits automatically after your approval.</p>
+  </div>
+  <div class="prod">
+    <article class="prod-card reveal"><p class="kicker">[01]</p><h3 style="font-size:3rem">Heron Chat widget</h3><p style="color:var(--ink-soft)">A chat that floats over your design tool. Ask it about your model or tell it what to change, and it acts inside the software on your approval.</p><img src="assets/solution-chat.jpg" alt="Heron chat widget over a floor plan"/><a class="btn" href="#"><span>Learn more</span><i>→</i></a></article>
+    <article class="prod-card reveal"><p class="kicker">[02]</p><h3 style="font-size:3rem">Heron Dashboard</h3><p style="color:var(--ink-soft)">Ask code questions about your building and get answers that reflect your layout, occupancy, and conditions — active 8, pending 4, health 94%.</p><img src="assets/solution-dash.avif" alt="Heron dashboard with model health stats"/><a class="btn" href="#"><span>Learn more</span><i>→</i></a></article>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="block" id="about">
+  <div class="sec-head">
+    <div><p class="kicker">Why us</p><h2 class="reveal">Built to work the way you do</h2></div>
+    <p class="reveal">Heron fits into your process instead of replacing it. It watches quietly, speaks up when something needs attention, and only acts when you say so.</p>
+  </div>
+  <div class="why">
+    <div class="why-item reveal"><p class="kicker">01 — Observe</p><h3>Observe</h3><p>Heron watches your model as you design.</p></div>
+    <div class="why-item reveal"><p class="kicker">02 — Advise</p><h3>Advise</h3><p>It flags issues and suggests fixes in plain language.</p></div>
+    <div class="why-item reveal"><p class="kicker">03 — Act</p><h3>Act</h3><p>With your approval, it makes the edit directly in the model.</p></div>
+    <div class="why-item reveal"><p class="kicker">04 — Learn</p><h3>Learn</h3><p>It picks up your firm's standards and gets more useful over time.</p></div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="block" id="pricing">
+  <div class="sec-head">
+    <div><p class="kicker">Use cases</p><h2 class="reveal">Made for the people in the model</h2></div>
+    <p class="reveal">Architects, interior designers, engineers, BIM managers, drafters, design leads and small firms — hand the repetitive modelling to Heron.</p>
+  </div>
+  <div class="use">
+    <div class="use-item reveal"><img src="assets/usecase-arch.jpg" alt="Architects"/><h3>Architects</h3></div>
+    <div class="use-item reveal"><img src="assets/usecase-eng.jpg" alt="Engineers"/><h3>Engineers</h3></div>
+    <div class="use-item reveal"><img src="assets/before-1.avif" alt="Interior designers"/><h3>Interior designers</h3></div>
+    <div class="use-item reveal"><img src="assets/og.jpg" alt="BIM managers"/><h3>BIM managers</h3></div>
+    <div class="use-item reveal"><h3>Drafters</h3></div>
+    <div class="use-item reveal"><h3>Design leads</h3></div>
+    <div class="use-item reveal"><h3>Landscape</h3></div>
+    <div class="use-item reveal"><h3>Small firms</h3></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="block" id="contact">
+  <div class="cta">
+    <div class="cta-img"><img src="assets/cta-sketch.webp" alt="Hand sketch elevation"/></div>
+    <div class="cta-box">
+      <p class="kicker">Demo</p>
+      <h2 class="reveal">See what Heron can do in your model</h2>
+      <p class="reveal" style="color:var(--ink-soft);font-size:1.7rem">Book a demo and we'll show Heron working inside one of your own projects.</p>
+      <a class="btn reveal" href="mailto:hello@heronaiapp.com"><span>Contact us</span><i>→</i></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot-grid" style="max-width:1720px;margin:0 auto">
+    <div><h4>Heron AI</h4><p style="font-size:1.55rem;opacity:.85">An AI agent that works inside your design tools.<br/>1801 California St. Suite 2400, Denver, CO 80202</p></div>
+    <div><h4>Company</h4><a href="#">Home</a><a href="#about">About us</a><a href="#contact">Contact us</a></div>
+    <div><h4>Product</h4><a href="#product">Heron Chat Widget</a><a href="#resources">Heron Dashboard</a><a href="#pricing">Pricing</a></div>
+    <div><h4>Resources</h4><a href="#">Insights</a><a href="#">AI Practices</a><a href="#">Design Workflows</a></div>
+  </div>
+  <div class="foot-logo">HERON AI — HERON AI</div>
+  <div class="foot-base" style="max-width:1720px;margin:0 auto"><span>© 2026 Heron AI. Concept crafted by Bearplus.</span><span>Privacy — Terms — Cookies</span></div>
+</footer>
+
+<div class="cookie" id="cookie"><span>This website uses cookies. <a href="#" style="text-decoration:underline">Learn more</a></span><button class="btn" id="cookieOk"><span>Accept</span><i>→</i></button></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
