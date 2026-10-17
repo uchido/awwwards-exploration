@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Typography — the two type families and the full OFFF / FORVM scale.
+   Baikal  = geometric grotesque, weight 600  → "offf" voice (UI, labels)
+   Forvm   = display serif,        weight 400  → "forum" voice (headlines)
+   Scale flips from mobile → desktop values at 1024px (64rem).
+   ========================================================================== */
+
+@font-face {
+  font-family: Baikal;
+  src: url("../assets/fonts/Baikal-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Forvm;
+  src: url("../assets/fonts/Forvm-Roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── body copy ──────────────────────────────────────────────────────────── */
+.text-body {
+  font-family: var(--font-baikal);
+  font-size: var(--text-body-mobile);
+  line-height: var(--text-body-mobile--line-height);
+  letter-spacing: var(--text-body-mobile--letter-spacing);
+  font-weight: 600;
+}
+.text-body-2 {
+  font-family: var(--font-baikal);
+  font-size: var(--text-body-2-mobile);
+  line-height: var(--text-body-2-mobile--line-height);
+  letter-spacing: var(--text-body-2-mobile--letter-spacing);
+  font-weight: 600;
+}
+.text-small {
+  font-family: var(--font-baikal);
+  font-size: var(--text-small);
+  line-height: var(--text-small--line-height);
+  font-weight: 600;
+}
+
+/* ── buttons / nav items — Forvm caps ───────────────────────────────────── */
+.text-button,
+.text-tag {
+  font-family: var(--font-forvm);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.text-button {
+  font-size: var(--text-button-mobile);
+  line-height: var(--text-button-mobile--line-height);
+  letter-spacing: var(--text-button-mobile--letter-spacing);
+}
+.text-tag {
+  font-size: var(--text-tag-mobile);
+  line-height: var(--text-tag-mobile--line-height);
+}
+
+/* ── OFFF scale — Baikal 600 ────────────────────────────────────────────── */
+.text-title-1-offf,
+.text-title-2-offf,
+.text-title-3-offf,
+.text-title-4-offf,
+.text-title-5-offf {
+  font-family: var(--font-baikal);
+  font-weight: 600;
+}
+.text-title-1-offf { font-size: var(--text-h1-mobile-offf); line-height: var(--text-h1-mobile-offf--line-height); letter-spacing: var(--text-h1-mobile-offf--letter-spacing); }
+.text-title-2-offf { font-size: var(--text-h2-mobile-offf); line-height: var(--text-h2-mobile-offf--line-height); letter-spacing: var(--text-h2-mobile-offf--letter-spacing); }
+.text-title-3-offf { font-size: var(--text-h3-mobile-offf); line-height: var(--text-h3-mobile-offf--line-height); letter-spacing: var(--text-h3-mobile-offf--letter-spacing); }
+.text-title-4-offf { font-size: var(--text-h4-mobile-offf); line-height: var(--text-h4-mobile-offf--line-height); letter-spacing: var(--text-h4-mobile-offf--letter-spacing); }
+.text-title-5-offf { font-size: var(--text-h5-mobile-offf); line-height: var(--text-h5-mobile-offf--line-height); letter-spacing: var(--text-h5-mobile-offf--letter-spacing); }
+
+/* ── FORVM scale — Forvm 400, uppercase ─────────────────────────────────── */
+.text-title-1-forum,
+.text-title-2-forum,
+.text-title-3-forum,
+.text-title-4-forum,
+.text-title-5-forum {
+  font-family: var(--font-forvm);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.text-title-1-forum { font-size: var(--text-h1-mobile-forum); line-height: var(--text-h1-mobile-forum--line-height); letter-spacing: var(--text-h1-mobile-forum--letter-spacing); }
+.text-title-2-forum { font-size: var(--text-h2-mobile-forum); line-height: var(--text-h2-mobile-forum--line-height); letter-spacing: var(--text-h2-mobile-forum--letter-spacing); }
+.text-title-3-forum { font-size: var(--text-h3-mobile-forum); line-height: var(--text-h3-mobile-forum--line-height); letter-spacing: var(--text-h3-mobile-forum--letter-spacing); }
+.text-title-4-forum { font-size: var(--text-h4-mobile-forum); line-height: var(--text-h4-mobile-forum--line-height); letter-spacing: var(--text-h4-mobile-forum--letter-spacing); }
+.text-title-5-forum { font-size: var(--text-h5-mobile-forum); line-height: var(--text-h5-mobile-forum--line-height); letter-spacing: var(--text-h5-mobile-forum--letter-spacing); }
+
+/* ── desktop scale (≥1024px) ────────────────────────────────────────────── */
+@media (width >= 64rem) {
+  .text-body { font-size: var(--text-body-desktop); line-height: var(--text-body-desktop--line-height); letter-spacing: var(--text-body-desktop--letter-spacing); }
+  .text-body-2 { font-size: var(--text-body-2-desktop); line-height: var(--text-body-2-desktop--line-height); letter-spacing: var(--text-body-2-desktop--letter-spacing); }
+  .text-button { font-size: var(--text-button-desktop); line-height: var(--text-button-desktop--line-height); letter-spacing: var(--text-button-desktop--letter-spacing); }
+  .text-tag { font-size: var(--text-tag-desktop); line-height: var(--text-tag-desktop--line-height); letter-spacing: var(--text-tag-desktop--letter-spacing); }
+
+  .text-title-1-offf { font-size: var(--text-h1-desktop-offf); line-height: var(--text-h1-desktop-offf--line-height); letter-spacing: var(--text-h1-desktop-offf--letter-spacing); }
+  .text-title-2-offf { font-size: var(--text-h2-desktop-offf); line-height: var(--text-h2-desktop-offf--line-height); letter-spacing: var(--text-h2-desktop-offf--letter-spacing); }
+  .text-title-3-offf { font-size: var(--text-h3-desktop-offf); line-height: var(--text-h3-desktop-offf--line-height); letter-spacing: var(--text-h3-desktop-offf--letter-spacing); }
+  .text-title-4-offf { font-size: var(--text-h4-desktop-offf); line-height: var(--text-h4-desktop-offf--line-height); letter-spacing: var(--text-h4-desktop-offf--letter-spacing); }
+  .text-title-5-offf { font-size: var(--text-h5-desktop-offf); line-height: var(--text-h5-desktop-offf--line-height); letter-spacing: var(--text-h5-desktop-offf--letter-spacing); }
+
+  .text-title-1-forum { font-size: var(--text-h1-desktop-forum); line-height: var(--text-h1-desktop-forum--line-height); letter-spacing: var(--text-h1-desktop-forum--letter-spacing); }
+  .text-title-2-forum { font-size: var(--text-h2-desktop-forum); line-height: var(--text-h2-desktop-forum--line-height); letter-spacing: var(--text-h2-desktop-forum--letter-spacing); }
+  .text-title-3-forum { font-size: var(--text-h3-desktop-forum); line-height: var(--text-h3-desktop-forum--line-height); letter-spacing: var(--text-h3-desktop-forum--letter-spacing); }
+  .text-title-4-forum { font-size: var(--text-h4-desktop-forum); line-height: var(--text-h4-desktop-forum--line-height); letter-spacing: var(--text-h4-desktop-forum--letter-spacing); }
+  .text-title-5-forum { font-size: var(--text-h5-desktop-forum); line-height: var(--text-h5-desktop-forum--line-height); letter-spacing: var(--text-h5-desktop-forum--letter-spacing); }
+}

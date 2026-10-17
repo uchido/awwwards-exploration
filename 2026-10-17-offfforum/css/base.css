@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Base — reset + document defaults (mirrors Tailwind v4 preflight subset
+   that the original site actually relies on)
+   ========================================================================== */
+
+*,
+::backdrop,
+::after,
+::before {
+  box-sizing: border-box;
+  border: 0 solid;
+  margin: 0;
+  padding: 0;
+}
+
+:host,
+html {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+b, strong { font-weight: bolder; }
+
+small { font-size: 80%; }
+
+menu, ol, ul { list-style: none; }
+
+audio, canvas, embed, iframe, img, object, svg, video {
+  vertical-align: middle;
+  display: block;
+}
+
+img, video { max-width: 100%; height: auto; }
+
+button, input, optgroup, select, textarea {
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+::placeholder { opacity: 1; color: currentColor; }
+
+button, input:where([type="button"], [type="reset"], [type="submit"]) {
+  appearance: button;
+}
+
+[hidden]:where(:not([hidden="until-found"])) { display: none !important; }
+
+html {
+  background-color: var(--color-black);
+  color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-size: 62.5%; /* 1rem = 10px — the whole type scale depends on it */
+}
+
+html::-webkit-scrollbar { display: none; }
+
+body {
+  font-family: var(--font-baikal);
+  overflow-x: hidden;
+}
+
+.page { background-color: var(--color-white); }
+
+button { cursor: pointer; }
+
+::selection {
+  background: var(--color-black);
+  color: var(--color-white);
+}

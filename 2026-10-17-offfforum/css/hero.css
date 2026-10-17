@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Hero — full-viewport media band, data boxes pinned under the header,
+   centred FORVM headline + ticket pill anchored to the bottom.
+   ========================================================================== */
+
+.hero {
+  color: var(--color-white);
+}
+
+.hero__media {
+  background-color: var(--color-black);
+}
+
+.hero__media .media {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── the outlined info boxes ────────────────────────────────────────────── */
+.hero__boxes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero__box {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 16);
+  flex-grow: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-white);
+}
+
+/* ── headline block ─────────────────────────────────────────────────────── */
+.hero__bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: calc(var(--spacing) * 36);
+}
+
+.hero__bottom h1 {
+  padding-inline: var(--spacing-gutter);
+  text-align: center;
+}
+@media (width >= 48rem) {
+  .hero__bottom h1 { width: 50%; }
+}

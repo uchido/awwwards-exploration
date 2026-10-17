@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Header — absolute overlay bar carrying the split OFFF / FORUM wordmark,
+   the desktop nav and the mobile drawer.
+   ========================================================================== */
+
+.header {
+  user-select: none;
+}
+
+.header .container-main {
+  /* isolates the clip-path drawer from the stacking context */
+  isolation: isolate;
+}
+
+/* ── wordmark ───────────────────────────────────────────────────────────── */
+.header__logo {
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+.header.open .header__logo {
+  color: var(--color-black);
+  transition-delay: 0.1s;
+}
+
+/* ── desktop nav ────────────────────────────────────────────────────────── */
+.header__nav {
+  color: var(--color-white);
+}
+@media (width >= 48rem) {
+  .header__nav { color: var(--color-white); }
+}
+
+/* ── burger ─────────────────────────────────────────────────────────────── */
+.header__burger {
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+.header.open .header__burger {
+  color: var(--color-black);
+  transition-delay: 0.1s;
+}
+.header__burger-line {
+  transition-property: transform, translate, scale, rotate;
+  transition-duration: 0.7s;
+  transition-timing-function: var(--ease-in-out-expo);
+}
+.header.open .header__burger-line--top {
+  translate: 0 calc(var(--spacing) * 2);
+  rotate: 45deg;
+}
+.header.open .header__burger-line--bottom {
+  translate: 0 calc(var(--spacing) * -2);
+  rotate: -45deg;
+}
+
+/* ── mobile backdrop + drawer ───────────────────────────────────────────── */
+.header__backdrop {
+  transition-property: opacity;
+  transition-duration: 0.7s;
+  transition-timing-function: var(--ease-in-out-expo);
+}
+.header.open .header__backdrop {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.header__mobile-menu {
+  background-color: var(--color-white);
+  clip-path: inset(0 0 100% 0);
+  translate: 0 calc(var(--spacing) * -30);
+  transition-property: clip-path, translate;
+  transition-duration: 0.7s;
+  transition-timing-function: var(--ease-in-out-expo);
+  pointer-events: none;
+}
+.header.open .header__mobile-menu {
+  translate: 0 0;
+  clip-path: inset(0 0 0 0);
+  pointer-events: auto;
+}
+
+/* the drawer only exists below the md breakpoint */
+@media (width >= 48rem) {
+  .header__mobile-menu,
+  .header__backdrop,
+  .header__burger {
+    display: none !important;
+  }
+}

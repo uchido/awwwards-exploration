@@ -1,0 +1,153 @@
+/* ==========================================================================
+   OFFFORUM — Design tokens
+   Extracted verbatim from the original compiled stylesheet
+   (/_nuxt/entry.CI2s3_W4.css — Tailwind v4 build).
+   html font-size is 62.5%, therefore 1rem === 10px.
+   ========================================================================== */
+
+:host,
+:root {
+  /* spacing unit: 0.1rem === 1px at the default root size */
+  --spacing: 0.1rem;
+  --spacing-gutter: 0.4rem;        /* 4px  (mobile) */
+  --spacing-double-gutter: 0.8rem; /* 8px  (mobile) */
+  --spacing-header-height: 96px;
+
+  /* fonts */
+  --font-baikal: "Baikal", sans-serif;
+  --font-forvm: "Forvm", serif;
+  --font-weight-semibold: 600;
+
+  /* colours */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-red: #ee3338;
+  --color-grey: #c5c5c5;
+
+  /* easings */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-power2-out: cubic-bezier(0.32, 0.94, 0.6, 1);
+  --default-transition-duration: 0.15s;
+  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --aspect-video: 16 / 9;
+
+  /* ---- typography scale — Baikal (sans, 600) ---- */
+  --text-body-mobile: 1.8rem;
+  --text-body-mobile--line-height: 2rem;
+  --text-body-mobile--letter-spacing: -0.04em;
+  --text-body-desktop: 2.4rem;
+  --text-body-desktop--line-height: 2.6rem;
+  --text-body-desktop--letter-spacing: -0.04em;
+
+  --text-body-2-mobile: 1.4rem;
+  --text-body-2-mobile--line-height: 1.7rem;
+  --text-body-2-mobile--letter-spacing: -0.02em;
+  --text-body-2-desktop: 1.8rem;
+  --text-body-2-desktop--line-height: 2rem;
+  --text-body-2-desktop--letter-spacing: -0.04em;
+
+  --text-small: 1.1rem;
+  --text-small--line-height: 1.2rem;
+
+  --text-h1-mobile-offf: 3.2rem;
+  --text-h1-mobile-offf--line-height: 3.1rem;
+  --text-h1-mobile-offf--letter-spacing: -0.04em;
+  --text-h1-desktop-offf: 8rem;
+  --text-h1-desktop-offf--line-height: 7.7rem;
+  --text-h1-desktop-offf--letter-spacing: -0.04em;
+
+  --text-h2-mobile-offf: 3.2rem;
+  --text-h2-mobile-offf--line-height: 3.1rem;
+  --text-h2-mobile-offf--letter-spacing: -0.04em;
+  --text-h2-desktop-offf: 4.8rem;
+  --text-h2-desktop-offf--line-height: 4.6rem;
+  --text-h2-desktop-offf--letter-spacing: -0.04em;
+
+  --text-h3-mobile-offf: 2.4rem;
+  --text-h3-mobile-offf--line-height: 2.3rem;
+  --text-h3-mobile-offf--letter-spacing: -0.04em;
+  --text-h3-desktop-offf: 3.2rem;
+  --text-h3-desktop-offf--line-height: 3.1rem;
+  --text-h3-desktop-offf--letter-spacing: -0.04em;
+
+  --text-h4-mobile-offf: 1.6rem;
+  --text-h4-mobile-offf--line-height: 1.5rem;
+  --text-h4-mobile-offf--letter-spacing: -0.06em;
+  --text-h4-desktop-offf: 1.8rem;
+  --text-h4-desktop-offf--line-height: 1.7rem;
+  --text-h4-desktop-offf--letter-spacing: -0.04em;
+
+  --text-h5-mobile-offf: 1.2rem;
+  --text-h5-mobile-offf--line-height: 1.3rem;
+  --text-h5-mobile-offf--letter-spacing: -0.02em;
+  --text-h5-desktop-offf: 1.4rem;
+  --text-h5-desktop-offf--line-height: 1.5rem;
+  --text-h5-desktop-offf--letter-spacing: -0.02em;
+
+  /* ---- typography scale — Forvm (serif, 400) ---- */
+  --text-button-mobile: 1.1rem;
+  --text-button-mobile--line-height: 1.2rem;
+  --text-button-mobile--letter-spacing: -0.02em;
+  --text-button-desktop: 1.4rem;
+  --text-button-desktop--line-height: 1.2rem;
+  --text-button-desktop--letter-spacing: -0.02em;
+
+  --text-tag-mobile: 0.9rem;
+  --text-tag-mobile--line-height: 1rem;
+  --text-tag-desktop: 1.1rem;
+  --text-tag-desktop--line-height: 1rem;
+  --text-tag-desktop--letter-spacing: -0.02em;
+
+  --text-h1-mobile-forum: 4.6rem;
+  --text-h1-mobile-forum--line-height: 4.4rem;
+  --text-h1-mobile-forum--letter-spacing: -0.02em;
+  --text-h1-desktop-forum: 7.6rem;
+  --text-h1-desktop-forum--line-height: 7.3rem;
+  --text-h1-desktop-forum--letter-spacing: -0.02em;
+
+  --text-h2-mobile-forum: 3rem;
+  --text-h2-mobile-forum--line-height: 2.9rem;
+  --text-h2-mobile-forum--letter-spacing: -0.02em;
+  --text-h2-desktop-forum: 4.5rem;
+  --text-h2-desktop-forum--line-height: 4.3rem;
+  --text-h2-desktop-forum--letter-spacing: -0.02em;
+
+  --text-h3-mobile-forum: 2.2rem;
+  --text-h3-mobile-forum--line-height: 2.1rem;
+  --text-h3-mobile-forum--letter-spacing: -0.02em;
+  --text-h3-desktop-forum: 3rem;
+  --text-h3-desktop-forum--line-height: 2.9rem;
+  --text-h3-desktop-forum--letter-spacing: -0.06em;
+
+  --text-h4-mobile-forum: 1.5rem;
+  --text-h4-mobile-forum--line-height: 1.4rem;
+  --text-h4-mobile-forum--letter-spacing: -0.03rem;
+  --text-h4-desktop-forum: 1.7rem;
+  --text-h4-desktop-forum--line-height: 1.6rem;
+  --text-h4-desktop-forum--letter-spacing: -0.03rem;
+
+  --text-h5-mobile-forum: 1.1rem;
+  --text-h5-mobile-forum--line-height: 1.2rem;
+  --text-h5-mobile-forum--letter-spacing: -0.02em;
+  --text-h5-desktop-forum: 1.4rem;
+  --text-h5-desktop-forum--line-height: 1.5rem;
+  --text-h5-desktop-forum--letter-spacing: -0.02em;
+}
+
+/* Header height grows with the viewport on ≥768px */
+@media (width >= 48rem) {
+  :root {
+    --spacing-header-height: calc(6.42755vw + 27.8864px);
+  }
+}
+
+/* Gutters double on ≥1024px */
+@media (width >= 64rem) {
+  :root {
+    --spacing-gutter: 0.8rem;
+    --spacing-double-gutter: 1.6rem;
+  }
+}

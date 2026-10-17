@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Components — layout container, buttons, inputs, overlay, link underline
+   ========================================================================== */
+
+.container-main {
+  width: 100%;
+  padding-inline: var(--spacing-gutter);
+}
+
+/* ── the dark gradient veil over the hero media ─────────────────────────── */
+/* three stacked layers, first one on top:
+   1. bottom fade to black          2. flat 30% black
+   3. top fade from 50% black       */
+.home-overlay {
+  background:
+    linear-gradient(#0000 50%, #000c),
+    linear-gradient(#0000004d 0 100%),
+    linear-gradient(#00000080, #0000 35.62%);
+}
+
+/* ── underline-on-hover links (used across header + footer) ─────────────── */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: calc(var(--spacing) * -3);
+  height: var(--spacing);
+  background-color: currentColor;
+  transform-origin: 0;
+  scale: 0 1;
+  transition-property: transform, translate, scale, rotate;
+  transition-duration: 0.5s;
+  transition-timing-function: var(--ease-in-out-quart);
+}
+.link-underline--wide::after { bottom: calc(var(--spacing) * -8); }
+.link-underline:hover::after,
+.link-underline.is-active::after {
+  scale: 1 1;
+}
+
+/* ── inputs (newsletter forms live on inner pages, kept for completeness) ─ */
+.input {
+  width: 100%;
+  padding-top: calc(var(--spacing) * 16);
+  padding-bottom: calc(var(--spacing) * 8);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--color-black);
+  font-family: var(--font-forvm);
+  font-size: var(--text-button-mobile);
+  line-height: var(--text-button-mobile--line-height);
+  letter-spacing: var(--text-button-mobile--letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.input::placeholder { color: var(--color-black); }
+.input:focus { outline-width: 0; }
+@media (width >= 64rem) {
+  .input { font-size: var(--text-button-desktop); line-height: var(--text-button-desktop--line-height); letter-spacing: var(--text-button-desktop--letter-spacing); }
+}
+
+/* ── buttons ────────────────────────────────────────────────────────────── */
+.button-basic-primary,
+.button-basic-secondary,
+.button-basic-secondary-sharp {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: calc(var(--spacing) * 16);
+  padding-block: calc(var(--spacing) * 6);
+  border-width: 1px;
+  border-radius: 2147483647px;
+  font-family: var(--font-forvm);
+  font-size: var(--text-button-mobile);
+  line-height: var(--text-button-mobile--line-height);
+  letter-spacing: var(--text-button-mobile--letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+  transition-duration: 0.1s;
+  transition-timing-function: var(--ease-in-out);
+  transition-property: color, background-color, border-color, outline-color,
+    text-decoration-color, fill, stroke;
+}
+@media (width >= 64rem) {
+  .button-basic-primary,
+  .button-basic-secondary,
+  .button-basic-secondary-sharp {
+    font-size: var(--text-button-desktop);
+    line-height: var(--text-button-desktop--line-height);
+    letter-spacing: var(--text-button-desktop--letter-spacing);
+  }
+}
+
+.button-basic-primary {
+  border-color: var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+.button-basic-secondary {
+  border-color: var(--color-black);
+  background-color: transparent;
+  color: var(--color-black);
+}
+.button-basic-secondary-sharp {
+  background-color: var(--color-white);
+  border-color: transparent;
+  color: var(--color-black);
+}
+
+@media (hover: hover) {
+  .button-basic-primary:hover { border-color: var(--color-black); color: var(--color-black); background-color: transparent; }
+  .button-basic-secondary:hover { border-color: var(--color-black); background-color: var(--color-black); color: var(--color-white); }
+  .button-basic-secondary-sharp:hover { border-color: var(--color-white); color: var(--color-white); background-color: transparent; }
+}

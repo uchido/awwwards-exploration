@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Consent manager — bottom-right cookie dialog.
+   Values lifted from the original `.app-consent-manager` component styles.
+   ========================================================================== */
+
+.app-consent-manager {
+  --bg-color: var(--color-white);
+  --fg-color: var(--color-black);
+  --box-width: 4.5rem;
+  --box-height: 2.6rem;
+  --box-padding: 0.3rem;
+  --box-radius: 100px;
+  --check-height: 2rem;
+  --check-width: 2rem;
+  --check-radius: 50%;
+  --modal-width: 37.5rem;
+  --radius: 20px;
+  --spacer: var(--spacing-double-gutter);
+  --z-index: 9999;
+  --ease-power2Out: cubic-bezier(0.32, 0.94, 0.6, 1);
+
+  position: fixed;
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  z-index: var(--z-index);
+  pointer-events: none;
+  max-width: calc(100% - var(--spacing-double-gutter) * 2);
+}
+
+.app-consent-manager a:not(.t-link):not(.t-underline) {
+  text-decoration: underline;
+}
+
+.app-consent-manager__simple,
+.app-consent-manager__thorough {
+  width: var(--modal-width);
+  background-color: var(--bg-color);
+  border-radius: var(--radius);
+  max-width: 100%;
+  color: var(--fg-color);
+  opacity: 0;
+  transform: translateY(var(--spacer));
+  transition: all 0.3s var(--ease-power2Out);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 50px #00000026;
+}
+
+.app-consent-manager__simple {
+  pointer-events: auto;
+}
+.app-consent-manager__simple.--visible {
+  opacity: 1;
+  transform: none;
+}
+.app-consent-manager__simple.--hidden {
+  visibility: hidden;
+}
+
+.app-consent-manager__thorough {
+  pointer-events: none;
+  visibility: hidden;
+}
+.app-consent-manager__thorough.--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+}
+
+.app-consent-manager__back svg {
+  transition: transform 0.4s var(--ease-power2Out);
+}
+.app-consent-manager__back:hover svg {
+  transform: rotate(180deg);
+}
+
+.app-consent-manager__cookieInner {
+  height: var(--box-height);
+  width: var(--box-width);
+  transition: all 0.4s var(--ease-power2Out);
+  position: relative;
+}
+.app-consent-manager__cookieItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(var(--spacer) * 0.75);
+}
+.app-consent-manager__cookieInput {
+  cursor: pointer;
+  opacity: 0;
+  height: var(--box-height);
+  width: var(--box-width);
+  margin: 0;
+  position: absolute;
+}
+.app-consent-manager__cookieCheck {
+  transition: all 0.4s var(--ease-power2Out);
+  pointer-events: none;
+  opacity: 0.3;
+  position: relative;
+  display: block;
+}
+.app-consent-manager__cookieCheck svg {
+  height: var(--check-width);
+  width: var(--check-width);
+  opacity: 0;
+  visibility: hidden;
+  top: 50%;
+  right: var(--box-padding);
+  z-index: 10;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.app-consent-manager__cookieCheck svg path {
+  stroke: var(--bg-color);
+  transition: stroke 0.4s var(--ease-power2Out);
+}
+.app-consent-manager__cookieCheck::before {
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  border: 1px solid var(--fg-color);
+  border-radius: var(--box-radius);
+  content: "";
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s var(--ease-power2Out);
+  position: absolute;
+  inset: 0;
+}
+.app-consent-manager__cookieCheck::after {
+  background-color: var(--fg-color);
+  border-radius: var(--check-radius);
+  content: "";
+  height: var(--check-height);
+  top: 50%;
+  left: var(--box-padding);
+  width: var(--check-width);
+  transition: all 0.4s var(--ease-power2Out);
+  position: absolute;
+  transform: translateY(-50%);
+}
+.app-consent-manager__cookieInput:checked + .app-consent-manager__cookieCheck {
+  opacity: 1;
+}
+.app-consent-manager__cookieInput:checked + .app-consent-manager__cookieCheck svg {
+  opacity: 1;
+  visibility: visible;
+}
+.app-consent-manager__cookieInput:checked + .app-consent-manager__cookieCheck svg path {
+  stroke: var(--fg-color);
+}
+.app-consent-manager__cookieInput:checked + .app-consent-manager__cookieCheck::before {
+  background-color: var(--fg-color);
+}
+.app-consent-manager__cookieInput:checked + .app-consent-manager__cookieCheck::after {
+  background-color: var(--bg-color);
+  transform: translate(100%) translateY(-50%);
+}
+:is(.app-consent-manager__cookieInput:hover, .app-consent-manager__cookieInput:focus-visible)
+  + .app-consent-manager__cookieCheck {
+  opacity: 1;
+}
+
+.app-consent-manager__buttonItem {
+  height: calc(var(--spacing) * 40);
+  padding-inline: calc(var(--spacing) * 40);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-black);
+  border-radius: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: color, background-color, border-color, outline-color;
+  transition-duration: 0.3s;
+  transition-timing-function: var(--ease-power2Out);
+}
+.app-consent-manager__buttonItem.w-full { width: 100%; }
+
+@media (hover: hover) {
+  .app-consent-manager__buttonItem:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+}
+
+/* on very small screens the dialog becomes a bottom sheet */
+@media (max-width: 40rem) {
+  .app-consent-manager__simple,
+  .app-consent-manager__thorough {
+    width: 100%;
+  }
+  .app-consent-manager__buttonItem {
+    padding-inline: calc(var(--spacing) * 16);
+  }
+}

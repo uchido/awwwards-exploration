@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Footer — newsletter block, link columns, social pills and the giant
+   wordmark that slides up out of the SVG viewBox on scroll.
+   ========================================================================== */
+
+/* ── newsletter / radios ────────────────────────────────────────────────── */
+.footer__radio-dot {
+  transform-origin: center;
+}
+
+/* ── link columns ───────────────────────────────────────────────────────── */
+.footer__nav a {
+  display: inline-block;
+}
+
+/* ── social pills ───────────────────────────────────────────────────────── */
+.footer__bottom .button-basic-secondary {
+  padding-block: calc(var(--spacing) * 6);
+}
+
+/* ── the oversized wordmark ─────────────────────────────────────────────── */
+.footer__logo-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden; /* clips the y:100% offset applied by GSAP */
+}
+
+/* pre-animation state is applied by GSAP; if JS is unavailable the logo
+   simply stays in place (no FOUC) */
+.footer__logo-wrap .logo-offf,
+.footer__logo-wrap .logo-forum {
+  will-change: transform;
+}

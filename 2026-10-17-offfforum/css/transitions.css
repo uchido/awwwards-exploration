@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Page / route transitions
+   Lifted from the original Nuxt page transition stylesheet.
+   ========================================================================== */
+
+.page-enter-active,
+.page-leave-active {
+  pointer-events: none;
+  width: 100%;
+  transition-property: opacity, transform, clip-path;
+  transition-duration: 1.1s;
+  transition-timing-function: cubic-bezier(0.75, 0, 0.1, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.page-leave-active {
+  transform-origin: top;
+  z-index: 9;
+}
+.page-leave-active .page-inner {
+  transform: translateY(calc(var(--scroll) * -1));
+}
+.page-leave-active .header {
+  transform: translateZ(0);
+}
+.page-enter-active {
+  z-index: 10;
+}
+.page-leave-to {
+  opacity: 0.5;
+  transform: scale(0.9) translateY(5vw);
+}
+.page-enter-to {
+  clip-path: inset(0);
+}
+.page-enter-from {
+  clip-path: inset(85dvh 0 0);
+  transform: translateY(15dvh);
+}

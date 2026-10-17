@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>A WEEK OF DESIGN, ART &amp; DIGITAL CULTURE · FORUM · SEPT 15, 2027 · OFFF SEPT 16–17 · SAT, MONTRÉAL </title>
+  <meta name="description" content="OFFF &amp; FORUM — a week of design, art &amp; digital culture in Montréal. FORUM Sept 15, 2027 · OFFF Sept 16–17, 2027 · Société des arts technologiques [SAT].">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch.png">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/Baikal-SemiBold.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/Forvm-Roman.woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/consent.css">
+  <link rel="stylesheet" href="css/transitions.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════ COOKIE CONSENT ══════════════════════════════ -->
+<div class="app-consent-manager text-small" id="consent" role="region" aria-labelledby="consent-title" aria-describedby="consent-text">
+  <div class="app-consent-manager__simple p-24" id="consent-simple">
+    <p id="consent-title" class="app-consent-manager__title text-title-5-offf mb-8">We use cookies on this site</p>
+    <p id="consent-text" class="app-consent-manager__text">Our cookies and those of our partners help improve your experience and analyze your use of the website. To learn all about cookies, check our <a href="#privacy-policy" class="underline">terms of use</a>. </p>
+    <div class="app-consent-manager__buttonWrapper mt-16 flex flex-col gap-y-8">
+      <button class="app-consent-manager__buttonItem" data-consent="all">Allow all cookies</button>
+      <button class="app-consent-manager__buttonItem" data-consent="necessary">Allow necessary cookies</button>
+      <button class="app-consent-manager__buttonItem" data-consent="manage">Manage cookies</button>
+    </div>
+  </div>
+  <div class="app-consent-manager__thorough p-24" id="consent-thorough">
+    <button class="app-consent-manager__back inline-flex items-center gap-x-5" data-consent="back">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="size-14 rotate-90"><path d="M18 9L12 15L6 9" stroke="currentColor" stroke-width="3"></path></svg>
+      <span class="t-underline">Back</span>
+    </button>
+    <p class="app-consent-manager__title text-title-5-offf mt-16">Manage cookies</p>
+    <div class="app-consent-manager__cookieList mt-16 flex flex-col gap-y-8">
+      <div class="app-consent-manager__cookieItem py-4">
+        <span class="app-consent-manager__cookieLabel">Necessary</span>
+        <span class="app-consent-manager__activeText uppercase">Always active</span>
+      </div>
+      <div class="app-consent-manager__cookieItem">
+        <label for="analyticsCookies" class="app-consent-manager__cookieLabel">Analytics</label>
+        <span class="app-consent-manager__cookieInner">
+          <input id="analyticsCookies" type="checkbox" value="Analytics" class="app-consent-manager__cookieInput">
+          <span class="app-consent-manager__cookieCheck" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 8L9.5 12.5L7 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        </span>
+      </div>
+      <div class="app-consent-manager__cookieItem">
+        <label for="personalizationCookies" class="app-consent-manager__cookieLabel">Preferences</label>
+        <span class="app-consent-manager__cookieInner">
+          <input id="personalizationCookies" type="checkbox" value="Preferences" class="app-consent-manager__cookieInput">
+          <span class="app-consent-manager__cookieCheck" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 8L9.5 12.5L7 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        </span>
+      </div>
+      <div class="app-consent-manager__cookieItem">
+        <label for="adCookies" class="app-consent-manager__cookieLabel">Marketing</label>
+        <span class="app-consent-manager__cookieInner">
+          <input id="adCookies" type="checkbox" value="Marketing" class="app-consent-manager__cookieInput">
+          <span class="app-consent-manager__cookieCheck" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 8L9.5 12.5L7 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        </span>
+      </div>
+      <div class="app-consent-manager__cookieItem">
+        <label for="securityCookies" class="app-consent-manager__cookieLabel">Security</label>
+        <span class="app-consent-manager__cookieInner">
+          <input id="securityCookies" type="checkbox" value="Security" class="app-consent-manager__cookieInput">
+          <span class="app-consent-manager__cookieCheck" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 8L9.5 12.5L7 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        </span>
+      </div>
+    </div>
+    <div class="app-consent-manager__buttonWrapper mt-16">
+      <button class="app-consent-manager__buttonItem w-full" data-consent="confirm">Confirm my choice</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ APP ══════════════════════════════ -->
+<div id="app" class="overflow-x-hidden">
+  <main id="main" class="min-h-screen" style="--scroll:0px;">
+    <div class="page relative">
+      <div class="page-inner">
+
+        <!-- ─────────────── HEADER ─────────────── -->
+        <header id="header" class="header h-header-height absolute top-0 left-0 z-50 flex w-full flex-col">
+          <div class="container-main relative flex items-start gap-24 py-16">
+            <a href="#top" class="header__logo text-white px-gutter md:pr-double-gutter mr-auto h-24 md:h-auto md:w-1/2" aria-label="OFFFORUM">
+              <svg viewBox="0 0 1408 181" fill="none" class="logo-full fill-current h-full md:h-auto md:w-full" xmlns="http://www.w3.org/2000/svg">
+                <g class="logo-forum">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M805.57 0C855.445 0.000236796 893.382 40.1962 893.382 90.5044C893.381 140.812 855.445 181.007 805.57 181.007C755.695 181.007 717.758 140.812 717.758 90.5044C717.758 40.196 755.695 0 805.57 0ZM799.014 11.283C768.573 11.2832 745.387 37.8488 745.387 75.9234C745.387 130.224 777.234 169.717 812.592 169.717C843.033 169.717 865.986 143.151 865.986 105.077C865.985 50.7761 834.371 11.283 799.014 11.283Z"></path>
+                  <path d="M1087.06 2.35522C1083.78 22.0981 1082.84 46.7849 1082.84 90.5043V119.65C1082.84 150.208 1100.87 167.37 1128.74 167.37C1156.61 167.37 1174.64 150.208 1174.64 119.65V90.5043C1174.64 46.7849 1173.7 22.0981 1170.42 2.35522H1194.77C1191.49 22.0981 1190.55 46.785 1190.55 90.5043V117.304C1190.55 157.733 1165.03 181.007 1125.22 181.007C1085.41 181.007 1059.89 157.733 1059.89 117.304V90.5043C1059.89 46.785 1058.95 22.0981 1055.68 2.35522H1087.06Z"></path>
+                  <path d="M1312.56 141.28L1382.81 0H1389.6L1395.92 90.5044C1398.96 134.224 1402.94 158.911 1408.1 178.654H1375.78C1378.12 158.911 1376.72 133.99 1372.97 90.5044L1370.16 59.4775L1309.98 181.007H1305.76L1245.34 63.0024L1242.77 90.5044C1238.55 133.99 1237.61 158.911 1239.95 178.654H1214.66C1219.81 158.911 1223.8 134.224 1226.84 90.5044L1233.16 0H1239.96L1312.56 141.28Z"></path>
+                  <path d="M951.444 2.34644C999.914 2.34648 1022.87 18.0983 1022.87 44.6638C1022.87 62.0594 1007.88 75.9304 982.358 83.2132C1011.87 125.763 1033.41 156.088 1057.53 178.654H1021.69C1002.96 152.33 986.335 126.465 955.661 82.979V79.2214C981.418 76.1648 995.704 66.0584 995.704 46.7834C995.703 28.686 978.374 14.1128 948.167 14.1126H943.949C942.077 31.9764 941.37 55.0182 941.37 90.5118C941.37 134.231 942.309 158.918 945.587 178.661H914.207C917.485 158.918 918.425 134.231 918.425 90.5118C918.425 46.7923 917.485 22.1056 914.207 2.36264L914.214 2.34644H951.444Z"></path>
+                  <path d="M708.878 18.8055C690.621 15.9836 677.034 14.3391 639.103 14.1052C637.231 30.5576 636.524 51.4784 636.524 82.2777C669.07 82.2777 684.761 82.0429 699.519 79.9298V96.383C684.768 94.2698 669.077 94.0351 636.524 94.0351C636.524 135.641 637.464 159.384 640.742 178.659H609.361C612.639 158.917 613.578 134.231 613.578 90.5117C613.578 46.7924 612.639 22.1054 609.361 2.36258H672.822C684.061 2.36257 697.646 1.65984 709.818 0.0146484L708.878 18.8055Z"></path>
+                </g>
+                <path class="logo-offf" d="M87.7144 178.653C122.772 178.653 153.032 158.027 167.114 128.201V178.653H227.793V118.707H303.861V178.653H364.54V119.416H440.609V178.653H501.288V119.416H577.026V70.2929H228.176V50.4518H577.018V2.48301H167.114V52.7989C153.032 22.9732 122.772 2.34717 87.7144 2.34717C39.2223 2.34717 -0.0976562 41.818 -0.0976562 90.5038C-0.0976562 139.19 39.2148 178.653 87.7144 178.653Z"></path>
+              </svg>
+            </a>
+
+            <div class="header__right px-gutter flex items-center gap-24">
+              <div class="header__nav text-white hidden gap-24 md:flex">
+                <nav>
+                  <ul class="text-button flex gap-24">
+                    <li>
+                      <a href="#about" class="link-underline" download="false" aria-label="About">
+                        <span>About</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="header__lang text-button rounded-full border border-black px-16 py-6 md:border-0 md:p-0 link-underline link-underline--wide">
+                  <a href="#fr" class="header__lang-link">fr</a>
+                </div>
+              </div>
+            </div>
+
+            <button class="header__burger text-white relative mr-16 h-24 w-32 md:hidden" aria-label="Menu">
+              <div class="header__burger-line header__burger-line--top absolute top-10 left-0 h-1 w-32 bg-current"></div>
+              <div class="header__burger-line header__burger-line--bottom absolute top-14 left-0 h-1 w-32 bg-current"></div>
+            </button>
+
+            <div class="header__backdrop ease-in-out-expo pointer-events-none fixed inset-0 z--1 bg-black\/30 opacity-0 transition-opacity duration-700 md:hidden"></div>
+
+            <div class="header__mobile-menu container-main absolute top-0 right-0 left-0 z--1 flex flex-col items-start bg-white md:hidden">
+              <ul class="px-gutter text-title-3-forum flex flex-col gap-24 pt-112 pb-72">
+                <li><a href="#about" aria-label="About"><span>About</span></a></li>
+                <li><a href="#media-room" aria-label="Media room"><span>Media room</span></a></li>
+                <li><a href="mailto:info@offforum.com" rel="noopener noreferrer" target="_blank" aria-label="Contact"><span>Contact</span></a></li>
+                <li><a href="#faq" aria-label="FAQ"><span>FAQ</span></a></li>
+              </ul>
+              <div class="px-gutter mb-8">
+                <div class="text-button rounded-full border border-black px-16 py-6">
+                  <a href="#fr" class="header__lang-link">fr</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- ─────────────── PAGE CONTENT ─────────────── -->
+        <div class="page-content">
+
+          <!-- HERO -->
+          <section class="hero pt-header-height relative flex min-h-dvh w-full text-white">
+            <div class="hero__media pointer-events-none absolute inset-0 bg-black">
+              <div class="media relative flex size-full">
+                <video class="hero__video size-full object-cover" autoplay loop muted playsinline preload="auto"
+                       poster="assets/img/hero-poster.jpg" src="assets/img/hero-video.mp4"></video>
+              </div>
+            </div>
+
+            <div class="home-overlay pointer-events-none absolute inset-0"></div>
+
+            <div class="container-main relative z-1 flex h-auto flex-col pb-32">
+              <div class="hero__boxes text-title-4-offf px-gutter flex w-full flex-wrap">
+                <div class="hero__box flex w-1/2 grow-0 flex-col gap-16 border border-white px-8 pt-8 pb-36 sm:w-1/3 md:px-16 md:pt-16 lg:w-1/4 2xl:w-1/6">
+                  <div class="flex justify-between">
+                    <div class="flex-1/2 grow-0">FORUM</div>
+                    <div class="flex-1/2 grow-0">September 15, 2027</div>
+                  </div>
+                  <div class="flex justify-between">
+                    <div class="flex-1/2 grow-0">OFFF</div>
+                    <div class="flex-1/2 grow-0">September 16-17, 2027</div>
+                  </div>
+                </div>
+                <div class="hero__box flex w-1/2 grow-0 flex-col gap-16 border border-white px-8 pt-8 pb-36 sm:w-1/3 md:px-16 md:pt-16 lg:w-1/4 2xl:w-1/6">
+                  <div class="flex justify-between">
+                    <div class="flex-1/2 grow-0">Société des arts technologiques [SAT]</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero__bottom mt-auto flex flex-col items-center pt-36">
+                <h1 class="px-gutter text-title-2-forum text-center md:w-1/2">A WEEK OF DESIGN, ART &amp; DIGITAL CULTURE · FORUM · SEPT 15, 2027 · OFFF SEPT 16–17 · SAT, MONTRÉAL </h1>
+                <a href="https://ticketscandy.com/e/forum-2027-21731" rel="noopener noreferrer" target="_blank" class="button-basic-secondary-sharp mt-16" aria-label="GET YOUR FORUM TICKET ">
+                  <span>GET YOUR FORUM TICKET </span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- FOOTER -->
+          <footer class="container-main">
+            <div class="footer__inner relative flex flex-col gap-40 pt-16 pb-8 lg:gap-120 lg:pb-16">
+              <div class="footer__top flex flex-col gap-64 lg:flex-row lg:items-baseline lg:justify-between lg:gap-0">
+
+                <div class="footer__newsletter flex flex-col gap-16 lg:w-4/12">
+                  <h3 class="text-title-3-offf px-gutter">Join our community and get updates, offers, and exclusive content.</h3>
+                  <div class="footer__radios flex flex-col gap-24 lg:gap-32">
+                    <div class="px-gutter flex items-center gap-16">
+                      <label class="group flex cursor-pointer items-center gap-4">
+                        <input type="radio" name="newsletter" value="offf" class="sr-only">
+                        <span class="flex size-16 shrink-0 items-center justify-center rounded-full border border-black">
+                          <span class="footer__radio-dot group-hover:scale-50 size-8 scale-0 rounded-full bg-black transition-transform duration-200"></span>
+                        </span>
+                        <span class="text-button">Only OFFF</span>
+                      </label>
+                      <label class="group flex cursor-pointer items-center gap-4">
+                        <input type="radio" name="newsletter" value="forum" class="sr-only">
+                        <span class="flex size-16 shrink-0 items-center justify-center rounded-full border border-black">
+                          <span class="footer__radio-dot group-hover:scale-50 size-8 scale-0 rounded-full bg-black transition-transform duration-200"></span>
+                        </span>
+                        <span class="text-button">Only Forum</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="footer__nav flex flex-wrap gap-32 md:flex-row md:items-baseline md:gap-0 lg:w-6/12">
+                  <div class="flex w-full flex-row md:w-4/6">
+                    <div class="flex w-full flex-col gap-y-4 md:w-1/2 md:gap-y-8">
+                      <div class="px-gutter w-full">
+                        <a href="#media-room" class="link-underline" download="false" aria-label="Media Room"><span>Media Room</span></a>
+                      </div>
+                      <div class="px-gutter w-full">
+                        <a href="#faq" class="link-underline" download="false" aria-label="Faq"><span>Faq</span></a>
+                      </div>
+                      <div class="px-gutter w-full">
+                        <a href="mailto:info@offforum.com" rel="noopener noreferrer" target="_blank" class="link-underline" aria-label="Contact"><span>Contact</span></a>
+                      </div>
+                    </div>
+                    <div class="flex w-full flex-col gap-y-4 md:w-1/2 md:gap-y-8">
+                      <div class="px-gutter w-full">
+                        <a href="#privacy-policy" class="link-underline" download="false" aria-label="Privacy Policy"><span>Privacy Policy</span></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="px-gutter flex flex-wrap items-baseline gap-16 md:w-2/6">
+                    <div class="flex flex-col gap-4">
+                      <span class="text-title-5-offf">OFFF</span>
+                      <div class="flex flex-wrap items-baseline gap-4 lg:gap-5">
+                        <a href="https://www.instagram.com/offf.montreal/" rel="noopener noreferrer" target="_blank" class="button-basic-secondary" aria-label="IG"><span>IG</span></a>
+                        <a href="https://www.linkedin.com/showcase/offfmontreal/" rel="noopener noreferrer" target="_blank" class="button-basic-secondary" aria-label="IN"><span>IN</span></a>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                      <span class="text-title-5-offf">FORUM</span>
+                      <div class="flex flex-wrap items-baseline gap-4 lg:gap-5">
+                        <a href="https://www.instagram.com/forum_mtl/" rel="noopener noreferrer" target="_blank" class="button-basic-secondary" aria-label="IG"><span>IG</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="footer__bottom flex flex-col gap-16 lg:gap-24">
+                <div class="px-gutter footer__logo-wrap">
+                  <svg viewBox="0 0 1408 181" fill="none" class="logo-full logo-full--footer fill-current" xmlns="http://www.w3.org/2000/svg">
+                    <g class="logo-forum">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M805.57 0C855.445 0.000236796 893.382 40.1962 893.382 90.5044C893.381 140.812 855.445 181.007 805.57 181.007C755.695 181.007 717.758 140.812 717.758 90.5044C717.758 40.196 755.695 0 805.57 0ZM799.014 11.283C768.573 11.2832 745.387 37.8488 745.387 75.9234C745.387 130.224 777.234 169.717 812.592 169.717C843.033 169.717 865.986 143.151 865.986 105.077C865.985 50.7761 834.371 11.283 799.014 11.283Z"></path>
+                      <path d="M1087.06 2.35522C1083.78 22.0981 1082.84 46.7849 1082.84 90.5043V119.65C1082.84 150.208 1100.87 167.37 1128.74 167.37C1156.61 167.37 1174.64 150.208 1174.64 119.65V90.5043C1174.64 46.7849 1173.7 22.0981 1170.42 2.35522H1194.77C1191.49 22.0981 1190.55 46.785 1190.55 90.5043V117.304C1190.55 157.733 1165.03 181.007 1125.22 181.007C1085.41 181.007 1059.89 157.733 1059.89 117.304V90.5043C1059.89 46.785 1058.95 22.0981 1055.68 2.35522H1087.06Z"></path>
+                      <path d="M1312.56 141.28L1382.81 0H1389.6L1395.92 90.5044C1398.96 134.224 1402.94 158.911 1408.1 178.654H1375.78C1378.12 158.911 1376.72 133.99 1372.97 90.5044L1370.16 59.4775L1309.98 181.007H1305.76L1245.34 63.0024L1242.77 90.5044C1238.55 133.99 1237.61 158.911 1239.95 178.654H1214.66C1219.81 158.911 1223.8 134.224 1226.84 90.5044L1233.16 0H1239.96L1312.56 141.28Z"></path>
+                      <path d="M951.444 2.34644C999.914 2.34648 1022.87 18.0983 1022.87 44.6638C1022.87 62.0594 1007.88 75.9304 982.358 83.2132C1011.87 125.763 1033.41 156.088 1057.53 178.654H1021.69C1002.96 152.33 986.335 126.465 955.661 82.979V79.2214C981.418 76.1648 995.704 66.0584 995.704 46.7834C995.703 28.686 978.374 14.1128 948.167 14.1126H943.949C942.077 31.9764 941.37 55.0182 941.37 90.5118C941.37 134.231 942.309 158.918 945.587 178.661H914.207C917.485 158.918 918.425 134.231 918.425 90.5118C918.425 46.7923 917.485 22.1056 914.207 2.36264L914.214 2.34644H951.444Z"></path>
+                      <path d="M708.878 18.8055C690.621 15.9836 677.034 14.3391 639.103 14.1052C637.231 30.5576 636.524 51.4784 636.524 82.2777C669.07 82.2777 684.761 82.0429 699.519 79.9298V96.383C684.768 94.2698 669.077 94.0351 636.524 94.0351C636.524 135.641 637.464 159.384 640.742 178.659H609.361C612.639 158.917 613.578 134.231 613.578 90.5117C613.578 46.7924 612.639 22.1054 609.361 2.36258H672.822C684.061 2.36257 697.646 1.65984 709.818 0.0146484L708.878 18.8055Z"></path>
+                    </g>
+                    <path class="logo-offf" d="M87.7144 178.653C122.772 178.653 153.032 158.027 167.114 128.201V178.653H227.793V118.707H303.861V178.653H364.54V119.416H440.609V178.653H501.288V119.416H577.026V70.2929H228.176V50.4518H577.018V2.48301H167.114V52.7989C153.032 22.9732 122.772 2.34717 87.7144 2.34717C39.2223 2.34717 -0.0976562 41.818 -0.0976562 90.5038C-0.0976562 139.19 39.2148 178.653 87.7144 178.653Z"></path>
+                  </svg>
+                </div>
+                <div class="px-gutter flex items-baseline justify-between gap-20">
+                  <p class="text-small opacity-40">©OFFFORUM 2026. All rights reserved.</p>
+                  <a href="https://ref.digital/" class="underline underline-offset-3 transition-opacity hover:opacity-60" target="_blank" rel="noopener noreferrer">Website by REF®</a>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+        </div><!-- /page-content -->
+      </div><!-- /page-inner -->
+    </div><!-- /page -->
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
