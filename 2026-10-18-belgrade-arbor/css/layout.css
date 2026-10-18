@@ -1,0 +1,459 @@
+/* ============================================================
+   layout.css — awwwards ribbon, floating nav pill, menu,
+   rolling buttons, loader, page-transition curtain
+   ============================================================ */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ---------- Awwwards ribbon ---------- */
+
+.awwwards {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 999;
+  transform: translateY(-50%);
+  line-height: 0;
+}
+
+.awwwards img {
+  display: block;
+  width: 53px;
+  height: 171px;
+}
+
+@media (max-width: 850px) {
+  .awwwards { display: none; }
+}
+
+/* ---------- Nav pill ---------- */
+
+.nav {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  z-index: 100;
+  width: 100%;
+  max-width: 40rem; /* max-w-160 */
+  transform: translateX(-50%);
+  color: var(--color-cream);
+  pointer-events: none;
+}
+
+.nav__inner {
+  pointer-events: auto;
+  position: relative;
+  width: 100%;
+  border-radius: 1.75rem;
+  background: rgba(31, 38, 30, 0.8);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  transition: border-radius 0.5s ease, background-color 0.4s ease;
+  overflow: hidden;
+}
+
+.nav__inner.is-open {
+  border-radius: 1.75rem;
+  background: rgba(31, 38, 30, 0.92);
+}
+
+.nav__bar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.nav__side {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.nav__side--right {
+  justify-content: flex-end;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav__logo-symbol {
+  width: 35px;
+  height: 35px;
+}
+
+.nav__logo-word {
+  width: 108px;
+  height: 51px;
+}
+
+/* ---------- Menu button ---------- */
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-left: 0.75rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  color: var(--color-cream);
+}
+
+.menu-btn__icon {
+  display: flex;
+  width: 2.5rem;
+  height: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.menu-btn__line {
+  display: block;
+  height: 0.125rem;
+  width: 100%;
+  background: var(--color-green);
+  transform-origin: center;
+  transition: all 0.5s ease;
+}
+
+.menu-btn[aria-expanded="true"] .menu-btn__icon {
+  height: 1.25rem;
+}
+
+.menu-btn[aria-expanded="true"] .menu-btn__line:nth-child(1) {
+  transform: translateY(0.5625rem) rotate(45deg);
+}
+
+.menu-btn[aria-expanded="true"] .menu-btn__line:nth-child(2) {
+  transform: translateY(-0.5625rem) rotate(-45deg);
+}
+
+/* ---------- Nav dropdown panel ---------- */
+
+.nav__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.nav__panel.is-open {
+  grid-template-rows: 1fr;
+}
+
+.nav__panel-clip {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.nav__panel-body {
+  padding: 1.5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__panel-logo {
+  display: none;
+  margin-bottom: 2rem;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0.35rem 0;
+  color: var(--color-cream);
+  transition: color 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+}
+
+.nav__panel.is-open .nav__link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav__link:hover {
+  color: var(--color-accent);
+}
+
+.nav__link-a,
+.nav__link-b {
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.45, 0, 0.15, 1);
+}
+
+.nav__link-b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-style: italic;
+  transform: translateY(110%);
+}
+
+.nav__link:hover .nav__link-a {
+  transform: translateY(-110%);
+}
+
+.nav__link:hover .nav__link-b {
+  transform: translateY(0);
+}
+
+.nav__lang {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.nav__lang-link {
+  font-family: var(--font-workSans);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  color: var(--color-green);
+  transition: color 0.3s ease;
+}
+
+.nav__lang-link.is-active,
+.nav__lang-link:hover {
+  color: var(--color-cream);
+}
+
+.nav__mobile-cta {
+  display: none;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Buttons (rolling label) ---------- */
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  height: 2.5rem;         /* h-10 */
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-green);
+  border-radius: 9999px;
+  background: transparent;
+  padding: 1.25rem 1.25rem; /* px-5 py-5 */
+  font-family: var(--font-workSans);
+  font-size: 0.875rem;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  color: var(--color-sand);
+  cursor: pointer;
+}
+
+.btn__roll {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.btn__label {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.6s ease;
+}
+
+.btn__label + .btn__label {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.group:hover .btn__label {
+  transform: translateY(-100%);
+}
+
+.group:hover .btn__label + .btn__label {
+  top: 0;
+}
+
+.btn__arrow {
+  width: 1.5rem;
+  height: 1.125rem;
+  color: var(--color-green);
+  transition: all 0.3s ease;
+}
+
+.btn__icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(96, 115, 92, 0.4); /* bg-green/40 */
+}
+
+.btn:active {
+  background: var(--color-green);
+  border-color: var(--color-cream-dark);
+}
+
+.btn:active .btn__arrow,
+.btn:active .btn__icon {
+  color: var(--color-cream-dark);
+}
+
+.btn--sm {
+  height: 2.5rem;
+}
+
+/* Taller variant used inside intro screens */
+.btn--tall {
+  height: 3.5rem; /* h-14 */
+}
+
+/* Solid green fill variant */
+.btn--fill {
+  background: var(--color-green);
+  border-color: var(--color-green);
+  color: var(--color-sand);
+}
+
+.btn--fill:hover {
+  background: var(--color-pine-green);
+  border-color: var(--color-pine-green);
+}
+
+.btn--fill .btn__arrow,
+.btn--fill .btn__icon {
+  color: var(--color-vanilla);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* ---------- Loader ---------- */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  background: var(--color-vanilla);
+  color: var(--color-golden);
+}
+
+.loader.is-done {
+  pointer-events: none;
+}
+
+.loader__logo {
+  width: 5rem;
+  height: 5rem;
+  color: var(--color-golden);
+}
+
+.loader__bar {
+  height: 0.125rem;
+  width: 18.75rem; /* w-75 */
+  overflow: hidden;
+  border-radius: 9999px;
+  background: var(--color-sand);
+}
+
+.loader__fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 9999px;
+  background: var(--color-golden);
+}
+
+.loader__percent {
+  margin-top: 1rem;
+  color: var(--color-pine-green);
+}
+
+/* ---------- Hero ---------- */
+
+.hero-section {
+  position: relative;
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-title-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-block: 5rem; /* py-20 */
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-title {
+  font-family: var(--font-editorialOld);
+  font-size: 10.5vw;
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-sand);
+}
+
+/* ---------- Page transition curtain ---------- */
+
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: var(--color-pine-green);
+  transform: scaleY(0);
+  transform-origin: top;
+  pointer-events: none;
+}
