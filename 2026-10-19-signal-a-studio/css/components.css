@@ -1,0 +1,1104 @@
+.s-a-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  height: 80px;
+  margin-right: var(--s-a-site-margin-default);
+  margin-left: var(--s-a-site-margin-default);
+  grid-column-gap: var(--s-a-gap-default);
+  grid-row-gap: var(--s-a-gap-default);
+  pointer-events: none;
+}
+
+.s-a-menu-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 8px;
+  pointer-events: auto;
+  -webkit-text-stroke-width: var(--s-a-stroke-width-default);
+  -webkit-text-stroke-color: var(--s-a-black-persistent);
+  paint-order: stroke fill;
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: 1;
+  color: var(--s-a-black);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.s-a-menu-button.social {
+  margin-left: auto;
+  gap: var(--s-a-mono-font-gap-default);
+}
+
+.s-a-menu-button.social:hover {
+  color: var(--s-a-black);
+}
+
+.s-a-menu-dot {
+  display: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--s-a-black);
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.s-a-menu-button.hovered .s-a-menu-dot,
+.s-a-menu-button.clicked .s-a-menu-dot,
+.s-a-menu-dot.active {
+  display: block;
+}
+
+.menu-button-text {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button-text.s-a-negative {
+  color: var(--s-a-black-persistent);
+}
+
+.s-a-main-header-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.s-a-main-header-a,
+.s-a-main-header-b,
+.s-a-main-header-c,
+.s-a-main-header-d {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.s-a-main-pre-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: var(--s-a-gap-default);
+  grid-column-gap: var(--s-a-gap-default);
+  grid-row-gap: var(--s-a-gap-default);
+}
+
+.s-a-main-pre-header-a {
+  display: flex;
+  align-items: flex-end;
+  grid-column-gap: var(--s-a-gap-default);
+  grid-row-gap: var(--s-a-gap-default);
+}
+
+.s-a-location,
+.s-a-time {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-mono-font-gap-default);
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-black);
+}
+
+.s-a-main-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: var(--s-a-gap-default);
+  grid-column-gap: var(--s-a-gap-default);
+  grid-row-gap: var(--s-a-gap-default);
+}
+
+.s-a-home-subheader-a {
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 200;
+  font-size: clamp(48px, 8vw, 120px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--s-a-black);
+}
+
+.s-a-home-postheader-text {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-black);
+  max-width: 400px;
+}
+
+.s-a-home-subheader-b {
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 200;
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--s-a-black);
+  text-align: right;
+}
+
+.s-a-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-top: var(--s-a-gap-default);
+  grid-column-gap: var(--s-a-gap-default);
+  grid-row-gap: var(--s-a-gap-default);
+  overflow: hidden;
+  background: #000;
+}
+
+.s-a-showreel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.s-a-showreel video,
+.s-a-showreel iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s-a-home-case-studies-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--s-a-gap-default);
+  width: 100%;
+  margin-top: calc(var(--s-a-gap-default) * 2);
+  grid-column-gap: var(--s-a-gap-default);
+  grid-row-gap: var(--s-a-gap-default);
+}
+
+.s-a-home-case-study-row {
+  position: relative;
+  grid-column: span 6;
+  aspect-ratio: 4 / 3;
+  cursor: none;
+  overflow: hidden;
+}
+
+.s-a-home-case-study-row:nth-child(2n) {
+  grid-column: span 6;
+  grid-column-start: 7;
+}
+
+.s-a-home-case-study-large-title {
+  position: absolute;
+  bottom: var(--s-a-gap-default);
+  left: var(--s-a-gap-default);
+  right: var(--s-a-gap-default);
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(60px, 8vw, 120px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--s-a-white);
+  z-index: 10;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+.s-a-home-case-study-large-title.s-a-scramble-title {
+  display: none;
+}
+
+.s-a-home-case-study-row:hover .s-a-home-case-study-large-title.s-a-scramble-title {
+  display: block;
+}
+
+.s-a-home-case-study-info-wrapper {
+  position: absolute;
+  bottom: var(--s-a-gap-default);
+  right: var(--s-a-gap-default);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--s-a-mono-font-gap-default);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.s-a-case-studies-row-title {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-white);
+  mix-blend-mode: difference;
+}
+
+.s-a-case-studies-row-description-right {
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 200;
+  font-size: clamp(18px, 2.5vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--s-a-white);
+  mix-blend-mode: difference;
+  max-width: 300px;
+}
+
+.s-a-case-studies-row-description-right.top {
+  margin-bottom: auto;
+}
+
+.s-a-case-studies-row-description-left-top {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-white);
+  mix-blend-mode: difference;
+}
+
+.s-a-case-studies-row-description-left-bottom {
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 200;
+  font-size: clamp(18px, 2.5vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--s-a-white);
+  mix-blend-mode: difference;
+}
+
+.s-a-image-cursor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.s-a-image-cursor-hover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  display: none !important;
+}
+
+.s-a-home-case-study-row:hover .s-a-image-cursor-hover {
+  display: block !important;
+}
+
+.s-a-home-case-study-row:hover .s-a-image-cursor {
+  opacity: 0;
+}
+
+.s-a-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  cursor: none;
+  overflow: hidden;
+}
+
+.s-a-card-img-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.s-a-card:hover .s-a-card-img-wrapper {
+  transform: scale(1.05);
+}
+
+.s-a-card-description-a {
+  position: absolute;
+  bottom: var(--s-a-gap-default);
+  left: var(--s-a-gap-default);
+  right: var(--s-a-gap-default);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-a-mono-font-gap-default);
+  z-index: 10;
+  color: var(--s-a-white);
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+.s-a-card-dscr-a {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-mono-font-gap-default);
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+}
+
+.s-a-card-dscr-b {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-mono-font-gap-default);
+}
+
+.s-a-card-nmbr-b {
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.s-a-card-dscr-c {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-mono-font-gap-default);
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+}
+
+.s-a-home-awards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-a-gap-default);
+  margin-top: calc(var(--s-a-gap-default) * 2);
+}
+
+.s-a-home-award-item {
+  position: relative;
+  width: calc(25% - var(--s-a-gap-default) * 0.75);
+  min-width: 200px;
+  aspect-ratio: 1;
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+  cursor: none;
+  overflow: hidden;
+}
+
+.s-a-home-award-item.scramble-hover:hover {
+  border-color: transparent;
+}
+
+.s-a-award-image-b {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+}
+
+.s-a-footer {
+  position: relative;
+  width: 100%;
+  padding: calc(var(--s-a-gap-default) * 4) var(--s-a-site-margin-default);
+  margin-top: calc(var(--s-a-gap-default) * 4);
+  background: var(--s-a-black);
+  color: var(--s-a-white);
+}
+
+.s-a-footer-marquee {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-gap-default);
+  white-space: nowrap;
+}
+
+.s-a-footer-marquee-gsap {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-gap-default);
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-image {
+  height: 60px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.s-a-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: calc(var(--s-a-gap-default) * 3);
+  flex-wrap: wrap;
+  gap: var(--s-a-gap-default);
+}
+
+.s-a-footer-left,
+.s-a-footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-a-mono-font-gap-default);
+}
+
+.s-a-footer-link {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-white);
+  transition: opacity 0.3s ease;
+}
+
+.s-a-footer-link:hover {
+  opacity: 0.6;
+}
+
+.s-a-footer-social {
+  display: flex;
+  gap: var(--s-a-gap-default);
+}
+
+.s-a-social-link {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-white);
+  transition: opacity 0.3s ease;
+}
+
+.s-a-social-link:hover {
+  opacity: 0.6;
+}
+
+.s-a-case-studies-more-item {
+  position: relative;
+  grid-column: span 4;
+  aspect-ratio: 4 / 3;
+  cursor: none;
+  overflow: hidden;
+}
+
+.s-a-case-study-more-cursor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.s-a-archive-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--s-a-gap-default);
+  padding: var(--s-a-gap-default) 0;
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+  cursor: pointer;
+}
+
+.s-a-archive-row:hover {
+  border-color: transparent;
+}
+
+.s-a-archive-row.is-hovered {
+  border-color: var(--s-a-black) !important;
+}
+
+.s-a-archive-row-tablet {
+  display: none;
+}
+
+.s-a-archive-table-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--s-a-gap-default);
+  padding: var(--s-a-gap-default) 0;
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  color: var(--s-a-black);
+}
+
+.s-a-archive-row-title {
+  grid-column: span 4;
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.s-a-archive-row-scope {
+  grid-column: span 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-a-mono-font-gap-default);
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: #666;
+}
+
+.s-a-archive-content-wrapper {
+  grid-column: span 12;
+  display: none;
+  overflow: hidden;
+  padding-top: var(--s-a-gap-default);
+}
+
+.s-a-archive-row[data-accordion-status="active"] .s-a-archive-content-wrapper {
+  display: block;
+}
+
+.s-a-archive-slider-wrap {
+  width: 100%;
+}
+
+.s-a-archive-slider {
+  display: flex;
+  gap: var(--s-a-gap-default);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.s-a-archive-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.s-a-archive-slider > img,
+.s-a-archive-slider > .video-embed {
+  flex: 0 0 auto;
+  width: calc((100% / 4) - var(--s-a-gap-default) * 0.75);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+.s-a-archive-slider-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--s-a-gap-default);
+  margin-top: var(--s-a-gap-default);
+}
+
+.s-a-slider-button-left-bottom-line,
+.s-a-slider-button-right-bottom-line {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-mono-font-gap-default);
+  padding: 8px 0;
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  color: var(--s-a-black);
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.s-a-slider-button-left-bottom-line.disabled,
+.s-a-slider-button-right-bottom-line.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.s-a-archive-close-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: none;
+}
+
+.archive-close-image {
+  width: 24px;
+  height: 24px;
+}
+
+.s-a-archive-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--s-a-white);
+  z-index: 20;
+  display: none;
+  pointer-events: auto;
+}
+
+.s-a-archive-viewed {
+  position: absolute;
+  top: var(--s-a-gap-default);
+  right: var(--s-a-gap-default);
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  color: var(--s-a-black);
+  opacity: 0.5;
+  display: none;
+  pointer-events: none;
+}
+
+.s-a-about-header {
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(48px, 6vw, 100px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--s-a-black);
+  margin-bottom: var(--s-a-gap-default);
+}
+
+.s-a-about-header-text {
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 200;
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--s-a-black);
+  max-width: 600px;
+}
+
+.s-a-about-subheader-a {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-black);
+  margin-bottom: var(--s-a-mono-font-gap-default);
+}
+
+.s-a-about-subheader-text {
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 200;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--s-a-black);
+  max-width: 500px;
+  margin-bottom: var(--s-a-gap-default);
+}
+
+.s-a-about-subheader-b {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-black);
+}
+
+.s-a-testimonial-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-a-gap-default);
+}
+
+.s-a-testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-a-gap-default);
+}
+
+.s-a-testimonial-a,
+.s-a-testimonial-b,
+.s-a-testimonial-c,
+.s-a-testimonial-d {
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 200;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--s-a-black);
+}
+
+.s-a-testimonial-a.inactive,
+.s-a-testimonial-b.inactive,
+.s-a-testimonial-c.inactive,
+.s-a-testimonial-d.inactive {
+  display: none;
+}
+
+.s-a-slider-buttons {
+  display: flex;
+  gap: var(--s-a-gap-default);
+  margin-top: var(--s-a-gap-default);
+}
+
+.s-a-slider-button-left,
+.s-a-slider-button-right {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-mono-font-gap-default);
+  padding: 8px 0;
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  color: var(--s-a-black);
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+  transition: opacity 0.3s ease;
+}
+
+.s-a-slider-button-left:hover,
+.s-a-slider-button-right:hover {
+  opacity: 0.6;
+}
+
+.s-a-service-cell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-a-mono-font-gap-default);
+  padding: var(--s-a-gap-default) 0;
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+}
+
+.s-a-service-cell:last-child {
+  border-bottom: none;
+}
+
+.s-a-case-header-recognitions-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-a-gap-default);
+  margin-top: calc(var(--s-a-gap-default) * 2);
+}
+
+.s-a-case-header-recognition-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-mono-font-gap-default);
+}
+
+.s-a-case-header-recognition-item img {
+  height: 32px;
+  width: auto;
+}
+
+.s-a-case-title {
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(60px, 8vw, 120px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--s-a-black);
+}
+
+.s-a-case-study-header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.s-a-case-study-page-row {
+  position: relative;
+  grid-column: span 12;
+  aspect-ratio: 16 / 9;
+  cursor: none;
+  overflow: hidden;
+}
+
+.s-a-case-study-page-title-row {
+  grid-column: span 12;
+  margin-top: calc(var(--s-a-gap-default) * 2);
+}
+
+.s-a-case-study-page-title {
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(60px, 8vw, 120px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--s-a-black);
+}
+
+.s-a-sublogo {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-mono-font-gap-default);
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-black);
+}
+
+.s-a-sublogo.s-a-align-right {
+  justify-content: flex-end;
+}
+
+.s-a-arrow-new-page-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--s-a-mono-font-gap-default);
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  color: var(--s-a-black);
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+  padding-bottom: 4px;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.s-a-arrow-new-page-wrapper:hover {
+  opacity: 0.6;
+}
+
+.s-a-contact-wrapper-a,
+.s-a-contact-wrapper-b {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--s-a-gap-default);
+  margin-top: calc(var(--s-a-gap-default) * 2);
+}
+
+.s-a-contact-subheader {
+  grid-column: span 12;
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-black);
+}
+
+.s-a-discovery-call-description {
+  grid-column: span 6;
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 200;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--s-a-black);
+  max-width: 400px;
+}
+
+.s-a-form-wrapper {
+  grid-column: span 6;
+  grid-column-start: 7;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-a-gap-default);
+}
+
+.s-a-text-field,
+.s-a-text-area {
+  width: 100%;
+  padding: 12px 0;
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-black);
+  background: transparent;
+  border: none;
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+  outline: none;
+  resize: none;
+}
+
+.s-a-text-field:focus,
+.s-a-text-area:focus {
+  border-color: var(--s-a-black);
+}
+
+.s-a-text-field::placeholder,
+.s-a-text-area::placeholder {
+  color: #999;
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+}
+
+.s-a-text-area {
+  min-height: 120px;
+}
+
+.s-a-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
+  padding: 16px 24px;
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  color: var(--s-a-white);
+  background: var(--s-a-black);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.s-a-submit-button:hover {
+  background: var(--s-a-white);
+  color: var(--s-a-black);
+}
+
+.s-a-submit-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.s-a-faq-header {
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--s-a-black);
+  margin-top: calc(var(--s-a-gap-default) * 3);
+  margin-bottom: var(--s-a-gap-default);
+}
+
+.s-a-contact-faq-item {
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+  padding: var(--s-a-gap-default) 0;
+}
+
+.s-a-contact-faq-item-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--s-a-gap-default);
+  align-items: center;
+}
+
+.s-a-mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background: var(--s-a-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--s-a-site-margin-default);
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+}
+
+.s-a-mobile-menu.is-open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.s-a-mobile-logo {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  color: var(--s-a-black);
+}
+
+.s-a-mobile-menu-social {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-a-gap-default);
+  margin-bottom: var(--s-a-gap-default);
+}
+
+.s-a-mobile-menu-social .link-2 {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  color: var(--s-a-black);
+  transition: opacity 0.3s ease;
+}
+
+.s-a-mobile-menu-social .link-2:hover {
+  opacity: 0.6;
+}
+
+.s-a-mobile-menu-open-wrapper,
+.s-a-mobile-menu-close-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.s-a-mobile-menu-open,
+.s-a-mobile-menu-close {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-size: var(--s-a-mono-font-default);
+  color: var(--s-a-black);
+}
+
+.div-block-44 {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.s-a-menu-mobile-link {
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--s-a-black);
+  padding: var(--s-a-gap-default) 0;
+  border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);
+  transition: opacity 0.3s ease;
+}
+
+.s-a-menu-mobile-link:hover {
+  opacity: 0.6;
+}
+
+.s-a-menu-mobile-link.w--current {
+  opacity: 0.4;
+}
+
+@media (min-width: 992px) {
+  .s-a-mobile-menu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .s-a-home-case-study-row {
+    grid-column: span 12;
+    aspect-ratio: 16 / 9;
+  }
+
+  .s-a-home-case-study-row:nth-child(2n) {
+    grid-column: span 12;
+    grid-column-start: 1;
+  }
+
+  .s-a-archive-row {
+    display: none;
+  }
+
+  .s-a-archive-row-tablet {
+    display: block;
+  }
+
+  .s-a-archive-table-header {
+    display: none;
+  }
+
+  .s-a-case-study-page-row {
+    aspect-ratio: 16 / 9;
+  }
+
+  .s-a-case-studies-more-item {
+    grid-column: span 6;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-a-case-studies-more-item {
+    grid-column: span 12;
+  }
+
+  .s-a-home-case-study-row {
+    aspect-ratio: 3 / 4;
+  }
+}

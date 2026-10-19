@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Signal-A Studio • Award–Winning Web Design & Product Design Studio</title>
+  <meta content="Meticulously crafted, award-winning Web Design and Product Design. Tailored to connect with your audience. Engineered for the lasting impact." name="description"/>
+  <meta content="Signal-A Studio • Award–Winning Web Design & Product Design Studio" property="og:title"/>
+  <meta content="Signal-A builds meticulously crafted digital experiences. Tailored to connect with your audience. Engineered for the lasting impact." property="og:description"/>
+  <meta property="og:type" content="website"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous"/>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+</head>
+<body class="body">
+  <div class="s-a-page-wrapper">
+    <nav class="s-a-menu" role="navigation" aria-label="Main navigation">
+      <a id="s-a-menu-home" href="/" aria-current="page" class="s-a-menu-button w-inline-block w--current">
+        <div class="s-a-menu-dot"></div>
+        <div class="menu-button-text s-a-negative">Home</div>
+      </a>
+      <div class="s-a-menu-button-social-wrapper">
+        <a href="https://www.instagram.com/signal.a.studio/" target="_blank" class="s-a-menu-button social" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="https://www.behance.net/signal-a" target="_blank" class="s-a-menu-button social" aria-label="Behance">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+            <polygon points="1 7 8 12 1 17 1 7"></polygon>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <div class="s-a-mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile menu">
+      <div class="flex-block-29">
+        <a href="/" aria-current="page" class="s-a-mobile-logo w--current">S—A</a>
+        <button class="s-a-mobile-menu-close-wrapper w-inline-block" aria-label="Close menu">
+          <div class="s-a-mobile-menu-close">[close]</div>
+        </button>
+      </div>
+      <div class="w-layout-hflex s-a-mobile-menu-social">
+        <a href="https://www.instagram.com/signal.a.studio/" target="_blank" class="link-2">Instagram</a>
+        <a href="https://www.behance.net/signal-a" target="_blank" class="link-2">Behance</a>
+      </div>
+      <div class="div-block-44">
+        <a href="/" aria-current="page" class="s-a-menu-mobile-link w--current">Home</a>
+        <div class="div-block-45"></div>
+        <a href="/case-studies" class="s-a-menu-mobile-link">Case Studies</a>
+        <div class="div-block-45"></div>
+        <a href="/archive" class="s-a-menu-mobile-link">Archive</a>
+        <div class="div-block-45"></div>
+        <a href="/about" class="s-a-menu-mobile-link">About</a>
+        <div class="div-block-45"></div>
+        <a href="/contact" class="s-a-menu-mobile-link">Contact</a>
+      </div>
+    </div>
+
+    <main class="s-a-main">
+      <section class="s-a-section s-a-hero">
+        <div class="s-a-main-header-wrapper">
+          <img class="s-a-main-header-a" src="assets/images/s-a-main-header-a.svg" alt="Signal-A Studio" width="120" height="40"/>
+          <img class="s-a-main-header-b" src="assets/images/header-b.svg" alt="" width="120" height="40"/>
+          <img class="s-a-main-header-c" src="assets/images/header-c.svg" alt="" width="120" height="40"/>
+          <img class="s-a-main-header-d" src="assets/images/header-d.svg" alt="" width="120" height="40"/>
+          
+          <div class="s-a-main-pre-header">
+            <div class="s-a-main-pre-header-a">
+              <div class="s-a-location">
+                <span class="s-a-mono">Warsaw</span>
+                <span class="s-a-mono">Berlin</span>
+              </div>
+              <div class="s-a-time">
+                <span class="s-a-mono" data-time></span>
+              </div>
+            </div>
+            <div class="s-a-sublogo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+              </svg>
+              <span>Signal-A Studio</span>
+            </div>
+          </div>
+
+          <div class="s-a-main-post-header">
+            <h1 class="s-a-home-subheader-a">Meticulously crafted digital experiences</h1>
+            <div class="s-a-home-postheader-text s-a-default-text">
+              Award-winning interface & experience design studio specialized in crafting bespoke digital products
+            </div>
+            <h2 class="s-a-home-subheader-b">Tailored to connect. Engineered for impact.</h2>
+          </div>
+        </div>
+
+        <div class="s-a-video-wrapper">
+          <div class="s-a-showreel" data-video="wrapper">
+            <video class="s-a-showreel-video" data-video="player" playsinline muted loop preload="metadata" poster="assets/images/4.gif">
+              <source src="assets/images/4.gif" type="image/gif"/>
+            </video>
+            <div class="cursor-container" data-video="cursor-container"></div>
+            <div class="volume-slider-container" data-volume="container">
+              <input type="range" class="volume-slider" data-volume="slider" min="0" max="1" step="0.01" value="0.5" aria-label="Volume"/>
+              <div class="volume-track" data-volume="track"></div>
+            </div>
+            <button class="fullscreen-button" aria-label="Toggle fullscreen">[ FULLSCREEN ]</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="s-a-section s-a-case-studies">
+        <div class="s-a-home-case-studies-wrapper">
+          <article class="s-a-home-case-study-row" style="background-image: url('assets/images/case-1.jpg'); background-size: cover; background-position: center;">
+            <img class="s-a-image-cursor" src="assets/images/case-1.jpg" alt=""/>
+            <img class="s-a-image-cursor-hover" src="assets/images/case-1.jpg" alt=""/>
+            <h3 class="s-a-home-case-study-large-title s-a-scramble-title" data-original-text="Project Alpha">Project Alpha</h3>
+            <div class="s-a-home-case-study-info-wrapper">
+              <span class="s-a-case-studies-row-title s-a-mono">Web Design / 2024</span>
+              <span class="s-a-case-studies-row-description-right top">Award-winning e-commerce platform</span>
+            </div>
+          </article>
+
+          <article class="s-a-home-case-study-row" style="background-image: url('assets/images/case-2.jpg'); background-size: cover; background-position: center;">
+            <img class="s-a-image-cursor" src="assets/images/case-2.jpg" alt=""/>
+            <img class="s-a-image-cursor-hover" src="assets/images/case-2.jpg" alt=""/>
+            <h3 class="s-a-home-case-study-large-title s-a-scramble-title" data-original-text="Project Beta">Project Beta</h3>
+            <div class="s-a-home-case-study-info-wrapper">
+              <span class="s-a-case-studies-row-title s-a-mono">Product Design / 2024</span>
+              <span class="s-a-case-studies-row-description-right top">Innovative mobile application</span>
+            </div>
+          </article>
+
+          <article class="s-a-home-case-study-row" style="background-image: url('assets/images/case-3.jpg'); background-size: cover; background-position: center;">
+            <img class="s-a-image-cursor" src="assets/images/case-3.jpg" alt=""/>
+            <img class="s-a-image-cursor-hover" src="assets/images/case-3.jpg" alt=""/>
+            <h3 class="s-a-home-case-study-large-title s-a-scramble-title" data-original-text="Project Gamma">Project Gamma</h3>
+            <div class="s-a-home-case-study-info-wrapper">
+              <span class="s-a-case-studies-row-title s-a-mono">Art Direction / 2023</span>
+              <span class="s-a-case-studies-row-description-right top">Brand identity system</span>
+            </div>
+          </article>
+
+          <article class="s-a-home-case-study-row" style="background-image: url('assets/images/b-c-1.jpg'); background-size: cover; background-position: center;">
+            <img class="s-a-image-cursor" src="assets/images/b-c-1.jpg" alt=""/>
+            <img class="s-a-image-cursor-hover" src="assets/images/b-c-1.jpg" alt=""/>
+            <h3 class="s-a-home-case-study-large-title s-a-scramble-title" data-original-text="Project Delta">Project Delta</h3>
+            <div class="s-a-home-case-study-info-wrapper">
+              <span class="s-a-case-studies-row-title s-a-mono">Web Development / 2023</span>
+              <span class="s-a-case-studies-row-description-right top">High-performance web platform</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="s-a-section s-a-awards">
+        <div class="s-a-home-awards-list" role="list" aria-label="Awards and recognition">
+          <div class="s-a-home-award-item scramble-hover" role="listitem" style="background-image: url('assets/images/recognition-red-dot.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+            <img class="s-a-award-image-b" src="assets/images/recognition-red-dot.png" alt="Red Dot Design Award"/>
+          </div>
+          <div class="s-a-home-award-item scramble-hover" role="listitem" style="background-image: url('assets/images/recognition-behance.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+            <img class="s-a-award-image-b" src="assets/images/recognition-behance.png" alt="Behance Featured"/>
+          </div>
+          <div class="s-a-home-award-item scramble-hover" role="listitem" style="background-image: url('assets/images/recognition-if.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+            <img class="s-a-award-image-b" src="assets/images/recognition-if.png" alt="IF Design Award"/>
+          </div>
+          <div class="s-a-home-award-item scramble-hover" role="listitem" style="background-image: url('assets/images/recognition-behance2.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+            <img class="s-a-award-image-b" src="assets/images/recognition-behance2.png" alt="Behance Featured 2"/>
+          </div>
+          <div class="s-a-home-award-item scramble-hover" role="listitem" style="background-image: url('assets/images/recognition-ca.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+            <img class="s-a-award-image-b" src="assets/images/recognition-ca.png" alt="Communication Arts Featured"/>
+          </div>
+          <div class="s-a-home-award-item scramble-hover" role="listitem" style="background-image: url('assets/images/recognition-awwwwards.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+            <img class="s-a-award-image-b" src="assets/images/recognition-awwwwards.png" alt="Awwwards Site of the Day"/>
+          </div>
+          <div class="s-a-home-award-item scramble-hover" role="listitem" style="background-image: url('assets/images/awwward.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+            <img class="s-a-award-image-b" src="assets/images/awwward.png" alt="Awwwards"/>
+          </div>
+          <div class="s-a-home-award-item scramble-hover" role="listitem" style="background-image: url('assets/images/recognition-awwward.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+            <img class="s-a-award-image-b" src="assets/images/recognition-awwward.png" alt="Awwwards Recognition"/>
+          </div>
+        </div>
+      </section>
+
+      <section class="s-a-section s-a-about" id="about">
+        <div class="s-a-grid s-a-grid-2-rows">
+          <div style="grid-column: span 6;">
+            <h2 class="s-a-about-header">About Signal-A</h2>
+            <p class="s-a-about-header-text">We are an award-winning interface & experience design studio specialized in crafting bespoke digital products.</p>
+          </div>
+          <div style="grid-column: span 6;">
+            <p class="s-a-about-subheader-a s-a-mono">Founded 2020</p>
+            <p class="s-a-about-subheader-text">Based in Warsaw and Berlin, we work with ambitious brands worldwide.</p>
+            <p class="s-a-about-subheader-b s-a-mono">Team of 15+ designers and developers</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s-a-section s-a-testimonials">
+        <div class="s-a-grid">
+          <div class="s-a-testimonial-left" style="grid-column: span 5;">
+            <div class="s-a-testimonial-content">
+              <blockquote class="s-a-testimonial-a">"Signal-A delivered beyond our expectations. Their attention to detail and strategic thinking transformed our digital presence."</blockquote>
+              <blockquote class="s-a-testimonial-b inactive">"Working with Signal-A was a game-changer. They understood our vision and executed it flawlessly."</blockquote>
+              <blockquote class="s-a-testimonial-c inactive">"Exceptional design quality and technical expertise. A true partner in every sense."</blockquote>
+              <blockquote class="s-a-testimonial-d inactive">"Their work speaks for itself. Award-winning for a reason."</blockquote>
+            </div>
+            <div class="s-a-slider-buttons">
+              <button class="s-a-slider-button-left" aria-label="Previous testimonial">← Previous</button>
+              <button class="s-a-slider-button-right" aria-label="Next testimonial">Next →</button>
+            </div>
+          </div>
+          <div style="grid-column: span 7;">
+            <div class="s-a-about-testimonial-wrapper">
+              <p class="s-a-default-text center s-a-micro-header s-a-mono">Client Testimonials</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s-a-section s-a-services">
+        <div class="s-a-grid s-a-grid-1-row">
+          <div style="grid-column: span 12;">
+            <h2 class="s-a-about-header" style="font-size: clamp(32px, 4vw, 56px);">Services</h2>
+          </div>
+          <div class="s-a-service-cell" style="grid-column: span 3;">
+            <span class="s-a-mono">01</span>
+            <h3 class="s-a-display" style="font-size: clamp(24px, 3vw, 36px);">Web Design</h3>
+          </div>
+          <div class="s-a-service-cell" style="grid-column: span 3;">
+            <span class="s-a-mono">02</span>
+            <h3 class="s-a-display" style="font-size: clamp(24px, 3vw, 36px);">Product Design</h3>
+          </div>
+          <div class="s-a-service-cell" style="grid-column: span 3;">
+            <span class="s-a-mono">03</span>
+            <h3 class="s-a-display" style="font-size: clamp(24px, 3vw, 36px);">Art Direction</h3>
+          </div>
+          <div class="s-a-service-cell" style="grid-column: span 3;">
+            <span class="s-a-mono">04</span>
+            <h3 class="s-a-display" style="font-size: clamp(24px, 3vw, 36px);">Web Development</h3>
+          </div>
+          <div class="s-a-service-cell" style="grid-column: span 3;">
+            <span class="s-a-mono">05</span>
+            <h3 class="s-a-display" style="font-size: clamp(24px, 3vw, 36px);">Brand Design</h3>
+          </div>
+          <div class="s-a-service-cell" style="grid-column: span 3;">
+            <span class="s-a-mono">06</span>
+            <h3 class="s-a-display" style="font-size: clamp(24px, 3vw, 36px);">UI/UX Design</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="s-a-section s-a-archive" id="archive">
+        <div class="s-a-archive-table-header">
+          <span class="s-a-mono" style="grid-column: span 4;">Project</span>
+          <span class="s-a-mono" style="grid-column: span 4;">Scope</span>
+          <span class="s-a-mono" style="grid-column: span 4;">Year</span>
+        </div>
+
+        <article class="s-a-archive-row" data-slider-tablet="1" data-slider-desktop="1">
+          <h3 class="s-a-archive-row-title">Project Alpha</h3>
+          <div class="s-a-archive-row-scope">
+            <span class="s-a-mono">Web Design</span>
+            <span class="s-a-mono">E-commerce</span>
+            <span class="s-a-mono">2024</span>
+          </div>
+          <div class="s-a-archive-content-wrapper">
+            <div class="s-a-archive-slider-wrap" data-slider="wrap">
+              <div class="s-a-archive-slider">
+                <img src="assets/images/case-1.jpg" alt="Project Alpha 1" loading="lazy"/>
+                <img src="assets/images/case-1.jpg" alt="Project Alpha 2" loading="lazy"/>
+                <img src="assets/images/case-1.jpg" alt="Project Alpha 3" loading="lazy"/>
+                <img src="assets/images/case-1.jpg" alt="Project Alpha 4" loading="lazy"/>
+              </div>
+              <div class="s-a-archive-slider-nav">
+                <button class="s-a-slider-button-left-bottom-line disabled" aria-label="Previous">← Prev</button>
+                <button class="s-a-slider-button-right-bottom-line" aria-label="Next">Next →</button>
+              </div>
+            </div>
+            <button class="s-a-archive-close-wrapper" aria-label="Close">
+              <svg class="archive-close-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <span class="s-a-archive-viewed">Viewed</span>
+          </div>
+        </article>
+
+        <article class="s-a-archive-row" data-slider-tablet="2" data-slider-desktop="2">
+          <h3 class="s-a-archive-row-title">Project Beta</h3>
+          <div class="s-a-archive-row-scope">
+            <span class="s-a-mono">Product Design</span>
+            <span class="s-a-mono">Mobile App</span>
+            <span class="s-a-mono">2024</span>
+          </div>
+          <div class="s-a-archive-content-wrapper">
+            <div class="s-a-archive-slider-wrap" data-slider="wrap">
+              <div class="s-a-archive-slider">
+                <img src="assets/images/case-2.jpg" alt="Project Beta 1" loading="lazy"/>
+                <img src="assets/images/case-2.jpg" alt="Project Beta 2" loading="lazy"/>
+                <img src="assets/images/case-2.jpg" alt="Project Beta 3" loading="lazy"/>
+                <img src="assets/images/case-2.jpg" alt="Project Beta 4" loading="lazy"/>
+              </div>
+              <div class="s-a-archive-slider-nav">
+                <button class="s-a-slider-button-left-bottom-line disabled" aria-label="Previous">← Prev</button>
+                <button class="s-a-slider-button-right-bottom-line" aria-label="Next">Next →</button>
+              </div>
+            </div>
+            <button class="s-a-archive-close-wrapper" aria-label="Close">
+              <svg class="archive-close-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <span class="s-a-archive-viewed">Viewed</span>
+          </div>
+        </article>
+
+        <article class="s-a-archive-row" data-slider-tablet="3" data-slider-desktop="3">
+          <h3 class="s-a-archive-row-title">Project Gamma</h3>
+          <div class="s-a-archive-row-scope">
+            <span class="s-a-mono">Art Direction</span>
+            <span class="s-a-mono">Brand Identity</span>
+            <span class="s-a-mono">2023</span>
+          </div>
+          <div class="s-a-archive-content-wrapper">
+            <div class="s-a-archive-slider-wrap" data-slider="wrap">
+              <div class="s-a-archive-slider">
+                <img src="assets/images/case-3.jpg" alt="Project Gamma 1" loading="lazy"/>
+                <img src="assets/images/case-3.jpg" alt="Project Gamma 2" loading="lazy"/>
+                <img src="assets/images/case-3.jpg" alt="Project Gamma 3" loading="lazy"/>
+                <img src="assets/images/case-3.jpg" alt="Project Gamma 4" loading="lazy"/>
+              </div>
+              <div class="s-a-archive-slider-nav">
+                <button class="s-a-slider-button-left-bottom-line disabled" aria-label="Previous">← Prev</button>
+                <button class="s-a-slider-button-right-bottom-line" aria-label="Next">Next →</button>
+              </div>
+            </div>
+            <button class="s-a-archive-close-wrapper" aria-label="Close">
+              <svg class="archive-close-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <span class="s-a-archive-viewed">Viewed</span>
+          </div>
+        </article>
+
+        <article class="s-a-archive-row" data-slider-tablet="4" data-slider-desktop="4">
+          <h3 class="s-a-archive-row-title">Project Delta</h3>
+          <div class="s-a-archive-row-scope">
+            <span class="s-a-mono">Web Development</span>
+            <span class="s-a-mono">Platform</span>
+            <span class="s-a-mono">2023</span>
+          </div>
+          <div class="s-a-archive-content-wrapper">
+            <div class="s-a-archive-slider-wrap" data-slider="wrap">
+              <div class="s-a-archive-slider">
+                <img src="assets/images/b-c-1.jpg" alt="Project Delta 1" loading="lazy"/>
+                <img src="assets/images/b-c-2.jpg" alt="Project Delta 2" loading="lazy"/>
+                <img src="assets/images/b-c-3.jpg" alt="Project Delta 3" loading="lazy"/>
+                <img src="assets/images/b-c-4.jpg" alt="Project Delta 4" loading="lazy"/>
+              </div>
+              <div class="s-a-archive-slider-nav">
+                <button class="s-a-slider-button-left-bottom-line disabled" aria-label="Previous">← Prev</button>
+                <button class="s-a-slider-button-right-bottom-line" aria-label="Next">Next →</button>
+              </div>
+            </div>
+            <button class="s-a-archive-close-wrapper" aria-label="Close">
+              <svg class="archive-close-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <span class="s-a-archive-viewed">Viewed</span>
+          </div>
+        </article>
+
+        <div class="s-a-archive-row-tablet" data-accordion-status="not-active" data-slider-tablet="1">
+          <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--s-a-gap-default); align-items: center; padding: var(--s-a-gap-default) 0; border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);">
+            <h3 class="s-a-archive-row-title" style="margin: 0;">Project Alpha</h3>
+            <button class="s-a-archive-close-wrapper dropdown-icon" aria-label="Toggle">
+              <svg class="archive-close-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="s-a-archive-content-wrapper">
+            <div class="s-a-archive-slider-wrap" data-slider="wrap">
+              <div class="s-a-archive-slider">
+                <img src="assets/images/case-1.jpg" alt="Project Alpha 1" loading="lazy"/>
+                <img src="assets/images/case-1.jpg" alt="Project Alpha 2" loading="lazy"/>
+                <img src="assets/images/case-1.jpg" alt="Project Alpha 3" loading="lazy"/>
+                <img src="assets/images/case-1.jpg" alt="Project Alpha 4" loading="lazy"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-a-archive-row-tablet" data-accordion-status="not-active" data-slider-tablet="2">
+          <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--s-a-gap-default); align-items: center; padding: var(--s-a-gap-default) 0; border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);">
+            <h3 class="s-a-archive-row-title" style="margin: 0;">Project Beta</h3>
+            <button class="s-a-archive-close-wrapper dropdown-icon" aria-label="Toggle">
+              <svg class="archive-close-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="s-a-archive-content-wrapper">
+            <div class="s-a-archive-slider-wrap" data-slider="wrap">
+              <div class="s-a-archive-slider">
+                <img src="assets/images/case-2.jpg" alt="Project Beta 1" loading="lazy"/>
+                <img src="assets/images/case-2.jpg" alt="Project Beta 2" loading="lazy"/>
+                <img src="assets/images/case-2.jpg" alt="Project Beta 3" loading="lazy"/>
+                <img src="assets/images/case-2.jpg" alt="Project Beta 4" loading="lazy"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-a-archive-row-tablet" data-accordion-status="not-active" data-slider-tablet="3">
+          <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--s-a-gap-default); align-items: center; padding: var(--s-a-gap-default) 0; border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);">
+            <h3 class="s-a-archive-row-title" style="margin: 0;">Project Gamma</h3>
+            <button class="s-a-archive-close-wrapper dropdown-icon" aria-label="Toggle">
+              <svg class="archive-close-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="s-a-archive-content-wrapper">
+            <div class="s-a-archive-slider-wrap" data-slider="wrap">
+              <div class="s-a-archive-slider">
+                <img src="assets/images/case-3.jpg" alt="Project Gamma 1" loading="lazy"/>
+                <img src="assets/images/case-3.jpg" alt="Project Gamma 2" loading="lazy"/>
+                <img src="assets/images/case-3.jpg" alt="Project Gamma 3" loading="lazy"/>
+                <img src="assets/images/case-3.jpg" alt="Project Gamma 4" loading="lazy"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-a-archive-row-tablet" data-accordion-status="not-active" data-slider-tablet="4">
+          <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--s-a-gap-default); align-items: center; padding: var(--s-a-gap-default) 0; border-bottom: var(--s-a-stroke-width-default) solid var(--s-a-black);">
+            <h3 class="s-a-archive-row-title" style="margin: 0;">Project Delta</h3>
+            <button class="s-a-archive-close-wrapper dropdown-icon" aria-label="Toggle">
+              <svg class="archive-close-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="s-a-archive-content-wrapper">
+            <div class="s-a-archive-slider-wrap" data-slider="wrap">
+              <div class="s-a-archive-slider">
+                <img src="assets/images/b-c-1.jpg" alt="Project Delta 1" loading="lazy"/>
+                <img src="assets/images/b-c-2.jpg" alt="Project Delta 2" loading="lazy"/>
+                <img src="assets/images/b-c-3.jpg" alt="Project Delta 3" loading="lazy"/>
+                <img src="assets/images/b-c-4.jpg" alt="Project Delta 4" loading="lazy"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s-a-section s-a-contact" id="contact">
+        <div class="s-a-contact-wrapper-a">
+          <p class="s-a-contact-subheader s-a-mono">Let's work together</p>
+          <p class="s-a-discovery-call-description">Book a discovery call to discuss your project</p>
+          <form class="s-a-form-wrapper" action="#" method="POST">
+            <input type="text" class="s-a-text-field" placeholder="Name" required/>
+            <input type="email" class="s-a-text-field" placeholder="Email" required/>
+            <input type="text" class="s-a-text-field" placeholder="Company" />
+            <textarea class="s-a-text-area" placeholder="Project details" required></textarea>
+            <input type="hidden" id="work-email" name="work-email" tabindex="-1" autocomplete="off"/>
+            <button type="submit" class="s-a-submit-button" id="submit">Send message</button>
+          </form>
+        </div>
+
+        <div class="s-a-contact-wrapper-b">
+          <h2 class="s-a-faq-header">FAQ</h2>
+          <div class="s-a-contact-faq-item">
+            <div class="s-a-contact-faq-item-content">
+              <p class="s-a-default-text">What is your typical project timeline?</p>
+              <span class="s-a-mono">+</span>
+            </div>
+          </div>
+          <div class="s-a-contact-faq-item">
+            <div class="s-a-contact-faq-item-content">
+              <p class="s-a-default-text">Do you work with startups?</p>
+              <span class="s-a-mono">+</span>
+            </div>
+          </div>
+          <div class="s-a-contact-faq-item">
+            <div class="s-a-contact-faq-item-content">
+              <p class="s-a-default-text">What is your pricing model?</p>
+              <span class="s-a-mono">+</span>
+            </div>
+          </div>
+          <div class="s-a-contact-faq-item">
+            <div class="s-a-contact-faq-item-content">
+              <p class="s-a-default-text">How do we start a project?</p>
+              <span class="s-a-mono">+</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="s-a-footer" id="footer-height" role="contentinfo">
+      <div class="flex-block-marquee is-marquee" data-css-marquee>
+        <div class="s-a-footer-marquee-gsap" data-css-marquee-list>
+          <img src="assets/images/footer-marquee.svg" loading="lazy" alt="" class="marquee-image"/>
+          <img src="assets/images/footer-marquee.svg" loading="lazy" alt="" class="marquee-image"/>
+        </div>
+      </div>
+
+      <div class="s-a-footer-content">
+        <div class="s-a-footer-left">
+          <a href="/" class="s-a-footer-link s-a-mono">Signal-A Studio</a>
+          <a href="/case-studies" class="s-a-footer-link s-a-mono">Case Studies</a>
+          <a href="/archive" class="s-a-footer-link s-a-mono">Archive</a>
+          <a href="/about" class="s-a-footer-link s-a-mono">About</a>
+          <a href="/contact" class="s-a-footer-link s-a-mono">Contact</a>
+        </div>
+        <div class="s-a-footer-right">
+          <div class="s-a-footer-social">
+            <a href="https://www.instagram.com/signal.a.studio/" target="_blank" class="s-a-social-link s-a-mono">Instagram</a>
+            <a href="https://www.behance.net/signal-a" target="_blank" class="s-a-social-link s-a-mono">Behance</a>
+          </div>
+          <p class="s-a-footer-link s-a-mono">© 2024 Signal-A Studio. All rights reserved.</p>
+          <p class="s-a-footer-link s-a-mono">Warsaw • Berlin</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

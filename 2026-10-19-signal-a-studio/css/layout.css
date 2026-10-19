@@ -1,0 +1,115 @@
+.s-a-page-wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.s-a-main {
+  position: relative;
+  z-index: 10;
+}
+
+.s-a-section {
+  position: relative;
+  width: 100%;
+}
+
+.s-a-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--s-a-gap-default);
+  margin-left: var(--s-a-site-margin-default);
+  margin-right: var(--s-a-site-margin-default);
+  width: 100%;
+  max-width: 100%;
+}
+
+.s-a-grid-1-row {
+  grid-template-rows: auto;
+}
+
+.s-a-grid-2-rows {
+  grid-template-rows: auto auto;
+}
+
+.fullwidth-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: var(--s-a-site-margin-default);
+  padding-right: var(--s-a-site-margin-default);
+}
+
+.flex-block {
+  display: flex;
+  align-items: center;
+}
+
+.flex-block-29 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.w-layout-hflex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.div-block-45 {
+  width: 100%;
+  height: 1px;
+  background: var(--s-a-black);
+  margin: 4px 0;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --s-a-site-margin-default: 24px;
+    --s-a-gap-default: 16px;
+    --s-a-default-text: 17px;
+    --s-a-mono-font-default: 12px;
+    --s-a-menu-back-height-px: 32px;
+  }
+
+  .s-a-grid {
+    gap: var(--s-a-gap-default);
+    margin-left: var(--s-a-site-margin-default);
+    margin-right: var(--s-a-site-margin-default);
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --s-a-site-margin-default: 16px;
+    --s-a-gap-default: 12px;
+    --s-a-default-text: 16px;
+    --s-a-mono-font-default: 11px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1549px) {
+  :root {
+    --s-a-mono-font-default: 12px;
+    --s-a-gap-default: 20px;
+    --s-a-default-text: 17px;
+  }
+}
+
+@media (min-width: 2500px) {
+  .flex-block-marquee.is-marquee {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+.s-a-align-right {
+  text-align: right;
+  justify-self: end;
+}
+
+.s-a-align-right.footer-link:hover {
+  text-decoration: underline;
+}

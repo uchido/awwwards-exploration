@@ -1,0 +1,148 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--s-a-black);
+  background-color: var(--s-a-white);
+  min-height: 100%;
+  font-family: 'Neue Haas Grotesk Text Pro', Arial, sans-serif;
+  font-size: var(--s-a-default-text);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  display: inline-block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  outline: 0;
+}
+
+.w-hidden {
+  display: none !important;
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.w-clearfix:before,
+.w-clearfix:after {
+  content: " ";
+  grid-area: 1 / 1 / 2 / 2;
+  display: table;
+}
+
+.w-clearfix:after {
+  clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.s-a-mono {
+  font-family: 'GT America Mono', Arial, sans-serif;
+  font-weight: 300;
+  font-size: var(--s-a-mono-font-default);
+  line-height: var(--s-a-line-height-mono-default);
+  color: var(--s-a-black);
+}
+
+.s-a-editorial {
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 200;
+}
+
+.s-a-editorial-thin {
+  font-family: 'PPEditorialNew', serif;
+  font-weight: 100;
+}
+
+.s-a-display {
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 300;
+}
+
+.s-a-display-regular {
+  font-family: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+  font-weight: 400;
+}
+
+.s-a-text {
+  font-family: 'Neue Haas Grotesk Text Pro', Arial, sans-serif;
+  font-weight: 400;
+}
+
+.s-a-text-light {
+  font-family: 'Neue Haas Grotesk Text Pro', Arial, sans-serif;
+  font-weight: 300;
+}
+
+.s-a-default-text {
+  font-size: var(--s-a-default-text);
+  font-family: 'Neue Haas Grotesk Text Pro', Arial, sans-serif;
+  font-weight: 400;
+}
+
+.s-a-default-text.center {
+  text-align: center;
+}
+
+.s-a-default-text.small {
+  font-size: calc(var(--s-a-default-text) * 0.8);
+}
+
+.s-a-default-text.scramble-target {
+  white-space: nowrap;
+}
+
+.s-a-negative {
+  color: var(--s-a-black-persistent);
+}

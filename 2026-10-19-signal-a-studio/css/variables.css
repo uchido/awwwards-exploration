@@ -1,0 +1,73 @@
+:root {
+  --s-a-black: #000;
+  --s-a-black-persistent: black;
+  --s-a-white: #fff;
+  --s-a-mono-font-default: 13px;
+  --s-a-site-margin-default: 40px;
+  --s-a-gap-default: 25px;
+  --s-a-mono-font-gap-default: 5px;
+  --s-a-stroke-width-default: 1px;
+  --s-a-case-study-color-variable: #fff;
+  --s-a-line-height-mono-default: 130%;
+  --s-a-menu-back-height-px: 39px;
+  --s-a-social-buttons-hover: 0px;
+  --s-a-case-study-color-variable-overwrite: transparent;
+  --s-a-menu-back-height: 39%;
+  --s-a-default-text: 19px;
+}
+
+@font-face {
+  font-family: 'GT America Mono';
+  src: url('../assets/fonts/GT-America-Mono-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Text Pro';
+  src: url('../assets/fonts/NeueHaasGroteskTextPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Text Pro';
+  src: url('../assets/fonts/NeueHaasGroteskTextPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('../assets/fonts/NeueHaasGroteskDisplayPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('../assets/fonts/NeueHaasGroteskDisplayPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPEditorialNew';
+  src: url('../assets/fonts/PPEditorialNew-Ultralight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPEditorialNew';
+  src: url('../assets/fonts/PPEditorialNew-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
