@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- the logo's own F, white on the page's own ground -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#222222" />
+    <!-- How the link unfurls when it is shared, and what a search engine reads.
+         The image is 1440x754 — the 1.91:1 every feed crops to, so it shows
+         whole rather than losing its head. Absolute URLs: a relative one is not
+         resolved by most of the clients that fetch these. -->
+    <meta name="description" content="FORMAT is an interactive Obys × DES Special Project exploring format as a design tool. Discover how different shapes, proportions, and boundaries can change the way we think, compose, and design." />
+    <meta property="og:description" content="FORMAT is an interactive Obys × DES Special Project exploring format as a design tool. Discover how different shapes, proportions, and boundaries can change the way we think, compose, and design." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FORMAT" />
+    <meta property="og:title" content="FORMAT" />
+    <meta property="og:url" content="https://format.obys.agency/" />
+    <meta property="og:image" content="https://format.obys.agency/og.png" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="754" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FORMAT" />
+    <meta name="twitter:description" content="FORMAT is an interactive Obys × DES Special Project exploring format as a design tool. Discover how different shapes, proportions, and boundaries can change the way we think, compose, and design." />
+    <meta name="twitter:image" content="https://format.obys.agency/og.png" />
+
+    <!-- Google Analytics. Loaded async, so it never holds up the page: the
+         preloader and everything after it start whether or not it has arrived. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8KYY8LG8Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-R8KYY8LG8Y');
+    </script>
+
+    <!-- The face every line on the page is set in. Without this it is not found
+         until the stylesheet has been fetched and read, which is two round
+         trips in, and the text waits that long before it can be drawn. -->
+    <link
+      rel="preload"
+      href="/fonts/ObysSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <title>FORMAT</title>
+    <!-- The one thing that has to be true before any stylesheet arrives: the
+         page opens white and empty, which is what the preloader's own curtain
+         shows anyway. Without it the markup is briefly drawn raw — a black logo
+         and an unstyled nav — because in development the styles come in through
+         the script. The stylesheet turns this off on its first rule. -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #ffffff;
+      }
+      #app {
+        visibility: hidden;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CzAHO6hM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D1Q7NR-y.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- the white the page opens on, drawn back upward to uncover the ground -->
+      <div class="curtain" aria-hidden="true"></div>
+
+      <div class="logo-fixed">
+        <!-- The 14 shapes group into the six letters, each free to ride up on its
+             own. The SVG viewport is the mask: below y=215 a letter is simply not
+             drawn, so it climbs into view out of nothing. -->
+        <svg class="logo-svg" viewBox="0 0 1401 215" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FORMAT">
+          <g class="logo-letter" data-letter="F">
+            <path d="M0 46.1383V214.085H46.1383H109.701V1.90735e-05H46.1383L0 46.1383Z" fill="currentColor"/>
+            <path d="M226.434 0H117.715V79.9239H226.434V0Z" fill="currentColor"/>
+            <path d="M226.434 88.0225H117.715V167.946H226.434V88.0225Z" fill="currentColor"/>
+          </g>
+          <g class="logo-letter" data-letter="O">
+            <path d="M234.453 46.1383V167.947L280.51 214.085H344.154V0H280.51L234.453 46.1383Z" fill="currentColor"/>
+            <path d="M351.762 0V214.085H415.325L461.463 167.947V46.1383L415.325 0H351.762Z" fill="currentColor"/>
+          </g>
+          <g class="logo-letter" data-letter="R">
+            <path d="M469.484 0V214.167H515.623H579.185V0H515.623H469.484Z" fill="currentColor"/>
+            <path d="M587.199 0V134.488H695.919V54.4824L641.109 0H587.199Z" fill="currentColor"/>
+            <path d="M587.199 143.569V214.658H695.919L625.075 143.569H587.199Z" fill="currentColor"/>
+          </g>
+          <g class="logo-letter" data-letter="M">
+            <path d="M703.934 1.90735e-05V214.167H767.496H813.635V46.1383L767.496 1.90735e-05H703.934Z" fill="currentColor"/>
+            <path d="M821.246 46.1383V214.167H867.384H930.947V0H867.384L821.246 46.1383Z" fill="currentColor"/>
+          </g>
+          <g class="logo-letter" data-letter="A">
+            <path d="M938.965 46.1383V214.167H985.021H1048.67V0H985.021L938.965 46.1383Z" fill="currentColor"/>
+            <path d="M1056.27 0V214.167H1119.84H1165.97V46.1383L1119.84 0H1056.27Z" fill="currentColor"/>
+          </g>
+          <g class="logo-letter" data-letter="T">
+            <path d="M1203.85 0H1173.99V46.1383V109.865H1203.85V214.167H1283.69V0H1203.85Z" fill="currentColor"/>
+            <path d="M1371.55 0H1291.71V46.1383V109.865V214.167H1371.55V109.865H1401V46.1383V0H1371.55Z" fill="currentColor"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="screen">
+        <nav class="nav">
+          <span class="nav__bar" aria-hidden="true"></span>
+          <span class="nav__box" aria-hidden="true"></span>
+
+          <!-- every line sits in its own mask so it can climb into place -->
+          <p class="nav__credits">
+            <span class="line"
+              ><span class="line__in"
+                >Format — <a class="u" href="https://obys.agency/" target="_blank" rel="noopener">Obys</a> and
+                <a class="u" href="https://des.obys.agency/" target="_blank" rel="noopener">DES</a> Special Project</span
+              ></span
+            >
+          </p>
+
+          <p class="nav__season">
+            <span class="line"
+              ><span class="line__in"
+                >This project is a part of
+                <a class="u" href="https://des.obys.agency/grids/" target="_blank" rel="noopener">Grids Season</a></span
+              ></span
+            ><span class="line"><span class="line__in">by Design Educations Series</span></span>
+          </p>
+
+          <button type="button" class="nav__toggle nav__toggle--notes" data-toggle="notes" aria-pressed="false">
+            <span class="line"><span class="line__in"><span class="u">Notes Mode</span></span></span>
+          </button>
+          <button type="button" class="nav__toggle nav__toggle--daughter" data-toggle="daughter" aria-pressed="false">
+            <span class="line"><span class="line__in"><span class="u">My 6 y.o. Daughter’s Version</span></span></span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- The short nav. It is the header's own line with the middle taken out —
+           no season block and no plate under it — and it comes down from the top
+           edge whenever the page is being read backwards. Its own element rather
+           than the header moved: the header is fixed at the top of the document
+           and the preloader walks it into place, and a thing that has to appear
+           and disappear on a rule of its own should not be the same thing. -->
+      <nav class="back-nav" aria-hidden="true">
+        <span class="back-nav__bar" aria-hidden="true"></span>
+
+        <p class="back-nav__credits">
+          Format — <a class="u" href="https://obys.agency/" target="_blank" rel="noopener">Obys</a> and
+          <a class="u" href="https://des.obys.agency/" target="_blank" rel="noopener">DES</a> Special Project
+        </p>
+
+        <button type="button" class="nav__toggle back-nav__toggle back-nav__toggle--notes" data-toggle="notes" aria-pressed="false">
+          <span class="u">Notes Mode</span>
+        </button>
+        <button type="button" class="nav__toggle back-nav__toggle back-nav__toggle--daughter" data-toggle="daughter" aria-pressed="false">
+          <span class="u">My 6 y.o. Daughter’s Version</span>
+        </button>
+      </nav>
+
+      <!-- The filmstrip is a stand-in for the site, not the site: it rides down
+           and swells until its top card lands exactly where the real first block
+           sits, at which point the real one takes over and this is dropped. -->
+      <!-- clipped to the screen: the strip is 7760 tall and only ever a
+           screenful of it is in view, so there is no sense painting the rest -->
+      <div class="strip-view" aria-hidden="true">
+        <div class="strip">
+          <img class="strip__art" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijc3NjAiIHZpZXdCb3g9IjAgMCAxNDAwIDc3NjAiIGZpbGw9Im5vbmUiPgogIDwhLS0KICAgIFRoZSBwcmVsb2FkZXIncyBmaWxtc3RyaXA6IHRoZSBzaXRlJ3MgYmxvY2tzIHJlZHVjZWQgdG8gdGhlaXIgc2lsaG91ZXR0ZXMuCiAgICBBc3NlbWJsZWQgZnJvbSB0aGUgZGVzaWduJ3Mgb3duIGdlb21ldHJ5IHJhdGhlciB0aGFuIGV4cG9ydGVkIGZsYXQsIHNvIGl0CiAgICBzdGF5cyBzaGFycCBhdCBhbnkgem9vbSBhbmQgd2VpZ2hzIGFsbW9zdCBub3RoaW5nLgoKICAgIE9uZSBydW4gb2YgYmxvY2tzIGlzIGRlZmluZWQgb25jZSBhbmQgcGxhY2VkIHR3aWNlLCAzODgzIGFwYXJ0LCB3aGljaCBpcyB0aGUKICAgIGxvb3AgdGhlIGZpbGUgcmVwZWF0cyBvbi4gR3JvdXAgMjI4IHNpdHMgYXQgdGhlIHZlcnkgdG9wLCA1MzMgYWNyb3NzIGFuZAogICAgbm90aGluZyBkb3duIOKAlCBpdCBpcyB0aGUgY2FyZCB0aGF0IGxhbmRzIG9uIHRoZSByZWFsIGZpcnN0IGJsb2NrLgogIC0tPgogIDxkZWZzPgogICAgPGcgaWQ9InJ1biIgZmlsbD0iI0Q5RDlEOSI+CiAgICAgIDwhLS0gR3JvdXAgMjI4IOKAlCB0aGUgZmlyc3QgYmxvY2sgLS0+CiAgICAgIDxyZWN0IHg9IjUzMyIgeT0iMCIgd2lkdGg9IjMzNSIgaGVpZ2h0PSI0MjYiIC8+CiAgICAgIDxjaXJjbGUgY3g9IjkwOCIgY3k9IjM0IiByPSIzNCIgLz4KICAgICAgPHJlY3QgeD0iODc0IiB5PSI3MCIgd2lkdGg9IjY4IiBoZWlnaHQ9IjY4IiAvPgoKICAgICAgPCEtLSBHcm91cCAyMjkg4oCUIHdpZGUgYmFyIHdpdGggYSB0YWIgZWl0aGVyIHNpZGUgLS0+CiAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgNDMyKSI+CiAgICAgICAgPHJlY3QgeD0iMTc4IiB5PSIwIiB3aWR0aD0iMTA0NSIgaGVpZ2h0PSI0NDgiIC8+CiAgICAgICAgPHJlY3QgeD0iMCIgeT0iMTQ1IiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjEyMiIgLz4KICAgICAgICA8cmVjdCB4PSIxMjI5IiB5PSIxNDUiIHdpZHRoPSIxNzEiIGhlaWdodD0iMTIyIiAvPgogICAgICA8L2c+CgogICAgICA8IS0tIGJsb2NrIGFib3ZlIGEgZGlzYywgd2l0aCBzaXggb2YgZGF5bGlnaHQgYmV0d2VlbiB0aGVtLiBUaGUgZmlsZSB0dXJucwogICAgICAgICAgIHRoaXMgYmxvY2sgYSBxdWFydGVyLCBhbmQgZ2l2ZXMgYSB0dXJuZWQgbm9kZSBpdHMgZm9vdCByYXRoZXIgdGhhbiBpdHMKICAgICAgICAgICB0b3AgY29ybmVyIOKAlCByZWFkIGFzIGEgdG9wIGl0IGxhbmRzIG9uIHRoZSBkaXNjIGFuZCBjbG9zZXMgdGhlIGdhcC4gLS0+CiAgICAgIDxyZWN0IHg9IjUzMyIgeT0iODg2IiB3aWR0aD0iMzM1IiBoZWlnaHQ9IjIyNiIgLz4KICAgICAgPGNpcmNsZSBjeD0iNzAwLjUiIGN5PSIxMzc0LjUiIHI9IjI1Ni41IiAvPgoKICAgICAgPCEtLSB1cHJpZ2h0IGJsb2NrIC0tPgogICAgICA8cmVjdCB4PSI1MzIiIHk9IjE2MzYiIHdpZHRoPSIzMzUiIGhlaWdodD0iNDI2IiAvPgoKICAgICAgPCEtLSBkb3QsIGJhciwgcGlsbCAtLT4KICAgICAgPGNpcmNsZSBjeD0iNzkiIGN5PSIyMTQ3IiByPSI3OSIgLz4KICAgICAgPHJlY3QgeD0iMTYzIiB5PSIyMDY4IiB3aWR0aD0iNTM0IiBoZWlnaHQ9IjE1OCIgLz4KICAgICAgPHJlY3QgeD0iNzA0IiB5PSIyMDY4IiB3aWR0aD0iNjk2IiBoZWlnaHQ9IjE1OCIgcng9Ijc5IiAvPgoKICAgICAgPCEtLSBHcm91cCAyMzAg4oCUIHRoZSBwYWlyIG9mIGRpc2NzIC0tPgogICAgICA8Y2lyY2xlIGN4PSIzNDguNSIgY3k9IjI1ODAuNSIgcj0iMzQ4LjUiIC8+CiAgICAgIDxjaXJjbGUgY3g9IjEwNTEuNSIgY3k9IjI1ODAuNSIgcj0iMzQ4LjUiIC8+CgogICAgICA8IS0tIHRoZSB3ZWRnZSAtLT4KICAgICAgPHBhdGgKICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNDggMjkzNSkiCiAgICAgICAgZD0iTTcwNCA1MS4xODM2TDM4Mi4xNCA2MDguNjY0SDMyMS4zOTRMMCA1MS45OTIyTDMwLjAxNzYgMEg2NzQuNDQ5TDcwNCA1MS4xODM2WiIKICAgICAgLz4KCiAgICAgIDwhLS0gYmxvY2sgd2l0aCB0aGUgaGFsZi1kaXNjIGJpdHRlbiBvdXQgLS0+CiAgICAgIDxwYXRoCiAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQ4IDM1NTApIgogICAgICAgIGQ9Ik03MDUgMFYzMjdIMFYwSDcwNVpNMzUzIDI4My45OTZDNDE5LjMyIDI4My43MjcgNDczIDIyOS44ODQgNDczIDE2My41QzQ3MyA5Ny4xMTY1IDQxOS4zMiA0My4yNzI0IDM1MyA0My4wMDI5VjI4My45OTZaIgogICAgICAvPgogICAgPC9nPgogIDwvZGVmcz4KCiAgPHVzZSBocmVmPSIjcnVuIiAvPgogIDx1c2UgaHJlZj0iI3J1biIgeT0iMzg4MyIgLz4KPC9zdmc+Cg==" alt="" />
+        </div>
+      </div>
+
+      <!-- Group 228, on the spot the strip hands over to: 163 below the nav -->
+      <article class="block-one">
+        <div class="block-one__card">
+          <!-- One picture. The design stacks the same photograph four times and
+               blends them, and that stack is what makes the light in it — but a
+               stack is only worth carrying if something needs to move inside
+               it, and nothing here does. It is baked flat, so the drift moves
+               one picture and the browser has no blend to work out per frame. -->
+          <div class="block-one__photo">
+            <img src="/assets/vertical-card-DzgfrpMV.webp" alt="" />
+          </div>
+
+          <p class="block-one__index">1</p>
+          <p class="block-one__kicker">(Format)</p>
+          <h2 class="block-one__title">Vertical</h2>
+
+          <p class="block-one__no" style="--top: 206">1.1</p>
+          <div class="block-one__spec" style="--top: 208">
+            <span>Usage</span><span></span><span>Mobile Design</span><span>Poster Design</span><span>Editorial Design</span>
+          </div>
+
+          <p class="block-one__no" style="--top: 260">1.2</p>
+          <div class="block-one__spec" style="--top: 262">
+            <span>Geometry</span><span></span><span>Vertical Ratio</span><span>Linear Edges</span><span>Defined Corners</span>
+          </div>
+
+          <p class="block-one__no" style="--top: 315">1.3</p>
+          <div class="block-one__spec" style="--top: 317">
+            <span>Perception</span><span></span><span>Visually Taller</span><span>Narrow Focus</span><span>Tight Tension</span>
+          </div>
+
+          <p class="block-one__no" style="--top: 369">1.4</p>
+          <div class="block-one__spec" style="--top: 371">
+            <span>Balance</span><span></span><span>Central Gravity</span><span>Stable Layout</span><span>Strong Axis</span>
+          </div>
+        </div>
+
+        <!-- Group 435: a clock keeping the real time, and a photograph under it.
+             The hole at the middle of the face is cut clean through to the
+             page's own ground rather than drawn on the white, so what shows in
+             it is the background itself. -->
+        <!-- Daughter's version: laid over the whole card, on top of everything -->
+        <img class="kid kid--vertical" data-kid="/kid/vertical.webp" alt="" aria-hidden="true" />
+
+        <span class="block-one__round" aria-hidden="true">
+          <!-- Daughter's version: over the face -->
+          <img class="kid kid--mini" data-kid="/kid/mini.webp" alt="" aria-hidden="true" />
+          <svg class="face" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="face__disc" cx="34" cy="34" r="34" />
+            <g class="face__ticks">
+              <path d="M33.9961 4L33.9961 -7.94663e-09" />
+              <path d="M64 33.9961L68 33.9961" />
+              <path d="M34.0039 64L34.0039 68" />
+              <path d="M4 34.0039L1.39091e-08 34.0039" />
+              <path d="M48.9961 8.01758L50.9961 4.55348" />
+              <path d="M59.9805 48.9971L63.4446 50.9971" />
+              <path d="M19.0039 59.9824L17.0039 63.4465" />
+              <path d="M8.01953 19.0029L4.55543 17.0029" />
+              <path d="M18.9961 8.02148L16.9961 4.55738" />
+              <path d="M59.9766 18.999L63.4407 16.999" />
+              <path d="M49.0039 59.9785L51.0039 63.4426" />
+              <path d="M8.02344 49.001L4.55934 51.001" />
+            </g>
+            <!-- The three hands, the way the big dial does it: each ball rides
+                 the inside of one rail, so where it sits is the rail's radius
+                 less its own. Smallest is the second, then the minute, and the
+                 largest is the hour. -->
+            <circle class="face__ball face__ball--second" r="2" />
+            <circle class="face__ball face__ball--minute" r="3" />
+            <circle class="face__ball face__ball--hour" r="5" />
+          </svg>
+        </span>
+        <span class="block-one__square" aria-hidden="true">
+          <img src="data:image/webp;base64,UklGRoAFAABXRUJQVlA4IHQFAADQQgCdASrMAMwAPikUiEMhoSESCe0cGAKEtIHYD4w5/63LMgBXtMk2G7j4fgpqKTEgNkl3hSc6GHTPg9HzZstTw3f9AT5zFXJCKi78aySwUS817Vr91AL02khr/2YXPyXghxe3yjXZvrnYuSGCDNyDe5Rm2TeL43iS1V7ctNaJbZCAWTzuiDVqlD2xIhi2joPE3+KZH4MCwm7O1HrkL4PcR3SujwqQVtj1eXgABZ4cx45Z2tYpKOdneNcn2GM5x58E5b9DiCEHcz3SQjPUkrNxQS1XjbOv2ljJ5jpmB8hs/HHZpYiMYAPOaarWbfTQFbsrA4LaoeGuuE1olm0oOk8JtUUKZ/g6TD+1wfqMIwzOG2PzSPwwtBLLSqU4rJRX/Uxs+H9slmNlcCVR+CLQMuj9AVUkm4aVj310CpKBft195+Uz14nyGpmMWf5Kxy2LmDCWzpBcvREQVECEVKEuhwMDeYwT5FyQxgU0hlimuaHZR5fHaurmydR2cJsmCRHdbiNgBFm1aJrPEStBqboH2bZWDMhYz/hKbTjHm1vB3BA+zcLtI83tLqJ/OTo8lppCEc6chcujOtHZcsgV02USsjbZs83wvWlKMdJ9jyrR+QlFj0+n85R09/6oJc0HhHo54YMpW2lUz9bDDJeKTJtKxlxmyWIQLwEcC5VGlYzHpUtHQM1QOOKIgan2Tq8VTFUHSsHpIZzmEMeON+iHEWTAAUAA/vwTv45gj9gEb9eoUuJpuTmkp4A41qfimZmtGqo1af/9NLDW1wCSbwtT2UrZDH7+LcORfSsMsfYmNEWFScnK4PVLWAW6Y0+osbpT5X2GAXiIeaxWEDa3GrEBdFacj5EwazceJC+7uwwyXfbcVvORtpcikC4dPgZvkVdperZhRrRHaD9SGCb141MXfSGIngb9ET5AyojpkKG1OjOKjagUz4xCLe3H47o5WXALEPzg5fnT9Hltc/0NMkGXNPItzxODXfn93oBvoMW8GHJ6e9zc737nnk+Kefn3LZ4YdaOu8BZRCFO0npcep+g367ml68n+BPe8saCoVu9NKXnMloyEpScScp/ycdU754ENdfOHBq/hgZjgYQbmliY5Sn/fXst3AASWjUfBgYMhbtVOzKMpXUrFPSr5t9vlbLVByYLf2XUc5PGbawpcslYTb2df/SHTQOijmv2Z3gT5RV/sH5s1zqYp+PcNTabjxCcQT/shEb7m18A6yw8ZPF2f9m1mQlVhUgesQSkQX0IRyvoyxVtodix3ECyyX5BhZhOeYqhngOfcTPXom6OJR+EsueFHjbNRCdtmsciRx4tdF5yqXT8dGFwBTLQv5nyEAy29oBdtV+WWqOTHB/CTDEmSpfDCLCR2aHNF56KvvEIAjsYmksZfYr0y+gsbKmkj34rL3JzVe2G7G46u6QdN0BJYwgBDdL3EVpMAFs1q2I/4MfQyForxnj1RVL6B9tlo8aZR0LJOcgtXjKlu9o582AQKYnA54/P0kIDs+3eLF3E9D+vNEe9RO02MEPLCxsinYbAT+/WPWLOMt6Ja+2CaqdcUY77/vk/qtQiWgRi9NITFwZmP0VX/SOqT41TRkXFzJYQIhx9DEzebCZVfzkAL9oEgJ7xlMW43lT8OQr/FyM+H+SjZpKmajZD331qyTfe7k4xEJG25sB7are05Vj4mXqAW3kdOM7HGeMFoYfZYrpsosGOuteBEtpF5P++a2oKyxiyNBcxGbdREy+JngHiDwZ7BEAGK6yiRFJMxoaLgQFarZ9QOIxe3s2NGFJSHvGg704hTHbBCOUomNmPHEKVmMcdztf1kUvuvtGxPiTfgE+E5B4mIabln/8KmN2wNJ8BqBqyQdooBtNL8AAAA" alt="" />
+        </span>
+      </article>
+
+      <!-- NEW BLOCKS: everything sits at the design's own page coordinates, the
+           way the header and first block already do. Starts 6 under block one. -->
+
+      <!-- Group 21 — the ground the lower blocks stand on, bleeding past both edges -->
+      <div class="ground" aria-hidden="true">
+        <img src="/assets/flower-CVKgWteV.webp" alt="" />
+      </div>
+
+      <!-- Group 121 — Horizontal -->
+      <article class="wide">
+        <div class="wide__photo">
+          <img src="/assets/horizontal-CWAIze4S.webp" alt="" />
+        </div>
+
+        <p class="wide__index">2</p>
+        <p class="wide__kicker">(Format)</p>
+        <h2 class="wide__title">Horizontal</h2>
+
+        <div class="wide__reel" aria-hidden="true">
+          <div class="wide__reel-in">
+            <span>Desktop</span><span>Business Cards</span><span>Editorial</span><span>TV</span><span>Advert</span>
+            <span>Desktop</span><span>Business Cards</span><span>Editorial</span><span>TV</span><span>Advert</span>
+            <span>Desktop</span><span>Business Cards</span><span>Editorial</span><span>TV</span><span>Advert</span>
+            <span>Desktop</span><span>Business Cards</span><span>Editorial</span><span>TV</span><span>Advert</span>
+          </div>
+        </div>
+      
+        <!-- Daughter's version: over the right-hand part, where the run of
+             formats goes by — 690 across, from where the photograph ends -->
+        <img class="kid kid--horizontal" data-kid="/kid/horizontal.webp" alt="" aria-hidden="true" />
+</article>
+
+      <!-- Group 127 — HRZNTL -->
+      <div class="tag">
+        <!-- Daughter's version: over the whole of it -->
+        <img class="kid kid--tag" data-kid="/kid/tag.webp" alt="" aria-hidden="true" />
+        <div class="tag__cut" style="--x: 44; --y: 0; --w: 84; --h: 122; --ix: -72; --iy: -122"></div>
+        <div class="tag__cut" style="--x: 0; --y: 88; --w: 171; --h: 34; --ix: -25; --iy: -174"></div>
+        <p class="tag__kicker">(Format)</p>
+        <p class="tag__word">HRZNTL</p>
+      </div>
+
+      <!-- Group 126 — the same card turned on its side -->
+      <div class="side">
+        <!-- Daughter's version: over the whole of it -->
+        <img class="kid kid--side" data-kid="/kid/side.webp" alt="" aria-hidden="true" />
+        <div class="side__cut" style="--x: 47; --y: 0; --w: 83; --h: 122; --ix: -73; --iy: -122"></div>
+        <div class="side__cut" style="--x: 88; --y: 34; --w: 84; --h: 122; --ix: -72; --iy: -122"></div>
+        <p class="side__title"><span>Horizontal</span></p>
+        <p class="side__kicker"><span>(Format)</span></p>
+        <p class="side__index"><span>2</span></p>
+        <p class="side__note" style="--x: 87; --y: 6; --size: 5"><span>(P)</span><span>2.3</span></p>
+        <p class="side__note" style="--x: 89; --y: -47; --size: 8"><span>(B)</span><span>2.4</span></p>
+        <p class="side__note" style="--x: 87; --y: 56; --size: 5"><span>(G)</span><span>2.2</span></p>
+        <p class="side__note" style="--x: 87; --y: 108; --size: 5"><span>(U)</span><span>2.1</span></p>
+      </div>
+
+      <!-- Group 129 — Desktop Screens -->
+      <article class="screens">
+        <div class="screens__card">
+          <!-- Daughter's version: the left white part only, held off the photo -->
+          <img class="kid kid--screens" data-kid="/kid/screens.webp" alt="" aria-hidden="true" />
+        </div>
+
+        <p class="screens__index">2</p>
+        <p class="screens__kicker">(Format)</p>
+        <h2 class="screens__title">Horizontal</h2>
+
+        <p class="screens__no" style="--top: 1439">2.1</p>
+        <div class="screens__spec" style="--top: 1441">
+          <span>Usage</span><span></span><span>Desktop Design</span><span>Poster Design</span><span>TV &amp; Films</span>
+        </div>
+        <p class="screens__no screens__no--muted" style="--top: 1493">2.2</p>
+        <div class="screens__spec screens__spec--muted" style="--top: 1495">
+          <span>Geometry</span><span></span><span>Strong Horizontals</span><span>Defined Corners</span><span>Wide Ratio</span>
+        </div>
+
+        <div class="screens__photo">
+          <img src="/assets/screens-BQ9sth5J.webp" alt="" />
+        </div>
+
+        <p class="screens__shout screens__shout--a"><span>Desktop<br />Screens</span></p>
+        <p class="screens__shout screens__shout--b"><span>2.1<br />Usage</span></p>
+      </article>
+
+      <!-- Notes mode (100:4347). Every note stands at the page coordinates the
+           file gives it, the way the blocks around it do — nothing here is
+           worked out from a block's own box, so a note can be moved by the one
+           pair of numbers it carries.
+
+           Its tail is a 3x3 corner of the note itself, not a pointer drawn from
+           the block: `side` says which edge it leaves by and `--tail` how far
+           along that edge it sits, which is why no two of them sit alike. The
+           tail stops 3 clear of the block it speaks about — they never touch.
+
+           `--i` is only the order they arrive in, top of the page first. -->
+      <div class="notes" aria-hidden="true">
+        <!-- the first Vertical card, off its left edge -->
+        <aside class="note" data-side="right" data-anchor=".block-one__card" style="--dx: -147; --dy: 0; --h: 41; --w: 92; --i: 0">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Vertical format naturally make us rely more on vertical lines.</p>
+        </aside>
+
+        <!-- the little clock on the first screen, off its right edge -->
+        <aside class="note" data-side="left" data-anchor=".block-one__round" style="--dx: 75; --dy: 33; --h: 33; --w: 84; --i: 1">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">This clock shows the current time in CEST.</p>
+        </aside>
+
+        <!-- the same first card, lower down, against its specifications -->
+        <aside class="note" data-side="left" data-anchor=".block-one__card" style="--dx: 341; --dy: 317; --h: 33; --w: 87; --i: 2">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Vertical lines become key, so emphasize them.</p>
+        </aside>
+
+        <!-- the only one standing over its block: above the wide Horizontal,
+             tail pointing down out of its bottom-left corner -->
+        <aside class="note" data-side="down" data-anchor=".wide" style="--dx: 824; --dy: -38; --h: 33; --w: 88; --i: 3">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">A format can be divided into several sub-formats.</p>
+        </aside>
+
+        <!-- Desktop Screens, off the right edge of its card -->
+        <aside class="note" data-side="left" data-anchor=".screens__card" style="--dx: 341; --dy: 96; --h: 41; --w: 89; --i: 4">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">The format is divided into a narrow vertical strip and a horizontal block.</p>
+        </aside>
+
+        <!-- the big dial, one either side of it, both on its centre line -->
+        <aside class="note" data-side="right" data-anchor=".clock" style="--dx: -146; --dy: 251; --h: 41; --w: 92; --i: 5">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Circle format naturally suggests working with radii and diameters.</p>
+        </aside>
+        <aside class="note" data-side="left" data-anchor=".clock" style="--dx: 519; --dy: 251; --h: 33; --w: 89; --i: 6">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Circular animation naturally fits this format.</p>
+        </aside>
+
+        <!-- Second set (101:4349), on the run of blocks from the vertical card
+             down to Special. That sheet is a layout of its own and the gaps
+             between its blocks are not the gaps on the page, so these are read
+             off the blocks themselves rather than off its page numbers: each
+             one keeps the offset it has from the block it speaks about. -->
+
+        <!-- over the round tile, tail down from its left corner -->
+        <aside class="note" data-side="down" data-anchor=".tile" style="--dx: 10; --dy: -47; --h: 41; --w: 89; --i: 7">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">This format naturally draws more attention to the center.</p>
+        </aside>
+
+        <!-- over the rounded Horizontal, tail down -->
+        <aside class="note" data-side="down" data-anchor=".pill" style="--dx: 259; --dy: -47; --h: 41; --w: 83; --i: 8">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Design the content inside the format to work with its shape.</p>
+        </aside>
+
+        <!-- above the big Side A disc. Its tail leaves by the far corner, not
+             the near one, and comes down onto the curve of the circle. -->
+        <aside class="note" data-side="down" data-tail="end" data-anchor=".side-a" style="--dx: -29; --dy: 45; --h: 41; --w: 89; --i: 9">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Thanks to the format, centered alignment feels naturally stronger here.</p>
+        </aside>
+
+        <!-- Beside the triangle, tail on its sloped edge. The one note not
+             placed by the sheet's own offset: our type inside the triangle
+             runs 32 lower than it does there, so the note landed on the line
+             reading "(3)". It keeps the gap it has from the type on the sheet
+             instead, and the tail is put back 3 clear of the slope, which by
+             then has moved left. -->
+        <aside class="note" data-side="left" data-anchor=".tri" style="--dx: 515; --dy: 390; --h: 41; --w: 83; --i: 10">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Use the boundaries of a complex format to create visual tension.</p>
+        </aside>
+
+
+        <!-- Third set (97:4268), on the blocks from Deck down to the second
+             triangle. Read off the sheet 58:218, which starts flush at Deck. -->
+
+        <!-- off the right edge of the Deck card, level with its top -->
+        <aside class="note" data-side="left" data-anchor=".deck" style="--dx: 341; --dy: 0; --h: 33; --w: 90; --i: 11">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Vertical lines in a vertical format. Simple as that.</p>
+        </aside>
+
+        <!-- over the fan, tail down from its far corner onto the disc's curve -->
+        <aside class="note" data-side="down" data-tail="end" data-anchor=".fan__disc" style="--dx: -88; --dy: 114; --h: 41; --w: 89; --i: 12">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Borrow physical properties from objects with a similar format.</p>
+        </aside>
+
+        <!-- over the left plate of the windows block -->
+        <aside class="note" data-side="down" data-anchor=".win__plate--west" style="--dx: 0; --dy: -47; --h: 41; --w: 83; --i: 13">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Explore unexpected ways of combining different formats.</p>
+        </aside>
+
+        <!-- over the left card of the vee -->
+        <aside class="note" data-side="down" data-anchor=".vee__card--west" style="--dx: 178; --dy: -39; --h: 33; --w: 83; --i: 14">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Strong horizontal lines for a horizontal format.</p>
+        </aside>
+
+        <!-- the second triangle, in the same spot as the first: beside it, tail
+             on the sloped edge -->
+        <aside class="note" data-side="left" data-anchor=".vee__plate" style="--dx: 526; --dy: 375; --h: 41; --w: 89; --i: 15">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Create visual rhyme between the format and the shapes inside it.</p>
+        </aside>
+
+        <!-- the poster, in its top right corner, 20 off both edges (97:4120) -->
+        <aside class="note" data-side="left" data-anchor=".poster" style="--dx: 1280; --dy: 20; --h: 57; --w: 89; --i: 16">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">On screen, you read it as a horizontal format. In reality, it’s vertical, but designed to work equally well in both dimensions.</p>
+        </aside>
+
+        <!-- the last one: under the click—clack field rather than beside it, so
+             its tail points up out of its own top left corner and `from` is the
+             foot of the block, not its head (97:4126) -->
+        <aside class="note" data-side="up" data-anchor=".field" data-from="bottom" style="--dx: 0; --dy: 3; --h: 49; --w: 92; --i: 17">
+          <span class="note__label">(Note)</span>
+          <p class="note__text">Using the same visual rules creates consistency across different formats and brings them together.</p>
+        </aside>
+      </div>
+
+      <section class="clock-section">
+        <div class="clock">
+          <div class="clock__bg"></div>
+
+          <!-- Daughter's version: her own drawing laid over the dial, at the
+               place the file gives it (76:1789). The paper is gone — the sheet's
+               own colour was taken out and what is left of each stroke is its
+               density, so the grain and the pressure survive and the edge is
+               the pencil's, not a cut-out's. -->
+          <img class="clock__kid kid" data-kid="/kid/clock.webp" alt="" aria-hidden="true" />
+
+          <!-- marks run clockwise from 3 o'clock, so --i doubles as the hour step -->
+          <p class="clock__mark" style="--i: 0">(Format)</p>
+          <p class="clock__mark" style="--i: 1">(Format)</p>
+          <p class="clock__mark" style="--i: 2">(Format)</p>
+          <p class="clock__mark" style="--i: 3">(Format)</p>
+          <p class="clock__mark" style="--i: 4">(Format)</p>
+          <p class="clock__mark" style="--i: 5">(Format)</p>
+          <p class="clock__mark" style="--i: 6">(Format)</p>
+          <p class="clock__mark" style="--i: 7">(Format)</p>
+          <p class="clock__mark" style="--i: 8">(Format)</p>
+          <p class="clock__mark" style="--i: 9">(Format)</p>
+          <p class="clock__mark" style="--i: 10">(Format)</p>
+          <p class="clock__mark" style="--i: 11">(Format)</p>
+
+          <div class="clock__hand">
+            <span class="clock__hand-near">3</span>
+            <span class="clock__hand-far">Circle</span>
+            <span class="clock__hand-rule"></span>
+          </div>
+        </div>
+
+        <!-- Struck off the rim and thrown at the viewer, so it leaves the dial
+             behind and is pinned to the screen rather than to the page. -->
+        <div class="clock__burst">
+          <span class="clock__ball clock__ball--dot"></span>
+          <span class="clock__ball clock__ball--light"></span>
+          <span class="clock__ball clock__ball--dark"></span>
+        </div>
+      </section>
+
+      <!-- The seven blocks. Placed by script rather than by a number here: they
+           come in as the transition's last circle reaches the foot of the
+           screen, and where that falls depends on the window's height while
+           everything else on this page is measured off its width. -->
+      <!-- The card the ground shrinks into. Its line of pictures runs on for
+           good; one slot in it is left open, and that is where the ground
+           lands. Placed by script, since where it sits depends on how much
+           runway the shrink needs and that is a matter of screen height. -->
+      <!-- The fog the lower blocks stand on (58:295). It starts on the palette's
+           own middle and stops where the triangle starts, which is what the file
+           has it do, and it drifts as it passes. Under everything: the blocks are
+           on the content layer, this is below them. -->
+      <div class="fog" aria-hidden="true">
+        <img src="/assets/tri-fog-BzhW1aqF.webp" alt=""  loading="lazy" decoding="async" />
+      </div>
+
+      <section class="deck">
+        <p class="deck__index">1</p>
+        <p class="deck__kicker">(Format)</p>
+        <h2 class="deck__title">Vertical</h2>
+
+        <p class="deck__no" style="--top: 19">1.1</p>
+        <div class="deck__spec" style="--top: 21">
+          <span>Usage</span><span></span><span>Mobile Design</span><span>Poster Design</span><span>Editorial Design</span>
+        </div>
+        <p class="deck__no" style="--top: 73">1.2</p>
+        <div class="deck__spec" style="--top: 75">
+          <span>Geometry</span><span></span><span>Vertical Ratio</span><span>Linear Edges</span><span>Defined Corners</span>
+        </div>
+        <p class="deck__no" style="--top: 128">1.3</p>
+        <div class="deck__spec" style="--top: 130">
+          <span>Perception</span><span></span><span>Visually Taller</span><span>Narrow Focus</span><span>Tight Tension</span>
+        </div>
+        <p class="deck__no" style="--top: 182">1.4</p>
+        <div class="deck__spec" style="--top: 184">
+          <span>Balance</span><span></span><span>Central Gravity</span><span>Stable Layout</span><span>Strong Axis</span>
+        </div>
+
+        <p class="deck__shout-no">1.3</p>
+        <div class="deck__shout">
+          <span>Perception</span><span></span><span>Visually Taller</span><span>Narrow Focus</span><span>Tight Tension</span>
+        </div>
+
+        <!-- Seven slots on one pitch, each wrapped round on its own, so the run
+             never ends and never repeats a seam. The fourth is the open one. -->
+        <div class="deck__reel">
+          <img class="deck__pic" style="--i: 0" src="/assets/a-B09-tIjy.webp" alt=""  loading="lazy" decoding="async" />
+          <img class="deck__pic" style="--i: 1" src="/assets/b-Bh_L6HFx.webp" alt=""  loading="lazy" decoding="async" />
+          <img class="deck__pic" style="--i: 2" src="/assets/c-CgW8p4ax.webp" alt=""  loading="lazy" decoding="async" />
+          <!-- The slot the ground lands in. It holds the same picture, cropped
+               to exactly what the ground shows at the end of its shrink, so the
+               two can be swapped on the frame they agree and nothing shows. -->
+          <div class="deck__pic deck__slot" style="--i: 3">
+            <img src="/assets/bg7-DimjdT4q.webp" alt=""  loading="lazy" decoding="async" />
+          </div>
+          <img class="deck__pic" style="--i: 4" src="/assets/d-CezkVoqu.webp" alt=""  loading="lazy" decoding="async" />
+          <img class="deck__pic" style="--i: 5" src="/assets/e-CYwPQZib.webp" alt=""  loading="lazy" decoding="async" />
+          <img class="deck__pic" style="--i: 6" src="/assets/f-DI0ib4TW.webp" alt=""  loading="lazy" decoding="async" />
+        </div>
+      </section>
+
+        <!-- The ground the blocks stand on, and the thing that travels down into
+           the card below. All three sit on one layer and are ordered by hand:
+           the card first, then this, then the blocks. So the picture passes
+           over the card on its way down and still paints under the blocks it
+           is the ground for, which no single z-index could give it — it has to
+           be between two things that do not overlap each other.
+           A window with the picture drifting inside rather than a bare image,
+           since it has to end up a crop with room to move. -->
+        <div class="seven__ground">
+          <img src="/assets/bg7-DimjdT4q.webp" alt=""  loading="lazy" decoding="async" />
+        </div>
+
+
+      <!-- Daughter's version over the card the ground lands in. Outside the
+           card on purpose: the card carries a layer of its own, so nothing
+           inside it can rise above the picture that lands there. Placed after
+           that picture, and before the blocks, which keeps the same order the
+           three of them already have. -->
+      <img class="kid kid--deck" data-kid="/kid/deck.webp" alt="" aria-hidden="true" />
+      <div class="seven">
+
+
+        <!-- 1 — Vertical -->
+        <article class="v-card">
+          <div class="v-card__plate"><img class="kid kid--v-card" data-kid="/kid/v-card.webp" alt="" aria-hidden="true" /></div>
+
+        <!-- Daughter's version over the card the ground lands in. Placed after
+             the landing picture so it lies over it — inside the card it would
+             be trapped under it, the card being a layer of its own. -->
+          <p class="v-turn" style="--x: 758; --y: 13; --w: 12; --h: 9; --size: 8"><span>1.1</span></p>
+          <div class="v-turn" style="--x: 728; --y: 44; --w: 40; --h: 56; --size: 8">
+            <span class="lines"
+              ><span>Usage</span><span></span><span>Mobile Design</span><span>Poster Design</span><span>Editorial Design</span></span
+            >
+          </div>
+          <p class="v-turn is-muted" style="--x: 704; --y: 13; --w: 12; --h: 10; --size: 8"><span>1.2</span></p>
+          <div class="v-turn is-muted" style="--x: 674; --y: 44; --w: 40; --h: 58; --size: 8">
+            <span class="lines"
+              ><span>Geometry</span><span></span><span>Vertical Ratio</span><span>Linear Edges</span><span>Defined Corners</span></span
+            >
+          </div>
+          <p class="v-turn is-muted" style="--x: 649; --y: 13; --w: 12; --h: 10; --size: 8"><span>1.3</span></p>
+          <div class="v-turn is-muted" style="--x: 619; --y: 44; --w: 40; --h: 50; --size: 8">
+            <span class="lines"
+              ><span>Perception</span><span></span><span>Visually Taller</span><span>Narrow Focus</span><span>Tight Tension</span></span
+            >
+          </div>
+          <p class="v-turn is-muted" style="--x: 595; --y: 13; --w: 12; --h: 10; --size: 8"><span>1.4</span></p>
+          <div class="v-turn is-muted" style="--x: 565; --y: 44; --w: 40; --h: 56; --size: 8">
+            <span class="lines"
+              ><span>Balance</span><span></span><span>Central Gravity</span><span>Stable Layout</span><span>Strong Axis</span></span
+            >
+          </div>
+          <p class="v-turn" style="--x: 855; --y: 43; --w: 18; --h: 40; --size: 12"><span>Vertical</span></p>
+          <p class="v-turn is-muted" style="--x: 869; --y: 43; --w: 12; --h: 31; --size: 8"><span>(Format)</span></p>
+          <p class="v-turn" style="--x: 859; --y: 13; --w: 12; --h: 4; --size: 8"><span>1</span></p>
+
+          <p class="v-card__no">1.1</p>
+          <div class="v-card__shout">
+            <span>Usage</span><span></span><span>Mobile Design</span><span>Poster Design</span><span>Editorial Design</span>
+          </div>
+        </article>
+
+        <!-- 2 — the dark tile on the left -->
+        <div class="tile">
+        <img class="kid kid--tile" data-kid="/kid/tile.webp" alt="" aria-hidden="true" />
+          <img class="tile__disc" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='158'%20height='158'%20viewBox='0%200%20158%20158'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20id='Ellipse%2092'%20cx='79'%20cy='79'%20r='79'%20fill='white'/%3e%3c/svg%3e" alt="" />
+          <img class="tile__mark tile__mark--a" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='64.5744'%20height='61.0553'%20viewBox='0%200%2064.5744%2061.0553'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%2023'%3e%3cpath%20id='Vector'%20d='M0%2013.1583V61.0553H13.1583H31.2859V0H13.1583L0%2013.1583Z'%20fill='black'/%3e%3cpath%20id='Vector_2'%20d='M64.5743%201.46732e-06H33.5684V22.7937H64.5743V1.46732e-06Z'%20fill='black'/%3e%3cpath%20id='Vector_3'%20d='M64.5744%2025.1052H33.5685V47.8989H64.5744V25.1052Z'%20fill='black'/%3e%3c/g%3e%3c/svg%3e" alt="" />
+          <img class="tile__mark tile__mark--b" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='64.5743'%20height='61.0553'%20viewBox='0%200%2064.5743%2061.0553'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%2024'%3e%3cpath%20id='Vector'%20d='M0%2013.1583V61.0553H13.1583H31.2859V0H13.1583L0%2013.1583Z'%20fill='black'/%3e%3cpath%20id='Vector_2'%20d='M64.5743%204.40195e-06H33.5684V22.7937H64.5743V4.40195e-06Z'%20fill='black'/%3e%3cpath%20id='Vector_3'%20d='M64.5742%2025.1053H33.5683V47.899H64.5742V25.1053Z'%20fill='black'/%3e%3c/g%3e%3c/svg%3e" alt="" />
+        </div>
+
+        <!-- 3 — Horizontal -->
+        <article class="bar">
+          <!-- a plain white rectangle in the file, so a div rather than the SVG:
+               its corners have somewhere to go on the scroll -->
+          <div class="bar__plate"><img class="kid kid--bar" data-kid="/kid/bar.webp" alt="" aria-hidden="true" /></div>
+          <img class="bar__disc" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='148'%20height='148'%20viewBox='0%200%20148%20148'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20id='Ellipse%2093'%20cx='74'%20cy='74'%20r='73.5'%20stroke='%23E9E9E9'/%3e%3c/svg%3e" alt="" />
+          <p class="bar__index">2</p>
+          <p class="bar__kicker">(Format)</p>
+          <h2 class="bar__title">Horizontal</h2>
+          <p class="bar__body">
+            A horizontal format feels stable and grounded, built on a long axis with four clear 90-degree corners that
+            create a firm, balanced, orderly structure with a calm visual flow.
+          </p>
+        </article>
+
+        <!-- 4 — Horizontal (Rounded) -->
+        <article class="pill">
+          <div class="pill__plate"><img class="kid kid--pill" data-kid="/kid/pill.webp" alt="" aria-hidden="true" /></div>
+          <img class="pill__disc" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='148'%20height='148'%20viewBox='0%200%20148%20148'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20id='Ellipse%2093'%20cx='74'%20cy='74'%20r='73.5'%20stroke='%23E9E9E9'/%3e%3c/svg%3e" alt="" />
+          <span class="pill__square" aria-hidden="true"></span>
+          <p class="pill__index">2.1</p>
+          <p class="pill__kicker">(Format)</p>
+          <h2 class="pill__title">Horizontal (Rounded)</h2>
+          <p class="pill__body">
+            A horizontal format with rounded corners keeps the same stability, but softens the edges, making the shape
+            more fluid, friendly, and approachable, with a smoother, more organic visual rhythm.
+          </p>
+        </article>
+
+        <!-- 5 — the dial -->
+        <div class="dial">
+          <img class="kid kid--dial" data-kid="/kid/dial.webp" alt="" aria-hidden="true" />
+          <img class="dial__rim" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='697'%20height='697'%20viewBox='0%200%20697%20697'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20id='Ellipse%2051'%20cx='348.5'%20cy='348.5'%20r='348.5'%20fill='white'/%3e%3c/svg%3e" alt="" />
+          <img class="dial__inner dial__inner--a" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='504.068'%20height='504.068'%20viewBox='0%200%20504.068%20504.068'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Ellipse%2052'%20d='M252.034%200.679688C390.854%200.679745%20503.389%20113.215%20503.389%20252.034C503.389%20390.854%20390.854%20503.389%20252.034%20503.389C113.215%20503.389%200.679696%20390.854%200.679688%20252.034C0.679688%20113.215%20113.215%200.679688%20252.034%200.679688Z'%20stroke='%23E9E9E9'%20stroke-width='1.35867'/%3e%3c/svg%3e" alt="" />
+          <img class="dial__inner dial__inner--b" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='504.068'%20height='504.068'%20viewBox='0%200%20504.068%20504.068'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Ellipse%2053'%20d='M252.034%200.679688C390.854%200.679745%20503.389%20113.215%20503.389%20252.034C503.389%20390.854%20390.854%20503.389%20252.034%20503.389C113.215%20503.389%200.679696%20390.854%200.679688%20252.034C0.679688%20113.215%20113.215%200.679688%20252.034%200.679688Z'%20fill='white'%20stroke='%23E9E9E9'%20stroke-width='1.35867'/%3e%3c/svg%3e" alt="" />
+          <!-- The three hands. Each touches the inner ring from the inside, so
+               where it sits is the ring's radius less its own; the script takes
+               them round from there. Biggest tells the hour, smallest the second. -->
+          <img class="dial__dot dial__dot--minute" style="--d: 27.173" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='27.1735'%20height='27.1735'%20viewBox='0%200%2027.1735%2027.1735'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cellipse%20id='Ellipse%2054'%20cx='13.5867'%20cy='13.5867'%20rx='13.5867'%20ry='13.5867'%20fill='black'/%3e%3c/svg%3e" alt="" />
+          <img class="dial__dot dial__dot--second" style="--d: 16.304" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='16.3041'%20height='16.3041'%20viewBox='0%200%2016.3041%2016.3041'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cellipse%20id='Ellipse%2055'%20cx='8.15205'%20cy='8.15205'%20rx='8.15205'%20ry='8.15205'%20fill='black'/%3e%3c/svg%3e" alt="" />
+          <img class="dial__dot dial__dot--hour" style="--d: 40.76" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='40.7602'%20height='40.7602'%20viewBox='0%200%2040.7602%2040.7602'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cellipse%20id='Ellipse%2056'%20cx='20.3801'%20cy='20.3801'%20rx='20.3801'%20ry='20.3801'%20fill='black'/%3e%3c/svg%3e" alt="" />
+          <!-- hours run on one rule: radius 326, a step of 30, each turned to face out -->
+          <p class="dial__hour" style="--i: 12">12</p>
+          <p class="dial__hour" style="--i: 1">1</p>
+          <p class="dial__hour" style="--i: 2">2</p>
+          <p class="dial__hour" style="--i: 3">3</p>
+          <p class="dial__hour" style="--i: 4">4</p>
+          <p class="dial__hour" style="--i: 5">5</p>
+          <p class="dial__hour" style="--i: 6">6</p>
+          <p class="dial__hour" style="--i: 7">7</p>
+          <p class="dial__hour" style="--i: 8">8</p>
+          <p class="dial__hour" style="--i: 9">9</p>
+          <p class="dial__hour" style="--i: 10">10</p>
+          <p class="dial__hour" style="--i: 11">11</p>
+          <p class="dial__kicker">(Format)</p>
+          <h2 class="dial__title">Circle</h2>
+        </div>
+
+        <!-- 6 — the black circle -->
+        <div class="side-a">
+          <img class="side-a__ring" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='697'%20height='697'%20viewBox='0%200%20697%20697'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Exclude'%20d='M348.5%200C540.971%200%20697%20156.029%20697%20348.5C697%20540.971%20540.971%20697%20348.5%20697C156.029%20697%200%20540.971%200%20348.5C0%20156.029%20156.029%200%20348.5%200ZM348.5%20318C331.655%20318%20318%20331.655%20318%20348.5C318%20365.345%20331.655%20379%20348.5%20379C365.345%20379%20379%20365.345%20379%20348.5C379%20331.655%20365.345%20318%20348.5%20318Z'%20fill='white'/%3e%3c/svg%3e" alt="" />
+          <img class="side-a__fill" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='697'%20height='697'%20viewBox='0%200%20697%20697'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Ellipse%2062'%20d='M697%20348.5C697%20540.971%20540.971%20697%20348.5%20697C156.029%20697%200%20540.971%200%20348.5C0%20156.029%20156.029%200%20348.5%200C540.971%200%20697%20156.029%20697%20348.5ZM24.0822%20348.5C24.0822%20527.671%20169.329%20672.918%20348.5%20672.918C527.671%20672.918%20672.918%20527.671%20672.918%20348.5C672.918%20169.329%20527.671%2024.0822%20348.5%2024.0822C169.329%2024.0822%2024.0822%20169.329%2024.0822%20348.5Z'%20fill='black'/%3e%3c/svg%3e" alt="" />
+          <!-- Everything printed on the disc turns with it; the rings do not
+               need to, being circles, and the glass stays put so that what turns
+               passes underneath and comes through it. -->
+          <div class="side-a__spin">
+            <div class="side-a__shout">
+              <span>Side</span><span>A</span><span>Circle Format</span><span>is centered<br />Calm and Smooth</span
+              ><span>Curved Edges</span><span>No Sharpness</span><span></span><span>Side</span><span>B</span
+              ><span>Circle Format</span><span>is centered<br />Calm and Smooth</span><span>Curved Edges</span
+              ><span>No Sharpness</span>
+            </div>
+            <p class="side-a__index">3</p>
+            <p class="side-a__kicker">(Format)</p>
+            <h2 class="side-a__title">Circle</h2>
+
+            <!-- Daughter's version: over the printing, under the glass, and
+                 turning with the record because it is inside the turning part -->
+            <img class="kid kid--side-a" data-kid="/kid/side-a.webp" alt="" aria-hidden="true" />
+          </div>
+          <!-- Last, because it is glass: it has to stand over the words to have
+               anything to blur. -->
+          <div class="side-a__core"></div>
+        </div>
+
+        <!-- 7 — Triangle -->
+        <div class="tri">
+          <img class="kid kid--tri" data-kid="/kid/tri.webp" alt="" aria-hidden="true" />
+          <img class="tri__outline" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='704.001'%20height='608.664'%20viewBox='0%200%20704.001%20608.664'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Subtract'%20d='M704.001%2051.1836L382.141%20608.664H321.395L0%2051.9912L30.0166%200H674.45L704.001%2051.1836Z'%20fill='white'/%3e%3c/svg%3e" alt="" />
+          <img class="tri__half tri__half--left" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='315.323'%20height='506.999'%20viewBox='0%200%20315.323%20506.999'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Subtract'%20d='M315.323%200V506.999H292.716L0%200H315.323Z'%20fill='%23F3F3F3'/%3e%3c/svg%3e" alt="" />
+          <!-- The right half is the same triangle mirrored, and it is a real
+               mask: the picture and the two shouts run past its edges and the
+               shape cuts them. The words stay words. -->
+          <div class="tri__half tri__half--right">
+            <img class="tri__pic" src="/assets/tri-bg-BUX7DWVI.webp" alt=""  loading="lazy" decoding="async" />
+            <p class="tri__shout">
+              <span>Transformative</span><span>Progressive</span><span>Directional</span><span>unstable</span
+              ><span>Complex</span><span>Angles</span><span>(3)</span>
+            </p>
+            <p class="tri__shout tri__shout--turned">
+              <span>Transformative</span><span>Progressive</span><span>Directional</span><span>unstable</span
+              ><span>Complex</span><span>Angles</span><span>(3)</span>
+            </p>
+          </div>
+          <img class="tri__stud tri__stud--a" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='33'%20height='33'%20viewBox='0%200%2033%2033'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20id='Ellipse%2090'%20cx='16.5'%20cy='16.5'%20r='16.5'%20fill='black'/%3e%3c/svg%3e" alt="" />
+          <img class="tri__stud tri__stud--b" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='33'%20height='33'%20viewBox='0%200%2033%2033'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20id='Ellipse%2090'%20cx='16.5'%20cy='16.5'%20r='16.5'%20fill='black'/%3e%3c/svg%3e" alt="" />
+          <h2 class="tri__title">Triangle</h2>
+          <p class="tri__lead">Triangle is a format that creates direction and movement,</p>
+          <p class="tri__lead tri__lead--turned">
+            <span>adds visual tension, and brings a dynamic, energetic structure to any composition.</span>
+          </p>
+          <!-- fourth by the order the speedometer counts in: vertical,
+               horizontal, circle, triangle, complex -->
+          <p class="tri__index">4</p>
+        </div>
+
+        <!-- 8 — Horizontal (Special) -->
+        <article class="special">
+          <!-- The card is punched through in the middle, and the picture on the
+               left half rides over the punch. So only the right half of the
+               circle is an actual hole, and the dark behind reads as half a
+               disc. The plate is the ground the picture stands on. -->
+          <div class="special__plate"></div>
+          <img class="special__cut" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='705'%20height='327'%20viewBox='0%200%20705%20327'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Exclude'%20d='M705%20327H0V0H705V327ZM352.5%2043C285.95%2043%20232%2096.9497%20232%20163.5C232%20230.05%20285.95%20284%20352.5%20284C419.05%20284%20473%20230.05%20473%20163.5C473%2096.9497%20419.05%2043%20352.5%2043Z'%20fill='white'/%3e%3c/svg%3e" alt="" />
+          <img class="kid kid--special" data-kid="/kid/special.webp" alt="" aria-hidden="true" />
+          <div class="special__photo"><img src="/assets/special-DCkX6FsC.webp" alt=""  loading="lazy" decoding="async" /></div>
+          <p class="special__index">2.3</p>
+          <p class="special__kicker">(Format)</p>
+          <h2 class="special__title">Horizontal (Special)</h2>
+
+          <p class="special__no" style="--top: 1979">2.1</p>
+          <div class="special__spec" style="--top: 1981">
+            <span>Usage</span><span></span><span>Desktop Design</span><span>Poster Design</span><span>TV &amp; Films</span>
+          </div>
+          <p class="special__no" style="--top: 2033">2.2</p>
+          <div class="special__spec" style="--top: 2035">
+            <span>Geometry</span><span></span><span>Strong Horizontals</span><span>Defined Corners</span><span>Wide Ratio</span>
+          </div>
+          <p class="special__no" style="--top: 2088">2.3</p>
+          <div class="special__spec" style="--top: 2090">
+            <span>Perception</span><span></span><span>Visually Wider</span><span>Broad Focus</span><span>Calm Feel</span>
+          </div>
+          <p class="special__no" style="--top: 2142">2.4</p>
+          <div class="special__spec" style="--top: 2144">
+            <span>Balance</span><span></span><span>Stable Layout</span><span>Strong Baseline</span><span>Grounded Feel</span>
+          </div>
+        </article>
+      </div>
+
+
+
+      <!-- Group 229 — the palette. A disc with a hole through the middle, and six
+           cards riveted at that hole: the six letters of the logo, each the same
+           246 x 234 card turned one sixth of a circle further round than the
+           last. Fanned out they read as the design draws them; folded up they
+           stack on one another. The glass sits on the rivet. -->
+      <section class="fan">
+          <img class="kid kid--fan" data-kid="/kid/fan.webp" alt="" aria-hidden="true" />
+        <!-- Punched through, and nothing behind it: the hole runs the whole way
+             down to the page. Every layer over it is open at the middle too —
+             the glass is a ring, not a disc — so the eye goes straight through. -->
+        <img class="fan__disc" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='697'%20height='697'%20viewBox='0%200%20697%20697'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Exclude'%20d='M348.5%200C540.971%200%20697%20156.029%20697%20348.5C697%20540.971%20540.971%20697%20348.5%20697C156.029%20697%200%20540.971%200%20348.5C0%20156.029%20156.029%200%20348.5%200ZM348.5%20318C331.655%20318%20318%20331.655%20318%20348.5C318%20365.345%20331.655%20379%20348.5%20379C365.345%20379%20379%20365.345%20379%20348.5C379%20331.655%20365.345%20318%20348.5%20318Z'%20fill='white'/%3e%3c/svg%3e" alt="" />
+        <img class="fan__rim" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='697'%20height='697'%20viewBox='0%200%20697%20697'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Ellipse%20132'%20d='M697%20348.5C697%20540.971%20540.971%20697%20348.5%20697C156.029%20697%200%20540.971%200%20348.5C0%20156.029%20156.029%200%20348.5%200C540.971%200%20697%20156.029%20697%20348.5ZM3.80453%20348.5C3.80453%20538.87%20158.13%20693.195%20348.5%20693.195C538.87%20693.195%20693.195%20538.87%20693.195%20348.5C693.195%20158.13%20538.87%203.80453%20348.5%203.80453C158.13%203.80453%203.80453%20158.13%203.80453%20348.5Z'%20fill='black'/%3e%3c/svg%3e" alt="" />
+
+        <div class="fan__deck">
+          <!-- Two numbers each. --base is the turn the file gives that letter, so
+               at rest they stand exactly as drawn. --v is how fast it travels
+               from there, ranked by the word: F quickest, T slowest. And they
+               lie in that same order, F on top of the pile and T on the floor. -->
+          <div class="fan__card" style="--base: 1; --v: 1"><img src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='246'%20height='234'%20viewBox='0%200%20246%20234'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20193'%3e%3cpath%20id='Rectangle%2099'%20d='M0%200H246V234H0V0Z'%20fill='%23E9E9E9'/%3e%3cg%20id='Group%20185'%3e%3cpath%20id='Vector'%20d='M206.556%2010.0016H126.714V56.1399V119.866V224.168H206.556V119.866H236.006V56.1399V10.0016H206.556Z'%20fill='black'/%3e%3cpath%20id='Vector_2'%20d='M38.859%2010H9V56.1383V119.865H38.859V224.167H118.701V10H38.859Z'%20fill='black'/%3e%3c/g%3e%3ccircle%20id='Ellipse%20136'%20cx='35.499'%20cy='35.5015'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /><img class="fan__corner" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='61'%20height='61'%20viewBox='0%200%2061%2061'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20186'%3e%3cpath%20id='Exclude'%20opacity='0.1'%20d='M30.5%200C47.3447%200%2061%2013.6553%2061%2030.5C61%2047.3447%2047.3447%2061%2030.5%2061C13.6553%2061%200%2047.3447%200%2030.5C0%2013.6553%2013.6553%200%2030.5%200Z'%20fill='black'/%3e%3ccircle%20id='Ellipse%20137'%20cx='30.5'%20cy='30.5'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /></div>
+          <div class="fan__card" style="--base: 2; --v: 2"><img src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='246'%20height='234'%20viewBox='0%200%20246%20234'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20192'%3e%3cpath%20id='Rectangle%2098'%20d='M0%200L246%200V234H0L0%200Z'%20fill='%23E9E9E9'/%3e%3cg%20id='Group%20184'%3e%3cpath%20id='Vector'%20d='M8.99971%2056.1383L8.99971%20224.167H55.0561H118.701L118.701%2010.0001L55.0561%2010.0001L8.99971%2056.1383Z'%20fill='black'/%3e%3cpath%20id='Vector_2'%20d='M126.309%2010.002L126.309%20224.169H189.872L236.01%20224.169L236.01%2056.1402L189.872%2010.002L126.309%2010.002Z'%20fill='black'/%3e%3c/g%3e%3ccircle%20id='Ellipse%20135'%20cx='35.5008'%20cy='35.5016'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /><img class="fan__corner" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='61'%20height='61'%20viewBox='0%200%2061%2061'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20186'%3e%3cpath%20id='Exclude'%20opacity='0.1'%20d='M30.5%200C47.3447%200%2061%2013.6553%2061%2030.5C61%2047.3447%2047.3447%2061%2030.5%2061C13.6553%2061%200%2047.3447%200%2030.5C0%2013.6553%2013.6553%200%2030.5%200Z'%20fill='black'/%3e%3ccircle%20id='Ellipse%20137'%20cx='30.5'%20cy='30.5'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /></div>
+          <div class="fan__card" style="--base: 3; --v: 3"><img src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='246'%20height='234'%20viewBox='0%200%20246%20234'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20191'%3e%3cpath%20id='Rectangle%2097'%20d='M0%200H246V234H0V0Z'%20fill='%23E9E9E9'/%3e%3cg%20id='Group%20183'%3e%3cpath%20id='Vector'%20d='M9%2010V224.167H72.5629H118.701V56.1383L72.5629%2010H9Z'%20fill='black'/%3e%3cpath%20id='Vector_2'%20d='M126.312%2056.1383V224.167H172.451H236.014V10H172.451L126.312%2056.1383Z'%20fill='black'/%3e%3c/g%3e%3ccircle%20id='Ellipse%20134'%20cx='35.5'%20cy='35.5'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /><img class="fan__corner" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='61'%20height='61'%20viewBox='0%200%2061%2061'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20186'%3e%3cpath%20id='Exclude'%20opacity='0.1'%20d='M30.5%200C47.3447%200%2061%2013.6553%2061%2030.5C61%2047.3447%2047.3447%2061%2030.5%2061C13.6553%2061%200%2047.3447%200%2030.5C0%2013.6553%2013.6553%200%2030.5%200Z'%20fill='black'/%3e%3ccircle%20id='Ellipse%20137'%20cx='30.5'%20cy='30.5'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /></div>
+          <div class="fan__card" style="--base: 4; --v: 4"><img src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='246'%20height='234'%20viewBox='0%200%20246%20234'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20190'%3e%3cpath%20id='Rectangle%2096'%20d='M0%200L246%200V234H0L0%200Z'%20fill='%23E9E9E9'/%3e%3cg%20id='Group%20182'%3e%3cpath%20id='Vector'%20d='M9.99996%209.99987L9.99996%20224.167H56.1382H119.701L119.701%209.99987L56.1382%209.99987L9.99996%209.99987Z'%20fill='black'/%3e%3cpath%20id='Vector_2'%20d='M127.714%2010.0015L127.714%20144.49H236.433L236.433%2064.4839L181.623%2010.0015L127.714%2010.0015Z'%20fill='black'/%3e%3cpath%20id='Vector_3'%20d='M127.715%20153.568L127.715%20224.657H236.434L165.59%20153.568H127.715Z'%20fill='black'/%3e%3c/g%3e%3ccircle%20id='Ellipse%20133'%20cx='35.499'%20cy='35.5015'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /><img class="fan__corner" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='61'%20height='61'%20viewBox='0%200%2061%2061'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20186'%3e%3cpath%20id='Exclude'%20opacity='0.1'%20d='M30.5%200C47.3447%200%2061%2013.6553%2061%2030.5C61%2047.3447%2047.3447%2061%2030.5%2061C13.6553%2061%200%2047.3447%200%2030.5C0%2013.6553%2013.6553%200%2030.5%200Z'%20fill='black'/%3e%3ccircle%20id='Ellipse%20137'%20cx='30.5'%20cy='30.5'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /></div>
+          <div class="fan__card" style="--base: 5; --v: 5"><img src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='246'%20height='234'%20viewBox='0%200%20246%20234'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20189'%3e%3cpath%20id='Rectangle%2095'%20d='M0%200L246%200V234H0L0%200Z'%20fill='%23E9E9E9'/%3e%3cg%20id='Group%20181'%3e%3cpath%20id='Vector'%20d='M8.99971%2056.1383L8.99971%20177.947L55.0562%20224.085L118.701%20224.085L118.701%2010.0001L55.0562%2010.0001L8.99971%2056.1383Z'%20fill='black'/%3e%3cpath%20id='Vector_2'%20d='M126.309%2010.0017L126.309%20224.087H189.872L236.01%20177.948V56.14L189.872%2010.0017L126.309%2010.0017Z'%20fill='black'/%3e%3c/g%3e%3ccircle%20id='Ellipse%20132'%20cx='35.5008'%20cy='35.5016'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /><img class="fan__corner" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='61'%20height='61'%20viewBox='0%200%2061%2061'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20186'%3e%3cpath%20id='Exclude'%20opacity='0.1'%20d='M30.5%200C47.3447%200%2061%2013.6553%2061%2030.5C61%2047.3447%2047.3447%2061%2030.5%2061C13.6553%2061%200%2047.3447%200%2030.5C0%2013.6553%2013.6553%200%2030.5%200Z'%20fill='black'/%3e%3ccircle%20id='Ellipse%20137'%20cx='30.5'%20cy='30.5'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /></div>
+          <div class="fan__card" style="--base: 0; --v: 6"><img src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='246'%20height='234'%20viewBox='0%200%20246%20234'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20188'%3e%3cpath%20id='Rectangle%2094'%20d='M0%200H246V234H0V0Z'%20fill='%23E9E9E9'/%3e%3cg%20id='Group%20180'%3e%3cpath%20id='Vector'%20d='M10%2055.8448V223.791H56.1383H119.701V9.70654H56.1383L10%2055.8448Z'%20fill='black'/%3e%3cpath%20id='Vector_2'%20d='M236.434%209.70654H127.715V89.6305H236.434V9.70654Z'%20fill='black'/%3e%3cpath%20id='Vector_3'%20d='M236.434%2097.729H127.715V177.653H236.434V97.729Z'%20fill='black'/%3e%3c/g%3e%3ccircle%20id='Ellipse%20131'%20cx='35.5'%20cy='35.4995'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /><img class="fan__corner" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='61'%20height='61'%20viewBox='0%200%2061%2061'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20186'%3e%3cpath%20id='Exclude'%20opacity='0.1'%20d='M30.5%200C47.3447%200%2061%2013.6553%2061%2030.5C61%2047.3447%2047.3447%2061%2030.5%2061C13.6553%2061%200%2047.3447%200%2030.5C0%2013.6553%2013.6553%200%2030.5%200Z'%20fill='black'/%3e%3ccircle%20id='Ellipse%20137'%20cx='30.5'%20cy='30.5'%20r='20.5'%20fill='%23636363'/%3e%3c/g%3e%3c/svg%3e" alt="" /></div>
+        </div>
+
+        <div class="fan__glass"></div>
+
+        <p class="fan__index">3</p>
+        <p class="fan__kicker">(Format)</p>
+        <h2 class="fan__title">Circle</h2>
+      </section>
+
+
+
+      <!-- Windows (51:1215). A black disc turning behind a white plate, and the
+           plate has two windows cut out of it: what shows through them are the
+           four names that ride the disc, one to a side. A quarter turn brings
+           the next pair up, and the two photographs in the plate are carried
+           round with it — they are on the disc as much as the names are, and the
+           windows simply let a different part of it be seen.
+
+           The plate is laid as five pieces rather than one with holes punched
+           through: the holes have to be real, since the disc turns behind them,
+           and five rectangles are surer than any mask. -->
+      <section class="win">
+        <img class="kid kid--win" data-kid="/kid/win.webp" alt="" aria-hidden="true" />
+        <div class="win__disc" aria-hidden="true">
+          <span class="win__face"></span>
+
+          <!-- the disc's own reading, four times round its edge -->
+          <span class="win__arc" style="--q: 0"
+            ><i>(Format)</i><b>Circle</b><u>3</u></span
+          >
+          <span class="win__arc" style="--q: 1"
+            ><i>(Format)</i><b>Circle</b><u>3</u></span
+          >
+          <span class="win__arc" style="--q: 2"
+            ><i>(Format)</i><b>Circle</b><u>3</u></span
+          >
+          <span class="win__arc" style="--q: 3"
+            ><i>(Format)</i><b>Circle</b><u>3</u></span
+          >
+          <span class="win__tag" style="--q: 0"
+            ><i>(Left)</i><b>Desert Tree</b></span
+          >
+          <span class="win__tag" style="--q: 3"
+            ><i>(Left)</i><b>Silent Fog</b></span
+          >
+          <span class="win__tag" style="--q: 2"
+            ><i>(Left)</i><b>Frozen Bloom</b></span
+          >
+          <span class="win__tag" style="--q: 1"
+            ><i>(Left)</i><b>Lost Dreams</b></span
+          >
+        </div>
+
+        <span class="win__plate win__plate--west" aria-hidden="true"></span>
+        <span class="win__plate win__plate--east" aria-hidden="true"></span>
+        <span class="win__plate win__plate--head" aria-hidden="true"></span>
+        <span class="win__plate win__plate--waist" aria-hidden="true"></span>
+        <span class="win__plate win__plate--foot" aria-hidden="true"></span>
+
+        <!-- the plate's own rules, dividing it in three -->
+        <span class="win__rule win__rule--west" aria-hidden="true"></span>
+        <span class="win__rule win__rule--east" aria-hidden="true"></span>
+
+        <!-- The photographs, inset forty from the plate's edges and standing to
+             the same height as the two windows. Each cell holds a strip of every
+             photograph on its side, one under the next; the strip runs with the
+             disc and never stops, and the cell shows whichever is on it. The
+             strips are written by script, off the same list as the names. -->
+        <div class="win__shot win__shot--left"><div class="win__reel"></div></div>
+        <div class="win__shot win__shot--right"><div class="win__reel"></div></div>
+
+        <p class="win__no">2</p>
+        <p class="win__kicker">(Format)</p>
+        <p class="win__name">Horizontal</p>
+      </section>
+
+      <!-- 2 rec and triangle (58:87). Two long cards side by side and a triangle
+           standing under them, six below the slider. Everything is placed off the
+           file's own frame, where the pair sit at y 416 and the triangle at 648. -->
+      <section class="vee">
+        <!-- the left card: a photograph with two pale bands laid across it -->
+        <div class="vee__card vee__card--west">
+          <img class="kid kid--vee-west" data-kid="/kid/vee-west.webp" alt="" aria-hidden="true" />
+          <div class="vee__shot"><img src="/assets/rec-left-CR_1c09C.webp" alt=""  loading="lazy" decoding="async" /></div>
+          <span class="vee__pane vee__pane--head" aria-hidden="true"></span>
+          <span class="vee__pane vee__pane--foot" aria-hidden="true"></span>
+          <span class="vee__band vee__band--one" aria-hidden="true"></span>
+          <span class="vee__band vee__band--two" aria-hidden="true"></span>
+
+          <p class="vee__no vee__no--one">2</p>
+          <p class="vee__kicker vee__kicker--one">(Format)</p>
+          <p class="vee__name vee__name--one">Horizontal</p>
+          <p class="vee__mark vee__mark--one">2.1</p>
+
+          <p class="vee__no vee__no--two">2</p>
+          <p class="vee__kicker vee__kicker--two">(Format)</p>
+          <p class="vee__name vee__name--two">Horizontal</p>
+          <p class="vee__mark vee__mark--two">2.2</p>
+
+          <div class="vee__list vee__list--one">
+            <b>Usage</b><span>Desktop Design</span><span>Poster Design</span><span>TV &amp; Films</span>
+          </div>
+          <div class="vee__list vee__list--two">
+            <b>Geometry</b><span>Strong Horizontals</span><span>Defined Corners</span><span>Wide Ratio</span>
+          </div>
+          <div class="vee__list vee__list--three">
+            <b>Perception</b><span>Visually Wider</span><span>Broad Focus</span><span>Calm Feel</span>
+          </div>
+        </div>
+
+        <!-- the right card: white at its head, the photograph filling the rest -->
+        <div class="vee__card vee__card--east">
+          <img class="kid kid--vee-east" data-kid="/kid/vee-east.webp" alt="" aria-hidden="true" />
+          <span class="vee__head" aria-hidden="true"></span>
+          <div class="vee__shot vee__shot--east"><img src="/assets/rec-right-CyoYXL7w.webp" alt=""  loading="lazy" decoding="async" /></div>
+
+          <p class="vee__no vee__no--east">2</p>
+          <p class="vee__kicker vee__kicker--east">(Format)</p>
+          <p class="vee__name vee__name--east">Horizontal</p>
+
+          <p class="vee__mark vee__mark--east-a">2.1</p>
+          <div class="vee__list vee__list--east-a">
+            <b>Usage</b><span>Desktop Design</span><span>Poster Design</span><span>TV &amp; Films</span>
+          </div>
+          <p class="vee__mark vee__mark--east-b">2.2</p>
+          <div class="vee__list vee__list--east-b">
+            <b>Geometry</b><span>Strong Horizontals</span><span>Defined Corners</span><span>Wide Ratio</span>
+          </div>
+
+          <p class="vee__turned vee__turned--usage">2.1<br />Usage</p>
+          <p class="vee__turned vee__turned--screens">Desktop<br />Screens</p>
+        </div>
+
+        <!-- the triangle, and the three small ones set into it. The lowest is the
+             one that leaves the block later and goes into the storytelling. -->
+        <div class="vee__plate">
+          <img class="kid kid--vee-tri" data-kid="/kid/vee-tri.webp" alt="" aria-hidden="true" />
+          <svg class="vee__form" viewBox="0 0 704 608.664" aria-hidden="true">
+            <path d="M704 51.1836L382.14 608.664H321.394L0 51.9922L30.0176 0H674.449L704 51.1836Z" fill="currentColor"/>
+          </svg>
+          <svg class="vee__marks" viewBox="0 0 660.715 571.571" aria-hidden="true">
+            <path d="M621.581 13.6907L651.759 13.6893L653.181 16.1521L638.112 42.2515L635.299 42.2505L620.195 16.0896L621.581 13.6907Z" fill="currentColor"/>
+            <path d="M8.25537 14.2801L8.25755 14.2802L8.25657 14.2819L8.25537 14.2801ZM24.7663 42.8777L9.68012 16.7479L11.1049 14.2801L41.2358 14.2812L42.6411 16.7164L27.5371 42.8773L24.7663 42.8777Z" fill="currentColor"/>
+          </svg>
+
+          <h2 class="vee__word">Triangle</h2>
+          <p class="vee__no vee__no--tri">4</p>
+          <p class="vee__kicker vee__kicker--tri">(Format)</p>
+          <p class="vee__name vee__name--tri">Triangle</p>
+          <p class="vee__reads">Transformative<br />Progressive<br />Directional<br />unstable<br />Complex<br />Angled<br />(4)</p>
+        </div>
+      </section>
+
+      <!-- Two dials, 1401 across, with their middles sat on the left and right
+           edges of the screen — so only the inner half of each is ever in view
+           and the shape they both read stands between them. The far one is the
+           near one mirrored in where things sit, not in how they read.
+
+           The divisions are written by script: six names cycling round the arc
+           at seven and a half degrees apart, six-and-twenty of them, which is
+           what fills the face. A name that is not being read has its inner end
+           on the shorter radius the file marks; the one being read stands by its
+           far end instead, on the rim the file's own read name ends at.
+
+           Each dial is three rings and nothing else: white outside, black in,
+           and glass at the middle with a hole bitten out of it that goes all the
+           way down to the page. -->
+      <section class="gauge">
+        <div class="gauge__dial gauge__dial--left">
+          <span class="gauge__ring gauge__ring--white"></span>
+          <span class="gauge__ring gauge__ring--black"></span>
+          <span class="gauge__ring gauge__ring--glass"></span>
+          <div class="gauge__words"></div>
+          <div class="gauge__needle"><span class="gauge__no">0</span></div>
+        </div>
+
+        <div class="gauge__dial gauge__dial--right">
+          <span class="gauge__ring gauge__ring--white"></span>
+          <span class="gauge__ring gauge__ring--black"></span>
+          <span class="gauge__ring gauge__ring--glass"></span>
+          <div class="gauge__words"></div>
+          <div class="gauge__needle"><span class="gauge__no">0</span></div>
+        </div>
+
+      </section>
+
+      <!-- Bottom Poster (61:602), after the speedometer. The big line is set
+           line by line because each of its four lines has its own indent, and it
+           is built letter by letter because the circle will pass through it like
+           a magnet and every letter has to answer for itself. At rest it reads as
+           ordinary type.
+
+           The clock at the foot keeps real time — its hand steps a twelfth of a
+           turn a second — and the white circle beside it is where the travelling
+           shape is going to come to rest. -->
+      <section class="poster">
+        <h2 class="poster__say">
+          <span class="poster__line" style="--x: 18; --n: 0">The format is</span>
+          <span class="poster__line" style="--x: 145; --n: 1">Part of the</span>
+          <span class="poster__line" style="--x: 15; --n: 2">Bigger idea</span>
+          <span class="poster__line" style="--x: 145; --n: 3">(0)</span>
+        </h2>
+
+        <div class="poster__shot">
+          <img class="kid kid--poster-shot" data-kid="/kid/poster-shot.webp" alt="" aria-hidden="true" />
+          <img src="/assets/poster-BewnwD3v.webp" alt=""  loading="lazy" decoding="async" />
+        </div>
+
+        <p class="poster__no poster__no--one">1</p>
+        <p class="poster__kicker poster__kicker--one">(Format)</p>
+        <p class="poster__name">Vertical</p>
+
+        <p class="poster__no" style="--top: 96">1.1</p>
+        <div class="poster__list" style="--top: 98">
+          <b>Usage</b><span>Mobile Design</span><span>Poster Design</span><span>Editorial Design</span>
+        </div>
+        <p class="poster__no poster__no--dim" style="--top: 150">1.2</p>
+        <div class="poster__list poster__list--dim" style="--top: 152">
+          <b>Geometry</b><span>Vertical Ratio</span><span>Linear Edges</span><span>Defined Corners</span>
+        </div>
+        <p class="poster__no poster__no--dim" style="--top: 205">1.3</p>
+        <div class="poster__list poster__list--dim" style="--top: 207">
+          <b>Perception</b><span>Visually Taller</span><span>Narrow Focus</span><span>Tight Tension</span>
+        </div>
+        <p class="poster__no poster__no--dim" style="--top: 259">1.4</p>
+        <div class="poster__list poster__list--dim" style="--top: 261">
+          <b>Balance</b><span>Central Gravity</span><span>Stable Layout</span><span>Strong Axis</span>
+        </div>
+
+        <p class="poster__advice poster__advice--one">(Advice)</p>
+        <p class="poster__advice poster__advice--two">(Advice)</p>
+
+        <h3 class="poster__tell poster__tell--one">
+          <span class="poster__line" style="--x: 730; --n: 0">Split format</span>
+          <span class="poster__line" style="--x: 756; --n: 1">Into smaller</span>
+          <span class="poster__line" style="--x: 730; --n: 2">(1)</span>
+        </h3>
+        <h3 class="poster__tell poster__tell--two">
+          <span class="poster__line" style="--x: 1084; --n: 0">Make the</span>
+          <span class="poster__line" style="--x: 1110; --n: 1">Edges work</span>
+          <span class="poster__line" style="--x: 1084; --n: 2">(2)</span>
+        </h3>
+
+        <!-- the clock: a ring with a hand that steps once a second -->
+        <span class="poster__dial" aria-hidden="true"></span>
+        <span class="poster__hand" aria-hidden="true">
+          <!-- the reading rides the hand, so it is written inside it -->
+          <b class="poster__no--clock">3</b>
+          <i class="poster__kicker--clock">(Format)</i>
+          <b class="poster__name--clock">Circle</b>
+        </span>
+
+        <!-- The white circle the file draws here is the travelling shape itself,
+             so for the whole of the flight there is nothing to draw: it arrives.
+             On the frame it lands the two change places — the flight is put out
+             and this one is lit, same size, same spot, same white — and from
+             then on the block is one thing that can be moved as one thing. -->
+        <span class="poster__seat" aria-hidden="true"></span>
+
+        <!-- The outline it grows on its way to becoming a card: one rectangle
+             whose stroke thickens from nothing, all the way round at once. -->
+        <svg class="poster__edge" viewBox="0 0 1440 1617" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="1439" height="1616" />
+        </svg>
+      </section>
+
+      <!-- The shape that carries the reader from block to block. It begins as the
+           small triangle set into the big one, leaves that block, loses its black
+           on the way, and arrives as the shape the speedometer reads — one thing
+           the whole way, never handed over. It lives above the sections because
+           it crosses between them, and its home is where the speedometer wants
+           it; the flight is written as a departure from that home which runs
+           out. -->
+      <div class="pip" aria-hidden="true">
+        <!-- Every shape is resampled to the same number of points, so one can be
+             walked into the next. Two panes, not one, because Complex is a circle
+             standing clear of a square: two islands, which no single outline can
+             hold without a seam. The second pane is a point for every other
+             shape, so the square grows out of nothing. -->
+        <div class="gauge__shape">
+          <span class="gauge__pane"></span>
+          <span class="gauge__pane"></span>
+        </div>
+      </div>
+
+      <!-- click--clack: a field you can play in. The marks are the design's —
+           a dashed frame, a dashed cross on both middles and the two dashed
+           diagonals — and the words come up out of a mask to ask to be pressed.
+           Screen-sized rather than the 1100 the file draws, which Slava asked
+           to try; the width is the grid's own 1400. -->
+      <section class="field">
+        <div class="field__marks" aria-hidden="true">
+          <span class="field__rule field__rule--v"></span>
+          <span class="field__rule field__rule--h"></span>
+          <span class="field__rule field__rule--d1"></span>
+          <span class="field__rule field__rule--d2"></span>
+        </div>
+
+        <!-- Every word sits in its own mask and rides up out of it, a beat
+             behind the one before, the way the nav's lines arrive. Once they
+             are up they start flicking: every click lit while every clack is
+             dark and then the other way about, switched rather than faded, so
+             the two are never at the same weight. --phase 1 is half a period
+             of delay, which is the whole of how a word joins the other camp. -->
+        <div class="field__says">
+          <p class="field__tick field__tick--top"><span class="field__mask"><span class="field__word" style="--phase: 0">Click...</span></span></p>
+          <p class="field__tick field__tick--foot"><span class="field__mask"><span class="field__word" style="--phase: 1">Clack...</span></span></p>
+          <p class="field__call field__call--left">
+            <span class="field__mask"><span class="field__word" style="--phase: 0">click,</span></span>
+            <span class="field__mask"><span class="field__word" style="--phase: 1">clack,</span></span>
+            <span class="field__mask"><span class="field__word" style="--phase: 0">click...</span></span>
+          </p>
+          <p class="field__call field__call--right">
+            <span class="field__mask"><span class="field__word" style="--phase: 0">click,</span></span>
+            <span class="field__mask"><span class="field__word" style="--phase: 1">clack,</span></span>
+            <span class="field__mask"><span class="field__word" style="--phase: 0">click...</span></span>
+          </p>
+        </div>
+      </section>
+
+      <!-- The footer. The last thing the page does is the first thing again:
+           the name climbs out of its mask letter by letter, the plates open
+           from their top edge and the lines ride up out of theirs — the
+           preloader's own arrival, played once more at the other end. The
+           letters are the logo's own shapes; the mask is the SVG's viewport,
+           so below its foot a letter is simply not drawn. -->
+      <footer class="footer">
+        <svg class="footer__logo" viewBox="0 0 1401 215" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FORMAT">
+          <g class="footer__letter" data-letter="F">
+            <path d="M0 46.1383V214.085H46.1383H109.701V1.90735e-05H46.1383L0 46.1383Z" fill="currentColor"/>
+            <path d="M226.434 0H117.715V79.9239H226.434V0Z" fill="currentColor"/>
+            <path d="M226.434 88.0225H117.715V167.946H226.434V88.0225Z" fill="currentColor"/>
+          </g>
+          <g class="footer__letter" data-letter="O">
+            <path d="M234.453 46.1383V167.947L280.51 214.085H344.154V0H280.51L234.453 46.1383Z" fill="currentColor"/>
+            <path d="M351.762 0V214.085H415.325L461.463 167.947V46.1383L415.325 0H351.762Z" fill="currentColor"/>
+          </g>
+          <g class="footer__letter" data-letter="R">
+            <path d="M469.484 0V214.167H515.623H579.185V0H515.623H469.484Z" fill="currentColor"/>
+            <path d="M587.199 0V134.488H695.919V54.4824L641.109 0H587.199Z" fill="currentColor"/>
+            <path d="M587.199 143.569V214.658H695.919L625.075 143.569H587.199Z" fill="currentColor"/>
+          </g>
+          <g class="footer__letter" data-letter="M">
+            <path d="M703.934 1.90735e-05V214.167H767.496H813.635V46.1383L767.496 1.90735e-05H703.934Z" fill="currentColor"/>
+            <path d="M821.246 46.1383V214.167H867.384H930.947V0H867.384L821.246 46.1383Z" fill="currentColor"/>
+          </g>
+          <g class="footer__letter" data-letter="A">
+            <path d="M938.965 46.1383V214.167H985.021H1048.67V0H985.021L938.965 46.1383Z" fill="currentColor"/>
+            <path d="M1056.27 0V214.167H1119.84H1165.97V46.1383L1119.84 0H1056.27Z" fill="currentColor"/>
+          </g>
+          <g class="footer__letter" data-letter="T">
+            <path d="M1203.85 0H1173.99V46.1383V109.865H1203.85V214.167H1283.69V0H1203.85Z" fill="currentColor"/>
+            <path d="M1371.55 0H1291.71V46.1383V109.865V214.167H1371.55V109.865H1401V46.1383V0H1371.55Z" fill="currentColor"/>
+          </g>
+        </svg>
+
+        <div class="footer__line">
+          <span class="footer__bar" aria-hidden="true"></span>
+          <span class="footer__box" aria-hidden="true"></span>
+
+          <p class="footer__credits">
+            <span class="line"
+              ><span class="line__in"
+                >©2026. Format — <a class="u" href="https://obys.agency/" target="_blank" rel="noopener">Obys</a> and
+                <a class="u" href="https://des.obys.agency/" target="_blank" rel="noopener">DES</a> Special Project</span
+              ></span
+            >
+          </p>
+
+          <p class="footer__season">
+            <span class="line"
+              ><span class="line__in"
+                >This project is a part of
+                <a class="u" href="https://des.obys.agency/grids/" target="_blank" rel="noopener">Grids Season</a></span
+              ></span
+            ><span class="line"><span class="line__in">by Design Educations Series</span></span>
+          </p>
+
+          <p class="footer__by">
+            <span class="line"
+              ><span class="line__in"
+                >Designed by <a class="u" href="https://obys.agency/" target="_blank" rel="noopener">Obys</a></span
+              ></span
+            >
+          </p>
+        </div>
+      </footer>
+
+      <div class="clock-spacer"></div>
+    </div>
+
+    <!-- The small-screen stand-in. The site is drawn against a 1440 frame and
+         every measure in it is that frame scaled, so there is no honest way to
+         show it on a phone — better to say so plainly and give the visitor the
+         one thing here that needs no room: the dial, running. Its own hands are
+         driven by the same script as the one in the page. -->
+    <div class="splash" aria-hidden="false">
+      <svg class="splash__logo" viewBox="0 0 1401 215" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FORMAT">
+      <g class="splash__letter" data-letter="F">
+      <path d="M0 46.1383V214.085H46.1383H109.701V1.90735e-05H46.1383L0 46.1383Z" fill="currentColor"/>
+      <path d="M226.434 0H117.715V79.9239H226.434V0Z" fill="currentColor"/>
+      <path d="M226.434 88.0225H117.715V167.946H226.434V88.0225Z" fill="currentColor"/>
+      </g>
+      <g class="splash__letter" data-letter="O">
+      <path d="M234.453 46.1383V167.947L280.51 214.085H344.154V0H280.51L234.453 46.1383Z" fill="currentColor"/>
+      <path d="M351.762 0V214.085H415.325L461.463 167.947V46.1383L415.325 0H351.762Z" fill="currentColor"/>
+      </g>
+      <g class="splash__letter" data-letter="R">
+      <path d="M469.484 0V214.167H515.623H579.185V0H515.623H469.484Z" fill="currentColor"/>
+      <path d="M587.199 0V134.488H695.919V54.4824L641.109 0H587.199Z" fill="currentColor"/>
+      <path d="M587.199 143.569V214.658H695.919L625.075 143.569H587.199Z" fill="currentColor"/>
+      </g>
+      <g class="splash__letter" data-letter="M">
+      <path d="M703.934 1.90735e-05V214.167H767.496H813.635V46.1383L767.496 1.90735e-05H703.934Z" fill="currentColor"/>
+      <path d="M821.246 46.1383V214.167H867.384H930.947V0H867.384L821.246 46.1383Z" fill="currentColor"/>
+      </g>
+      <g class="splash__letter" data-letter="A">
+      <path d="M938.965 46.1383V214.167H985.021H1048.67V0H985.021L938.965 46.1383Z" fill="currentColor"/>
+      <path d="M1056.27 0V214.167H1119.84H1165.97V46.1383L1119.84 0H1056.27Z" fill="currentColor"/>
+      </g>
+      <g class="splash__letter" data-letter="T">
+      <path d="M1203.85 0H1173.99V46.1383V109.865H1203.85V214.167H1283.69V0H1203.85Z" fill="currentColor"/>
+      <path d="M1371.55 0H1291.71V46.1383V109.865V214.167H1371.55V109.865H1401V46.1383V0H1371.55Z" fill="currentColor"/>
+      </g>
+      </svg>
+
+      <div class="splash__face">
+    <div class="dial">
+    <img class="dial__rim" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='697'%20height='697'%20viewBox='0%200%20697%20697'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20id='Ellipse%2051'%20cx='348.5'%20cy='348.5'%20r='348.5'%20fill='white'/%3e%3c/svg%3e" alt="" />
+    <img class="dial__inner dial__inner--a" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='504.068'%20height='504.068'%20viewBox='0%200%20504.068%20504.068'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Ellipse%2052'%20d='M252.034%200.679688C390.854%200.679745%20503.389%20113.215%20503.389%20252.034C503.389%20390.854%20390.854%20503.389%20252.034%20503.389C113.215%20503.389%200.679696%20390.854%200.679688%20252.034C0.679688%20113.215%20113.215%200.679688%20252.034%200.679688Z'%20stroke='%23E9E9E9'%20stroke-width='1.35867'/%3e%3c/svg%3e" alt="" />
+    <img class="dial__inner dial__inner--b" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='504.068'%20height='504.068'%20viewBox='0%200%20504.068%20504.068'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Ellipse%2053'%20d='M252.034%200.679688C390.854%200.679745%20503.389%20113.215%20503.389%20252.034C503.389%20390.854%20390.854%20503.389%20252.034%20503.389C113.215%20503.389%200.679696%20390.854%200.679688%20252.034C0.679688%20113.215%20113.215%200.679688%20252.034%200.679688Z'%20fill='white'%20stroke='%23E9E9E9'%20stroke-width='1.35867'/%3e%3c/svg%3e" alt="" />
+    <!-- The three hands. Each touches the inner ring from the inside, so
+    where it sits is the ring's radius less its own; the script takes
+    them round from there. Biggest tells the hour, smallest the second. -->
+    <img class="dial__dot dial__dot--minute" style="--d: 27.173" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='27.1735'%20height='27.1735'%20viewBox='0%200%2027.1735%2027.1735'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cellipse%20id='Ellipse%2054'%20cx='13.5867'%20cy='13.5867'%20rx='13.5867'%20ry='13.5867'%20fill='black'/%3e%3c/svg%3e" alt="" />
+    <img class="dial__dot dial__dot--second" style="--d: 16.304" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='16.3041'%20height='16.3041'%20viewBox='0%200%2016.3041%2016.3041'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cellipse%20id='Ellipse%2055'%20cx='8.15205'%20cy='8.15205'%20rx='8.15205'%20ry='8.15205'%20fill='black'/%3e%3c/svg%3e" alt="" />
+    <img class="dial__dot dial__dot--hour" style="--d: 40.76" src="data:image/svg+xml,%3csvg%20preserveAspectRatio='none'%20overflow='visible'%20style='display:%20block;'%20width='40.7602'%20height='40.7602'%20viewBox='0%200%2040.7602%2040.7602'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cellipse%20id='Ellipse%2056'%20cx='20.3801'%20cy='20.3801'%20rx='20.3801'%20ry='20.3801'%20fill='black'/%3e%3c/svg%3e" alt="" />
+    <!-- hours run on one rule: radius 326, a step of 30, each turned to face out -->
+    <p class="dial__hour" style="--i: 12">12</p>
+    <p class="dial__hour" style="--i: 1">1</p>
+    <p class="dial__hour" style="--i: 2">2</p>
+    <p class="dial__hour" style="--i: 3">3</p>
+    <p class="dial__hour" style="--i: 4">4</p>
+    <p class="dial__hour" style="--i: 5">5</p>
+    <p class="dial__hour" style="--i: 6">6</p>
+    <p class="dial__hour" style="--i: 7">7</p>
+    <p class="dial__hour" style="--i: 8">8</p>
+    <p class="dial__hour" style="--i: 9">9</p>
+    <p class="dial__hour" style="--i: 10">10</p>
+    <p class="dial__hour" style="--i: 11">11</p>
+    <p class="dial__kicker">(Format)</p>
+    <h2 class="dial__title">Circle</h2>
+    </div>
+      </div>
+
+      <p class="splash__line splash__line--credit">
+        Format — <a class="u" href="https://obys.agency/" target="_blank" rel="noopener">Obys</a> and
+        <a class="u" href="https://des.obys.agency/" target="_blank" rel="noopener">DES</a> Special Project
+      </p>
+      <p class="splash__line splash__line--sorry">
+        Sorry, this experience is designed<br />for desktop devices.
+      </p>
+    </div>
+  </body>
+</html>
