@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Le Choeur des Pierres — An immersive journey into Cartier High Jewellery, where gemstones reveal the inspiration, craftsmanship and gouachés behind each exceptional creation.">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Le Choeur des Pierres | Cartier</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" as="style" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preload" as="font" type="font/ttf" href="assets/fonts/CormorantGaramond-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="assets/fonts/CormorantGaramond-Light.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="assets/fonts/CormorantGaramond-SemiBold.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="assets/fonts/CormorantGaramond-Bold.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="assets/fonts/CormorantGaramond-Italic.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="assets/fonts/DMSans-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="assets/fonts/DMSans-Medium.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="assets/fonts/DMSans-Bold.ttf" crossorigin>
+</head>
+<body>
+    <div class="cursor" aria-hidden="true">
+        <div class="cursor__inner"></div>
+        <div class="cursor__ring"></div>
+    </div>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header" role="banner">
+        <div class="header__container">
+            <a href="https://www.cartier.com" class="header__logo" aria-label="Cartier - Home">
+                <svg class="header__logo-svg" viewBox="0 0 120 24" fill="none" aria-hidden="true">
+                    <text x="0" y="18" font-family="Cormorant Garamond, serif" font-size="20" font-weight="400" letter-spacing="0.15em" fill="currentColor">CARTIER</text>
+                </svg>
+            </a>
+            <nav class="header__nav" role="navigation" aria-label="Main navigation">
+                <button class="header__menu-btn" aria-expanded="false" aria-controls="header-menu" aria-label="Toggle menu">
+                    <span class="header__menu-line" aria-hidden="true"></span>
+                    <span class="header__menu-line" aria-hidden="true"></span>
+                </button>
+                <div id="header-menu" class="header__menu" role="dialog" aria-label="Navigation menu">
+                    <ul class="header__menu-list">
+                        <li><a href="#" class="header__menu-link">High Jewellery</a></li>
+                        <li><a href="#" class="header__menu-link">Jewellery</a></li>
+                        <li><a href="#" class="header__menu-link">Watches</a></li>
+                        <li><a href="#" class="header__menu-link">The Maison</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header__actions">
+                <button class="header__search" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16" y1="16" x2="21" y2="21"></line>
+                    </svg>
+                </button>
+                <button class="header__language" aria-label="Language selection">
+                    <span>EN-FR</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__media" aria-hidden="true">
+                <img src="assets/images/hero.jpg" alt="" class="hero__image" loading="eager">
+                <div class="hero__overlay"></div>
+            </div>
+            <div class="hero__content">
+                <h1 id="hero-title" class="hero__title">
+                    <span class="hero__title-line"><span class="hero__title-word">LE CHŒUR</span></span>
+                    <span class="hero__title-line"><span class="hero__title-word">DES PIERRES</span></span>
+                </h1>
+                <p class="hero__subtitle">High Jewellery Collection</p>
+                <div class="hero__scroll" aria-hidden="true">
+                    <span class="hero__scroll-text">SCROLL</span>
+                    <svg class="hero__scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 5v14M12 19l-5-5M12 19l5-5"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="hero__progress" aria-hidden="true">
+                <div class="hero__progress-bar"></div>
+            </div>
+        </section>
+
+        <section class="intro" aria-labelledby="intro-title">
+            <div class="intro__container">
+                <div class="intro__text" data-animate="reveal-up">
+                    <h2 id="intro-title" class="intro__title">An immersive journey into Cartier High Jewellery</h2>
+                    <div class="intro__divider" aria-hidden="true"></div>
+                    <p class="intro__description">Where gemstones reveal the inspiration, craftsmanship and gouachés behind each exceptional creation. Le Choeur des Pierres orchestrates a symphony of precious stones, each singing its own story of nature, architecture, and the extraordinary savoir-faire of Cartier's master jewellers.</p>
+                </div>
+                <div class="intro__media" data-animate="reveal-up" style="transition-delay: 0.2s;">
+                    <figure class="intro__figure">
+                        <img src="assets/images/jewelry-1.jpg" alt="Cartier High Jewellery necklace with exceptional gemstones" class="intro__image" loading="lazy">
+                        <figcaption class="intro__caption">Necklace in platinum, diamonds, and exceptional colored stones</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="themes" aria-labelledby="themes-title">
+            <div class="themes__container">
+                <header class="themes__header" data-animate="reveal-up">
+                    <h2 id="themes-title" class="themes__title">Markers of Style</h2>
+                    <p class="themes__subtitle">Thematic inspirations guiding the creation of each exceptional piece</p>
+                </header>
+                <div class="themes__grid">
+                    <article class="theme-card" data-animate="reveal-up" data-theme="architecture">
+                        <div class="theme-card__media">
+                            <img src="assets/images/architecture.jpg" alt="Architectural inspiration for Cartier jewellery" class="theme-card__image" loading="lazy">
+                            <div class="theme-card__overlay"></div>
+                        </div>
+                        <div class="theme-card__content">
+                            <span class="theme-card__label">01</span>
+                            <h3 class="theme-card__title">Architecture and Purity</h3>
+                            <p class="theme-card__description">Structural lines and geometric volumes inspired by monumental architecture</p>
+                            <button class="theme-card__link" aria-label="Discover Architecture and Purity collection">
+                                <span>Discover</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="theme-card" data-animate="reveal-up" data-theme="geometry" style="transition-delay: 0.1s;">
+                        <div class="theme-card__media">
+                            <img src="assets/images/geometry.jpg" alt="Geometric inspiration for Cartier jewellery" class="theme-card__image" loading="lazy">
+                            <div class="theme-card__overlay"></div>
+                        </div>
+                        <div class="theme-card__content">
+                            <span class="theme-card__label">02</span>
+                            <h3 class="theme-card__title">Geometry and Contrasts</h3>
+                            <p class="theme-card__description">Bold interplay of shapes, light and shadow creating dynamic harmony</p>
+                            <button class="theme-card__link" aria-label="Discover Geometry and Contrasts collection">
+                                <span>Discover</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="theme-card" data-animate="reveal-up" data-theme="flora" style="transition-delay: 0.2s;">
+                        <div class="theme-card__media">
+                            <img src="assets/images/flora.jpg" alt="Floral inspiration for Cartier jewellery" class="theme-card__image" loading="lazy">
+                            <div class="theme-card__overlay"></div>
+                        </div>
+                        <div class="theme-card__content">
+                            <span class="theme-card__label">03</span>
+                            <h3 class="theme-card__title">Flora and Fauna</h3>
+                            <p class="theme-card__description">Nature's poetry translated into precious botanical and animal motifs</p>
+                            <button class="theme-card__link" aria-label="Discover Flora and Fauna collection">
+                                <span>Discover</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="theme-card" data-animate="reveal-up" data-theme="fauna" style="transition-delay: 0.3s;">
+                        <div class="theme-card__media">
+                            <img src="assets/images/fauna.jpg" alt="Fauna inspiration for Cartier jewellery" class="theme-card__image" loading="lazy">
+                            <div class="theme-card__overlay"></div>
+                        </div>
+                        <div class="theme-card__content">
+                            <span class="theme-card__label">04</span>
+                            <h3 class="theme-card__title">Cultural Dialogues</h3>
+                            <p class="theme-card__description">Cross-cultural conversations expressed through exceptional gemstones</p>
+                            <button class="theme-card__link" aria-label="Discover Cultural Dialogues collection">
+                                <span>Discover</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="gouaches" aria-labelledby="gouaches-title">
+            <div class="gouaches__container">
+                <header class="gouaches__header" data-animate="reveal-up">
+                    <h2 id="gouaches-title" class="gouaches__title">The Art of Gouaché</h2>
+                    <p class="gouaches__subtitle">Watercolour paintings that bring each jewel to life before it exists</p>
+                </header>
+                <div class="gouaches__slider" data-slider>
+                    <div class="gouaches__track">
+                        <div class="gouaches__slide" data-animate="reveal-up">
+                            <figure class="gouaches__figure">
+                                <img src="assets/images/gouache-1.jpg" alt="Gouaché watercolour design of a Cartier High Jewellery necklace" class="gouaches__image" loading="lazy">
+                                <figcaption class="gouaches__caption">
+                                    <span class="gouaches__caption-title">Necklace Gouaché</span>
+                                    <span class="gouaches__caption-detail">Watercolour and gouache on paper — 2024</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="gouaches__slide" data-animate="reveal-up">
+                            <figure class="gouaches__figure">
+                                <img src="assets/images/gouache-2.jpg" alt="Gouaché watercolour design of Cartier earrings" class="gouaches__image" loading="lazy">
+                                <figcaption class="gouaches__caption">
+                                    <span class="gouaches__caption-title">Earrings Gouaché</span>
+                                    <span class="gouaches__caption-detail">Watercolour and gouache on paper — 2024</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="gouaches__slide" data-animate="reveal-up">
+                            <figure class="gouaches__figure">
+                                <img src="assets/images/jewelry-2.jpg" alt="Gouaché watercolour design of a Cartier ring" class="gouaches__image" loading="lazy">
+                                <figcaption class="gouaches__caption">
+                                    <span class="gouaches__caption-title">Ring Gouaché</span>
+                                    <span class="gouaches__caption-detail">Watercolour and gouache on paper — 2024</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="gouaches__controls" aria-label="Gouaché slider navigation">
+                        <button class="gouaches__btn gouaches__btn--prev" aria-label="Previous gouaché">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <div class="gouaches__pagination" aria-label="Slide indicators"></div>
+                        <button class="gouaches__btn gouaches__btn--next" aria-label="Next gouaché">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="craft" aria-labelledby="craft-title">
+            <div class="craft__container">
+                <div class="craft__media" data-animate="reveal-left">
+                    <figure class="craft__figure">
+                        <img src="assets/images/craft-1.jpg" alt="Cartier master jeweller at work in the atelier" class="craft__image" loading="lazy">
+                        <figcaption class="craft__caption">Master jeweller setting an exceptional stone in the Cartier atelier</figcaption>
+                    </figure>
+                </div>
+                <div class="craft__content" data-animate="reveal-right">
+                    <span class="craft__label">Savoir-Faire</span>
+                    <h2 id="craft-title" class="craft__title">Exceptional Craftsmanship</h2>
+                    <div class="craft__divider" aria-hidden="true"></div>
+                    <p class="craft__text">Each creation in Le Choeur des Pierres emerges from the hands of Cartier's master jewellers, whose expertise has been refined over generations. From the precise calibration of each facet to the invisible setting that lets stones breathe, every gesture carries the weight of tradition and the courage of innovation.</p>
+                    <p class="craft__text">The atelier becomes a stage where gemstones find their voice — selected not merely for their rarity, but for their ability to harmonize within a greater composition. Here, the gouaché meets the gemstone, and drawing becomes jewel.</p>
+                    <div class="craft__stats">
+                        <div class="craft__stat" data-animate="counter">
+                            <span class="craft__stat-number" data-target="1847">0</span>
+                            <span class="craft__stat-label">Founded</span>
+                        </div>
+                        <div class="craft__stat" data-animate="counter">
+                            <span class="craft__stat-number" data-target="350">0</span>
+                            <span class="craft__stat-label">Master Jewellers</span>
+                        </div>
+                        <div class="craft__stat" data-animate="counter">
+                            <span class="craft__stat-number" data-target="1200">0</span>
+                            <span class="craft__stat-label">Hours per Piece</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="creations" aria-labelledby="creations-title">
+            <div class="creations__container">
+                <header class="creations__header" data-animate="reveal-up">
+                    <h2 id="creations-title" class="creations__title">Exceptional Creations</h2>
+                    <p class="creations__subtitle">A selection of masterpieces from Le Choeur des Pierres</p>
+                </header>
+                <div class="creations__grid">
+                    <article class="creation-card" data-animate="reveal-up">
+                        <div class="creation-card__media">
+                            <img src="assets/images/jewelry-1.jpg" alt="Exceptional Cartier High Jewellery necklace" class="creation-card__image" loading="lazy">
+                            <div class="creation-card__overlay"></div>
+                        </div>
+                        <div class="creation-card__content">
+                            <span class="creation-card__category">Necklace</span>
+                            <h3 class="creation-card__title">Symphony of Blues</h3>
+                            <p class="creation-card__details">Platinum, diamonds, sapphires, aquamarines</p>
+                        </div>
+                    </article>
+                    <article class="creation-card" data-animate="reveal-up" style="transition-delay: 0.1s;">
+                        <div class="creation-card__media">
+                            <img src="assets/images/jewelry-2.jpg" alt="Exceptional Cartier High Jewellery earrings" class="creation-card__image" loading="lazy">
+                            <div class="creation-card__overlay"></div>
+                        </div>
+                        <div class="creation-card__content">
+                            <span class="creation-card__category">Earrings</span>
+                            <h3 class="creation-card__title">Celestial Dance</h3>
+                            <p class="creation-card__details">White gold, diamonds, emeralds, pearls</p>
+                        </div>
+                    </article>
+                    <article class="creation-card" data-animate="reveal-up" style="transition-delay: 0.2s;">
+                        <div class="creation-card__media">
+                            <img src="assets/images/jewelry-3.jpg" alt="Exceptional Cartier High Jewellery ring" class="creation-card__image" loading="lazy">
+                            <div class="creation-card__overlay"></div>
+                        </div>
+                        <div class="creation-card__content">
+                            <span class="creation-card__category">Ring</span>
+                            <h3 class="creation-card__title">Solitary Star</h3>
+                            <p class="creation-card__details">Platinum, diamond, pink sapphires</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="cta__container" data-animate="reveal-up">
+                <h2 id="cta-title" class="cta__title">Experience the Collection</h2>
+                <p class="cta__text">Book a private appointment to discover Le Choeur des Pierres in a Cartier boutique</p>
+                <a href="#" class="cta__btn">
+                    <span>Book Appointment</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <a href="https://www.cartier.com" class="footer__logo" aria-label="Cartier - Home">
+                    <svg viewBox="0 0 120 24" fill="none" aria-hidden="true">
+                        <text x="0" y="18" font-family="Cormorant Garamond, serif" font-size="20" font-weight="400" letter-spacing="0.15em" fill="currentColor">CARTIER</text>
+                    </svg>
+                </a>
+                <p class="footer__tagline">Jeweller and Watchmaker since 1847</p>
+            </div>
+            <nav class="footer__nav" aria-label="Footer navigation">
+                <div class="footer__nav-group">
+                    <h3 class="footer__nav-title">High Jewellery</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__nav-link">Le Choeur des Pierres</a></li>
+                        <li><a href="#" class="footer__nav-link">En Équilibre</a></li>
+                        <li><a href="#" class="footer__nav-link">All Collections</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-group">
+                    <h3 class="footer__nav-title">The Maison</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__nav-link">Savoir-Faire</a></li>
+                        <li><a href="#" class="footer__nav-link">Heritage</a></li>
+                        <li><a href="#" class="footer__nav-link">Responsibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-group">
+                    <h3 class="footer__nav-title">Services</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__nav-link">Book Appointment</a></li>
+                        <li><a href="#" class="footer__nav-link">Contact Us</a></li>
+                        <li><a href="#" class="footer__nav-link">Find a Boutique</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Cartier on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                <a href="#" class="footer__social-link" aria-label="Cartier on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M23 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"></path><rect x="1" y="5" width="20" height="14" rx="2"></rect><path d="M7 15a5 5 0 0 0 7 0v-1a3 3 0 0 1 3-3"></path></svg></a>
+                <a href="#" class="footer__social-link" aria-label="Cartier on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 Cartier. All rights reserved.</p>
+                <nav class="footer__legal" aria-label="Legal links">
+                    <a href="#" class="footer__legal-link">Legal Notice</a>
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Cookies</a>
+                    <a href="#" class="footer__legal-link">Accessibility</a>
+                    <a href="#" class="footer__legal-link">Sitemap</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
