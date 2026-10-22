@@ -1,0 +1,355 @@
+/* ============================================================
+   Ascension — Pegassi | component styles
+   Reconstructed from the scoped <style> blocks of the original
+   Nuxt build (data-v-*) plus the record-disc chunk.
+   ============================================================ */
+
+/* ---------- Lenis smooth scroll (styles bundled by the original) ---------- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* ---------- Site noise (SiteNoise) ---------- */
+.noise {
+  z-index: -1;
+  position: fixed;
+  inset: 0;
+}
+
+/* ---------- Site head (header typography helpers) ---------- */
+.indent-full,
+.indent-half {
+  --step: calc(25% + 0.25rem);
+}
+.indent-half {
+  padding-left: calc(var(--step) * 0.5);
+}
+.indent-full {
+  padding-left: var(--step);
+}
+.site-head .lead-in {
+  line-height: 1.5rem;
+}
+@media (width >= 650px) {
+  .site-head .lead-in {
+    line-height: 1.8rem;
+  }
+}
+@media (width < 650px) {
+  .site-head .block p {
+    line-height: 2.2rem;
+  }
+}
+.site-head .prod {
+  position: relative;
+}
+.site-head .prod img {
+  width: 5.77em;
+  max-width: none;
+  margin-left: 0.13em;
+  position: absolute;
+  bottom: -0.07em;
+  left: 100%;
+}
+.site-head sup {
+  vertical-align: 0.41em;
+}
+
+/* ---------- Hero (index page) ---------- */
+.hero {
+  height: 100svh;
+}
+@media (width >= 650px) {
+  .hero {
+    height: 0;
+    padding-top: 66.4svh;
+    padding-bottom: calc(55% - 1.1rem);
+  }
+}
+.stairs {
+  --feather: 14rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--feather), #000 calc(100% - var(--feather)), transparent),
+    linear-gradient(to bottom, transparent, #000 var(--feather), #000 calc(100% - var(--feather)), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 var(--feather), #000 calc(100% - var(--feather)), transparent),
+    linear-gradient(to bottom, transparent, #000 var(--feather), #000 calc(100% - var(--feather)), transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.cued {
+  color: var(--color-ink-dim);
+}
+.cued .lit {
+  color: var(--color-white);
+}
+[data-cue] {
+  cursor: pointer;
+}
+.scrolling [data-cue] {
+  pointer-events: none;
+}
+.raised {
+  white-space: nowrap;
+  width: 0;
+  display: inline-block;
+  position: relative;
+  top: -0.85rem;
+  left: 0.2rem;
+}
+@media (width >= 650px) {
+  .raised {
+    top: -2.6rem;
+  }
+}
+.ride {
+  font-size: 1.3rem;
+  position: relative;
+  top: -0.4rem;
+}
+@media (width >= 650px) {
+  .ride {
+    font-size: 1.7rem;
+  }
+}
+@media (width < 650px) {
+  .titles {
+    flex-direction: column;
+    display: flex;
+  }
+  .titles p {
+    display: contents;
+  }
+  .titles p:first-child span:first-child {
+    order: 1;
+  }
+  .titles p:nth-child(2) span:first-child {
+    order: 2;
+  }
+  .titles p:first-child span:nth-child(2) {
+    order: 3;
+  }
+  .titles p:nth-child(2) span:nth-child(2) {
+    order: 4;
+  }
+}
+
+/* ---------- Track cue panel (video preview on hover) ---------- */
+.cue-panel video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Site player (dock + expanded sheet) ---------- */
+.player .panel {
+  box-shadow: inset 0 0 0 1px #ffffff1a;
+}
+.player .mark {
+  opacity: 0;
+  transition: opacity 0.15s var(--ease-out-quad);
+}
+.player .shift {
+  transition: translate 0.15s var(--ease-out-quad);
+}
+@media (hover: hover) {
+  .player .row:hover .mark {
+    opacity: 1;
+  }
+  .player .row:hover .shift {
+    translate: 2rem;
+  }
+}
+
+/* ---------- Record disc (record-disc chunk) ---------- */
+.record-stage {
+  perspective: 1800px;
+  position: relative;
+  container-type: size;
+}
+.disc {
+  width: var(--disc, 70.88cqw);
+  aspect-ratio: 1;
+  transition: transform 0.8s var(--ease-flip);
+  flex-shrink: 0;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.disc .spin {
+  transform-style: preserve-3d;
+  animation: platter var(--turn, 1.8s) linear infinite;
+  position: absolute;
+  inset: 0;
+}
+.disc .spin.still {
+  animation-play-state: paused;
+}
+@keyframes platter {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.disc .face {
+  object-fit: contain;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+.disc .face.back {
+  transform: rotateY(180deg);
+}
+.disc .sheen {
+  pointer-events: none;
+  backface-visibility: hidden;
+  background: conic-gradient(#0000 0deg, #00000021 24deg, #ffffff42 52deg, #0000 88deg 170deg, #0000001a 198deg, #ffffff2e 226deg, #0000 264deg, 1turn);
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  transform: translateZ(1px);
+  -webkit-mask-image: radial-gradient(closest-side, #0000 0 33%, #000 40% 96%, #0000 100%);
+  mask-image: radial-gradient(closest-side, #0000 0 33%, #000 40% 96%, #0000 100%);
+}
+.disc .sheen.back {
+  transform: rotateY(180deg) translateZ(1px);
+}
+
+/* ---------- Site menu (mobile sheet) ---------- */
+.menu .panel {
+  box-shadow: inset 0 0 0 1px var(--color-hairline);
+}
+
+/* ---------- Hover wash on rows/links ---------- */
+.hoverable {
+  isolation: isolate;
+  position: relative;
+}
+.hoverable::after {
+  content: "";
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--color-wash);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s var(--ease-out-quad);
+  position: absolute;
+  inset: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hoverable:hover::after {
+    opacity: 1;
+  }
+}
+
+/* ---------- Line reveal (split masks) ---------- */
+.js-line-mask {
+  display: block;
+  position: relative;
+  overflow: clip;
+}
+.js-line {
+  display: block;
+  position: relative;
+  will-change: transform;
+}
+
+/* ---------- Enter overlay ---------- */
+.enter-backdrop.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background-color: var(--color-black);
+}
+.enter-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.enter-sheet.is-hot {
+  cursor: pointer;
+}
+.enter-sleeve {
+  width: 24rem;
+  aspect-ratio: 1;
+}
+.enter-sleeve img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.enter-label {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.enter-label-follow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  translate: 1rem 1rem;
+  pointer-events: none;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ---------- Idle easter-egg gif ---------- */
+.idle-gif {
+  position: fixed;
+  z-index: 110;
+  height: 25rem;
+  width: auto;
+  border-radius: 0.5rem;
+  transition: opacity 0.35s ease-snappy, transform 0.35s ease-snappy;
+  pointer-events: none;
+}
+.idle-gif.is-out {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.idle-gif.is-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- Grid overlay (shift + G) ---------- */
+.grid-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+.grid-overlay .site-max {
+  height: 100%;
+}
+.grid-overlay .col {
+  height: 100%;
+  background: #ffffff1a;
+}
+@media (width < 650px) {
+  .grid-overlay .col:nth-child(n + 5) {
+    display: none;
+  }
+}

@@ -1,0 +1,1 @@
+import{R as e}from"#entry";var t=e(`/record.webp`);export{t};

@@ -1,0 +1,549 @@
+import{
+C as e,f as t,p as n}
+from"./oPCmLQ4I.js";
+import{
+A as r,C as i,D as a,E as o,G as s,It as c,K as l,Lt as u,O as d,Pt as f,R as p,S as m,V as h,W as g,X as _,Y as v,_t as y,b,et as x,ft as S,i as C,l as w,p as T,r as E,rt as D,s as O,tt as k,u as A,x as j,y as M}
+from"./BcL1QBv6.js";
+import{
+t as N}
+from"./Dv6o1hQR.js";
+import{
+t as P}
+from"./B2Cn2Kjp.js";
+import{
+f as ee,i as F,n as te}
+from"./CSB_9qOQ.js";
+import{
+i as I,n as ne,t as L}
+from"./Co8Gqqe3.js";
+import{
+a as R,n as z}
+from"./CZEyUk1w.js";
+import{
+n as B,r as V,t as H}
+from"./9Gf3pYfE.js";
+import{
+A as re,F as U,M as W,N as G,R as K,_ as ie,f as ae,o as q,p as oe,v as se}
+from"#entry";
+import{
+t as J}
+from"./BDNMzG2s.js";
+import{
+t as ce}
+from"./BB7OxwI-.js";
+import{
+t as le}
+from"./CM_jQvtQ.js";
+import{
+t as ue}
+from"./DA6JRo_0.js";
+import{
+t as Y}
+from"./DINWoqki.js";
+import{
+t as X}
+from"./BIwriI8u.js";
+var de={
+class:`noise grain`,"aria-hidden":`true`}
+,fe=Object.assign(J(r({
+__name:`index`,setup(e){
+return(e,t)=>(l(),i(`div`,de))}
+}
+),[[`__scopeId`,`data-v-c2d76414`]]),{
+__name:`SiteNoise`}
+),pe=K(`/logo.png`),Z={
+class:`absolute top-0 left-0 z-50 w-full site-max site-grid pt-7`}
+,me={
+class:`row-start-1 col-start-4 flex justify-end s:col-start-12`}
+,he=Object.assign(J(r({
+__name:`index`,setup(e){
+let t=[{
+label:`Listen`,to:`/listen`,col:`col-start-3`}
+,{
+label:`Sequencer`,to:`/sequencer`,col:`col-start-4 text-right`}
+,{
+label:`About`,to:`/about`,col:`col-start-6`}
+];
+return(e,n)=>{
+let r=P,s=ce;
+return l(),i(`header`,Z,[n[2]||=b(`span`,{
+"aria-hidden":`true`,class:`absolute inset-x-0 top-36 border-t border-rule s:hidden`}
+,null,-1),d(r,{
+to:`/`,class:`row-start-1 col-span-2 mt-1`,"aria-label":`Pegassi — home`}
+,{
+default:D(()=>[...n[0]||=[b(`img`,{
+src:pe,width:`325`,height:`63`,alt:`Pegassi`,class:`w-105 h-20`}
+,null,-1)]]),_:1}
+),(l(),i(T,null,v(t,e=>b(`div`,{
+key:e.to,class:f([e.col,`hidden s:block`])}
+,[d(s,{
+to:e.to}
+,{
+default:D(()=>[a(u(e.label),1)]),_:2}
+,1032,[`to`])],2)),64)),n[3]||=o(`<div class="block row-start-2 col-span-4 mt-16 s:row-start-1 s:col-start-8 s:mt-7" data-v-940c61a7><p class="t-title lead-in js-animate-lines" data-v-940c61a7>“ASCENSION” Debut EP</p><p class="t-title mt-3 indent-half whitespace-nowrap js-animate-lines" data-v-940c61a7> aSide: Ascension, Circles<br data-v-940c61a7> bSide: Forest Walk, Twinflame </p><p class="t-title indent-full js-animate-lines" data-v-940c61a7> 04.09.2026 00:00AM<br data-v-940c61a7><span class="prod" data-v-940c61a7>Prod. by <img src="`+pe+`" width="325" height="63" alt="Pegassi®" data-v-940c61a7></span><br data-v-940c61a7> ©2026 </p></div>`,1),b(`div`,me,[d(s,{
+to:`/buy`}
+,{
+default:D(()=>[...n[1]||=[a(`Buy`,-1)]]),_:1}
+)])])}
+}
+}
+),[[`__scopeId`,`data-v-940c61a7`]]),{
+__name:`SiteHead`}
+),ge={
+class:`flex items-end gap-2 h-15`}
+,_e=.2,ve=Object.assign(r({
+__name:`Eq`,props:{
+lit:{
+type:Boolean}
+}
+,setup(e){
+let t=ee(),n=[.8,1.5,1],r=(e,n)=>t.playing.value?n*(_e+.8*t.bands.value[e]):n;
+return(t,a)=>(l(),i(`span`,ge,[(l(),i(T,null,v(n,(t,n)=>b(`i`,{
+key:n,class:f([`w-2`,e.lit?`bg-white`:`bg-ink`]),style:c({
+height:`${
+r(n,t)}
+rem`}
+)}
+,null,6)),64))]))}
+}
+),{
+__name:`Eq`}
+),Q=S(!1),ye=S(!1),be=S(!1),xe=S(!1),Se=()=>{
+let e=xe.value;
+return xe.value=!1,e}
+,Ce=S(!1),we=.8,$=.5,Te=e=>I.to(e,{
+"--reveal":1,duration:we,ease:`reveal`,overwrite:!0}
+),Ee=(e,t)=>I.to(e,{
+"--reveal":0,duration:$,ease:`snappy`,overwrite:!0,onComplete:t}
+),De=[`onClick`],Oe={
+class:`ml-auto`}
+,ke={
+key:1,class:`absolute right-0 bottom-full w-full h-5 s:w-300`,"aria-hidden":`true`}
+,Ae=[`aria-label`],je=[`aria-expanded`],Me=Object.assign(J(r({
+__name:`index`,setup(r){
+let a=ee(),o=ie(),s=t(),{
+$planes:_,$event:C,$gl:w,$scroll:E}
+=e(),O=S(!1),R=te,B=[0,1,3,2],V=S(!1),H=x(`slot`),U=x(`box`),W=x(`root`),G=e=>a.index.value===e,K=new Set([`/`,`/about`]),ae=new Set([...K,`/buy`]),q=N(`_small`),se=S(s.path),J=M(()=>q.value?se.value:s.path),ce=()=>{
+se.value=s.path}
+;
+g(()=>C.on(`page:inserted`,ce)),h(()=>C.off(`page:inserted`,ce));
+let Y=M(()=>(q.value?ae:K).has(J.value)&&!ye.value),X=!1,de=()=>{
+X=!1,_?.discard(`mini-panel`),V.value=!1}
+,fe=e=>{
+e||!X||de()}
+,pe=(e,t)=>{
+if(I.killTweensOf(e),q.value){
+I.set(e,{
+autoAlpha:+!!t}
+),fe(t);
+return}
+I.to(e,{
+autoAlpha:+!!t,duration:L,delay:t?L:0,ease:ne,onComplete:()=>fe(t)}
+)}
+;
+k(Y,e=>{
+W.value&&pe(W.value,e)}
+);
+let Z=!1;
+n().beforeEach(e=>{
+K.has(e.path)||!Q.value||(H.value&&o.release(H.value),Z=!0,Q.value=!1)}
+);
+let me=M(()=>Q.value&&Y.value),he=()=>window.matchMedia(`(hover: hover)`).matches,ge=()=>{
+be.value=!0,he()&&Y.value&&(Q.value=!0)}
+,_e=()=>{
+be.value=!1,he()&&(Q.value=!1)}
+,xe=()=>he()?a.toggle():Q.value=!Q.value,we=null;
+k([me,H],async([e])=>{
+if(!e){
+we=null,Se(),H.value&&o.release(H.value,{
+instant:!0}
+);
+return}
+await p(),!(!me.value||!H.value||we===H.value)&&(we=H.value,o.claim(H.value,oe,Se()?{
+}
+:{
+instant:!0}
+))}
+,{
+immediate:!0}
+),k(Q,async e=>{
+if(!e){
+if(!Z){
+if(q.value&&U.value)return void Ee(U.value,de);
+de();
+return}
+Z=!1,X=!0,_?.get(`mini-panel`)?.fade(L);
+return}
+Ce.value=!1,X=!1,V.value=!0,await p();
+let t=U.value;
+t&&(q.value&&Te(t),_?.ensureColor({
+el:t,color:A(`--color-surface`),id:`mini-panel`,order:z.overlay,fixed:!0}
+))}
+);
+let $=S(0),Me=1/0,Ne=()=>{
+let e=document.querySelector(`[data-player-floor]`);
+Me=e?e.getBoundingClientRect().top+window.scrollY:1/0}
+,Pe=e=>{
+if(q.value){
+$.value=0;
+return}
+Me===1/0&&Ne();
+let t=Math.max(0,window.innerHeight-(Me-e));
+t!==$.value&&($.value=t,_?.get(`mini-panel`)?.stale())}
+,Fe=()=>{
+Ne(),Pe(E?.y??0),I.delayedCall(re,()=>{
+Ne(),Pe(E?.y??0)}
+)}
+,Ie=({
+y:e}
+)=>Pe(e),Le=()=>{
+Ne(),Pe(E?.y??0)}
+;
+k(()=>s.path,()=>{
+Me=1/0}
+),g(()=>{
+O.value=!!w?.core,W.value&&I.set(W.value,{
+autoAlpha:+!!Y.value}
+),Fe(),C.on(`scroll`,Ie),C.on(`resize`,Le),C.on(`page:inserted`,Fe)}
+),h(()=>{
+C.off(`scroll`,Ie),C.off(`resize`,Le),C.off(`page:inserted`,Fe)}
+);
+let Re=()=>{
+H.value&&o.release(H.value),Z=!0,Q.value=!1}
+;
+return h(()=>{
+H.value&&o.release(H.value)}
+),(e,t)=>{
+let n=P,r=le,o=ve,s=ue;
+return l(),i(`div`,{
+ref_key:`root`,ref:W,class:`fixed left-10 right-10 bottom-10 z-70 s:left-auto`,style:c({
+translate:`0 ${
+-y($)}
+px`}
+),onMouseenter:ge,onMouseleave:_e}
+,[y(V)?(l(),i(`div`,{
+key:0,ref_key:`box`,ref:U,class:`panel mask-clip absolute right-0 bottom-40 w-full rounded-5 has-gl:bg-transparent bg-surface overflow-hidden s:w-300`}
+,[d(n,{
+to:`/listen`,class:`hoverable flex justify-between items-center h-40 pl-15 pr-10 border-b border-line s:pr-17`,onClick:Re}
+,{
+default:D(()=>[...t[1]||=[b(`span`,null,`Full Player`,-1),b(`span`,null,`→`,-1)]]),_:1}
+),d(n,{
+to:`/listen`,class:`block`,onClick:Re}
+,{
+default:D(()=>[b(`div`,{
+ref_key:`slot`,ref:H,class:`record-stage flex justify-center items-center h-305 border-b border-line`}
+,[y(O)?m(``,!0):(l(),j(r,{
+key:0,class:`[--disc:min(92cqw,92cqh)] s:[--disc:min(75.83cqw,100cqh)]`}
+))],512)]),_:1}
+),(l(),i(T,null,v(B,(e,t)=>b(`button`,{
+key:e,type:`button`,class:f([`row hoverable flex items-center w-full h-45 pr-10 text-left`,[t<B.length-1&&`border-b border-line`,G(e)&&`bg-surface-2`]]),onClick:t=>G(e)?y(a).toggle():y(a).select(e)}
+,[G(e)?(l(),j(o,{
+key:0,lit:``,class:`ml-15`}
+)):(l(),j(s,{
+key:1,class:`mark absolute left-15 top-1/2 -translate-y-1/2`}
+)),b(`span`,{
+class:f(G(e)?`ml-9`:`ml-15 shift`)}
+,u(y(R)[e]?.title),3),b(`span`,Oe,`(`+u(y(F)(y(a).durations.value[e]??0))+`)`,1)],10,De)),64))],512)):m(``,!0),y(V)?(l(),i(`div`,ke)):m(``,!0),b(`div`,{
+class:f([`panel flex items-center w-[calc(100%-var(--menu-slot))] h-35 rounded-5 s:ml-auto s:w-max s:min-w-210`,y(Q)?`bg-surface-2`:`bg-surface`])}
+,[b(`button`,{
+type:`button`,class:`flex justify-center items-center w-12 h-full ml-12`,"aria-label":y(a).playing.value?`Pause`:`Play`,onClick:t[0]||=e=>y(a).toggle()}
+,[y(a).playing.value?(l(),j(o,{
+key:0,lit:``}
+)):(l(),j(s,{
+key:1}
+))],8,Ae),b(`button`,{
+type:`button`,class:`flex items-center grow h-full pl-13 pr-13 text-left whitespace-nowrap`,"aria-expanded":y(Q),onClick:xe}
+,u(y(a).track.value.title)+` - Pegassi®`,9,je)],2)],36)}
+}
+}
+),[[`__scopeId`,`data-v-0a337d25`]]),{
+__name:`SitePlayer`}
+),Ne={
+class:`fixed inset-x-0 bottom-10 z-70 site-max pointer-events-none s:hidden`}
+,Pe={
+class:`flex justify-end`}
+,Fe=[`aria-expanded`],Ie=Object.assign(J(r({
+__name:`index`,setup(n){
+let r=t(),{
+$event:o}
+=e(),s=[{
+label:`Home`,to:`/`}
+,{
+label:`Listen`,to:`/listen`}
+,{
+label:`Sequencer`,to:`/sequencer`}
+,{
+label:`About`,to:`/about`}
+,{
+label:`Buy`,to:`/buy`}
+],c=Ce,_=x(`sheet`),C=S(!1);
+k(c,async e=>{
+if(e){
+Q.value=!1,C.value=!0,await p(),_.value&&Te(_.value);
+return}
+if(!_.value){
+C.value=!1;
+return}
+Ee(_.value,()=>{
+C.value=!1}
+)}
+);
+let w=S(r.path),E=()=>{
+c.value=!1}
+,O=()=>{
+w.value=r.path,c.value&&(c.value=!1,C.value=!1)}
+;
+return g(()=>o.on(`page:inserted`,O)),h(()=>o.off(`page:inserted`,O)),(e,t)=>{
+let n=P;
+return l(),i(`div`,Ne,[y(C)?(l(),i(`nav`,{
+key:0,ref_key:`sheet`,ref:_,class:`panel mask-clip absolute inset-x-10 bottom-40 rounded-5 bg-surface overflow-hidden pointer-events-auto`}
+,[t[1]||=b(`p`,{
+class:`flex items-center h-40 pl-15 border-b border-line`}
+,`Menu`,-1),(l(),i(T,null,v(s,(e,t)=>d(n,{
+key:e.to,to:e.to,class:f([`hoverable flex items-center h-70 pl-15 text-35 leading-45`,t<s.length-1&&`border-b border-line`]),onClick:t=>e.to===y(w)&&E()}
+,{
+default:D(()=>[a(u(y(w)===e.to?`● `:``)+u(e.label),1)]),_:2}
+,1032,[`to`,`class`,`onClick`])),64))],512)):m(``,!0),b(`div`,Pe,[b(`button`,{
+type:`button`,class:f([`panel flex justify-center items-center w-[var(--menu-button)] h-35 rounded-5 pointer-events-auto`,y(c)?`bg-surface-2`:`bg-surface`]),"aria-expanded":y(c),onClick:t[0]||=e=>c.value=!y(c)}
+,`Menu`,10,Fe)])])}
+}
+}
+),[[`__scopeId`,`data-v-72b635f0`]]),{
+__name:`SiteMenu`}
+),Le=1,Re=.25,ze=2.5,Be=.85,Ve=-6,He=.4,Ue=1.2,We=.85,Ge=.1,Ke=.6,qe=`power2.in`,Je=.35;
+function Ye(t,n){
+let{
+$gl:r,$event:i,$resize:a}
+=e(),o=ie(),c=null,l=null,u=null,d=0,f={
+value:0,velocity:0,target:0}
+,p={
+value:0}
+,m={
+x:0,y:0}
+,h=0,g=0,_=!1,v=()=>Math.min(1,Math.max(0,f.value/Re)),y=()=>1+He*v(),b=!1,x=!1,S=null,C=()=>window.matchMedia(`(prefers-reduced-motion: reduce)`).matches,T=()=>{
+d=u?.offsetWidth??0}
+,E=()=>!S||!d?null:{
+rect:S,sleeve:d,entry:p.value,disc:!1,split:Be,slide:m.x,drop:m.y,scale:y()}
+,D=()=>{
+if(!u||!S||!d)return;
+let e=V(S,d,f.value,Be),t=y();
+u.style.translate=`${
+e.discX*t}
+px`,u.style.scale=`${
+t*e.discSize/(d*ae)}
+`}
+,O=()=>{
+if(!S||!d||!_)return 0;
+let e=h-(S.left+S.width/2),t=g-(S.top+S.height/2),n=1-Math.min(1,Math.hypot(e,t)/(ze*d));
+return n*n*(3-2*n)}
+,k=({
+ratio:e}
+)=>{
+if(!c||!l?.isConnected)return;
+let t=l.getBoundingClientRect();
+S=t.width?{
+left:t.left,top:t.top,width:t.width,height:t.height}
+:null,b&&(f.target=Re*O()),C()?(f.value=f.target,f.velocity=0):w(f,Ue,We,e/60),c.pose(f.value,Ve*v(),0),D()}
+,A=async()=>{
+let e=r?.core,s=t.value,d=n.value;
+return!e||!s||!d||(l=s,u=d,c=H(e),T(),a.add(T),await c.loaded,x)||(c.pose(0,0,0),c.mount(E,z.planes+2),i.on(`tick`,k),C()?p.value=1:await new Promise(e=>{
+I.to(p,{
+value:1,duration:Le,ease:`none`,onComplete:e}
+)}
+),x)?!1:(o.gate(!1),o.claim(u,ae,{
+instant:!0}
+),b=!0,!0)}
+,j=(e,t)=>{
+h=e,g=t,_=!0}
+,M=({
+thrown:e=!1}
+={
+}
+)=>{
+if(b&&u&&o.release(u,{
+thrown:e}
+),b=!1,C()||!S)return N();
+let t=-(S.width/2+d*y());
+I.to(m,{
+x:t,y:Je*d*y(),duration:Ke,delay:Ge,ease:qe,onComplete:N}
+)}
+,N=()=>{
+x||(x=!0,I.killTweensOf([p,m]),i.off(`tick`,k),a.remove(T),b&&u&&o.release(u,{
+instant:!0}
+),b=!1,c?.unmount(),c=null,l=null,u=null,S=null)}
+;
+return s(N),{
+arrive:A,point:j,launch:M}
+}
+var Xe=[`/about-portrait.webp`,`/note-portrait.webp`],Ze=4e3,Qe=e=>{
+navigator.connection?.saveData||e&&(e.textures.preload(Xe),se(e),B(e),q(e),R(()=>{
+se(e),B(e)}
+,Ze))}
+,$e={
+key:0,class:`grain absolute inset-0 -z-10`,"aria-hidden":`true`}
+,et=`Click to enter`,tt=.5,nt=`power1`,rt=3e3,it=4,at=.55,ot=.15,st=Object.assign(r({
+__name:`index`,setup(n){
+let r=ee(),{
+$gl:a,$planes:o}
+=e(),c=ie(),d=x(`sheet`),h=x(`black`),_=x(`label`),v=x(`stage`),C=x(`slot`),w=t().path,D=!U(w),k=D&&(w===`/`||w===`/about`),A=S(!0),j=S(!1),M=S(!1),N=S(!1),P=S(!1),F=Ye(v,C),te=e=>new Promise(t=>setTimeout(t,Math.max(0,e))),ne=e=>Promise.race([O(),te(e)]),L=async()=>{
+let e=performance.now()+rt,t=()=>e-performance.now();
+await Promise.race([document.fonts.ready,te(t())]);
+let n=a?.core,r=0;
+for(;
+n&&r<it&&t()>0;
+)r=n.textures.settled?r+1:0,await ne(t());
+await ne(t())}
+;
+g(async()=>{
+if(W(document.body,o),D&&(c.gate(!0),ye.value=!0),Qe(a?.core??null),await L(),M.value=!0,!k)return K();
+N.value=!0,P.value=!!a?.core,await p(),P.value&&!await F.arrive()&&(P.value=!1),P.value||I.to(_.value,{
+autoAlpha:1,duration:tt,ease:nt}
+)}
+);
+let R=Y(_),z=0,B=0,V=!1,H=e=>{
+if(P.value){
+if(z=e.clientX,B=e.clientY,F.point(z,B),V)return R.move(z,B);
+R.show(z,B),V=!0}
+}
+;
+g(()=>{
+E()&&window.addEventListener(`mousemove`,H,{
+passive:!0}
+)}
+),s(()=>window.removeEventListener(`mousemove`,H));
+let re=()=>{
+!M.value||!k||(r.select(0),P.value&&(I.set(_.value,{
+autoAlpha:0}
+),F.launch({
+thrown:!0}
+)),K())}
+,K=()=>{
+c.gate(!1),ye.value=!1,j.value=!0;
+let e=P.value?at:0,t=P.value?ot:0;
+G(document.body,o,{
+delay:e,trail:t,textFade:tt}
+),I.to([d.value,h.value].filter(Boolean),{
+autoAlpha:0,duration:tt,delay:e+t,ease:nt,onComplete:()=>{
+A.value=!1}
+}
+)}
+;
+return(e,t)=>(l(),i(T,null,[y(A)&&y(P)?(l(),i(`div`,{
+key:0,ref_key:`black`,ref:h,class:`grain fixed inset-0 z-55 bg-black`,"aria-hidden":`true`}
+,null,512)):m(``,!0),y(A)?(l(),i(`button`,{
+key:1,ref_key:`sheet`,ref:d,type:`button`,class:f([`fixed inset-0 z-100 flex flex-col justify-center items-center`,[y(P)?``:`bg-black`,y(j)?`pointer-events-none`:y(M)?`cursor-pointer`:`cursor-default`]]),onClick:re}
+,[y(N)&&!y(P)?(l(),i(`span`,$e)):m(``,!0),y(P)?(l(),i(T,{
+key:1}
+,[b(`div`,{
+ref_key:`stage`,ref:v,class:`absolute inset-0 flex justify-center items-center`}
+,[b(`div`,{
+ref_key:`slot`,ref:C,class:`w-240 aspect-square`}
+,null,512)],512),b(`span`,{
+ref_key:`label`,ref:_,class:`fixed left-0 top-0 translate-x-10 translate-y-10 invisible opacity-0 pointer-events-none`}
+,u(et),512)],64)):y(N)?(l(),i(T,{
+key:2}
+,[t[0]||=b(`img`,{
+src:X,width:`717`,height:`717`,alt:`ASCENSION sleeve`,class:`w-240`}
+,null,-1),b(`span`,{
+ref_key:`label`,ref:_,class:`mt-10 invisible opacity-0`}
+,u(et),512)],64)):m(``,!0)],2)):m(``,!0)],64))}
+}
+),{
+__name:`SiteEnter`}
+),ct=[`src`],lt=1e4,ut=8,dt=Object.assign(r({
+__name:`index`,setup(t){
+let{
+$resize:n}
+=e(),r=x(`gif`),a=S(null),o=S(!1),s=S(0),u=S(0),d=0,p=0,_=!1,v=!1,b=0,w=[],T=0,D=0,O=null,k=e=>`/idle/${
+e}
+.gif`,A=()=>window.matchMedia(`(prefers-reduced-motion: reduce)`).matches,j=()=>(w.length||(w=I.utils.shuffle(Array.from({
+length:ut}
+,(e,t)=>t+1)),w.length>1&&w[w.length-1]===T&&w.unshift(w.pop())),T=w.pop()),M=()=>{
+D=j(),O=new Image,O.src=k(D)}
+,N=()=>{
+window.clearTimeout(b),b=0}
+,P=()=>{
+a.value=null,o.value=!1}
+,ee=()=>{
+if(b=0,A())return;
+let e=D||j();
+D=0,a.value=k(e)}
+,F=()=>{
+N(),b=window.setTimeout(ee,lt)}
+,te=()=>{
+let e=r.value;
+if(!e||!a.value)return;
+let t=e.offsetWidth,i=e.offsetHeight,c=parseFloat(getComputedStyle(document.documentElement).fontSize);
+s.value=C(c,n.ww-t-c,d-t/2),u.value=C(c,n.wh-i-c,p-i/2),o.value=!0,M()}
+,ne=()=>{
+P(),F()}
+,L=()=>{
+P(),F()}
+,R=e=>{
+_&&e.clientX===d&&e.clientY===p||(d=e.clientX,p=e.clientY,_=!0,L())}
+,z=()=>{
+v=!0,N()}
+,B=()=>{
+v=!1}
+,V=()=>{
+if(document.hidden){
+P(),N();
+return}
+_&&!v&&F()}
+;
+return g(()=>{
+E()&&(window.addEventListener(`mousemove`,R,{
+passive:!0}
+),window.addEventListener(`pointerdown`,L,{
+passive:!0}
+),window.addEventListener(`keydown`,L,{
+passive:!0}
+),window.addEventListener(`wheel`,L,{
+passive:!0}
+),document.documentElement.addEventListener(`mouseleave`,z),document.documentElement.addEventListener(`mouseenter`,B),document.addEventListener(`visibilitychange`,V))}
+),h(()=>{
+N(),window.removeEventListener(`mousemove`,R),window.removeEventListener(`pointerdown`,L),window.removeEventListener(`keydown`,L),window.removeEventListener(`wheel`,L),document.documentElement.removeEventListener(`mouseleave`,z),document.documentElement.removeEventListener(`mouseenter`,B),document.removeEventListener(`visibilitychange`,V)}
+),(e,t)=>y(a)?(l(),i(`img`,{
+key:0,ref_key:`gif`,ref:r,src:y(a),alt:``,"aria-hidden":`true`,class:f([`fixed z-110 h-250 w-auto rounded-5 transition-[opacity,transform] duration-350 ease-snappy pointer-events-none`,y(o)?`opacity-100 scale-100`:`opacity-0 scale-90`]),style:c({
+left:`${
+y(s)}
+px`,top:`${
+y(u)}
+px`}
+),onLoad:te,onError:ne}
+,null,46,ct)):m(``,!0)}
+}
+),{
+__name:`SiteIdle`}
+),ft={
+key:0,class:`pointer-events-none fixed inset-0 z-999`}
+,pt={
+class:`site-max site-grid h-full`}
+,mt=12,ht=Object.assign(r({
+__name:`GridOverlay`,setup(e){
+let t=S(!1),n=e=>{
+if(!e.shiftKey||e.code!==`KeyG`)return;
+let n=e.target;
+n?.tagName===`INPUT`||n?.tagName===`TEXTAREA`||n?.isContentEditable||(t.value=!t.value)}
+;
+return g(()=>{
+}
+),s(()=>window.removeEventListener(`keydown`,n)),(e,n)=>y(t)?(l(),i(`div`,ft,[b(`div`,pt,[(l(),i(T,null,v(mt,e=>b(`div`,{
+key:e,class:f([`h-full bg-white/10`,e>4&&`max-s:hidden`])}
+,null,2)),64))])])):m(``,!0)}
+}
+),{
+__name:`GridOverlay`}
+),gt=r({
+__name:`default`,setup(e){
+return(e,t)=>{
+let n=fe,r=he,a=Me,o=Ie,s=st,c=dt,u=ht;
+return l(),i(T,null,[b(`main`,null,[_(e.$slots,`default`)]),d(n),d(r),d(a),d(o),t[0]||=b(`div`,{
+"data-transition-mask":``,class:`grain fixed inset-0 z-90 bg-black opacity-0 invisible pointer-events-none`,"aria-hidden":`true`}
+,null,-1),d(s),d(c),d(u)],64)}
+}
+}
+);
+export{
+gt as default}
+;
