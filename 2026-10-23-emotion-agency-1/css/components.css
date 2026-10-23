@@ -1,0 +1,650 @@
+/* ============================================
+   COMPONENTS - Buttons, Pills, Links, etc.
+   ============================================ */
+
+.button {
+  --size: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: var(--rounded-full);
+  padding: 0.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-property: background-color, filter;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.button--sm {
+  --size: 2rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.button--md {
+  --size: 2.5rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.button--lg {
+  --size: 3rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.button__canvas-container {
+  border-radius: var(--rounded-full);
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.button__gradient {
+  display: block;
+  filter: saturate(1.2) contrast(1.05);
+  height: 100%;
+  pointer-events: none;
+  width: 100%;
+}
+
+.button__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.button__content-sub {
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.button__content-sub--2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.button:hover .button__content-sub--1 {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.button:hover .button__content-sub--2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.button__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 2;
+}
+
+.button__shadow {
+  border-radius: var(--rounded-full);
+  bottom: 0;
+  filter: blur(12px);
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transform: scale(0.6);
+  transition-duration: 0.4s;
+  transition-property: opacity, visibility, transform;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+.button:hover .button__shadow {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+.button--primary {
+  background-color: var(--primary);
+  color: var(--color-base-white);
+}
+
+.button--primary .button__shadow {
+  background-color: var(--primary);
+}
+
+.button--dark {
+  background-color: var(--foreground);
+  color: var(--color-base-white);
+}
+
+.button--dark .button__shadow {
+  background-color: var(--foreground);
+}
+
+.button--light {
+  background-color: var(--color-base-white);
+  color: var(--foreground);
+}
+
+.button--light .button__shadow {
+  background-color: var(--color-base-white);
+}
+
+.button--outline {
+  border: 1px solid var(--border);
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.button--outline:hover {
+  background-color: var(--muted);
+}
+
+/* Pill Component */
+.pill {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--rounded-full);
+  color: var(--color-base-white);
+  display: inline-flex;
+  width: fit-content;
+}
+
+.pill--md {
+  gap: 0.375rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.pill--sm {
+  gap: 0.25rem;
+  padding: 0.125rem 0.375rem;
+}
+
+.pill--sm .pill__content {
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.pill--primary {
+  background-color: var(--primary);
+}
+
+.pill--outline {
+  border-color: var(--color-gray-300);
+  color: var(--foreground);
+}
+
+.pill__icon {
+  flex-shrink: 0;
+}
+
+.pill__icon > svg {
+  display: block;
+  height: 1em;
+}
+
+.pill__content {
+  font-family: "IBM Plex Mono", "IBM Plex Mono Fallback: Courier New", "IBM Plex Mono Fallback: Roboto Mono", "IBM Plex Mono Fallback: Noto Sans Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.15;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Menu Link */
+.menu-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.menu-link::after {
+  background-color: currentColor;
+  bottom: 0.25rem;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+}
+
+.menu-link:hover::after,
+.menu-link.router-link-exact-active::after {
+  transform: scaleX(1);
+}
+
+.menu-link.draggable-false {
+  draggable: false;
+}
+
+/* Anim Icon */
+.anim-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.anim-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Info Label */
+.info-label {
+  align-items: center;
+  color: var(--color-slate-400);
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.info-label--md {
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.info-label--sm {
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: none;
+}
+
+/* Separator */
+.separator {
+  background-color: var(--border);
+  height: 1px;
+  width: 100%;
+}
+
+/* Spec List */
+.spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spec-list__item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.spec-list__item-label {
+  font-family: "Emotion Serif", serif;
+  font-size: 1.25rem;
+  font-variation-settings: "wdth" 75, "HGHT" 100;
+  font-weight: 300;
+  line-height: 0.8;
+  text-transform: none;
+}
+
+@media (min-width: 1024px) {
+  .spec-list__item-label {
+    font-size: 1.5rem;
+  }
+}
+
+.spec-list__item-label {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.spec-list__item-value {
+  font-family: "IBM Plex Mono", "IBM Plex Mono Fallback: Courier New", "IBM Plex Mono Fallback: Roboto Mono", "IBM Plex Mono Fallback: Noto Sans Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.spec-list__item-line {
+  background-color: var(--foreground);
+  bottom: 0;
+  height: 1px;
+  position: absolute;
+  width: 100%;
+}
+
+/* Progress Ring */
+.progress-ring {
+  align-items: center;
+  background-color: var(--ring-fill, rgba(var(--foreground-rgb), 0.1));
+  border-radius: 50%;
+  display: flex;
+  height: 6rem;
+  justify-content: center;
+  position: relative;
+  width: 6rem;
+}
+
+.progress-ring__svg {
+  height: 100%;
+  inset: 0;
+  overflow: visible;
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 100%;
+  z-index: 2;
+}
+
+.progress-ring__track {
+  fill: none;
+  stroke: var(--ring-track, rgba(var(--foreground-rgb), 0.2));
+  stroke-width: 2;
+}
+
+.progress-ring__bar {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.progress-ring__icon {
+  font-size: 1rem;
+}
+
+/* Sound Visualization */
+.sound-viz {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+.sound-viz__canvas {
+  display: block;
+}
+
+.sound-viz__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  pointer-events: none;
+}
+
+/* F Email */
+.f-email {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.f-email__slot {
+  align-items: start;
+  display: grid;
+  justify-items: start;
+}
+
+.f-email__slot > * {
+  grid-area: 1 / 1;
+}
+
+.f-email__link {
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+
+.f-email--copied .f-email__link,
+.f-email__copied {
+  pointer-events: none;
+}
+
+.f-email__copied {
+  padding: 0.25rem 0;
+}
+
+.f-email .f-email__copy {
+  color: var(--color-gray-500);
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.f-email .f-email__copy::after {
+  content: "";
+  inset: -0.1875rem;
+  position: absolute;
+}
+
+.f-email .f-email__copy:focus-visible,
+.f-email .f-email__copy:hover {
+  color: var(--foreground);
+}
+
+.f-email .f-email__copy:focus-visible,
+.f-email--copied .f-email__copy,
+.f-email:hover .f-email__copy {
+  opacity: 1;
+}
+
+/* Footer Data */
+.footer-data {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1.45fr 1fr;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 460px) {
+  .footer-data {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+}
+
+.footer-data--contact {
+  grid-template-columns: 0.84fr 1fr;
+}
+
+@media (min-width: 1024px) {
+  .footer-data {
+    margin-top: 3.25rem;
+  }
+}
+
+.footer-data__group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-data__group:not(:last-child) {
+  max-width: 11rem;
+}
+
+.footer-data__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-data__link {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.footer-data__index {
+  color: var(--color-gray-500);
+  font-family: "IBM Plex Mono", "IBM Plex Mono Fallback: Courier New", "IBM Plex Mono Fallback: Roboto Mono", "IBM Plex Mono Fallback: Noto Sans Mono", monospace;
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.footer-data__text {
+  display: inline-block;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+.footer-data__text.router-link-exact-active::after {
+  pointer-events: none;
+  transform: scaleX(1);
+}
+
+.footer-data__text::after {
+  background-color: currentColor;
+  bottom: 0.25rem;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+}
+
+.footer-data__icon {
+  flex-shrink: 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-bottom__line {
+  color: var(--color-gray-500);
+}
+
+.footer-bottom__content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .footer-bottom__content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.footer-bottom__copyrights {
+  color: var(--color-gray-500);
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: none;
+}
+
+@media (max-width: 640px) {
+  .footer-bottom__copyrights {
+    order: 1;
+  }
+}
+
+.footer-bottom__scroll-text {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-bottom__scroll-text {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-bottom__scroll-text {
+    order: 3;
+  }
+}
+
+.footer-bottom__privacy-links {
+  align-items: center;
+  color: var(--color-gray-500);
+  display: flex;
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  gap: 1rem;
+  line-height: 1;
+  text-transform: none;
+}
+
+@media (max-width: 640px) {
+  .footer-bottom__privacy-links {
+    order: 2;
+  }
+}
+
+.footer-bottom__privacy-link {
+  display: block;
+  position: relative;
+}
+
+.footer-bottom__privacy-link::after {
+  background-color: currentColor;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.footer-bottom__privacy-link.router-link-exact-active::after,
+.footer-bottom__privacy-link:hover::after {
+  transform: scaleX(1);
+}

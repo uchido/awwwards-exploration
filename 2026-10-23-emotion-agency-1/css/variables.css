@@ -1,0 +1,61 @@
+:root {
+  --primary: #9047ff;
+  --primary-rgb: 144, 71, 255;
+  --primary-active: #7114ff;
+  --primary-active-rgb: 113, 20, 255;
+  --status-danger: #ff3b30;
+  --status-danger-rgb: 255, 59, 48;
+  --status-danger-active: #c91b11;
+  --status-danger-active-rgb: 201, 27, 17;
+  --status-success: #319f43;
+  --status-success-rgb: 49, 159, 67;
+  --background: #f5efff;
+  --background-rgb: 245, 239, 255;
+  --foreground: #2a1647;
+  --foreground-rgb: 42, 22, 71;
+  --foreground-muted: #64698b;
+  --foreground-muted-rgb: 100, 105, 139;
+  --border: #e2e4f0;
+  --border-rgb: 226, 228, 240;
+  --card: #fff;
+  --card-rgb: 255, 255, 255;
+  --muted: #f1f2f9;
+  --muted-rgb: 241, 242, 249;
+  --contrast: #000;
+  --contrast-rgb: 0, 0, 0;
+  --glass: #fff;
+  --glass-rgb: 255, 255, 255;
+  --backdrop: rgba(0, 0, 0, 0.8);
+  --backdrop-rgb: 0, 0, 0;
+  --btn-color: var(--foreground);
+  --color-base-white: #fff;
+  --color-gray-300: #e2e4f0;
+  --color-gray-500: #64698b;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-violet-100: #ede9fe;
+  --rounded-full: 9999px;
+}
+
+[data-theme="dark"] {
+  --background: #121212;
+  --background-rgb: 18, 18, 18;
+  --foreground: #fff;
+  --foreground-rgb: 255, 255, 255;
+  --foreground-muted: #a3a6c1;
+  --foreground-muted-rgb: 163, 166, 193;
+  --border: #30343f;
+  --border-rgb: 48, 52, 63;
+  --card: #181818;
+  --card-rgb: 24, 24, 24;
+  --muted: #25282e;
+  --muted-rgb: 37, 40, 46;
+  --contrast: #fff;
+  --contrast-rgb: 255, 255, 255;
+  --glass: #000;
+  --glass-rgb: 0, 0, 0;
+  --backdrop: rgba(0, 0, 0, 0.9);
+  --backdrop-rgb: 0, 0, 0;
+  --btn-color: #e5e5e5;
+  --btn-color-rgb: 229, 229, 229;
+}

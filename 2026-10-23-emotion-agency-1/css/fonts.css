@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: local("PP Neue Montreal Medium"), url("../assets/fonts/PPNeueMontreal-Medium.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: local("IBM Plex Mono Medium"), url("../assets/fonts/IBMPlexMono-Medium-Latin1.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Fallback: Courier New";
+  src: local("Courier New");
+  size-adjust: 99.9837%;
+  ascent-override: 102.5167%;
+  descent-override: 27.5045%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Fallback: Roboto Mono";
+  src: local("Roboto Mono");
+  size-adjust: 99.9837%;
+  ascent-override: 102.5167%;
+  descent-override: 27.5045%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Fallback: Noto Sans Mono";
+  src: local("Noto Sans Mono");
+  size-adjust: 100%;
+  ascent-override: 102.5%;
+  descent-override: 27.5%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Emotion Serif";
+  src: local("Georgia"), local("Times New Roman"), local("serif");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Emotion Serif";
+  src: local("Georgia"), local("Times New Roman"), local("serif");
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+}
