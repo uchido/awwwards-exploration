@@ -1,0 +1,39 @@
+/* Fonts extracted from the original site (Next.js self-hosted woff2)
+   Body:  FK Grotesk (Regular / Italic / Medium / Medium Italic) — Fontfabric "FK" foundry
+   Mono:  Regular Book (used for all uppercase micro-typography) */
+
+@font-face {
+  font-family: "FK Grotesk";
+  src: url("../assets/fonts/fk-grotesk-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FK Grotesk";
+  src: url("../assets/fonts/fk-grotesk-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FK Grotesk";
+  src: url("../assets/fonts/fk-grotesk-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FK Grotesk";
+  src: url("../assets/fonts/fk-grotesk-medium-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Regular Book";
+  src: url("../assets/fonts/regular-book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
