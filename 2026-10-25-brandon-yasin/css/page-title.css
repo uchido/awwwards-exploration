@@ -1,0 +1,19 @@
+.font-headline-1>div[data-v-2453162c]:not(:first-child){margin-top:-1.6rem}
+@media only screen and (width>=1025px){.font-headline-1>div[data-v-2453162c]:not(:first-child){margin-top:-3.2rem}}
+@media only screen and (width>=1438px){.font-headline-1>div[data-v-2453162c]:not(:first-child){margin-top:-2.23vw}}
+.font-headline-2-large>div[data-v-2453162c]:not(:first-child){margin-top:-1.6rem}
+@media only screen and (width>=1025px){.font-headline-2-large>div[data-v-2453162c]:not(:first-child){margin-top:-3.2rem}}
+@media only screen and (width>=1438px){.font-headline-2-large>div[data-v-2453162c]:not(:first-child){margin-top:-2.23vw}}
+.font-body-24>div[data-v-2453162c]:not(:first-child){margin-top:-.3rem}
+@media only screen and (width>=1025px){.font-body-24>div[data-v-2453162c]:not(:first-child){margin-top:-.4rem}}
+@media only screen and (width>=1438px){.font-body-24>div[data-v-2453162c]:not(:first-child){margin-top:-.28vw}}
+.font-body-40-100>div[data-v-2453162c]:not(:first-child){margin-top:-.6rem}
+@media only screen and (width>=1025px){.font-body-40-100>div[data-v-2453162c]:not(:first-child){margin-top:-.6rem}}
+@media only screen and (width>=1438px){.font-body-40-100>div[data-v-2453162c]:not(:first-child){margin-top:-.42vw}}
+[data-v-2453162c]:root{--color-main:#111;--color-bg:#f8f6f2;--selection-color:#111;--selection-bg:#44300033;--focus-bg:var(--color-main);--focus-color:var(--color-bg)}
+.page-title[data-v-2453162c]{top:var(--menu-page-scroll,0);z-index:10;visibility:hidden;opacity:0;pointer-events:none;width:100%;padding:6.4rem .8rem 0;position:absolute;left:0;overflow:hidden}
+@media only screen and (width>=768px){.page-title[data-v-2453162c]{padding:6.4rem 1.6rem 0}}
+@media only screen and (width>=1025px){.page-title[data-v-2453162c]{padding:6.4rem 1.6rem 0}}
+.page-title__text[data-v-2453162c]{text-transform:lowercase;letter-spacing:-.04em;font-size:5.4rem;line-height:1;display:block}
+@media only screen and (width>=1025px){.page-title__text[data-v-2453162c]{font-size:6rem}}
+@media only screen and (width>=1438px){.page-title__text[data-v-2453162c]{font-size:4.17vw}}

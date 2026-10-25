@@ -1,0 +1,22 @@
+.font-headline-1>div[data-v-b4d4802c]:not(:first-child){margin-top:-1.6rem}
+@media only screen and (width>=1025px){.font-headline-1>div[data-v-b4d4802c]:not(:first-child){margin-top:-3.2rem}}
+@media only screen and (width>=1438px){.font-headline-1>div[data-v-b4d4802c]:not(:first-child){margin-top:-2.23vw}}
+.font-headline-2-large>div[data-v-b4d4802c]:not(:first-child){margin-top:-1.6rem}
+@media only screen and (width>=1025px){.font-headline-2-large>div[data-v-b4d4802c]:not(:first-child){margin-top:-3.2rem}}
+@media only screen and (width>=1438px){.font-headline-2-large>div[data-v-b4d4802c]:not(:first-child){margin-top:-2.23vw}}
+.font-body-24>div[data-v-b4d4802c]:not(:first-child){margin-top:-.3rem}
+@media only screen and (width>=1025px){.font-body-24>div[data-v-b4d4802c]:not(:first-child){margin-top:-.4rem}}
+@media only screen and (width>=1438px){.font-body-24>div[data-v-b4d4802c]:not(:first-child){margin-top:-.28vw}}
+.font-body-40-100>div[data-v-b4d4802c]:not(:first-child){margin-top:-.6rem}
+@media only screen and (width>=1025px){.font-body-40-100>div[data-v-b4d4802c]:not(:first-child){margin-top:-.6rem}}
+@media only screen and (width>=1438px){.font-body-40-100>div[data-v-b4d4802c]:not(:first-child){margin-top:-.42vw}}
+[data-v-b4d4802c]:root{--color-main:#111;--color-bg:#f8f6f2;--selection-color:#111;--selection-bg:#44300033;--focus-bg:var(--color-main);--focus-color:var(--color-bg)}
+.menu-overlay[data-v-b4d4802c]{z-index:50;pointer-events:none;position:fixed;inset:0}
+.menu-overlay[data-v-b4d4802c]:focus,.menu-overlay[data-v-b4d4802c]:focus-visible{outline:none}
+.menu-overlay--active[data-v-b4d4802c]{pointer-events:auto}
+.menu-tiles-wrapper[data-v-b4d4802c]{pointer-events:none;will-change:transform;position:fixed;inset:0}
+.menu-tile[data-v-b4d4802c]{visibility:hidden;opacity:0;cursor:pointer;will-change:transform,opacity;pointer-events:auto}
+.menu-tile[data-v-b4d4802c]:focus-visible{outline:none}
+.menu-tile[data-v-b4d4802c]:focus-visible:after{content:"";width:var(--cut);border:.4rem solid var(--focus-bg);pointer-events:none;z-index:10;position:absolute;inset:0 auto 0 0}
+.menu-tile[data-v-b4d4802c] .page{--cut:100%;pointer-events:none}
+.menu-tile[data-v-b4d4802c] .page *{pointer-events:none}
