@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grids — DES Season 03</title>
+
+    <!--
+      What the site says about itself when it is passed around. The words and
+      the picture are Slava's; the address is the one it lives at, written
+      absolutely, because a share card is read on someone else's machine and a
+      relative path there points at nothing.
+    -->
+    <meta
+      name="description"
+      content="Grids is an interactive project exploring grids, composition, and key design principles through visual experiments. First launched in 2021 and visited by 600,000+ designers, it now continues as Season 03 of Design Education Series."
+    />
+    <link rel="canonical" href="https://grids03.obys.agency/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Grids" />
+    <meta property="og:url" content="https://grids03.obys.agency/" />
+    <meta property="og:title" content="Grids — DES Season 03" />
+    <meta
+      property="og:description"
+      content="Grids is an interactive project exploring grids, composition, and key design principles through visual experiments. First launched in 2021 and visited by 600,000+ designers, it now continues as Season 03 of Design Education Series."
+    />
+    <meta property="og:image" content="https://grids03.obys.agency/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="GRIDS, drawn in the site's own modular typeface across the whole format." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Grids — DES Season 03" />
+    <meta
+      name="twitter:description"
+      content="Grids is an interactive project exploring grids, composition, and key design principles through visual experiments. First launched in 2021 and visited by 600,000+ designers, it now continues as Season 03 of Design Education Series."
+    />
+    <meta name="twitter:image" content="https://grids03.obys.agency/og.png" />
+
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--
+      The G of our own word, its modules stretched to the square, black on the
+      page's ground. Drawn from the typeface itself in tools/favicon.js rather
+      than by hand, so it cannot drift from the letter the site is built out of.
+    -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/favicon-180.png" />
+    <link
+      rel="preload"
+      href="/fonts/ObysSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!--
+      Read before the first paint, which is the whole point of it being here
+      rather than in style.css: the stylesheet is imported from main.js and so
+      arrives WITH the script, and until it does the browser paints this file
+      exactly as written — unstyled type on the left of a white page. That is
+      the blink on every reload.
+
+      Nothing is shown until the machinery is up and has placed it. Everything
+      else about how any of it looks stays in style.css.
+    -->
+    <style>
+      html { background: #fff; }
+      body { margin: 0; }
+      .intro,
+      .preloader { visibility: hidden; }
+      .is-up .intro,
+      .is-up .preloader { visibility: visible; }
+    </style>
+
+    <!--
+      Before anything else runs. A browser puts the reader back where they were
+      when the page is reloaded, and it does that around the first paint —
+      earlier than any module of ours can execute. Reloading from halfway down
+      the page therefore showed the old place for a frame, which is a flash of
+      the contents and its type. Turned off here, it never happens at all.
+    -->
+    <script>
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      window.scrollTo(0, 0);
+    </script>
+
+    <!-- Google tag (gtag.js) — the Grids 03 stream. Loaded async so it never
+         stands between the reader and the first paint. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C7819HM3SM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-C7819HM3SM');
+    </script>
+    <script type="module" crossorigin src="/assets/index-DG09JV5w.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DESn0ymm.css">
+  </head>
+  <body>
+    <div class="preloader" data-preloader>
+      <div class="preloader__ground" data-ground></div>
+      <div class="preloader__bar" data-bar></div>
+    </div>
+
+    <main class="page">
+      <section class="intro" data-intro>
+        <p class="intro__series intro__mask-line" data-series><i>Design Education Series®<svg class="intro__cross" viewBox="0 0 4 4" aria-hidden="true" focusable="false"><path d="M0.0003 0.4924L0.4927 0L4.0002 3.5075L3.5078 3.9999Z"/><path d="M3.5075 0L3.9999 0.4924L0.4924 3.9999L0 3.5075Z"/></svg>Obys</i></p>
+
+        <!-- what the season is, beside it — the same climb out of a mask -->
+        <div class="intro__about" data-about>
+          <span class="intro__mask-line"><i><a class="intro__link" data-season>Grids</a> — DES Season 03. 17 lectures.</i></span>
+          <span class="intro__mask-line"><i>4+ hours on grids and composition.</i></span>
+        </div>
+        <!-- the contents, its ruling and the title are built in intro.js -->
+      </section>
+
+    </main>
+
+  </body>
+</html>
