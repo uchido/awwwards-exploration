@@ -1,0 +1,1165 @@
+
+
+/* ================= INLINE STYLE BLOCK 0 ================= */
+
+.w-webflow-badge{display: none !important}
+
+
+/* ================= INLINE STYLE BLOCK 1 ================= */
+
+html,
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  /* progress header*/
+  .progress {
+    background: rgba(221, 221, 221, 0.2);
+    --bar: 1px;
+    --gap: 2.5px;
+
+    -webkit-mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+
+    mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+  }
+
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #fc4f00;
+  }
+  .preloader {
+    display: flex;
+  }
+
+  /* cursor*/
+
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: none;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1.45833rem;
+    height: 1.45833rem;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+
+  .custom-cursor img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform-origin: center;
+    transition: transform 0.15s ease;
+  }
+
+
+/* ================= INLINE STYLE BLOCK 2 ================= */
+
+@keyframes text-fade-in {
+    0% {
+      opacity: 1;
+      color: rgba(252, 79, 0, 0);
+    }
+
+    4% {
+      color: rgba(252, 79, 0, 1);
+    }
+    5% {
+      color: rgba(252, 79, 0, 0);
+    }
+
+    8% {
+      opacity: 0.2;
+    }
+    9% {
+      color: rgba(252, 79, 0, 0.8);
+    }
+
+    11% {
+      opacity: 0.9;
+    }
+
+    13% {
+      color: rgba(252, 79, 0, 0.3);
+    }
+    14% {
+      color: rgba(252, 79, 0, 1);
+    }
+
+    17% {
+      opacity: 0.4;
+    }
+    18% {
+      opacity: 1;
+    }
+
+    22% {
+      color: rgba(252, 79, 0, 0.6);
+    }
+    24% {
+      color: rgba(252, 79, 0, 0.2);
+    }
+    26% {
+      color: rgba(252, 79, 0, 0.9);
+    }
+
+    30% {
+      opacity: 0.6;
+    }
+    32% {
+      opacity: 1;
+    }
+
+    38% {
+      color: rgba(252, 79, 0, 1);
+    }
+
+    55% {
+      color: rgba(252, 79, 0, 0.5);
+      opacity: 0.7;
+    }
+
+    70% {
+      color: inherit;
+      opacity: 0.7;
+    }
+
+    100% {
+      opacity: 1;
+      color: inherit;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 0.25;
+    }
+    20% {
+      opacity: 0.85;
+    }
+    30% {
+      opacity: 0.15;
+    }
+    40% {
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    60% {
+      opacity: 0.8;
+    }
+    70% {
+      opacity: 0.2;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  [data-text-fade-in] {
+    display: inline-block;
+  }
+
+  .split-word,
+  .split-char {
+    display: inline-block;
+    will-change: transform;
+  }
+
+
+  [data-text-fade-in].is-inview .split-char {
+    animation: text-fade-in 0.32s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: calc((var(--char) - 1) * 28ms + 0.125s);
+  }
+
+  /* === WORD ANIMATION === */
+  [data-text-fade-in].is-inview .split-word {
+    animation: blink 0.26s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: calc((var(--word) - 1) * 39ms + 0.175s);
+  }
+  .card-wr-left-bot-top-text-item-h.is-inview .split-char {
+    animation: text-fade-in 0.22s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: calc((var(--char) - 1) * 20ms + 0.125s);
+  }
+  .card-wr-left-bot-top-text-item-h.is-inview .split-word {
+    animation: blink 0.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: calc((var(--word) - 1) * 30ms + 0.175s);
+  }
+
+  .h1.set-2.is-inview .split-char {
+    animation: text-fade-in 0.22s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: calc((var(--char) - 1) * 20ms + 0.125s);
+  }
+  .h1.set-2.is-inview .split-word {
+    animation: blink 0.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: calc((var(--word) - 1) * 30ms + 0.175s);
+  }
+    .abs-new-wrap-top-heading.is-inview .split-char {
+    animation: text-fade-in 0.22s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: calc((var(--char) - 1) * 20ms + 0.125s);
+  }
+  .abs-new-wrap-top-heading.is-inview .split-word {
+    animation: blink 0.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: calc((var(--word) - 1) * 30ms + 0.175s);
+  }
+
+
+/* ================= INLINE STYLE BLOCK 3 ================= */
+
+[link-hover] {
+    display: inline-block;
+  }
+
+  [link-hover]:hover {
+    animation: none;
+  }
+
+
+  [link-hover]:hover {
+    animation: flicker 0.45s linear;
+  }
+
+
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0.2;
+    }
+    40% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 0.4;
+    }
+    70% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .line-wrap {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .line-wrap-item {
+    height: 0vh;
+    will-change: height;
+  }
+
+  .bg-v-st {
+    opacity: 0;
+  }
+
+  .progress-1 {
+    background: rgba(221, 221, 221, 0.2);
+    --bar: 1px;
+    --gap: 2.5px;
+
+    -webkit-mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+
+    mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+  }
+
+  .progress-fill-1 {
+    height: 100%;
+    width: 0%;
+    background: #fc4f00;
+  }
+  .progress-2 {
+    background: rgba(221, 221, 221, 0.2);
+    --bar: 1px;
+    --gap: 2px;
+
+    -webkit-mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+
+    mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+  }
+
+    .progress-fill-3 {
+    height: 100%;
+    width: 0%;
+    background: #DDDDDD;
+  }
+  
+  .progress-fill-2 {
+    height: 100%;
+    width: 0%;
+    background: #fc4f00;
+  }
+    .progress-fill-2.set-2 {
+    height: 100%;
+    width: 0%;
+    background: #DDDDDD;
+      opacity: 0.6;  
+  }
+    .progress-fill-2.set-4 {
+    height: 100%;
+    width: 0%;
+    background: #DDDDDD;
+    opacity: 0.6;  
+  }
+  .progress-fill-2.set-5 {
+    height: 100%;
+    width: 0%;
+    background: #DDDDDD;
+    opacity: 0.6;  
+  }
+.l-h {
+
+  font-variation-settings: "opsz" 32;
+}
+  .mob-menu-wrap {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.6s ease;
+}
+
+
+/* ================= INLINE STYLE BLOCK 4 ================= */
+
+html.lenis {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  html.lenis.lenis-stopped body {
+    overflow: hidden;
+  }
+
+
+/* ================= INLINE STYLE BLOCK 5 ================= */
+
+/* Animation of input when focus */
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    transition: 0.2s;
+  }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    transition: 0.2s;
+  }
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    transition: 0.2s;
+  }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholde {
+    transition: 0.2s;
+  }
+  input:focus:-ms-input-placeholder,
+  textarea:focus:-ms-input-placeholde {
+    opacity: 0;
+  }
+  input:focus::-moz-placeholder,
+  textarea:focus::-moz-placeholder {
+    opacity: 0;
+  }
+  input:focus:-moz-placeholder,
+  textarea:focus:-moz-placeholder {
+    opacity: 0;
+  }
+  input:focus::-webkit-input-placeholder,
+  textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
+  /* Disabled display of border when focus on element */
+  *:focus {
+    outline: 0;
+  }
+  /* Make text look crisper and more legible in all browsers */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding-right: 0px !important;
+  }
+  /* Focus state style for keyboard navigation for the focusable elements */
+  *[tabindex]:focus-visible,
+  input[type='file']:focus-visible {
+    outline: 0.125rem solid #4d65ff;
+    outline-offset: 0.125rem;
+  }
+  /* Get rid of top margin on first element in any rich text element */
+  .w-richtext > :not(div):first-child,
+  .w-richtext > div:first-child > :first-child {
+    margin-top: 0 !important;
+  }
+  /* Get rid of bottom margin on last element in any rich text element */
+  .w-richtext > :last-child,
+  .w-richtext ol li:last-child,
+  .w-richtext ul li:last-child {
+    margin-bottom: 0 !important;
+  }
+  /* Prevent all click and hover interaction with an element */
+  .pointer-events-off {
+    pointer-events: none;
+  }
+  /* Enables all click and hover interaction with an element */
+  .pointer-events-on {
+    pointer-events: auto;
+  }
+  /* Make sure containers never lose their center alignment */
+  .container-medium,
+  .container-small,
+  .container-large {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: #080808 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #f5f5f5 inset !important;
+    background-color: #f5f5f5 !important;
+  }
+
+  a,
+  .w-select,
+  .w-tab-link,
+  .w-nav-link,
+  .w-dropdown-btn,
+  .w-dropdown-toggle,
+  .w-dropdown-link {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: inherit;
+  }
+
+  /* Apply "..." after 3 lines of text */
+  .text-style-3lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  /* Apply "..." after 2 lines of text */
+  .text-style-2lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  /* Adds inline flex display */
+  .display-inlineflex {
+    display: inline-flex;
+  }
+  /* These classes are never overwritten */
+  .hide {
+    display: none !important;
+  }
+  @media screen and (max-width: 991px) {
+    .hide,
+    .hide-tablet {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .hide-mobile {
+      display: none !important;
+    }
+  }
+
+  /*Fluid responsive */
+  html {
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: 1920px) {
+    html {
+      font-size: 1vw;
+    }
+  }
+  @media screen and (min-width: 992px) and (max-width: 1919px) {
+    html {
+      font-size: 1vw;
+    }
+  }
+  @media screen and (max-width: 991px) and (min-width: 768px) {
+    html {
+      font-size: 1vw;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+
+/* ================= INLINE STYLE BLOCK 6 ================= */
+
+/* Mobile Instagram / Telegram */
+
+.in-app .section-hero-h {
+  height: 1100svh !important;
+}
+
+.in-app .section-hero-st {
+  height: 100svh !important;
+}
+
+.in-app .step-1 {
+  min-height: 100svh !important;
+}
+
+.in-app .container.is_step-1 {
+  min-height: calc(100svh - 7.22rem - 5.49rem) !important;
+}
+
+.in-app .step-1-wrap {
+  height: calc(100svh - 5.5rem - 4rem) !important;
+}
+
+.in-app .hero-video-2 {
+  height: 100svh !important;
+}
+
+.in-app .step-2 {
+  height: 100svh !important;
+}
+
+.in-app .container.is_step-1.s {
+  min-height: calc(100svh - 9rem - 5.49rem) !important;
+}
+
+.in-app .step-2-wrap {
+  height: calc(100svh - 7rem - 3.49rem) !important;
+}
+
+.in-app .bg-video-section {
+  height: 100svh !important;
+}
+
+.in-app .bg-story {
+  height: 100svh !important;
+}
+
+.in-app .line-wrap {
+  min-height: 150svh !important;
+}
+
+.in-app .line-text-wrap-h {
+  height: 220svh !important;
+}
+
+.in-app .line-text-wrap {
+  height: 100svh !important;
+}
+
+.in-app .number-sec-wrap {
+  height: 150svh !important;
+}
+
+.in-app .number-sec {
+  min-height: 100svh !important;
+}
+
+.in-app .card-h {
+  height: 850svh !important;
+}
+
+.in-app .card-wr {
+  min-height: calc(100svh - 3.26rem - 6.11rem) !important;
+}
+
+.in-app .info-v-wrap-h.s {
+  height: 450svh !important;
+}
+
+.in-app .info-v-wrap {
+  height: 100svh !important;
+}
+
+.in-app .stat-wrap {
+  height: 200svh !important;
+}
+
+.in-app .hover-area-wrapper {
+  height: 290svh !important;
+}
+
+.in-app .hover-area-wrap {
+  height: calc(100svh - 6.5rem) !important;
+}
+
+.in-app .ppo-wrap {
+  height: 290svh !important;
+}
+
+.in-app .ppo {
+  min-height: 100svh !important;
+}
+
+
+/* ================= INLINE STYLE BLOCK 7 ================= */
+
+/* =========================
+   1. ОСНОВНЫЕ ПЕРЕМЕННЫЕ
+========================= */
+
+:root {
+  --black: #050505;
+  --white: #ddd;
+  --orange: #fc4f00;
+}
+
+
+/* =========================
+   2. DESKTOP
+========================= */
+
+.counter {
+  position: relative;
+  width: 43rem;
+  max-width: 100%;
+  height: 13rem;
+  margin: 0 auto;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Общий контейнер цифр */
+
+#digits,
+.digits {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 13rem;
+
+  font-size: 13rem;
+  line-height: 13rem;
+
+  color: var(--orange);
+  white-space: nowrap;
+}
+
+
+/* Отдельный слот */
+
+.slot {
+  position: relative;
+  height: 13rem;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+
+/* Вертикальная лента */
+
+.strip {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  will-change: transform;
+}
+
+
+/* Отдельная цифра */
+
+.d {
+  width: 100%;
+  height: 13rem;
+  min-height: 13rem;
+  line-height: 13rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   3. MOBILE
+========================= */
+
+@media screen and (max-width: 767px) {
+  .counter {
+    width: 100%;
+    max-width: 100%;
+    
+    /* Раньше здесь было 26vw,
+       поэтому цифры высотой 32vw обрезались */
+    height: 29vw;
+  }
+
+  #digits,
+  .digits {
+    width: 100%;
+    height: 29vw;
+
+    font-size: 29vw;
+    line-height: 29vw;
+  }
+
+  .slot,
+  .d {
+    height: 29vw;
+    min-height: 29vw;
+    line-height: 29vw;
+  }
+}
+
+
+/* ================= INLINE STYLE BLOCK 8 ================= */
+
+/* =========================
+   COUNTER
+========================= */
+
+.counter {
+  position: relative;
+  width: 43rem;
+  max-width: 100%;
+  height: 12rem;
+  margin: 0 auto;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#digits,
+.digits,
+.digit {
+  width: 100%;
+  height: 13rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13rem;
+  line-height: 13rem;
+  white-space: nowrap;
+  color: #fc4f00;
+}
+
+.slot {
+  position: relative;
+  height: 13rem;
+  flex: 0 0 auto;
+  overflow: hidden;
+  will-change: width;
+}
+
+.strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  will-change: transform;
+}
+
+.strip .d {
+  width: 100%;
+  height: 13rem;
+  min-height: 13rem;
+  line-height: 13rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Текстовые маски */
+
+.mask {
+  display: grid;
+  overflow: hidden;
+}
+
+.mask .line {
+  grid-area: 1 / 1;
+  will-change: transform;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 767px) {
+  .counter {
+    width: 100%;
+    height: 29vw;
+  }
+
+  #digits,
+  .digits,
+  .digit {
+    width: 100%;
+    height: 29vw;
+
+    font-size: 29vw;
+    line-height: 29vw;
+  }
+
+  .slot,
+  .strip .d {
+    height: 29vw;
+    min-height: 29vw;
+    line-height: 29vw;
+  }
+}
+
+
+/* ================= INLINE STYLE BLOCK 9 ================= */
+
+/* Контейнер колонок */
+.ppo-text-item-wrap-2 {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Элементы бегущей строки */
+.ppo-text-item {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  /* Пока .ppo-wrap не виден — анимация на паузе */
+  animation-play-state: paused !important;
+}
+
+/* Левая колонка: снизу вверх */
+.ppo-text-item-wrap-2:not(.right) .ppo-text-item {
+  animation-name: marquee-up;
+  animation-duration: 80s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Правая колонка: сверху вниз */
+.ppo-text-item-wrap-2.right .ppo-text-item {
+  animation-name: marquee-down;
+  animation-duration: 80s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Запускаем только тогда, когда секция видна */
+.ppo-wrap.is-playing .ppo-text-item {
+  animation-play-state: running !important;
+}
+
+@keyframes marquee-up {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-80%);
+  }
+}
+
+@keyframes marquee-down {
+  from {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= INLINE STYLE BLOCK 10 ================= */
+
+.footer-2 {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.footer-glow {
+  position: absolute;
+  z-index: 5;
+
+  left: 0;
+  top: 0;
+
+  width: 45rem;
+  height: 45rem;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.09) 22%,
+    rgba(255, 255, 255, 0.035) 46%,
+    rgba(255, 255, 255, 0) 70%
+  );
+
+  transform: translate3d(-50%, -50%, 0);
+  filter: blur(20px);
+  opacity: 0;
+
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition: opacity 0.5s ease;
+}
+
+
+@media (max-width: 767px) {
+  .footer-glow {
+    display: none;
+  }
+}
+
+/* ================= CLONE ADDITIONS ================= }*/
+
+/* keep the Webflow badge hidden */
+.w-webflow-badge { display: none !important; }
+
+/* hide scrollbars like the original */
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar { display: none; }
+
+/* progress header */
+.progress,
+.progress-1 {
+  background: rgba(221, 221, 221, 0.2);
+  --bar: 1px;
+  --gap: 2.5px;
+  -webkit-mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+  mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+}
+.progress-fill,
+.progress-fill-1,
+.progress-fill-2 {
+  height: 100%;
+  width: 0%;
+  background: #fc4f00;
+}
+.progress-fill-3 {
+  height: 100%;
+  width: 0%;
+  background: #dddddd;
+}
+.progress-fill-2.set-2,
+.progress-fill-2.set-4,
+.progress-fill-2.set-5 {
+  background: #dddddd;
+  opacity: 0.6;
+}
+.progress-2 {
+  background: rgba(221, 221, 221, 0.2);
+  --bar: 1px;
+  --gap: 2px;
+  -webkit-mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+  mask: repeating-linear-gradient(to right, black 0 var(--bar), transparent var(--bar) calc(var(--bar) + var(--gap)));
+}
+
+.preloader { display: flex; }
+
+/* cursor */
+body, a, button, input, textarea, select { cursor: none; }
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1.45833rem;
+  height: 1.45833rem;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+.custom-cursor img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform-origin: center;
+  transition: transform 0.15s ease;
+}
+
+@keyframes text-fade-in {
+  0% { opacity: 1; color: rgba(252, 79, 0, 0); }
+  4% { color: rgba(252, 79, 0, 1); }
+  5% { color: rgba(252, 79, 0, 0); }
+  8% { opacity: 0.2; }
+  9% { color: rgba(252, 79, 0, 0.8); }
+  11% { opacity: 0.9; }
+  13% { color: rgba(252, 79, 0, 0.3); }
+  14% { color: rgba(252, 79, 0, 1); }
+  17% { opacity: 0.4; }
+  18% { opacity: 1; }
+  22% { color: rgba(252, 79, 0, 0.6); }
+  24% { color: rgba(252, 79, 0, 0.2); }
+  26% { color: rgba(252, 79, 0, 0.9); }
+  30% { opacity: 0.6; }
+  32% { opacity: 1; }
+  38% { color: rgba(252, 79, 0, 1); }
+  55% { color: rgba(252, 79, 0, 0.5); opacity: 0.7; }
+  70% { color: inherit; opacity: 0.7; }
+  100% { opacity: 1; color: inherit; }
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  10% { opacity: 0.25; }
+  20% { opacity: 0.85; }
+  30% { opacity: 0.15; }
+  40% { opacity: 0.9; }
+  50% { opacity: 0.3; }
+  60% { opacity: 0.8; }
+  70% { opacity: 0.2; }
+  80% { opacity: 1; }
+  100% { opacity: 1; }
+}
+[data-text-fade-in] { display: inline-block; }
+.split-word,
+.split-char { display: inline-block; will-change: transform; }
+[data-text-fade-in].is-inview .split-char {
+  animation: text-fade-in 0.32s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: calc((var(--char) - 1) * 28ms + 0.125s);
+}
+[data-text-fade-in].is-inview .split-word {
+  animation: blink 0.26s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: calc((var(--word) - 1) * 39ms + 0.175s);
+}
+.card-wr-left-bot-top-text-item-h.is-inview .split-char {
+  animation: text-fade-in 0.22s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: calc((var(--char) - 1) * 20ms + 0.125s);
+}
+.card-wr-left-bot-top-text-item-h.is-inview .split-word,
+.h1.set-2.is-inview .split-char {
+  animation: text-fade-in 0.22s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: calc((var(--char) - 1) * 20ms + 0.125s);
+}
+.card-wr-left-bot-top-text-item-h.is-inview .split-word,
+.h1.set-2.is-inview .split-word {
+  animation: blink 0.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: calc((var(--word) - 1) * 30ms + 0.175s);
+}
+.abs-new-wrap-top-heading.is-inview .split-char {
+  animation: text-fade-in 0.22s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: calc((var(--char) - 1) * 20ms + 0.125s);
+}
+.abs-new-wrap-top-heading.is-inview .split-word {
+  animation: blink 0.2s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: calc((var(--word) - 1) * 30ms + 0.175s);
+}
+
+[link-hover] { display: inline-block; }
+[link-hover]:hover { animation: flicker 0.45s linear; }
+@keyframes flicker {
+  0% { opacity: 1; }
+  10% { opacity: 0; }
+  20% { opacity: 1; }
+  30% { opacity: 0.2; }
+  40% { opacity: 1; }
+  55% { opacity: 0.4; }
+  70% { opacity: 1; }
+  85% { opacity: 0.1; }
+  100% { opacity: 1; }
+}
+
+.line-wrap { display: flex; align-items: flex-end; }
+.line-wrap-item { height: 0vh; will-change: height; }
+
+.bg-v-st { opacity: 0; }
+
+.l-h { font-variation-settings: "opsz" 32; }
+
+.mob-menu-wrap { height: 0; overflow: hidden; transition: height 0.6s ease; }
+
+:root {
+  --black: #050505;
+  --white: #ddd;
+  --orange: #fc4f00;
+}
+
+/* Lenis */
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+html.lenis.lenis-stopped body { overflow: hidden; }
+
+/* Card section right progress line */
+.card-wr-left-right-line { display: block; }
+.card-wr-left-right-line-active { height: 0%; }
