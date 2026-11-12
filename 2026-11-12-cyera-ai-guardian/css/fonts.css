@@ -1,0 +1,18 @@
+/* Real fonts from the original site (Haffer + Season Mix, variable 100-900) */
+@font-face {
+    font-family: Haffer;
+    src: url(../assets/fonts/HafferUprightsVF.woff2) format("woff2"),
+         url(../assets/fonts/HafferUprightsVF.woff) format("woff");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Season;
+    src: url(../assets/fonts/SeasonMixUprightsVF.woff2) format("woff2"),
+         url(../assets/fonts/SeasonMixUprightsVF.woff) format("woff");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Cyera AI Guardian | Secure the Unknown</title>
+    <meta name="description" content="AI launches your data into orbit and Cyera helps secure every landing. Discover, govern and protect your data with the complete AI security platform.">
+    <meta property="og:title" content="Cyera AI Guardian | Secure the Unknown">
+    <meta property="og:description" content="AI launches your data into orbit and Cyera helps secure every landing.">
+    <meta property="og:image" content="assets/images/social/og.png">
+    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+
+    <link rel="preload" href="assets/fonts/HafferUprightsVF.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+
+<!-- ================= LOADER (faithful to source.html) ================= -->
+<div id="loader-container" aria-hidden="true">
+    <div id="loader-particles">
+        <svg width="282" height="366" viewBox="0 0 282 366" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="loader-particle1">
+                <path d="M86.7156 102.187L98.9024 73.6296L129.595 85.7291L117.885 115.217L86.7156 102.187Z" fill="#F3BFFF"/>
+                <path d="M98.9024 73.6296L86.7156 102.187M98.9024 73.6296L129.595 85.7291M98.9024 73.6296L102.765 100.632M86.7156 102.187L117.885 115.217M86.7156 102.187L102.765 100.632M117.885 115.217L129.595 85.7291M117.885 115.217L102.765 100.632M129.595 85.7291L102.765 100.632" stroke="black" stroke-width="0.573875"/>
+            </g>
+            <g id="loader-particle2">
+                <path d="M129.664 345.333L150.129 329.694L170.593 341.724L175.408 349.243L154.342 364.882L135.081 353.453L129.664 345.333Z" fill="#BFFFA2"/>
+                <path d="M129.664 345.333L150.129 329.694L170.593 341.724M129.664 345.333L135.081 353.453L154.342 364.882M129.664 345.333L150.129 357.664M154.342 364.882L175.408 349.243L170.593 341.724M154.342 364.882L150.129 357.664M170.593 341.724L150.129 357.664" stroke="black" stroke-width="0.535617"/>
+            </g>
+            <g id="loader-particle3">
+                <path d="M257.304 32.2909L259.235 37.524L252.274 48.585L249.638 48.9207L187.222 22.1846L187.028 19.5955L186.787 16.4L192.508 6.00846L195.263 5.41699L257.304 32.2909Z" fill="#E574FF"/>
+                <path d="M257.304 32.2909L259.235 37.524L252.274 48.585L249.638 48.9207M257.304 32.2909L255.317 33.2362M257.304 32.2909L195.263 5.41699L192.508 6.00846M255.317 33.2362L248.966 43.6477M255.317 33.2362L192.508 6.00846M248.966 43.6477L248.79 46.0483M248.966 43.6477L186.787 16.4M248.79 46.0483L249.638 48.9207M248.79 46.0483L187.028 19.5955M249.638 48.9207L187.222 22.1846L187.028 19.5955M192.508 6.00846L186.787 16.4M186.787 16.4L187.028 19.5955" stroke="#3C3C3C" stroke-width="0.818303"/>
+            </g>
+            <g id="loader-particle4">
+                <path d="M0.412292 287.872L3.54659 271.238L18.1575 279.785L24.2121 287.726L34.1576 307.41L35.9231 314.49L32.3855 331.309L17.3495 321.829L17.0849 321.54L11.5292 315.471L0.946156 294.387L0.412292 287.872Z" fill="#E574FF"/>
+                <path d="M3.54659 271.238L0.412292 287.872M3.54659 271.238L18.1575 279.785L24.2121 287.726M3.54659 271.238L10.7509 285.976M0.412292 287.872L0.946156 294.387L11.5292 315.471L17.0849 321.54M0.412292 287.872L10.4999 293.975M17.0849 321.54L17.3495 321.829L32.3855 331.309M17.0849 321.54L19.4262 313.561M17.0849 321.54L16.9462 322.013M32.3855 331.309L35.9231 314.49L34.1576 307.41M32.3855 331.309L27.6881 319.933M34.1576 307.41L24.2121 287.726M34.1576 307.41L27.6881 319.933M24.2121 287.726L10.7509 285.976M10.7509 285.976L10.4999 293.975M10.4999 293.975L19.4262 313.561M27.6881 319.933L19.6387 314.027L19.4262 313.561" stroke="#3C3C3C" stroke-width="0.818303"/>
+            </g>
+            <g id="loader-particle5">
+                <path d="M28.2234 11.4209L37.4145 0.594727L40.211 14.5182L39.3233 23.5784L34.7762 43.4272L32.301 49.6326L22.8374 60.3885L20.2778 45.5483L20.2896 45.1958L20.5378 37.7927L25.4401 16.5689L28.2234 11.4209Z" fill="#D390FF"/>
+                <path d="M37.4145 0.594727L28.2234 11.4209M37.4145 0.594727L40.211 14.5182L39.3233 23.5784M37.4145 0.594727L33.8976 15.3316M28.2234 11.4209L25.4401 16.5689L20.5378 37.7927L20.2896 45.1958M28.2234 11.4209L30.0601 21.185M20.2896 45.1958L20.2778 45.5483L22.8374 60.3885M20.2896 45.1958L25.0866 40.4348M20.2896 45.1958L20.0053 45.4779M22.8374 60.3885L32.301 49.6326L34.7762 43.4272M22.8374 60.3885L25.9519 49.459M34.7762 43.4272L39.3233 23.5784M34.7762 43.4272L25.9519 49.459M39.3233 23.5784L33.8976 15.3316M33.8976 15.3316L30.0601 21.185M30.0601 21.185L25.0866 40.4348M25.9519 49.459L24.9681 40.8931L25.0866 40.4348" stroke="black" stroke-width="0.535617"/>
+            </g>
+        </svg>
+    </div>
+    <div id="loader-logo">
+        <svg class="wordmark" viewBox="0 0 178 19" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Cyera AI Guardian">
+            <mask id="wm-mask" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="1" width="71" height="18">
+                <path d="M70.6428 1.23047H0V18.0492H70.6428V1.23047Z" fill="white"/>
+            </mask>
+            <g mask="url(#wm-mask)" fill="#FBFBFB">
+                <path d="M11.0152 5.35787C12.1365 5.35787 13.0532 4.44203 13.0532 3.32266C13.0532 2.2033 12.1435 1.28745 11.0152 1.28745C9.8869 1.28745 8.97724 2.19764 8.97724 3.32266C8.97724 4.44768 9.89251 5.35787 11.0152 5.35787Z"/>
+                <path d="M59.4392 4.34434H59.4069C57.7474 4.34434 56.7326 4.84325 56.1117 5.95979L56.0528 6.06438V5.94425L56.0304 4.56058H53.9784V14.7324H56.0514V9.73058C56.0514 7.52153 57.1489 6.30465 59.142 6.30465C59.3326 6.30465 59.4966 6.31313 59.6564 6.3315V4.34575C59.5807 4.3401 59.5106 4.3401 59.4378 4.3401L59.4392 4.34434Z"/>
+                <path d="M68.7461 4.5408V5.91598L68.6914 5.85521C67.793 4.88 66.4922 4.32173 65.1256 4.32173C63.759 4.32173 62.5732 4.81358 61.6664 5.70681C60.681 6.67919 60.1596 8.03034 60.1596 9.61894C60.1596 11.2075 60.681 12.5573 61.6664 13.5297C62.5732 14.4243 63.8011 14.9147 65.1256 14.9147C66.4502 14.9147 67.849 14.3268 68.6914 13.3827L68.7475 13.3191V14.6957H70.6439V4.5408H68.7461ZM67.7355 12.1983C67.1314 12.799 66.3002 13.1438 65.4564 13.1438C63.7997 13.1438 62.1219 11.9326 62.1219 9.61894C62.1219 8.56741 62.4793 7.66711 63.1549 7.01415C63.7618 6.42902 64.6 6.09265 65.4564 6.09265C66.3128 6.09265 67.1328 6.4375 67.7355 7.03817C68.3873 7.68831 68.7475 8.60416 68.7475 9.61894C68.7475 10.6337 68.3887 11.5496 67.7355 12.1997V12.1983Z"/>
+                <path d="M47.2492 4.32173C44.2091 4.32173 42.0856 6.49969 42.0856 9.61894C42.0856 11.1312 42.607 12.4908 43.5517 13.4477C44.4866 14.3932 45.7999 14.9147 47.2492 14.9147C49.4246 14.9147 51.2341 13.6554 51.8733 11.7036H49.8675C49.4106 12.6604 48.5289 13.1452 47.2492 13.1452C45.6303 13.1452 44.3997 12.0711 44.1124 10.4118L44.1054 10.3751H52.1087C52.148 10.0882 52.148 9.91856 52.148 9.62176C52.148 8.1745 51.635 6.83183 50.7057 5.84107C49.7876 4.86446 48.5584 4.32456 47.2464 4.32456L47.2492 4.32173ZM50.089 8.77658H44.1264L44.1334 8.73984C44.2876 7.94837 44.6576 7.28268 45.207 6.81345C45.7579 6.34281 46.4643 6.09265 47.2478 6.09265C48.0314 6.09265 48.6957 6.37532 49.227 6.88836C49.7371 7.37879 50.0539 8.03741 50.1198 8.74266L50.1226 8.77658H50.0876H50.089Z"/>
+                <path d="M26.1726 6.09123C26.8748 6.09123 27.4887 6.28627 27.9989 6.67211C28.5372 7.07774 28.9296 7.677 29.1665 8.45151H31.133C30.9144 7.22897 30.3313 6.19158 29.444 5.4524C28.5554 4.71181 27.4243 4.32031 26.1726 4.32031C24.7093 4.32031 23.3777 4.84466 22.4218 5.79584C21.4533 6.75974 20.9207 8.11513 20.9207 9.61751C20.9207 11.1199 21.4547 12.4753 22.4218 13.4378C23.3777 14.389 24.7107 14.9133 26.1726 14.9133C27.4159 14.9133 28.5428 14.5275 29.4286 13.7982C30.3032 13.0774 30.8849 12.0725 31.1106 10.8881H29.1357C28.6465 12.3212 27.5686 13.1424 26.1712 13.1424C25.2601 13.1424 24.4262 12.7919 23.8249 12.1545C23.2165 11.5114 22.8801 10.6097 22.8801 9.6161C22.8801 8.62252 23.2151 7.72081 23.8249 7.07774C24.4276 6.44174 25.2601 6.08982 26.1712 6.08982L26.1726 6.09123Z"/>
+                <path d="M36.6457 11.2372L36.6149 11.3107L36.5868 11.2358L34.0176 4.53797H31.7442L35.5538 13.9367L35.5594 13.9508L35.5538 13.9635L33.663 18.0509H35.9449L41.7673 4.53938H39.4826L36.6471 11.2386L36.6457 11.2372Z"/>
+                <path d="M14.8557 4.96495H14.8094C13.6825 4.96495 12.7659 5.87514 12.7659 6.99451C12.7659 7.53582 12.9775 8.04745 13.363 8.43753L13.939 9.00993C14.1044 9.17388 14.1969 9.3986 14.1969 9.63887C14.1969 9.87914 14.1044 10.0996 13.939 10.2678L13.363 10.8402C12.9761 11.2289 12.7659 11.7405 12.7659 12.2832V13.0959C12.7659 13.5877 12.3706 13.9849 11.8758 13.9849H11.0629C10.5162 13.9849 10.0088 14.1983 9.62057 14.5827L9.04449 15.1495C8.8791 15.312 8.65764 15.4053 8.41656 15.4053C8.17548 15.4053 7.95402 15.3134 7.78862 15.1495L7.21114 14.5757C6.82429 14.1912 6.30989 13.9778 5.76886 13.9778H4.9559C4.46673 13.9778 4.06446 13.5779 4.06446 13.0874V12.2748C4.06446 11.7278 3.85421 11.2218 3.46736 10.8331L2.89128 10.2593C2.72589 10.0911 2.63338 9.87066 2.63338 9.63039C2.63338 9.39012 2.72589 9.16964 2.89128 9.00145L3.46736 8.42764C3.85421 8.03897 4.06446 7.52734 4.06446 6.98603V6.17336C4.06446 5.68152 4.46253 5.28437 4.9559 5.28437H5.76886C6.88877 5.28437 7.79843 4.37842 7.80124 3.25905C7.79843 2.1411 6.88877 1.22949 5.76886 1.22949C4.64894 1.22949 3.73647 2.13968 3.73507 3.25905V4.07172C3.73507 4.56215 3.33981 4.96213 2.84503 4.96213H2.03208C0.912166 4.96213 0.00109863 5.87797 0.00109863 6.99875C0.00109863 7.54006 0.212747 8.05169 0.598198 8.44036L1.17427 9.01417C1.33827 9.18236 1.43077 9.40284 1.43077 9.6417C1.43077 9.88055 1.33827 10.1024 1.17427 10.2706L0.598198 10.8445C0.211345 11.2345 0.00109863 11.7448 0.00109863 12.2861C0.00109863 13.4068 0.912165 14.3156 2.03348 14.3156H2.84643C3.3356 14.3156 3.73648 14.7156 3.73648 15.206V16.0187C3.73648 17.1395 4.64754 18.0483 5.76886 18.0483C6.30989 18.0483 6.82289 17.8348 7.21114 17.4504L7.78722 16.878C7.95121 16.7141 8.17828 16.6208 8.41516 16.6208C8.65203 16.6208 8.8791 16.7126 9.04309 16.878L9.61917 17.4504C10.006 17.8348 10.5204 18.0483 11.0615 18.0483C12.1842 18.0483 13.0938 17.1381 13.0938 16.0187V15.206C13.0938 14.7142 13.4961 14.3156 13.9839 14.3156H14.7968C15.9195 14.3156 16.8292 13.4054 16.8292 12.2861C16.8292 11.1668 15.9195 10.2566 14.7968 10.2566H13.9839C13.4961 10.2566 13.0938 9.85811 13.0938 9.36633V8.55366C13.0938 7.43429 12.1842 6.5241 11.0615 6.5241H10.2485C9.75771 6.5241 9.35463 6.12564 9.35463 5.63386V4.82119C9.35463 3.70182 8.44503 2.79162 7.32231 2.79162H6.50936C6.01856 2.79162 5.61548 3.68543 5.61548 4.17721"/>
+            </g>
+            <path d="M168.629 14.6879V4.23237H169.925V6.57657C170.542 5.14516 171.983 4.06641 173.875 4.06641C176.035 4.06641 177.599 5.3941 177.599 7.80054V14.6879H176.303V8.07022C176.303 6.20316 175.274 5.24888 173.649 5.24888C171.386 5.24888 169.925 7.21967 169.925 10.2277V14.6879H168.629Z" fill="#FBFBFB"/>
+            <path d="M161.462 14.8539C159.24 14.8539 157.882 13.6507 157.882 11.9288C157.882 9.79207 159.343 8.79631 162.717 8.44364L165.062 8.1947V7.7383C165.062 6.20316 163.91 5.22814 162.244 5.22814C160.598 5.22814 159.446 6.09943 159.219 7.67607H157.923C158.232 5.56006 159.94 4.06641 162.244 4.06641C164.63 4.06641 166.358 5.53931 166.358 7.84203V14.6879H165.062V12.5304C164.671 13.8374 163.149 14.8539 161.462 14.8539ZM165.062 9.2527L162.799 9.50164C160.269 9.79207 159.199 10.3729 159.199 11.8873C159.199 13.0491 160.104 13.7544 161.524 13.7544C163.622 13.7544 165.062 12.0948 165.062 9.79207V9.2527Z" fill="#FBFBFB"/>
+            <path d="M154.694 14.6881V4.23254H156.011V14.6881H154.694ZM155.373 2.17877C154.776 2.17877 154.324 1.74312 154.324 1.14151C154.324 0.560648 154.776 0.125 155.373 0.125C155.99 0.125 156.422 0.560648 156.422 1.14151C156.422 1.74312 155.99 2.17877 155.373 2.17877Z" fill="#FBFBFB"/>
+            <path d="M147.097 14.8535C144.052 14.8535 141.995 12.6753 141.995 9.4598C141.995 6.2443 144.052 4.06605 147.097 4.06605C148.784 4.06605 150.368 4.97884 151.006 6.34802V0H152.302V14.6876H151.006V12.5716C150.368 13.92 148.784 14.8535 147.097 14.8535ZM147.159 13.6918C149.381 13.6918 151.006 11.9285 151.006 9.4598C151.006 6.97038 149.381 5.22778 147.159 5.22778C144.937 5.22778 143.312 6.97038 143.312 9.4598C143.312 11.9492 144.937 13.6918 147.159 13.6918Z" fill="#FBFBFB"/>
+            <path d="M136.42 14.6879V4.23237H137.716V6.57657C138.251 4.95845 139.527 4.06641 141.029 4.06641C141.461 4.06641 141.913 4.14939 142.263 4.31535V5.56006C141.687 5.35261 141.296 5.31112 140.885 5.31112C139.033 5.31112 137.716 7.24042 137.716 10.4974V14.6879H136.42Z" fill="#FBFBFB"/>
+            <path d="M129.253 14.8539C127.031 14.8539 125.673 13.6507 125.673 11.9288C125.673 9.79207 127.134 8.79631 130.508 8.44364L132.854 8.1947V7.7383C132.854 6.20316 131.701 5.22814 130.035 5.22814C128.389 5.22814 127.237 6.09943 127.011 7.67607H125.715C126.023 5.56006 127.731 4.06641 130.035 4.06641C132.422 4.06641 134.15 5.53931 134.15 7.84203V14.6879H132.854V12.5304C132.463 13.8374 130.94 14.8539 129.253 14.8539ZM132.854 9.2527L130.591 9.50164C128.06 9.79207 126.99 10.3729 126.99 11.8873C126.99 13.0491 127.895 13.7544 129.315 13.7544C131.413 13.7544 132.854 12.0948 132.854 9.79207V9.2527Z" fill="#FBFBFB"/>
+            <path d="M118.532 14.854C116.392 14.854 114.808 13.5263 114.808 11.1198V4.23242H116.104V10.8501C116.104 12.7172 117.153 13.6715 118.758 13.6715C121.021 13.6715 122.482 11.7007 122.482 8.69263V4.23242H123.778V14.688H122.482V12.3853C121.844 13.7959 120.425 14.854 118.532 14.854Z" fill="#FBFBFB"/>
+            <path d="M106.674 14.8535C102.663 14.8535 99.8234 12.0322 99.8234 7.42677C99.8234 2.94581 102.56 0 106.715 0C109.946 0 112.229 1.84632 112.599 4.70915H111.221C110.83 2.48942 108.958 1.22396 106.715 1.22396C103.403 1.22396 101.202 3.69264 101.202 7.42677C101.202 11.2024 103.403 13.6296 106.736 13.6296C109.678 13.6296 111.53 11.5343 111.53 8.56776H106.037V7.40603H112.805V14.6876H111.509V12.0529C110.81 13.7955 108.896 14.8535 106.674 14.8535Z" fill="#FBFBFB"/>
+            <path d="M92.3168 14.6876V0.166016H93.6952V14.6876H92.3168Z" fill="#FBFBFB"/>
+            <path d="M77.729 14.6876L83.5719 0.166016H85.1972L90.9989 14.6876H89.5176L87.9129 10.6631H80.7739L79.1691 14.6876H77.729ZM81.2471 9.43911H87.4602L84.3742 1.68041L81.2471 9.43911Z" fill="#FBFBFB"/>
+        </svg>
+        <div class="text">Loading</div>
+    </div>
+    <div id="loader-bar-container"><div id="loader-bar"></div></div>
+    <div id="ray-container">
+        <img id="ray-small" aria-hidden="true" src="assets/images/loader/ray.png" alt="" />
+        <img id="ray-big" aria-hidden="true" src="assets/images/loader/ray_big.png" alt="" />
+    </div>
+</div>
+
+<!-- ================= BACKGROUND LAYERS ================= -->
+<div id="bg-space" aria-hidden="true">
+    <div class="nebula nebula-a"></div>
+    <div class="nebula nebula-b"></div>
+    <div class="nebula nebula-c"></div>
+    <canvas id="stars-canvas"></canvas>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div id="planet-horizon">
+        <svg viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="crust" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#B96FE0"/><stop offset=".55" stop-color="#7A3AA6"/><stop offset="1" stop-color="#3C1B5E"/>
+                </linearGradient>
+            </defs>
+            <path d="M-80,420 C240,150 480,110 760,190 C1040,270 1240,300 1520,240 L1520,440 L-80,440 Z" fill="url(#crust)"/>
+            <path d="M-80,420 C240,150 480,110 760,190 C1040,270 1240,300 1520,240" fill="none" stroke="#F0C8FF" stroke-width="3" opacity=".55"/>
+            <path d="M-80,330 C260,120 560,95 860,170 C1120,235 1320,262 1520,215" fill="none" stroke="#2A0E44" stroke-width="26" opacity=".5" stroke-linecap="round"/>
+            <g fill="#D28EFF" opacity=".8">
+                <circle cx="180" cy="336" r="4"/><circle cx="392" cy="255" r="3"/><circle cx="605" cy="215" r="5"/>
+                <circle cx="842" cy="238" r="3.4"/><circle cx="1080" cy="272" r="4.4"/><circle cx="1300" cy="252" r="3"/>
+            </g>
+        </svg>
+    </div>
+    <div id="crystal-field" aria-hidden="true"></div>
+</div>
+
+<!-- ================= HUD ================= -->
+<header id="hud-top">
+    <a class="hud-logo" href="#" data-nav="0" aria-label="Cyera, go to home">
+        <svg viewBox="0 0 178 19" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g mask="url(#wm-mask)" fill="currentColor">
+                <path d="M11.0152 5.35787C12.1365 5.35787 13.0532 4.44203 13.0532 3.32266C13.0532 2.2033 12.1435 1.28745 11.0152 1.28745C9.8869 1.28745 8.97724 2.19764 8.97724 3.32266C8.97724 4.44768 9.89251 5.35787 11.0152 5.35787Z"/>
+                <path d="M59.4392 4.34434H59.4069C57.7474 4.34434 56.7326 4.84325 56.1117 5.95979L56.0528 6.06438V5.94425L56.0304 4.56058H53.9784V14.7324H56.0514V9.73058C56.0514 7.52153 57.1489 6.30465 59.142 6.30465C59.3326 6.30465 59.4966 6.31313 59.6564 6.3315V4.34575C59.5807 4.3401 59.5106 4.3401 59.4378 4.3401L59.4392 4.34434Z"/>
+                <path d="M68.7461 4.5408V5.91598L68.6914 5.85521C67.793 4.88 66.4922 4.32173 65.1256 4.32173C63.759 4.32173 62.5732 4.81358 61.6664 5.70681C60.681 6.67919 60.1596 8.03034 60.1596 9.61894C60.1596 11.2075 60.681 12.5573 61.6664 13.5297C62.5732 14.4243 63.8011 14.9147 65.1256 14.9147C66.4502 14.9147 67.849 14.3268 68.6914 13.3827L68.7475 13.3191V14.6957H70.6439V4.5408H68.7461ZM67.7355 12.1983C67.1314 12.799 66.3002 13.1438 65.4564 13.1438C63.7997 13.1438 62.1219 11.9326 62.1219 9.61894C62.1219 8.56741 62.4793 7.66711 63.1549 7.01415C63.7618 6.42902 64.6 6.09265 65.4564 6.09265C66.3128 6.09265 67.1328 6.4375 67.7355 7.03817C68.3873 7.68831 68.7475 8.60416 68.7475 9.61894C68.7475 10.6337 68.3887 11.5496 67.7355 12.1997V12.1983Z"/>
+                <path d="M47.2492 4.32173C44.2091 4.32173 42.0856 6.49969 42.0856 9.61894C42.0856 11.1312 42.607 12.4908 43.5517 13.4477C44.4866 14.3932 45.7999 14.9147 47.2492 14.9147C49.4246 14.9147 51.2341 13.6554 51.8733 11.7036H49.8675C49.4106 12.6604 48.5289 13.1452 47.2492 13.1452C45.6303 13.1452 44.3997 12.0711 44.1124 10.4118L44.1054 10.3751H52.1087C52.148 10.0882 52.148 9.91856 52.148 9.62176C52.148 8.1745 51.635 6.83183 50.7057 5.84107C49.7876 4.86446 48.5584 4.32456 47.2464 4.32456L47.2492 4.32173ZM50.089 8.77658H44.1264L44.1334 8.73984C44.2876 7.94837 44.6576 7.28268 45.207 6.81345C45.7579 6.34281 46.4643 6.09265 47.2478 6.09265C48.0314 6.09265 48.6957 6.37532 49.227 6.88836C49.7371 7.37879 50.0539 8.03741 50.1198 8.74266L50.1226 8.77658H50.0876H50.089Z"/>
+                <path d="M26.1726 6.09123C26.8748 6.09123 27.4887 6.28627 27.9989 6.67211C28.5372 7.07774 28.9296 7.677 29.1665 8.45151H31.133C30.9144 7.22897 30.3313 6.19158 29.444 5.4524C28.5554 4.71181 27.4243 4.32031 26.1726 4.32031C24.7093 4.32031 23.3777 4.84466 22.4218 5.79584C21.4533 6.75974 20.9207 8.11513 20.9207 9.61751C20.9207 11.1199 21.4547 12.4753 22.4218 13.4378C23.3777 14.389 24.7107 14.9133 26.1726 14.9133C27.4159 14.9133 28.5428 14.5275 29.4286 13.7982C30.3032 13.0774 30.8849 12.0725 31.1106 10.8881H29.1357C28.6465 12.3212 27.5686 13.1424 26.1712 13.1424C25.2601 13.1424 24.4262 12.7919 23.8249 12.1545C23.2165 11.5114 22.8801 10.6097 22.8801 9.6161C22.8801 8.62252 23.2151 7.72081 23.8249 7.07774C24.4276 6.44174 25.2601 6.08982 26.1712 6.08982L26.1726 6.09123Z"/>
+                <path d="M36.6457 11.2372L36.6149 11.3107L36.5868 11.2358L34.0176 4.53797H31.7442L35.5538 13.9367L35.5594 13.9508L35.5538 13.9635L33.663 18.0509H35.9449L41.7673 4.53938H39.4826L36.6471 11.2386L36.6457 11.2372Z"/>
+            </g>
+            <path d="M168.629 14.6879V4.23237H169.925V6.57657C170.542 5.14516 171.983 4.06641 173.875 4.06641C176.035 4.06641 177.599 5.3941 177.599 7.80054V14.6879H176.303V8.07022C176.303 6.20316 175.274 5.24888 173.649 5.24888C171.386 5.24888 169.925 7.21967 169.925 10.2277V14.6879H168.629Z" fill="currentColor"/>
+            <path d="M161.462 14.8539C159.24 14.8539 157.882 13.6507 157.882 11.9288C157.882 9.79207 159.343 8.79631 162.717 8.44364L165.062 8.1947V7.7383C165.062 6.20316 163.91 5.22814 162.244 5.22814C160.598 5.22814 159.446 6.09943 159.219 7.67607H157.923C158.232 5.56006 159.94 4.06641 162.244 4.06641C164.63 4.06641 166.358 5.53931 166.358 7.84203V14.6879H165.062V12.5304C164.671 13.8374 163.149 14.8539 161.462 14.8539ZM165.062 9.2527L162.799 9.50164C160.269 9.79207 159.199 10.3729 159.199 11.8873C159.199 13.0491 160.104 13.7544 161.524 13.7544C163.622 13.7544 165.062 12.0948 165.062 9.79207V9.2527Z" fill="currentColor"/>
+            <path d="M154.694 14.6881V4.23254H156.011V14.6881H154.694ZM155.373 2.17877C154.776 2.17877 154.324 1.74312 154.324 1.14151C154.324 0.560648 154.776 0.125 155.373 0.125C155.99 0.125 156.422 0.560648 156.422 1.14151C156.422 1.74312 155.99 2.17877 155.373 2.17877Z" fill="currentColor"/>
+            <path d="M147.097 14.8535C144.052 14.8535 141.995 12.6753 141.995 9.4598C141.995 6.2443 144.052 4.06605 147.097 4.06605C148.784 4.06605 150.368 4.97884 151.006 6.34802V0H152.302V14.6876H151.006V12.5716C150.368 13.92 148.784 14.8535 147.097 14.8535ZM147.159 13.6918C149.381 13.6918 151.006 11.9285 151.006 9.4598C151.006 6.97038 149.381 5.22778 147.159 5.22778C144.937 5.22778 143.312 6.97038 143.312 9.4598C143.312 11.9492 144.937 13.6918 147.159 13.6918Z" fill="currentColor"/>
+            <path d="M136.42 14.6879V4.23237H137.716V6.57657C138.251 4.95845 139.527 4.06641 141.029 4.06641C141.461 4.06641 141.913 4.14939 142.263 4.31535V5.56006C141.687 5.35261 141.296 5.31112 140.885 5.31112C139.033 5.31112 137.716 7.24042 137.716 10.4974V14.6879H136.42Z" fill="currentColor"/>
+            <path d="M129.253 14.8539C127.031 14.8539 125.673 13.6507 125.673 11.9288C125.673 9.79207 127.134 8.79631 130.508 8.44364L132.854 8.1947V7.7383C132.854 6.20316 131.701 5.22814 130.035 5.22814C128.389 5.22814 127.237 6.09943 127.011 7.67607H125.715C126.023 5.56006 127.731 4.06641 130.035 4.06641C132.422 4.06641 134.15 5.53931 134.15 7.84203V14.6879H132.854V12.5304C132.463 13.8374 130.94 14.8539 129.253 14.8539ZM132.854 9.2527L130.591 9.50164C128.06 9.79207 126.99 10.3729 126.99 11.8873C126.99 13.0491 127.895 13.7544 129.315 13.7544C131.413 13.7544 132.854 12.0948 132.854 9.79207V9.2527Z" fill="currentColor"/>
+            <path d="M118.532 14.854C116.392 14.854 114.808 13.5263 114.808 11.1198V4.23242H116.104V10.8501C116.104 12.7172 117.153 13.6715 118.758 13.6715C121.021 13.6715 122.482 11.7007 122.482 8.69263V4.23242H123.778V14.688H122.482V12.3853C121.844 13.7959 120.425 14.854 118.532 14.854Z" fill="currentColor"/>
+            <path d="M106.674 14.8535C102.663 14.8535 99.8234 12.0322 99.8234 7.42677C99.8234 2.94581 102.56 0 106.715 0C109.946 0 112.229 1.84632 112.599 4.70915H111.221C110.83 2.48942 108.958 1.22396 106.715 1.22396C103.403 1.22396 101.202 3.69264 101.202 7.42677C101.202 11.2024 103.403 13.6296 106.736 13.6296C109.678 13.6296 111.53 11.5343 111.53 8.56776H106.037V7.40603H112.805V14.6876H111.509V12.0529C110.81 13.7955 108.896 14.8535 106.674 14.8535Z" fill="currentColor"/>
+            <path d="M92.3168 14.6876V0.166016H93.6952V14.6876H92.3168Z" fill="currentColor"/>
+            <path d="M77.729 14.6876L83.5719 0.166016H85.1972L90.9989 14.6876H89.5176L87.9129 10.6631H80.7739L79.1691 14.6876H77.729ZM81.2471 9.43911H87.4602L84.3742 1.68041L81.2471 9.43911Z" fill="currentColor"/>
+        </svg>
+    </a>
+    <nav class="hud-right">
+        <button id="menu-button" class="pill" aria-label="Toggle navigation menu"><span>Menu</span></button>
+    </nav>
+</header>
+
+<div id="menu-overlay" aria-hidden="true">
+    <button id="menu-close" class="pill" aria-label="Close menu"><span>Close</span></button>
+    <nav class="menu-links">
+        <a href="#" data-nav="0"><em>Home</em></a>
+        <a href="#" data-nav="1"><em>Worlds</em></a>
+        <a href="#" data-nav="3"><em>Discover</em></a>
+        <a href="#" data-nav="4"><em>Govern</em></a>
+        <a href="#" data-nav="6"><em>Protect</em></a>
+        <a href="#" data-nav="8"><em>Further Reading</em></a>
+        <a href="#" data-nav="10"><em>Contact</em></a>
+    </nav>
+    <p class="menu-foot">Cyera AI Guardian &mdash; Secure the Unknown</p>
+</div>
+
+<footer id="hud-bottom">
+    <div id="chapter-rail" role="navigation" aria-label="Chapters"></div>
+    <div id="scroll-hint"><span>Scroll</span>
+        <svg viewBox="0 0 12 20" aria-hidden="true"><path d="M6 1v16M1 12l5 6 5-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+</footer>
+
+<div id="chapter-toast" aria-live="polite"></div>
+
+<!-- ================= WATERMARK ================= -->
+<div id="watermark" aria-hidden="true"></div>
+
+<!-- ================= STAGE ================= -->
+<main id="Stage">
+
+    <!-- 0 · LANDING -->
+    <section class="step step-landing" data-title="Intro" data-theme="grape">
+        <div class="landing-side" data-reveal>
+            <p class="kicker">Cyera AI Guardian</p>
+            <p class="landing-tag">AI launches your data into orbit &mdash; Cyera helps secure every landing.</p>
+        </div>
+        <div class="landing-center">
+            <h1 class="display" data-split>
+                <span class="line">Know Your Data.</span>
+                <span class="line">Control Your AI.</span>
+                <span class="line">Secure the <em class="season">Unknown</em>.</span>
+            </h1>
+            <div class="cta-row" data-reveal>
+                <button class="btn solid" data-nav="1"><span>Begin Your Mission</span></button>
+            </div>
+        </div>
+        <div class="landing-foot" data-reveal>
+            <p>Scroll to begin the mission</p>
+        </div>
+    </section>
+
+    <!-- 1 · WORLDS CAROUSEL -->
+    <section class="step step-worlds" data-title="Worlds" data-theme="grape">
+        <div class="worlds-head">
+            <p class="kicker" data-reveal>Three worlds · One platform</p>
+            <h2 class="h2" data-split>Swipe to explore the <em class="season">worlds</em></h2>
+        </div>
+        <div class="world-cards">
+            <article class="world-card" data-reveal data-world="horizon">
+                <div class="world-orb orb-horizon"><span class="world-completed" data-done="discover">Completed</span></div>
+                <h3>Horizon</h3>
+                <p class="world-tag">Discover: AI security starts with visibility</p>
+                <button class="btn ghost" data-nav="2"><span>Explore Discover: AI security visibility</span></button>
+            </article>
+            <article class="world-card" data-reveal data-world="dusk">
+                <div class="world-orb orb-dusk"><span class="world-completed" data-done="govern">Completed</span></div>
+                <h3>Dusk</h3>
+                <p class="world-tag">Govern: How to secure AI without slowing down adoption</p>
+                <button class="btn ghost" data-nav="4"><span>Explore Govern: secure AI adoption</span></button>
+            </article>
+            <article class="world-card" data-reveal data-world="space">
+                <div class="world-orb orb-space"><span class="world-completed" data-done="protect">Completed</span></div>
+                <h3>Space</h3>
+                <p class="world-tag">Protect: Blocking AI threats in real-time</p>
+                <button class="btn ghost" data-nav="6"><span>Explore Protect: real-time AI blocking</span></button>
+            </article>
+        </div>
+        <p class="worlds-foot" data-reveal>Explore other terrains &mdash; one platform to discover all AI</p>
+    </section>
+
+    <!-- 2 · DISCOVER INTRO -->
+    <section class="step step-chapter" data-title="Discover" data-theme="horizon" data-chapter="discover">
+        <div class="chapter-grid">
+            <div class="chapter-copy">
+                <p class="kicker" data-reveal>Chapter 01 &mdash; Horizon</p>
+                <h2 class="h1" data-split>Discover: AI security starts with <em class="season">visibility</em></h2>
+                <div class="question-chip" data-reveal><span class="q-mark">?</span>What AI is deployed in my environment?</div>
+                <p class="stat" data-reveal><strong>87%</strong> of security leaders lack visibility into AI usage.<br>AI Guardian surfaces unsanctioned tools and the risks associated with them.</p>
+                <p class="body" data-reveal>Shadow AI is widespread and the barrier to access is low. AI Guardian identifies AI tools used in the browser, maps each to user identities, and reveals connected corporate or personal accounts.</p>
+                <p class="body" data-reveal>AI Guardian doesn&rsquo;t just find AI. It combines the deep data context of DSPM with purpose-built controls of AI-SPM so you secure your AI future with confidence.</p>
+            </div>
+            <div class="chapter-visual" data-reveal>
+                <div class="threat-orbit" data-threats="Shadow AI,Data Leakage,Weak Access Controls,Data Overreach"></div>
+                <blockquote class="quote">
+                    <p>&ldquo;Implementing the Cyera data governance solution has significantly improved our visibility and control over sensitive data.&rdquo;</p>
+                    <cite>CISO at AT&amp;T</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 · DISCOVER GAMES -->
+    <section class="step step-games" data-title="Discover · Games" data-theme="horizon" data-chapter="discover">
+        <div class="games-head">
+            <p class="kicker" data-reveal>Training 01 &mdash; Horizon</p>
+            <h2 class="h2" data-split>Two drills to <em class="season">find</em> the AI</h2>
+        </div>
+        <div class="games-row">
+            <div class="game-card" data-reveal>
+                <h3>Constellation</h3>
+                <p>Connect the white stars to secure the green data inside.</p>
+                <svg id="constellation" viewBox="0 0 320 300" role="img" aria-label="Connect the stars minigame"></svg>
+                <p class="game-status" id="constellation-status">Click the stars in order</p>
+            </div>
+            <div class="game-card" data-reveal>
+                <h3>Compass</h3>
+                <p>Stop at the right moment.</p>
+                <div id="compass">
+                    <div class="compass-dial">
+                        <div class="compass-zone"></div>
+                        <div class="compass-needle"></div>
+                        <div class="compass-pin"></div>
+                    </div>
+                    <button class="btn ghost" id="compass-stop"><span>Tap to stop</span></button>
+                </div>
+                <p class="game-status" id="compass-status">Attempts: <span id="compass-attempts">0</span></p>
+            </div>
+        </div>
+        <div class="games-actions" data-reveal>
+            <button class="btn ghost skip" data-skip="discover"><span>Skip Game</span></button>
+            <button class="btn solid" data-next data-disabled><span>Continue</span></button>
+        </div>
+    </section>
+
+    <!-- 4 · GOVERN INTRO -->
+    <section class="step step-chapter" data-title="Govern" data-theme="dusk" data-chapter="govern">
+        <div class="chapter-grid">
+            <div class="chapter-copy">
+                <p class="kicker" data-reveal>Chapter 02 &mdash; Dusk</p>
+                <h2 class="h1" data-split>Govern: how to secure AI without slowing down <em class="season">adoption</em></h2>
+                <div class="question-chip" data-reveal><span class="q-mark">?</span>Should AI access this data?</div>
+                <p class="body" data-reveal>If your AI is deployed with flat permissions, your data is at risk. AI Guardian is the platform to scale AI securely.</p>
+                <p class="body" data-reveal>AI adoption is accelerating and security teams are struggling to keep pace. With AI Guardian, you enforce the right guardrails to ensure your data stays safe.</p>
+                <p class="body" data-reveal>AI is introducing new identities &mdash; agents, machines, delegated users &mdash; that is breaking traditional protocols. Cyera ties every data access event to the right identity, whether human or AI.</p>
+            </div>
+            <div class="chapter-visual" data-reveal>
+                <div class="threat-orbit" data-threats="Agent Abuse,Weak Access Controls,Data Overreach,Rogue Agents"></div>
+                <blockquote class="quote">
+                    <p>&ldquo;As we roll out AI, Data Intelligence is a foundational item for us to effectively govern the AI. Prior to Cyera we didn&rsquo;t have the ability to manage this. It&rsquo;s huge!&rdquo;</p>
+                    <cite>CISO at Cass Information Systems</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 · GOVERN GAME -->
+    <section class="step step-games" data-title="Govern · Game" data-theme="dusk" data-chapter="govern">
+        <div class="games-head">
+            <p class="kicker" data-reveal>Training 02 &mdash; Dusk</p>
+            <h2 class="h2" data-split>Can you block dangerous AI <em class="season">actions</em>?</h2>
+        </div>
+        <div class="game-card wide" data-reveal>
+            <h3>Shield Defend</h3>
+            <p>Move the shield to defend the crystal. Block <span id="shield-total">10</span> incoming threats.</p>
+            <div class="shield-stage">
+                <canvas id="shield-canvas" width="720" height="400"></canvas>
+                <div class="shield-hud"><span>Current Score: <b id="shield-score">0</b></span><span class="integrity">Crystal integrity <b id="shield-integrity">100%</b></span></div>
+            </div>
+            <p class="game-status" id="shield-status">Move your pointer to steer the shield</p>
+        </div>
+        <div class="games-actions" data-reveal>
+            <button class="btn ghost skip" data-skip="govern"><span>Skip Game</span></button>
+            <button class="btn solid" data-next data-disabled><span>Continue</span></button>
+        </div>
+    </section>
+
+    <!-- 6 · PROTECT INTRO -->
+    <section class="step step-chapter" data-title="Protect" data-theme="space" data-chapter="protect">
+        <div class="chapter-grid">
+            <div class="chapter-copy">
+                <p class="kicker" data-reveal>Chapter 03 &mdash; Space</p>
+                <h2 class="h1" data-split>Protect: blocking AI threats in <em class="season">real-time</em></h2>
+                <div class="question-chip" data-reveal><span class="q-mark">!</span>Protect Your Data in Minutes</div>
+                <p class="body" data-reveal>Organizations are scrambling to defend against a new category of attacks that target AI models, workflows, and infrastructure. Cyera detects AI prompts and actions to block malicious behavior related to your data.</p>
+                <p class="body" data-reveal>AI security must provide you with the ability to prevent malicious behavior from taking place. AI Guardian allows you to act in real-time &mdash; powered by an AI-brain that lets you focus on what matters most.</p>
+                <p class="stat" data-reveal><strong>76%</strong> of leaders say autonomous agents are the hardest to secure. Cyera lets you monitor agent actions and apply the right guardrails at every data interaction.</p>
+            </div>
+            <div class="chapter-visual" data-reveal>
+                <div class="threat-orbit big" data-threats="Leaking Data in Public AI,Shadow AI,AI Specific Attacks,Data Leakage,Agent Abuse,Weak Access Controls,Data Overreach,Rogue Agents,Identify Blind Spots"></div>
+                <blockquote class="quote">
+                    <p>&ldquo;The speed and scale of AI-driven threats are threatening to outpace traditional security approaches. Cyera is providing the clarity and control needed to protect data in real-time.&rdquo;</p>
+                    <cite>Corey Kaemming</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7 · PROTECT DECISION -->
+    <section class="step step-decide" data-title="Protect · Decide" data-theme="space" data-chapter="protect">
+        <div class="decide-wrap">
+            <p class="kicker" data-reveal>Real-time control</p>
+            <h2 class="h2" data-split>Sensitive data leaks are the <em class="season">#1</em> concern of CISOs regarding AI</h2>
+            <p class="body center" data-reveal>AI Guardian lets you control how AI accesses and shares your data. Approve or block each AI action &mdash; in real time.</p>
+            <div class="decide-card" data-reveal>
+                <p class="decide-q">Should AI access this data?</p>
+                <div class="decide-list" id="decide-list"></div>
+                <p class="game-status" id="decide-status">0 / 4 decisions made</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 · FURTHER READING -->
+    <section class="step step-reading" data-title="Further Reading" data-theme="grape">
+        <div class="reading-head">
+            <p class="kicker" data-reveal>Mission debrief</p>
+            <h2 class="h2" data-split>Further <em class="season">reading</em></h2>
+        </div>
+        <div class="reading-cards">
+            <article class="read-card" data-reveal>
+                <p class="read-kind">E-book</p>
+                <h3>AI Security for Dummies</h3>
+                <p>Want a framework and best practices for laying a foundation for AI security? Download the &ldquo;AI Security for Dummies&rdquo; e-book.</p>
+                <span class="btn ghost static"><span>Download</span></span>
+            </article>
+            <article class="read-card" data-reveal>
+                <p class="read-kind">Whitepaper</p>
+                <h3>Securing AI Starts with Data Security</h3>
+                <p>Want to learn more about AI Guardian? Download the whitepaper, which discusses why Cyera is uniquely suited to secure this next technology era.</p>
+                <span class="btn ghost static"><span>Download</span></span>
+            </article>
+            <article class="read-card" data-reveal>
+                <p class="read-kind">Report</p>
+                <h3>When AI Security Risks Become Reality</h3>
+                <p>Want to learn more about AI specific security risks? Read our report to learn about the most common attack paths.</p>
+                <span class="btn ghost static"><span>Read report</span></span>
+            </article>
+        </div>
+    </section>
+
+    <!-- 9 · FINISH -->
+    <section class="step step-finish" data-title="Finish" data-theme="grape">
+        <div class="finish-card" data-reveal>
+            <p class="kicker center">Mission complete!</p>
+            <h2 class="h1 center" data-split>Know Your Data. Control Your AI.<br><em class="season">Secure the Unknown.</em></h2>
+            <p class="body center" data-reveal>Ready to see it live?</p>
+            <div class="cta-row center" data-reveal>
+                <a class="btn solid" href="https://www.cyera.com/ai-guardian-demo?utm_medium=referral&amp;utm_source=cyera&amp;utm_campaign=ai-guardian&amp;utm_content=ai-microsite" target="_blank" rel="noopener"><span>See AI Guardian live</span></a>
+                <button class="btn ghost" data-replay><span>Go Back</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10 · CONTACT -->
+    <section class="step step-contact" data-title="Contact" data-theme="grape">
+        <div class="contact-wrap">
+            <div class="contact-copy">
+                <p class="kicker" data-reveal>Stay in orbit</p>
+                <h2 class="h2" data-split>Keep me <em class="season">updated</em></h2>
+                <p class="body" data-reveal>Get Cyera news, events, webcasts and special offers straight to your inbox.</p>
+            </div>
+            <form id="contact-form" novalidate>
+                <label data-reveal>
+                    <span>First name</span>
+                    <input type="text" name="firstName" autocomplete="given-name" required>
+                </label>
+                <label data-reveal>
+                    <span>Business email address</span>
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label class="consent" data-reveal>
+                    <input type="checkbox" name="consent" required>
+                    <span>Yes, please keep me updated on Cyera news, events, webcast and special offers. By submitting the form, you are agreeing to our <a href="https://www.cyera.com/legal/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</span>
+                </label>
+                <button class="btn solid" type="submit" data-reveal><span>Submit</span></button>
+                <p class="form-note" id="form-note" role="status"></p>
+            </form>
+        </div>
+        <footer class="site-foot" data-reveal>
+            <svg viewBox="0 0 178 19" class="foot-mark" aria-hidden="true"><use href="#cyera-mark"/></svg>
+            <div class="foot-links">
+                <a href="https://www.cyera.com" target="_blank" rel="noopener">cyera.com</a>
+                <a href="https://www.cyera.com/legal/privacy-policy" target="_blank" rel="noopener">privacy policy</a>
+                <a href="#" data-nav="9">Further Reading</a>
+            </div>
+            <p class="foot-credit">Static design-study clone of <em>secure-the-unknown.cyera.com</em> &mdash; Awwwards Site of the Day. Not affiliated with Cyera.</p>
+        </footer>
+    </section>
+
+</main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+        <g id="cyera-mark" fill="#FBFBFB">
+            <path d="M11.0152 5.35787C12.1365 5.35787 13.0532 4.44203 13.0532 3.32266C13.0532 2.2033 12.1435 1.28745 11.0152 1.28745C9.8869 1.28745 8.97724 2.19764 8.97724 3.32266C8.97724 4.44768 9.89251 5.35787 11.0152 5.35787Z"/>
+            <path d="M59.4392 4.34434H59.4069C57.7474 4.34434 56.7326 4.84325 56.1117 5.95979L56.0528 6.06438V5.94425L56.0304 4.56058H53.9784V14.7324H56.0514V9.73058C56.0514 7.52153 57.1489 6.30465 59.142 6.30465C59.3326 6.30465 59.4966 6.31313 59.6564 6.3315V4.34575C59.5807 4.3401 59.5106 4.3401 59.4378 4.3401L59.4392 4.34434Z"/>
+            <path d="M68.7461 4.5408V5.91598L68.6914 5.85521C67.793 4.88 66.4922 4.32173 65.1256 4.32173C63.759 4.32173 62.5732 4.81358 61.6664 5.70681C60.681 6.67919 60.1596 8.03034 60.1596 9.61894C60.1596 11.2075 60.681 12.5573 61.6664 13.5297C62.5732 14.4243 63.8011 14.9147 65.1256 14.9147C66.4502 14.9147 67.849 14.3268 68.6914 13.3827L68.7475 13.3191V14.6957H70.6439V4.5408H68.7461ZM67.7355 12.1983C67.1314 12.799 66.3002 13.1438 65.4564 13.1438C63.7997 13.1438 62.1219 11.9326 62.1219 9.61894C62.1219 8.56741 62.4793 7.66711 63.1549 7.01415C63.7618 6.42902 64.6 6.09265 65.4564 6.09265C66.3128 6.09265 67.1328 6.4375 67.7355 7.03817C68.3873 7.68831 68.7475 8.60416 68.7475 9.61894C68.7475 10.6337 68.3887 11.5496 67.7355 12.1997V12.1983Z"/>
+            <path d="M47.2492 4.32173C44.2091 4.32173 42.0856 6.49969 42.0856 9.61894C42.0856 11.1312 42.607 12.4908 43.5517 13.4477C44.4866 14.3932 45.7999 14.9147 47.2492 14.9147C49.4246 14.9147 51.2341 13.6554 51.8733 11.7036H49.8675C49.4106 12.6604 48.5289 13.1452 47.2492 13.1452C45.6303 13.1452 44.3997 12.0711 44.1124 10.4118L44.1054 10.3751H52.1087C52.148 10.0882 52.148 9.91856 52.148 9.62176C52.148 8.1745 51.635 6.83183 50.7057 5.84107C49.7876 4.86446 48.5584 4.32456 47.2464 4.32456L47.2492 4.32173ZM50.089 8.77658H44.1264L44.1334 8.73984C44.2876 7.94837 44.6576 7.28268 45.207 6.81345C45.7579 6.34281 46.4643 6.09265 47.2478 6.09265C48.0314 6.09265 48.6957 6.37532 49.227 6.88836C49.7371 7.37879 50.0539 8.03741 50.1198 8.74266L50.1226 8.77658H50.0876H50.089Z"/>
+            <path d="M26.1726 6.09123C26.8748 6.09123 27.4887 6.28627 27.9989 6.67211C28.5372 7.07774 28.9296 7.677 29.1665 8.45151H31.133C30.9144 7.22897 30.3313 6.19158 29.444 5.4524C28.5554 4.71181 27.4243 4.32031 26.1726 4.32031C24.7093 4.32031 23.3777 4.84466 22.4218 5.79584C21.4533 6.75974 20.9207 8.11513 20.9207 9.61751C20.9207 11.1199 21.4547 12.4753 22.4218 13.4378C23.3777 14.389 24.7107 14.9133 26.1726 14.9133C27.4159 14.9133 28.5428 14.5275 29.4286 13.7982C30.3032 13.0774 30.8849 12.0725 31.1106 10.8881H29.1357C28.6465 12.3212 27.5686 13.1424 26.1712 13.1424C25.2601 13.1424 24.4262 12.7919 23.8249 12.1545C23.2165 11.5114 22.8801 10.6097 22.8801 9.6161C22.8801 8.62252 23.2151 7.72081 23.8249 7.07774C24.4276 6.44174 25.2601 6.08982 26.1712 6.08982L26.1726 6.09123Z"/>
+            <path d="M36.6457 11.2372L36.6149 11.3107L36.5868 11.2358L34.0176 4.53797H31.7442L35.5538 13.9367L35.5594 13.9508L35.5538 13.9635L33.663 18.0509H35.9449L41.7673 4.53938H39.4826L36.6471 11.2386L36.6457 11.2372Z"/>
+            <path d="M168.629 14.6879V4.23237H169.925V6.57657C170.542 5.14516 171.983 4.06641 173.875 4.06641C176.035 4.06641 177.599 5.3941 177.599 7.80054V14.6879H176.303V8.07022C176.303 6.20316 175.274 5.24888 173.649 5.24888C171.386 5.24888 169.925 7.21967 169.925 10.2277V14.6879H168.629Z"/>
+            <path d="M161.462 14.8539C159.24 14.8539 157.882 13.6507 157.882 11.9288C157.882 9.79207 159.343 8.79631 162.717 8.44364L165.062 8.1947V7.7383C165.062 6.20316 163.91 5.22814 162.244 5.22814C160.598 5.22814 159.446 6.09943 159.219 7.67607H157.923C158.232 5.56006 159.94 4.06641 162.244 4.06641C164.63 4.06641 166.358 5.53931 166.358 7.84203V14.6879H165.062V12.5304C164.671 13.8374 163.149 14.8539 161.462 14.8539ZM165.062 9.2527L162.799 9.50164C160.269 9.79207 159.199 10.3729 159.199 11.8873C159.199 13.0491 160.104 13.7544 161.524 13.7544C163.622 13.7544 165.062 12.0948 165.062 9.79207V9.2527Z"/>
+            <path d="M154.694 14.6881V4.23254H156.011V14.6881H154.694ZM155.373 2.17877C154.776 2.17877 154.324 1.74312 154.324 1.14151C154.324 0.560648 154.776 0.125 155.373 0.125C155.99 0.125 156.422 0.560648 156.422 1.14151C156.422 1.74312 155.99 2.17877 155.373 2.17877Z"/>
+            <path d="M147.097 14.8535C144.052 14.8535 141.995 12.6753 141.995 9.4598C141.995 6.2443 144.052 4.06605 147.097 4.06605C148.784 4.06605 150.368 4.97884 151.006 6.34802V0H152.302V14.6876H151.006V12.5716C150.368 13.92 148.784 14.8535 147.097 14.8535ZM147.159 13.6918C149.381 13.6918 151.006 11.9285 151.006 9.4598C151.006 6.97038 149.381 5.22778 147.159 5.22778C144.937 5.22778 143.312 6.97038 143.312 9.4598C143.312 11.9492 144.937 13.6918 147.159 13.6918Z"/>
+            <path d="M136.42 14.6879V4.23237H137.716V6.57657C138.251 4.95845 139.527 4.06641 141.029 4.06641C141.461 4.06641 141.913 4.14939 142.263 4.31535V5.56006C141.687 5.35261 141.296 5.31112 140.885 5.31112C139.033 5.31112 137.716 7.24042 137.716 10.4974V14.6879H136.42Z"/>
+            <path d="M129.253 14.8539C127.031 14.8539 125.673 13.6507 125.673 11.9288C125.673 9.79207 127.134 8.79631 130.508 8.44364L132.854 8.1947V7.7383C132.854 6.20316 131.701 5.22814 130.035 5.22814C128.389 5.22814 127.237 6.09943 127.011 7.67607H125.715C126.023 5.56006 127.731 4.06641 130.035 4.06641C132.422 4.06641 134.15 5.53931 134.15 7.84203V14.6879H132.854V12.5304C132.463 13.8374 130.94 14.8539 129.253 14.8539ZM132.854 9.2527L130.591 9.50164C128.06 9.79207 126.99 10.3729 126.99 11.8873C126.99 13.0491 127.895 13.7544 129.315 13.7544C131.413 13.7544 132.854 12.0948 132.854 9.79207V9.2527Z"/>
+            <path d="M118.532 14.854C116.392 14.854 114.808 13.5263 114.808 11.1198V4.23242H116.104V10.8501C116.104 12.7172 117.153 13.6715 118.758 13.6715C121.021 13.6715 122.482 11.7007 122.482 8.69263V4.23242H123.778V14.688H122.482V12.3853C121.844 13.7959 120.425 14.854 118.532 14.854Z"/>
+            <path d="M106.674 14.8535C102.663 14.8535 99.8234 12.0322 99.8234 7.42677C99.8234 2.94581 102.56 0 106.715 0C109.946 0 112.229 1.84632 112.599 4.70915H111.221C110.83 2.48942 108.958 1.22396 106.715 1.22396C103.403 1.22396 101.202 3.69264 101.202 7.42677C101.202 11.2024 103.403 13.6296 106.736 13.6296C109.678 13.6296 111.53 11.5343 111.53 8.56776H106.037V7.40603H112.805V14.6876H111.509V12.0529C110.81 13.7955 108.896 14.8535 106.674 14.8535Z"/>
+            <path d="M92.3168 14.6876V0.166016H93.6952V14.6876H92.3168Z"/>
+            <path d="M77.729 14.6876L83.5719 0.166016H85.1972L90.9989 14.6876H89.5176L87.9129 10.6631H80.7739L79.1691 14.6876H77.729ZM81.2471 9.43911H87.4602L84.3742 1.68041L81.2471 9.43911Z"/>
+        </g>
+        <g id="gem-1">
+            <path d="M4 20 L18 6 L36 10 L42 26 L28 40 L10 34 Z" fill="#E0ADFF" stroke="#160923" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M18 6 L24 22 L42 26 M24 22 L10 34 M24 22 L4 20" fill="none" stroke="#160923" stroke-width="1.4" stroke-linejoin="round"/>
+        </g>
+        <g id="gem-2">
+            <path d="M6 14 L26 2 L44 14 L34 34 L12 32 Z" fill="#BFFFA2" stroke="#160923" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M26 2 L24 18 L44 14 M24 18 L12 32 M24 18 L6 14" fill="none" stroke="#160923" stroke-width="1.4" stroke-linejoin="round"/>
+        </g>
+        <g id="gem-3">
+            <path d="M10 2 L34 0 L44 18 L28 38 L4 30 Z" fill="#C579F4" stroke="#160923" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M34 0 L26 16 L44 18 M26 16 L4 30 M26 16 L10 2" fill="none" stroke="#160923" stroke-width="1.4" stroke-linejoin="round"/>
+        </g>
+        <g id="gem-4">
+            <path d="M2 18 L20 2 L40 8 L44 28 L24 42 L6 32 Z" fill="#7BF583" stroke="#160923" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M20 2 L22 20 L40 8 M22 20 L6 32 M22 20 L24 42" fill="none" stroke="#160923" stroke-width="1.4" stroke-linejoin="round"/>
+        </g>
+        <g id="gem-5">
+            <path d="M8 24 L2 6 L22 0 L40 10 L34 30 L14 36 Z" fill="#F3BFFF" stroke="#160923" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M2 6 L20 16 L40 10 M20 16 L14 36 M20 16 L8 24" fill="none" stroke="#160923" stroke-width="1.4" stroke-linejoin="round"/>
+        </g>
+        <g id="asteroid-1">
+            <path d="M4 16 L14 4 L32 2 L40 14 L36 30 L16 32 L2 26 Z" fill="#4B2A66" stroke="#160923" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M14 4 L18 16 L36 30 M18 16 L2 26" fill="none" stroke="#160923" stroke-width="1.4" stroke-linejoin="round"/>
+        </g>
+        <g id="asteroid-2">
+            <path d="M6 10 L24 2 L42 12 L38 28 L12 26 Z" fill="#3C1B5E" stroke="#160923" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M24 2 L22 14 L38 28 M22 14 L6 10" fill="none" stroke="#160923" stroke-width="1.4" stroke-linejoin="round"/>
+        </g>
+    </defs>
+</svg>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/games.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
