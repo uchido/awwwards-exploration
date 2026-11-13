@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Experience Studio | AUGE Experience</title>
+<meta name="description" content="AUGE Experience is an independent digital experience studio creating websites, digital products, interactive installations and creative technology for forward-thinking brands.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/img/viru.jpg">
+<link rel="preload" as="image" href="assets/img/maison.jpg">
+<link rel="preload" as="image" href="assets/img/lunarossa.jpg">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- ============================ LOADER ============================ -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-backdrop" data-loader-backdrop></div>
+  <div class="loader-center">
+    <div class="loader-line loader-clip">
+      <span class="block font-greed text-content-xl leading-none">AUGE</span>
+    </div>
+    <div class="loader-line loader-clip loader-line-2">
+      <span class="block font-farnham text-content-lg leading-none">Experience</span>
+    </div>
+  </div>
+  <div class="loader-bottom">
+    <span class="block font-sans text-content-xs leading-none uppercase" data-loader-percent>0</span>
+  </div>
+</div>
+
+<!-- ============================ HEADER ============================ -->
+<header>
+  <a class="logo" href="./" aria-label="AUGE XP — home">
+    <img src="assets/logo.svg" alt="AUGE XP" width="43" height="40">
+  </a>
+</header>
+
+<!-- ============================ MAIN ============================ -->
+<main class="site" id="site">
+
+  <!-- Top band : infinite projects carousel (60vh) -->
+  <section class="hero" aria-label="Selected projects">
+    <div class="hero-track" id="track"><!-- cards injected by js --></div>
+  </section>
+
+  <!-- Bottom band : wordmark + studio pitch (40vh) -->
+  <section class="base" aria-label="About AUGE Experience">
+    <div class="wordmark" data-wordmark role="img" aria-label="AUGE">
+      <span class="wordmark-letter" data-letter-push>A</span><span class="wordmark-letter" data-letter-push>U</span><span class="wordmark-letter" data-letter-push>G</span><span class="wordmark-letter" data-letter-push>E</span>
+    </div>
+    <div class="pitch">
+      <h1 class="pitch-title">
+        <span class="sr-only">AUGE EXPERIENCE©</span>
+        <span class="clip">
+          <span class="clip-inner" aria-hidden="true" data-scramble data-text="AUGE EXPERIENCE©">RCCS YFZVYTYHHV©</span>
+        </span>
+      </h1>
+      <p class="pitch-text" data-reveal>
+        An award-winning digital experience studio partnering with ambitious brands to create distinctive experiences through design, technology and creative experimentation.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer>
+  <div class="legal">
+    <span>© 2026</span>
+    <span aria-hidden="true">-</span>
+    <span>P.IVA 14298400962</span>
+    <span aria-hidden="true">|</span>
+    <a href="#" onclick="return false">PRIVACY</a>
+    <span aria-hidden="true">|</span>
+    <a href="#" onclick="return false">COOKIES</a>
+    <span aria-hidden="true" data-sound-toggle>|</span>
+    <button type="button" data-sound-toggle aria-label="Unmute sound" aria-pressed="false" class="sound-btn">
+      <svg viewBox="0 0 25 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M13.75 4.31221C13.75 2.60949 11.758 1.68558 10.4581 2.78544L6.50925 6.12678C6.14814 6.43233 5.69042 6.6 5.21739 6.60001L3.24998 6.60002C1.86928 6.60003 0.75 7.71932 0.75 9.10002V12.9C0.75 14.2808 1.86929 15.4 3.25 15.4H5.21742C5.69046 15.4 6.14819 15.5677 6.50931 15.8733L10.4581 19.2146C11.758 20.3144 13.75 19.3905 13.75 17.6878V11V4.31221Z"/>
+        <g data-sound-wave style="display:none">
+          <path d="M18.3174 14.7614C19.1701 13.8157 19.6754 12.6401 19.6754 11.3663C19.6754 10.0924 19.1701 8.91691 18.3174 7.97119" stroke-linecap="round"/>
+          <path d="M22.3916 17.4775C23.2443 15.7752 23.7496 13.6592 23.7496 11.3663C23.7496 9.07339 23.2443 6.95742 22.3916 5.25513" stroke-linecap="round"/>
+        </g>
+        <g data-sound-cross>
+          <path d="M17.9056 13.2216L22.3906 8.73657" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.9056 8.73689L22.3906 13.2219" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <div class="socials">
+    <a href="https://www.linkedin.com/company/auge-experience" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+    <span aria-hidden="true">|</span>
+    <a href="https://www.instagram.com/auge_xp/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+  </div>
+
+  <div class="menu" id="menu">
+    <div class="menu-panel" data-menu-panel>
+      <button type="button" class="menu-close" data-menu-close aria-label="Close menu">
+        <span class="menu-close-x">
+          <svg viewBox="0 0 100 100" shape-rendering="geometricPrecision" aria-hidden="true">
+            <line x1="0" y1="0" x2="100" y2="100" stroke="currentColor" stroke-width="15" stroke-linecap="round"/>
+            <line x1="100" y1="0" x2="0" y2="100" stroke="currentColor" stroke-width="15" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </button>
+      <nav class="menu-nav" data-menu-nav>
+        <a href="#" data-menu-link><span>Works</span></a>
+        <a href="#" data-menu-link><span>About</span></a>
+        <a href="#" data-menu-link><span>Let&#x27;s talk</span></a>
+      </nav>
+    </div>
+    <button type="button" class="menu-open" data-menu-open aria-label="Open menu" aria-expanded="false">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+  </div>
+</footer>
+
+<!-- ============================ CURSOR ============================ -->
+<div class="cursor" data-cursor aria-hidden="true">
+  <div class="cursor-diamond"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
