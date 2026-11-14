@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delta Cafés — Coffee with heart | Delta Cafés</title>
+<meta name="description" content="Discover Delta Cafés: Portuguese coffee heritage, culture, sustainability, and experiences from bean to cup for every coffee lover.">
+<link rel="icon" href="assets/misc/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+<!-- ==================== Preloader ==================== -->
+<div id="preloader" aria-hidden="true">
+  <svg viewBox="0 0 80 64" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#9E0212" d="M40 0 8 62c10-2.4 21.5-3.7 32-3.7S62 59.6 72 62L40 0z"/>
+    <path fill="#E70025" d="M40 8 14 58c8-2 17-3.1 26-3.1S58 56 66 58L40 8z"/>
+    <path fill="#FFD300" d="M40 22 26 49c4.4-1.1 9.3-1.7 14-1.7s9.6.6 14 1.7L40 22z"/>
+  </svg>
+</div>
+
+<!-- ==================== Header ==================== -->
+<header id="site-header">
+  <button id="audio-pill" class="corner-pill" aria-label="Toggle sound">
+    <span class="eq"><i></i><i></i><i></i><i></i></span>
+  </button>
+
+  <div class="nav-wrap">
+    <div class="nav-bar"></div>
+    <a class="nav-logo" href="#" aria-label="Delta Cafés — home">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1116 94"><g class="logo-shape"><path fill="#9E0212" d="M517 80c.006-.003 20.106-4.837 40-4.837 19.891 0 39.989 4.834 40 4.837zm63.704-41.843C572.692 22.137 557.025.034 557 0l40 80c0-.003-8.278-25.807-16.296-41.843m-47.408 0C525.281 54.193 517 80 517 80l40-80c-.023.034-15.692 22.138-23.704 38.157"></path><path fill="#E70025" d="M597 80 557 0l-40 80c.006-.003 20.106-4.837 40-4.837 19.891 0 39.989 4.834 40 4.837"></path><path fill="#FFD300" d="m549.3 69.733.209.61c-.257.13-.671.245-1.021.245-1.084 0-1.759-.776-1.759-1.82 0-.988.568-1.911 1.759-1.911.44 0 .762.093 1.016.206l-.252.646a1.6 1.6 0 0 0-.716-.192c-.737 0-.994.669-.994 1.234 0 .73.491 1.176 1.047 1.176a1.5 1.5 0 0 0 .711-.194m7.708.764h.79v-1.473h1.389v-.638h-1.389v-.795h1.437v-.644h-2.227zm-3.415-3.553 1.259 3.553h-.838l-.221-.674h-1.312l-.223.675h-.77l1.253-3.554zm.011 2.295-.46-1.584-.465 1.584zm9.427-3.268-.398.618h.542l.66-.618zm4.761 2.435-.257-.116c-.203-.09-.451-.194-.451-.44 0-.158.104-.395.519-.395.276 0 .53.076.739.198l.232-.599c-.294-.15-.652-.203-.971-.203-.782 0-1.281.46-1.281 1.075 0 .587.369.839.843 1.042l.263.113c.203.084.454.197.454.457 0 .296-.251.429-.581.429-.296 0-.621-.107-.824-.234l-.212.618c.229.118.576.234.996.234.731 0 1.395-.313 1.395-1.157-.003-.573-.404-.821-.864-1.022m-5.32.528h1.363v-.618h-1.363v-.728h1.411v-.638h-2.193v3.547h2.269v-.637h-1.487zm11.244-18.604h-11.501v2.463h3.917v9.413h3.065v-9.413h3.288zm-26.645 0v11.876h7.815v-2.464h-4.75v-2.244h4.75v-2.464h-4.75v-2.243h4.75v-2.464h-7.815zm30.971-.503h.127l.26.503h.268l-.282-.503c.203-.011.319-.096.319-.307 0-.125-.031-.238-.144-.308-.082-.05-.212-.054-.313-.054h-.458v1.174h.226v-.505zm0-.5h.178c.116 0 .28 0 .28.147 0 .15-.088.184-.221.184h-.237zm-17.977 1.003H557v11.876h7.019v-2.464h-3.954zm18.195.493a1.09 1.09 0 0 0 0-2.179c-.601 0-1.092.489-1.092 1.087a1.096 1.096 0 0 0 1.092 1.092m0-1.967a.88.88 0 0 1 0 1.761.88.88 0 1 1 0-1.761m-38.719 1.474H535v11.876h4.541a5.927 5.927 0 0 0 5.927-5.933c0-3.276-2.656-5.943-5.927-5.943m-.55 9.412h-.926v-6.949h.926a3.47 3.47 0 0 1 3.474 3.477 3.477 3.477 0 0 1-3.474 3.472m37.09-9.412-5.924 11.876h11.848zm0 5.356 1.984 4.056h-3.971z"></path></g></svg>
+    </a>
+    <nav class="nav-list left" aria-label="Primary">
+      <button class="nav-item" data-drop="delta"><span>Delta Cafés</span>
+        <svg class="chev" viewBox="0 0 20 20"><path d="M10 12.198 3.611 6.625 2.5 7.712l7.5 7.663 7.5-7.635-1.083-1.087z"/></svg>
+      </button>
+      <button class="nav-item" data-drop="culture"><span>Coffee Culture</span>
+        <svg class="chev" viewBox="0 0 20 20"><path d="M10 12.198 3.611 6.625 2.5 7.712l7.5 7.663 7.5-7.635-1.083-1.087z"/></svg>
+      </button>
+      <a class="nav-item" href="#products"><span>Products</span></a>
+    </nav>
+    <nav class="nav-list right" aria-label="Secondary">
+      <a class="nav-item" href="#"><span>Business Solutions</span></a>
+      <a class="nav-item" href="#sustainability"><span>Sustainability</span></a>
+      <a class="nav-item" href="#journal"><span>Journal</span></a>
+    </nav>
+  </div>
+
+  <button id="lang-pill" class="corner-pill" aria-label="Change language">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3.5 9.5h17M3.5 14.5h17M12 3c-2.7 2.5-4 5.7-4 9s1.3 6.5 4 9c2.7-2.5 4-5.7 4-9s-1.3-6.5-4-9z"/></svg>
+    <span>EN</span>
+    <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12.198 3.611 6.625 2.5 7.712l7.5 7.663 7.5-7.635-1.083-1.087z"/></svg>
+  </button>
+
+  <ul class="lang-drop" id="lang-drop">
+    <li class="active"><span class="flag"></span>English (EN)</li>
+    <li><span class="flag"></span>Português (PT)</li>
+  </ul>
+
+  <!-- dropdown mega menu -->
+  <div class="menu-drop" id="menu-drop">
+    <div class="drop-top">
+      <div class="drop-col" data-pane="delta">
+        <h4>Delta Cafés</h4>
+        <ul>
+          <li><a href="#history" data-img="f25bc355a209b988dc8a6cfa00dac898ee4af13c-504x324.jpg">Our History</a></li>
+          <li><a href="#" data-img="360034adb2563ecae69c516bb1aa77cb83abdb01-500x320.jpg">About Delta</a></li>
+          <li><a href="#sustainability" data-img="608546f91cd6e0e622cfb67d41b82fe9786d385f-500x320.jpg">Delta Sustainability</a></li>
+          <li><a href="#quiz" data-img="58196a9e00d675ce97e0b508d66d0c7dfff6c615-500x320.jpg">The Azores Coffee</a></li>
+          <li><a href="#quiz">Take the Delta coffee quiz</a></li>
+        </ul>
+      </div>
+      <div class="drop-col" data-pane="culture">
+        <h4>Coffee Culture</h4>
+        <ul>
+          <li><a href="#cycle" data-img="cf329b54fe19b444f33439a2a2580e6f48601fdc-500x320.jpg">Coffee Cycle</a></li>
+          <li class="sub"><a href="#cycle">Origins</a></li>
+          <li class="sub"><a href="#cycle">Blend</a></li>
+          <li class="sub"><a href="#cycle">Roast</a></li>
+          <li class="sub"><a href="#cycle">Tasting</a></li>
+          <li><a href="#culture" data-img="360034adb2563ecae69c516bb1aa77cb83abdb01-500x320.jpg">Barista Academy</a></li>
+          <li><a href="#culture" data-img="3cc867af6ecb9be83babd955f23e995e6c7deb8e-504x324.jpg">Coffee Science Centre</a></li>
+        </ul>
+      </div>
+      <div class="drop-media">
+        <img src="assets/img/f25bc355a209b988dc8a6cfa00dac898ee4af13c-504x324.jpg" alt="" class="show" data-img="f25bc355a209b988dc8a6cfa00dac898ee4af13c-504x324.jpg">
+        <img src="assets/img/cf329b54fe19b444f33439a2a2580e6f48601fdc-500x320.jpg" alt="" data-img="cf329b54fe19b444f33439a2a2580e6f48601fdc-500x320.jpg">
+        <img src="assets/img/360034adb2563ecae69c516bb1aa77cb83abdb01-500x320.jpg" alt="" data-img="360034adb2563ecae69c516bb1aa77cb83abdb01-500x320.jpg">
+        <img src="assets/img/3cc867af6ecb9be83babd955f23e995e6c7deb8e-504x324.jpg" alt="" data-img="3cc867af6ecb9be83babd955f23e995e6c7deb8e-504x324.jpg">
+        <img src="assets/img/608546f91cd6e0e622cfb67d41b82fe9786d385f-500x320.jpg" alt="" data-img="608546f91cd6e0e622cfb67d41b82fe9786d385f-500x320.jpg">
+        <img src="assets/img/58196a9e00d675ce97e0b508d66d0c7dfff6c615-500x320.jpg" alt="" data-img="58196a9e00d675ce97e0b508d66d0c7dfff6c615-500x320.jpg">
+      </div>
+    </div>
+    <div class="drop-bottom">
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2V7.6c0-.9.3-1.6 1.6-1.6h1.7V3.2c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.3H7.2v3.2H10V21h3.4z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 4.3c2.5 0 2.8 0 3.8.1.9 0 1.4.2 1.8.3.4.2.7.4 1 .7.3.3.5.6.7 1 .1.4.3.9.3 1.8.1 1 .1 1.3.1 3.8s0 2.8-.1 3.8c0 .9-.2 1.4-.3 1.8-.2.4-.4.7-.7 1-.3.3-.6.5-1 .7-.4.1-.9.3-1.8.3-1 .1-1.3.1-3.8.1s-2.8 0-3.8-.1c-.9 0-1.4-.2-1.8-.3-.4-.2-.7-.4-1-.7-.3-.3-.5-.6-.7-1-.1-.4-.3-.9-.3-1.8-.1-1-.1-1.3-.1-3.8s0-2.8.1-3.8c0-.9.2-1.4.3-1.8.2-.4.4-.7.7-1 .3-.3.6-.5 1-.7.4-.1.9-.3 1.8-.3 1-.1 1.3-.1 3.8-.1zM12 2.5c-2.6 0-2.9 0-3.9.1-1 0-1.7.2-2.3.4-.6.3-1.2.6-1.7 1.1-.5.5-.9 1.1-1.1 1.7-.2.6-.4 1.3-.4 2.3-.1 1-.1 1.3-.1 3.9s0 2.9.1 3.9c0 1 .2 1.7.4 2.3.3.6.6 1.2 1.1 1.7.5.5 1.1.9 1.7 1.1.6.2 1.3.4 2.3.4 1 .1 1.3.1 3.9.1s2.9 0 3.9-.1c1 0 1.7-.2 2.3-.4.6-.3 1.2-.6 1.7-1.1.5-.5.9-1.1 1.1-1.7.2-.6.4-1.3.4-2.3.1-1 .1-1.3.1-3.9s0-2.9-.1-3.9c0-1-.2-1.7-.4-2.3-.3-.6-.6-1.2-1.1-1.7-.5-.5-1.1-.9-1.7-1.1-.6-.2-1.3-.4-2.3-.4-1-.1-1.3-.1-3.9-.1zm0 4.7a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zm6.1-8.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15.2V8.8l5.2 3.2L10 15.2z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.9 8.6H3.6V20h3.3V8.6zM5.2 7.2a1.9 1.9 0 1 0 0-3.9 1.9 1.9 0 0 0 0 3.9zM20.4 13.4c0-3.2-1.7-4.7-4-4.7-1.8 0-2.7 1-3.1 1.7V8.6h-3.3V20h3.3v-6c0-1.6.3-3.1 2.2-3.1 1.9 0 1.9 1.8 1.9 3.2V20h3.3v-6.6z"/></svg></a>
+      </div>
+      <span>2026 © Delta Cafés</span>
+      <span>SOM: OFF</span>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== Hero ==================== -->
+<section id="hero">
+  <div class="hero-media">
+    <video src="assets/video/hero-homepage.mp4" poster="assets/img/f9570482b6771be43e3456c27ce28d2a2f49800b-1920x1080.jpg" autoplay muted loop playsinline></video>
+  </div>
+
+  <div class="hero-title" id="hero-title">
+    <div class="slide active" data-i="0">
+      <h1 class="t-serif">Delta, coffee<br>with heart.</h1>
+      <div class="hero-buttons">
+        <a class="btn btn--lg" href="#history"><span class="btn-label"><span>About Delta</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+        <a class="btn btn--lg" href="#pre-footer"><span class="btn-label"><span>The Azores Coffee</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+      </div>
+    </div>
+    <div class="slide" data-i="1">
+      <h1 class="t-serif">The first<br>Portuguese coffee.</h1>
+      <div class="hero-buttons">
+        <a class="btn btn--lg" href="#pre-footer"><span class="btn-label"><span>The Azores Coffee</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+      </div>
+    </div>
+    <div class="slide" data-i="2">
+      <h1 class="t-serif">There is a lot of<br>Portugal in Delta.</h1>
+    </div>
+  </div>
+
+  <ul class="hero-thumbs" id="hero-thumbs">
+    <li class="thumb active" data-i="0">
+      <div class="t-top"><span class="t-num">01</span>
+        <div class="t-media"><img src="assets/img/f0f69aff81fd15fba09ca70bcdf43e5e9fca029c-1280x720.jpg" alt=""></div>
+      </div>
+      <div class="t-bar"><i></i></div>
+    </li>
+    <li class="thumb" data-i="1">
+      <div class="t-top"><span class="t-num">02</span>
+        <div class="t-media"><img src="assets/img/cf53c4b8ead0290391d473affb2485032690aaa2-206x124.jpg" alt=""></div>
+      </div>
+      <div class="t-bar"><i></i></div>
+    </li>
+    <li class="thumb" data-i="2">
+      <div class="t-top"><span class="t-num">03</span>
+        <div class="t-media"><img src="assets/img/2ea2e09733aaa2f44783df1adcc4a1f86938bfa8-206x124.jpg" alt=""></div>
+      </div>
+      <div class="t-bar"><i></i></div>
+    </li>
+  </ul>
+
+  <div class="hero-ctas">
+    <a class="hc-products" href="#products"><span>Products</span>
+      <svg viewBox="0 0 20 20" fill="currentColor"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg>
+    </a>
+    <a class="hc-azores" href="#pre-footer">
+      <img src="assets/img/95916597284e9950bedfae2b0c6c68ca83f3d56d-112x176.png" alt="The Azores coffee bag">
+      <span>The Azores coffee</span>
+    </a>
+    <a class="hc-cycle" href="#cycle">
+      <img src="assets/img/b06f5f5cb8a50e008ae0eddedc59240ef0e679f3-394x382.jpg" alt="Workers harvesting coffee cherries">
+      <span>The coffee cycle</span>
+    </a>
+    <a class="hc-history" href="#history">
+      <span class="h-img"><img src="assets/img/3086abbc07e8e61d5a1bd668f34841b4f3bd2dfa-240x250.png" alt="Antique roasting machine"></span>
+      <span class="h-txt"><b>The History of delta</b><small>More than 65 years of coffee, people and moments to explore.</small></span>
+      <svg viewBox="0 0 20 20" fill="currentColor"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ==================== Products strip ==================== -->
+<section id="products" aria-label="Delta products">
+  <div class="products-track" id="products-track">
+    <!-- set A -->
+    <a class="card" style="--card:#0a2f8f" href="#products"><img src="assets/img/5bf7ae776f3b58af2031c266fa9d99dba5688556-532x652.png" alt="Colombia coffee bag"><span class="p-name">Colombia</span></a>
+    <a class="card" style="--card:#3c0957" href="#products"><img src="assets/img/646bc4149f0dca782b015c657bdc5c4037c8ee8b-532x652.png" alt="Timor coffee bag"><span class="p-name">Timor</span></a>
+    <a class="card" style="--card:#0a64a3" href="#products"><img src="assets/img/b46986173d3e49922e9a867d20eaa515695deb04-532x652.png" alt="Cuba coffee bag"><span class="p-name">Cuba</span></a>
+    <a class="card" style="--card:#8c0244" href="#products"><img src="assets/img/a59d12bc818e95eb7e654af833fdcd8278f7eb89-532x652.png" alt="Vietnam coffee bag"><span class="p-name">Vietnam</span></a>
+    <a class="card" style="--card:#27701c" href="#products"><img src="assets/img/b7c9fb6b4bb9f707b45a9931f561af76d34af6ae-532x652.png" alt="Brazil coffee bag"><span class="p-name">Brazil</span></a>
+    <a class="card" style="--card:#b65313" href="#products"><img src="assets/img/3d12868a6ddf06d001ad67224b41cd79a90a6dcd-532x652.png" alt="Angola coffee bag"><span class="p-name">Angola</span></a>
+    <a class="card" style="--card:#d98e00" href="#products"><img src="assets/img/7cce7ac0f51041c61b69b34c3c1e7bfc4a8f69a2-532x652.png" alt="Ethiopia coffee bag"><span class="p-name">Ethiopia</span></a>
+    <a class="card" style="--card:#e0d1b7" href="#products"><img src="assets/img/ac871c06e04663c50705a6d5a1cf3a48fec84e5c-532x652.png" alt="Bio organic coffee bag"><span class="p-name">Bio</span></a>
+    <a class="card" style="--card:#35221a" href="#products"><img src="assets/img/cc80cdfcde4a1f4b870fdb7ddf82bcdeee290a16-532x652.png" alt="Chávena coffee bag"><span class="p-name">Chávena</span></a>
+    <a class="card" style="--card:#004438" href="#products"><img src="assets/img/7ba5d7606e3ea4fc5264fa69416e6fd9420bb451-532x652.png" alt="Roast Portugal coffee bag"><span class="p-name">Roast Portugal</span></a>
+    <!-- set B (duplicate for seamless loop) -->
+    <a class="card" style="--card:#0a2f8f" href="#products"><img src="assets/img/5bf7ae776f3b58af2031c266fa9d99dba5688556-532x652.png" alt="Colombia coffee bag"><span class="p-name">Colombia</span></a>
+    <a class="card" style="--card:#3c0957" href="#products"><img src="assets/img/646bc4149f0dca782b015c657bdc5c4037c8ee8b-532x652.png" alt="Timor coffee bag"><span class="p-name">Timor</span></a>
+    <a class="card" style="--card:#0a64a3" href="#products"><img src="assets/img/b46986173d3e49922e9a867d20eaa515695deb04-532x652.png" alt="Cuba coffee bag"><span class="p-name">Cuba</span></a>
+    <a class="card" style="--card:#8c0244" href="#products"><img src="assets/img/a59d12bc818e95eb7e654af833fdcd8278f7eb89-532x652.png" alt="Vietnam coffee bag"><span class="p-name">Vietnam</span></a>
+    <a class="card" style="--card:#27701c" href="#products"><img src="assets/img/b7c9fb6b4bb9f707b45a9931f561af76d34af6ae-532x652.png" alt="Brazil coffee bag"><span class="p-name">Brazil</span></a>
+    <a class="card" style="--card:#b65313" href="#products"><img src="assets/img/3d12868a6ddf06d001ad67224b41cd79a90a6dcd-532x652.png" alt="Angola coffee bag"><span class="p-name">Angola</span></a>
+    <a class="card" style="--card:#d98e00" href="#products"><img src="assets/img/7cce7ac0f51041c61b69b34c3c1e7bfc4a8f69a2-532x652.png" alt="Ethiopia coffee bag"><span class="p-name">Ethiopia</span></a>
+    <a class="card" style="--card:#e0d1b7" href="#products"><img src="assets/img/ac871c06e04663c50705a6d5a1cf3a48fec84e5c-532x652.png" alt="Bio organic coffee bag"><span class="p-name">Bio</span></a>
+    <a class="card" style="--card:#35221a" href="#products"><img src="assets/img/cc80cdfcde4a1f4b870fdb7ddf82bcdeee290a16-532x652.png" alt="Chávena coffee bag"><span class="p-name">Chávena</span></a>
+    <a class="card" style="--card:#004438" href="#products"><img src="assets/img/7ba5d7606e3ea4fc5264fa69416e6fd9420bb451-532x652.png" alt="Roast Portugal coffee bag"><span class="p-name">Roast Portugal</span></a>
+  </div>
+</section>
+
+<!-- ==================== History ==================== -->
+<section id="history">
+  <svg class="curves" viewBox="0 0 1920 1900" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-50 480 C 300 700, 700 300, 1050 620 S 1700 900, 2000 700"/>
+    <path d="M-50 1050 C 350 1250, 640 900, 960 1180 S 1560 1500, 2000 1250"/>
+    <path d="M-50 1560 C 300 1750, 800 1420, 1150 1680 S 1650 1820, 2000 1620"/>
+    <path d="M430 1250 C 620 1350, 900 1250, 1180 1420"/>
+  </svg>
+
+  <div class="hist-head">
+    <h2 class="t-display hist-title" data-reveal>
+      <span class="reveal-line"><span>Since 1961,</span></span>
+      <span class="reveal-line"><span>Coffee <em>that</em> awakens</span></span>
+      <span class="reveal-line"><span>Stories</span></span>
+    </h2>
+    <div class="hist-cta" data-reveal>
+      <a class="btn" href="#"><span class="btn-label"><span>History of Delta</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+    </div>
+    <p class="t-body hist-desc" data-reveal>Delta Cafés was born in Campo Maior from a family’s dream. Today, it is part of the daily lives of millions, while preserving the essence that made it unique.</p>
+  </div>
+
+  <div class="hist-scatter">
+    <div class="hist-item" style="left:-2.3%; top:20.7%; width:17.7%; transform:rotate(-2deg)">
+      <img src="assets/img/da6cb5e4ba52bf708af9b2400e057ed6e7f2af1a-349x269.png" alt="EXPO'98 pavilion">
+      <span class="hist-popup">The official coffee of Expo’98</span>
+    </div>
+    <div class="hist-item" style="right:-2%; top:15.7%; width:18%; transform:rotate(2deg)">
+      <img src="assets/img/5b21088ca92b191a19f4194cc69c74192cb87b5d-328x468.png" alt="Camelo brand machinery">
+      <span class="hist-popup">The creation of the Camelo brand</span>
+    </div>
+    <div class="hist-item" style="left:-1.8%; top:50.2%; width:14.6%; transform:rotate(-1.5deg)">
+      <img src="assets/img/c57f070dd85d15b92018d6dc1ad6d79b79887072-332x254.png" alt="Delta stand with visitors">
+      <span class="hist-popup">Wake up every day with António Sala</span>
+    </div>
+    <div class="hist-item" style="left:25.2%; top:41.3%; width:9.8%; transform:rotate(-1deg)">
+      <img src="assets/img/11ca77fa3d76d195abda20b19e0f935f2746d9b7-271x381.png" alt="Deltanic poster">
+      <span class="hist-popup">The sugar packets that conquered the world</span>
+    </div>
+    <div class="hist-item" style="left:16%; top:61.5%; width:17.5%; transform:rotate(1deg)">
+      <img src="assets/img/a850c8389fb748bbf5b9637c4bfd87dccb9f2d85-480x379.png" alt="Family group photograph">
+      <span class="hist-popup">The birth of the children João and Helena</span>
+    </div>
+    <div class="hist-item" style="left:41.4%; top:52.4%; width:17.5%;">
+      <img src="assets/img/306aed7832fb7bcdee6138ceb3d8bd6fb0fb723f-694x911.png" alt="Sepia toddler photograph">
+    </div>
+    <div class="hist-item" style="left:66.7%; top:48.7%; width:12.3%;">
+      <img src="assets/img/4964395f83fc72a4a5fb8b25e1c99205ac4f03af-250x358.png" alt="Delta calendar advertisement">
+      <span class="hist-popup">The calendar craze</span>
+    </div>
+    <div class="hist-item" style="left:66.8%; top:69.7%; width:12.3%;">
+      <img src="assets/img/1ba13eb3a47f2c7f0e90f0415b8aa3c8460decd8-425x317.png" alt="Timor café polaroid">
+      <span class="hist-popup">A café for Timor Lorosae</span>
+    </div>
+    <div class="hist-flagpill" style="left:67.7%; top:73.3%;">
+      <span class="flag-dot"></span><b>1986</b><span>Start of activity in Spain</span>
+    </div>
+
+    <!-- objects row -->
+    <div class="hist-item" style="left:2.1%; top:78.5%; width:10.4%; transform:rotate(-6deg)">
+      <img src="assets/img/c0c8079c3fc884c1d097d773ff9c7e9deba0e12f-216x310.png" alt="Old Delta ground coffee tin">
+      <span class="hist-popup">Delta Foundation</span>
+    </div>
+    <div class="hist-item" style="left:33.6%; top:80.4%; width:6.3%">
+      <img src="assets/img/9f513ffd4131a61fd2003c65de09c7342dcf98b0-186x280.png" alt="Delta Q Rise coffee machine">
+      <span class="hist-popup">Innovation through Delta Q Rise</span>
+    </div>
+    <div class="hist-item" style="left:50.3%; top:82.9%; width:14.4%">
+      <img src="assets/img/3086abbc07e8e61d5a1bd668f34841b4f3bd2dfa-240x250.png" alt="Antique roasting machine">
+    </div>
+    <div class="hist-item" style="left:88%; top:80%; width:12.8%">
+      <img src="assets/img/68c7b46bbe4cc69656bb64d17a71a9a29788f006-288x218.png" alt="Delta orange cup and saucer">
+      <span class="hist-popup">Delta cups: a porcelain heritage</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Coffee Cycle ==================== -->
+<section id="cycle">
+  <div class="cycle-media">
+    <video src="assets/video/coffee-cycle.mp4" poster="assets/img/e6c4d6f82adf783e529e16b9a4894a62ed782518-3840x2160.jpg" autoplay muted loop playsinline></video>
+  </div>
+  <h2 class="t-display cycle-title" data-reveal>The Journey <em>of</em> Coffee</h2>
+  <div class="cycle-labels" aria-hidden="true">
+    <span>Origins</span><span>Roast</span><span>Blend</span><span>Tasting</span>
+  </div>
+  <div class="cycle-bottom">
+    <p class="t-body" data-reveal>Coffee begins at the origin, finds its soul in the roast, its balance in the blend, and its fullest expression in the cup. A ritual Delta has perfected over 60 years.</p>
+    <div data-reveal>
+      <a class="btn" href="#"><span class="btn-label"><span>The Coffee Cycle</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== D de Delta ==================== -->
+<section id="ddd">
+  <div class="ddd-row" id="ddd-row-1">
+    <!-- filled by JS (duplicated for marquee) -->
+  </div>
+  <div class="ddd-head">
+    <h2 class="t-display ddd-title" data-reveal>D <em>de</em> Delta</h2>
+    <p class="t-body" data-reveal>Coffee inspires vitality worldwide. DDD is Delta’s digital magazine that shares the stories keeping it lively. Through interviews, features, and memories, we celebrate people and places, all gathered around a cup of coffee.</p>
+    <div class="ddd-cta" data-reveal>
+      <a class="btn" href="#"><span class="btn-label"><span>D de Delta</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 14 14" fill="currentColor" width="14" height="14"><path d="m9.983 10.155-.396-5.676-5.675-.422v-1.03l7.18-.052-.066 7.193zm.528-5.702-7.814 7.814-.924-.924 7.814-7.814z"/></svg><svg class="ghost" viewBox="0 0 14 14" fill="currentColor" width="14" height="14"><path d="m9.983 10.155-.396-5.676-5.675-.422v-1.03l7.18-.052-.066 7.193zm.528-5.702-7.814 7.814-.924-.924 7.814-7.814z"/></svg></span></a>
+    </div>
+  </div>
+  <div class="ddd-row" id="ddd-row-2">
+    <!-- filled by JS -->
+  </div>
+</section>
+
+<!-- ==================== The Culture of Coffee ==================== -->
+<section id="culture">
+  <div class="culture-grid">
+    <div class="culture-left">
+      <h2 class="t-serif-md" data-reveal>The Culture<br>of Coffee</h2>
+      <p class="t-body culture-desc" data-reveal>The rituals, traditions, and craft of coffee form a living heritage integral to the daily lives of millions around the world. At the Coffee Science Centre and the Barista Academy, we celebrate, share, and interpret this rich culture. By bringing together science, emotion, and the art of preparation, we help safeguard the future of the coffee tradition that defines us.</p>
+    </div>
+    <div class="culture-links">
+      <div class="c-link">
+        <div class="cl-left">
+          <h3 data-reveal>Coffee Science Centre</h3>
+          <div class="cl-btn" data-reveal>
+            <a class="btn" href="#"><span class="btn-label"><span>Explore</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+          </div>
+        </div>
+        <div class="cl-right" data-reveal>
+          <img src="assets/img/10f1efd1149e8fd2c5696f01629b9b189c4617ac-628x440.jpg" alt="Coffee Science Centre atrium">
+          <p>In this immersive space, the universe of coffee is revealed through experiences, interactive equipment, and exhibitions. Here, questions find answers, stories unfold, and the Portuguese cultural and scientific heritage in the field of coffee comes to light.</p>
+        </div>
+      </div>
+      <div class="c-link">
+        <div class="cl-left">
+          <h3 data-reveal>Barista Academy</h3>
+          <div class="cl-btn" data-reveal>
+            <a class="btn" href="#"><span class="btn-label"><span>Explore</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+          </div>
+        </div>
+        <div class="cl-right" data-reveal>
+          <img src="assets/img/1f94aa3b0158d9642b43adf7a90223cebc4476ee-628x440.jpg" alt="Barista Academy installation">
+          <p>At Academia Barista, we share the art and passion of coffee, with a strong emphasis on training. Our team of specialists begins with the espresso to highlight creativity and expertise, showcasing the impressive results that stem from technical innovation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Quiz ==================== -->
+<section id="quiz">
+  <div class="quiz-bags" id="quiz-bags">
+    <!-- bags injected by JS -->
+  </div>
+  <div class="quiz-center">
+    <span class="q-kicker">Delta Quiz</span>
+    <h2 data-reveal>What is your<br>coffee profile?</h2>
+    <p data-reveal>From intensity to balance, find out what flavours best suit your taste.</p>
+    <div class="q-btn" data-reveal>
+      <a class="btn" href="#"><span class="btn-label"><span>Start Quiz</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Coffee Journal ==================== -->
+<section id="journal">
+  <div class="journal-grid">
+    <div class="j-left">
+      <h2 class="t-serif-md" data-reveal>The Coffee<br>Journal</h2>
+      <p data-reveal>Stories of people, culture, and places through the lens of coffee</p>
+      <div class="j-btn" data-reveal>
+        <a class="btn" href="#"><span class="btn-label"><span>Explore</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+      </div>
+    </div>
+    <div class="j-cards">
+      <a class="j-card" href="#" data-reveal>
+        <span class="j-img"><img src="assets/img/772c836cc90cbfe6290d0ccc38c124cdd769a77a-1024x683.jpg" alt="Delta House tour bus under a tree"></span>
+        <h3>Delta House on Tour from north to south</h3>
+        <span class="j-meta"><span class="tag">Stories</span><span class="j-date">2026-01-13</span></span>
+      </a>
+      <a class="j-card" href="#" data-reveal>
+        <span class="j-img"><img src="assets/img/b6879f4b3ab0af728582ac06947bea3fd92e7d8a-1721x857.jpg" alt="Harvest Collection coffee packs"></span>
+        <h3>Delta Cafés launches a range with exclusive Rainforest Alliance certification for the Horeca channel</h3>
+        <span class="j-meta"><span class="tag">Stories</span><span class="j-date">2025-05-06</span></span>
+      </a>
+      <a class="j-card" href="#" data-reveal>
+        <span class="j-img"><img src="assets/img/94331cb0506255b47d10daf088ec79bfde5feee5-1920x1440.webp" alt="Michelin Guide gala stage"></span>
+        <h3>Gala Dinner Coffee of the Guia Michelin Portugal is Delta</h3>
+        <span class="j-meta"><span class="tag">Press</span><span class="j-date">2025-02-13</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Sustainability ==================== -->
+<section id="sustainability">
+  <div class="s-img left"><img src="assets/img/ef681d8d80de465ba5ccfea283132fb0b57da12d-468x586.jpg" alt="Smiling women farmers"></div>
+  <div class="s-img right"><img src="assets/img/b2a5cb9fb3942f98659beae3c15ecb85e5157c83-582x388.jpg" alt="Picking coffee cherries with children"></div>
+  <div class="s-title">
+    <span class="s-kicker" data-reveal>Sustainability</span>
+    <h2 class="t-display" data-reveal>
+      <span class="reveal-line"><span>Positive Impact</span></span>
+      <span class="reveal-line"><span><em>From</em> The Origin <em>To</em></span></span>
+      <span class="reveal-line"><span>The Cup</span></span>
+    </h2>
+    <div class="s-cta" data-reveal>
+      <a class="btn" href="#"><span class="btn-label"><span>Sustainability</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Pre-footer (Azores) ==================== -->
+<section id="pre-footer">
+  <video src="assets/video/azores-footer.mp4" poster="assets/img/95fca77f75534e991e3715eba0dc808a91e7dd93-2400x1260.jpg" autoplay muted loop playsinline></video>
+  <div class="pf-title">
+    <span class="pf-kicker" data-reveal>The Azores Coffee</span>
+    <h2 class="t-display" data-reveal>
+      <span class="reveal-line"><span><em>The</em> First</span></span>
+      <span class="reveal-line"><span>Portuguese Coffee</span></span>
+    </h2>
+    <div class="pf-btn" data-reveal>
+      <a class="btn" href="#"><span class="btn-label"><span>The Azores coffee</span></span><span class="btn-icon"><svg class="main" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg><svg class="ghost" viewBox="0 0 20 20" fill="currentColor" width="17" height="17"><path d="m11.09 3.3 5.333 6.133-5.307 6.16 1.04 1.04 7.306-7.2-7.333-7.2zm6.293 5.226H1.595v1.867h15.787z"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Footer ==================== -->
+<footer id="site-footer">
+  <div class="f-panel">
+    <div class="f-col f-logo">
+      <a href="#" aria-label="Delta Cafés">
+        <svg viewBox="0 0 80 64" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path stroke="#f8eae0" stroke-width="2.4" d="M40 3 9 61c10-2.6 20.7-4 31-4s21 1.4 31 4L40 3z"/>
+          <text x="40" y="42" text-anchor="middle" fill="#f8eae0" font-family="'Trade Gothic Cond',sans-serif" font-weight="700" font-size="13" letter-spacing="1">DELTA</text>
+          <text x="40" y="52" text-anchor="middle" fill="#f8eae0" font-size="6" letter-spacing="2">CAFÉS</text>
+        </svg>
+      </a>
+      <div class="f-socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2V7.6c0-.9.3-1.6 1.6-1.6h1.7V3.2c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.3H7.2v3.2H10V21h3.4z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 4.3c2.5 0 2.8 0 3.8.1.9 0 1.4.2 1.8.3.4.2.7.4 1 .7.3.3.5.6.7 1 .1.4.3.9.3 1.8.1 1 .1 1.3.1 3.8s0 2.8-.1 3.8c0 .9-.2 1.4-.3 1.8-.2.4-.4.7-.7 1-.3.3-.6.5-1 .7-.4.1-.9.3-1.8.3-1 .1-1.3.1-3.8.1s-2.8 0-3.8-.1c-.9 0-1.4-.2-1.8-.3-.4-.2-.7-.4-1-.7-.3-.3-.5-.6-.7-1-.1-.4-.3-.9-.3-1.8-.1-1-.1-1.3-.1-3.8s0-2.8.1-3.8c0-.9.2-1.4.3-1.8.2-.4.4-.7.7-1 .3-.3.6-.5 1-.7.4-.1.9-.3 1.8-.3 1-.1 1.3-.1 3.8-.1zM12 2.5c-2.6 0-2.9 0-3.9.1-1 0-1.7.2-2.3.4-.6.3-1.2.6-1.7 1.1-.5.5-.9 1.1-1.1 1.7-.2.6-.4 1.3-.4 2.3-.1 1-.1 1.3-.1 3.9s0 2.9.1 3.9c0 1 .2 1.7.4 2.3.3.6.6 1.2 1.1 1.7.5.5 1.1.9 1.7 1.1.6.2 1.3.4 2.3.4 1 .1 1.3.1 3.9.1s2.9 0 3.9-.1c1 0 1.7-.2 2.3-.4.6-.3 1.2-.6 1.7-1.1.5-.5.9-1.1 1.1-1.7.2-.6.4-1.3.4-2.3.1-1 .1-1.3.1-3.9s0-2.9-.1-3.9c0-1-.2-1.7-.4-2.3-.3-.6-.6-1.2-1.1-1.7-.5-.5-1.1-.9-1.7-1.1-.6-.2-1.3-.4-2.3-.4-1-.1-1.3-.1-3.9-.1zm0 4.7a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zm6.1-8.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15.2V8.8l5.2 3.2L10 15.2z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.9 8.6H3.6V20h3.3V8.6zM5.2 7.2a1.9 1.9 0 1 0 0-3.9 1.9 1.9 0 0 0 0 3.9zM20.4 13.4c0-3.2-1.7-4.7-4-4.7-1.8 0-2.7 1-3.1 1.7V8.6h-3.3V20h3.3v-6c0-1.6.3-3.1 2.2-3.1 1.9 0 1.9 1.8 1.9 3.2V20h3.3v-6.6z"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Delta Cafés</h4>
+      <ul>
+        <li><a href="#history">Our History</a></li>
+        <li><a href="#">About Delta</a></li>
+        <li><a href="#pre-footer">The Azores coffee</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Coffee Culture</h4>
+      <ul>
+        <li><a href="#cycle">Coffee Cycle</a></li>
+        <li class="sub-list"><a href="#cycle">Origins</a></li>
+        <li class="sub-list"><a href="#cycle">Blend</a></li>
+        <li class="sub-list"><a href="#cycle">Roast</a></li>
+        <li class="sub-list"><a href="#cycle">Tasting</a></li>
+        <li><a href="#culture">Barista Academy</a></li>
+        <li><a href="#culture">Coffee Science Centre</a></li>
+      </ul>
+    </div>
+    <div class="f-col f-heads">
+      <div class="stack">
+        <a href="#products">Products</a>
+        <a href="#">Business Solutions</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#journal">Journal</a>
+        <a href="#ddd">D de Delta</a>
+        <a href="#quiz">Quiz</a>
+      </div>
+    </div>
+    <div class="f-col f-contact">
+      <div class="stack">
+        <div><span class="label">Email</span><a class="big" href="mailto:info@gruponabeiro.com">info@gruponabeiro.com</a></div>
+        <div><span class="label">Customer Support</span><a class="big" href="tel:808200644">808 20 06 44*</a></div>
+        <div><span class="label">Technical Support</span><a class="big" href="tel:800204110">800 20 41 10*</a></div>
+        <div class="note">*cost for calls to the national landline network</div>
+      </div>
+    </div>
+    <div class="f-bottom-links">
+      <ul>
+        <li><a href="#">Online Store Delta House</a></li>
+        <li><a href="#">Recruitment</a></li>
+        <li><a href="#">Press Centre</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-under">
+    <span>2026 © Delta Cafés</span>
+    <ul>
+      <li><a href="#">Electronic Complaints Book</a></li>
+      <li><a href="#">Ethics and Conduct Channel</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms and Conditions</a></li>
+      <li><a href="#">Cookie Policy</a></li>
+    </ul>
+    <span>Made by Büro</span>
+  </div>
+</footer>
+
+<!-- ==================== Cookie banner ==================== -->
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-brand">
+    <svg class="delta-mark" viewBox="0 0 80 64" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#9E0212" d="M40 0 8 62c10-2.4 21.5-3.7 32-3.7S62 59.6 72 62L40 0z"/>
+      <path fill="#E70025" d="M40 8 14 58c8-2 17-3.1 26-3.1S58 56 66 58L40 8z"/>
+      <path fill="#FFD300" d="M40 22 26 49c4.4-1.1 9.3-1.7 14-1.7s9.6.6 14 1.7L40 22z"/>
+    </svg>
+    <div class="cb-logo">
+      <div class="cb-word">Cookiebot</div>
+      <div class="cb-sub">by Usercentrics</div>
+    </div>
+  </div>
+  <div class="cookie-mid">
+    <h3>Cookies no nosso site</h3>
+    <p>Por defeito, utilizamos apenas cookies necessários à navegação no nosso site. Caso consinta, podem ser ainda utilizados cookies para analisar ou personalizar a sua navegação, ou para lhe mostrar publicidade mais relevante. O seu consentimento poderá implicar transferência de dados para fora do Espaço Económico Europeu. Através dos botões, pode aceitar ou rejeitar a utilização de todos os cookies ou, em alternativa, pode gerir as suas preferências.</p>
+    <div class="cookie-toggles">
+      <span class="cookie-toggle"><span>Necessários</span><span class="switch on"></span></span>
+      <span class="cookie-toggle"><span>Preferências</span><span class="switch"></span></span>
+      <span class="cookie-toggle"><span>Estatísticas</span><span class="switch"></span></span>
+      <span class="cookie-toggle"><span>Marketing</span><span class="switch"></span></span>
+      <button class="cookie-details">Mostrar detalhes <span>›</span></button>
+    </div>
+  </div>
+  <div class="cookie-actions">
+    <button class="allow-all" data-consent="all">Permitir todos os cookies</button>
+    <button class="ghost" data-consent="selection">Permitir seleção</button>
+    <button class="ghost" data-consent="reject">Rejeitar todos</button>
+  </div>
+</div>
+
+<!-- ==================== Floating quiz button ==================== -->
+<a id="quiz-float" href="#quiz">
+  <span class="quiz-tip">What is your coffee profile? Take the quiz</span>
+  <span class="quiz-img"><img src="assets/misc/quiz-icon.png" alt="Delta Quiz"></span>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
