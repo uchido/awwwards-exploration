@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Preymaker clone — supplemental styles
+   The base look comes from the original site's compiled stylesheets
+   (css/afade…, f58c…, d792…, cb50…). This file only adds what was
+   generated client-side in the original (text split masks, missing
+   utilities, cookie banner bits) plus small integration shims.
+   ========================================================================== */
+
+/* missing utility (used by News labels, compiled CSS dropped it) */
+.text-xs {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: -0.012rem;
+}
+
+/* --- word / char split masks -------------------------------------------- */
+[data-animation="text"] {
+  overflow: clip;
+}
+[data-animation="text"] > div,
+[data-animation="title"] > div,
+.hero_hero__Sbbfz h1 > div,
+.preloader_preloader__Bt96D p > div {
+  display: inline-block;
+  overflow: clip;
+  vertical-align: top;
+}
+[data-animation="text"] > div > div,
+[data-animation="title"] > div > div,
+.hero_hero__Sbbfz h1 > div > div,
+.preloader_preloader__Bt96D p > div > div {
+  display: inline-block;
+  will-change: transform;
+}
+[data-animation="text"] > div > div,
+.hero_hero__Sbbfz h1 > div > div {
+  margin-bottom: -0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* split word containers must not add layout noise */
+[data-animation="text"] > div,
+.hero_hero__Sbbfz h1 > div {
+  margin-bottom: -0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* large paragraph words inherit the same reveal as [data-animation=text] */
+.large-paragraph_large_paragraph__D05t_ h2 > div > div {
+  transform: translateY(125%);
+  transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: calc(var(--delay, 0s) + var(--index, 0) * 0.05s);
+  will-change: transform;
+}
+html.visible .large-paragraph_large_paragraph__D05t_ h2.is-inview > div > div {
+  transform: translateY(0);
+}
+
+/* --- cookie banner ------------------------------------------------------- */
+.cookie-banner_cookie_banner__CJ8LS {
+  border-radius: clamp(2px, 0.2rem, 0.2rem);
+  z-index: 9;
+}
+.cookie-banner_cookie_banner__CJ8LS u {
+  text-decoration: underline;
+}
+
+/* --- preloader counter --------------------------------------------------- */
+.preloader_preloader__Bt96D .preloader-number > div > div {
+  min-width: 1ch;
+}
+
+.preloader_preloader__Bt96D .preloader_mask__b2tjZ {
+  background: #000;
+  -webkit-mask-image: linear-gradient(#000000, #000000),
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNjIiIHZpZXdCb3g9IjAgMCA3MiA2MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQyLjUyODcgMTAuNjczNEw0OS42NDc1IDI0LjMzMDZMNjcuOTQ2IDI0LjQyNDNMNzIgMjguMzY0TDY2LjcxMzggMjkuMDU3NkwxMi4yNTIyIDYxLjk3OTlMMzUuNjUyOSAzMy44NzQ3TDM5LjY1ODMgMzQuMDAzTDE4LjkzMDIgMTUuMDYwNUwxOC44MjI2IDE3LjAwOTZMMCAwLjAxOTUzMTJMNDIuNTI4NyAxMC42NzM0WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==");
+  mask-image: linear-gradient(#000000, #000000),
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNjIiIHZpZXdCb3g9IjAgMCA3MiA2MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQyLjUyODcgMTAuNjczNEw0OS42NDc1IDI0LjMzMDZMNjcuOTQ2IDI0LjQyNDNMNzIgMjguMzY0TDY2LjcxMzggMjkuMDU3NkwxMi4yNTIyIDYxLjk3OTlMMzUuNjUyOSAzMy44NzQ3TDM5LjY1ODMgMzQuMDAzTDE4LjkzMDIgMTUuMDYwNUwxOC44MjI2IDE3LjAwOTZMMCAwLjAxOTUzMTJMNDIuNTI4NyAxMC42NzM0WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==");
+  -webkit-mask-composite: xor;
+  mask-composite: subtract;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* --- nav logo ------------------------------------------------------------ */
+.navigation_nav__44WQU .navigation_link__3cB1P svg,
+.menu_menu__hCC2l .menu_top__Cjy9h a svg {
+  display: block;
+}
+
+/* --- footer next-page media (injected by JS) ----------------------------- */
+.footer_footer__1m2ab .footer_bottom__GUCpH figure {
+  margin: 0;
+}
+.footer_footer__1m2ab .footer_bottom__GUCpH figure img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  transform: scale(calc(1.3 - var(--progress, 0) * 0.3));
+}
+.footer_footer__1m2ab .footer_bottom__GUCpH figure:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0.2;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- small fixes ---------------------------------------------------------- */
+/* keep layout stable while our JS measures sections */
+img {
+  user-select: none;
+}
