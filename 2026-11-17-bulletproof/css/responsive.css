@@ -1,0 +1,104 @@
+/* ============================================================
+   Bulletproof clone — responsive & misc
+   ============================================================ */
+
+/* --- smaller desktop --- */
+@media (max-width:1200px){
+  .h-h1.default{font-size:8.4vw}
+  .work-list-item .work-name{font-size:6.6vw}
+}
+
+/* --- tablet --- */
+@media (max-width:991px){
+  .brand_logo{width:15vw;height:3vw;top:3vw;left:4vw}
+  .nav-list{top:3vw;right:4vw}
+  .btn_content{height:3vw;padding-top:.3vw}
+  .btn_text{height:auto}
+  .cta_title{font-size:1.8vw}
+  .btn_arrow{width:1.8vw}
+  .btn.filled .btn_content{height:3vw}
+
+  .h-h1.default{font-size:10vw}
+  .h-h4{font-size:7vw}
+  .h_intro-img{width:40vw;height:28vw}
+  .h-h6.body.is-small{font-size:2.6vw}
+
+  .stamp-large p{font-size:5vw}
+  .case-hero__client .h-h6{font-size:3vw}
+  .work-list-item .work-name{font-size:7.4vw}
+  .work-poster{width:34vw;height:44vw}
+  .more-content-h{font-size:8vw}
+  .news_slider-item{width:36vw}
+  .h-h6.body.is-small.is-news-card{font-size:2.4vw}
+  .loc_title{font-size:9vw}
+  .bpf_title{font-size:4.4vw}
+  .bpf_city .h-h6{font-size:2.2vw}
+  .cookie-banner{width:30vw}
+  .cookie-banner__title{font-size:1.4vw}
+  .cookie-banner__desc{font-size:1.1vw}
+  .cookie-btn{font-size:1vw}
+}
+
+/* --- mobile --- */
+@media (max-width:767px){
+  body{line-height:1.4}
+  .brand_logo{width:37vw;height:7vw;top:5.5vw;left:4vw}
+  .nav-list{grid-column-gap:2vw;top:5vw;right:4vw}
+  .btn_content{height:7vw;padding-left:1.4vw;padding-right:1.4vw;border-radius:1.6vw}
+  .cta_title{font-size:3.4vw}
+  .btn_arrow{width:3vw}
+  .btn.filled .btn_content{height:7vw;padding:.15vw 3vw;border-radius:4vw}
+
+  .hero_content{padding-bottom:7vw}
+  .h-h1.default{font-size:14vw;padding-top:2vw}
+  .hero_text.is-waypoint.l2{left:1.5vw}
+  .hero_text.is-waypoint.l3{left:26vw}
+  .hero_text.is-waypoint.l4{left:14vw}
+  .hero_text.is-waypoint.l5{left:8vw}
+
+  .section.intro{padding-top:26vw;padding-bottom:26vw}
+  .h-h4{font-size:10vw;line-height:7vw}
+  .h_intro-img{width:62vw;height:44vw}
+  .h-h6.body.is-small{font-size:4vw;line-height:5vw}
+
+  .work-slider{height:400vh}
+  .stamp-wrap{top:14vh;right:6%}
+  .stamp-large p{font-size:7.5vw}
+  .case-hero__client{top:60vh}
+  .case-hero__client .h-h6{font-size:4.5vw}
+
+  .section.is-home__work{height:160vw}
+  .work-list-item .work-name{font-size:9.5vw}
+  .work-poster{width:60vw;height:78vw}
+  .work-poster .poster-stamp p{font-size:4.5vw}
+  .more-content{padding:8vw 4vw 12vw}
+  .more-content-h{font-size:11vw}
+  .news_slider{padding-left:4vw}
+  .news_slider-item{width:64vw}
+  .h-h6.body.is-small.is-news-card{font-size:4vw}
+  .news-all-btn .btn_content{margin:0 auto}
+
+  .loc_title{font-size:12vw;line-height:9vw}
+  .loc_details{max-width:70vw}
+  .loc_details-title{font-size:3.6vw}
+  .loc_details p{font-size:3vw}
+
+  .section.is-footer{height:auto;margin-top:0;padding:16vw 5vw 6vw}
+  .footer-top{flex-flow:column;row-gap:10vw}
+  .bpf_title{font-size:9vw;line-height:8vw}
+  .bpf_title-2{font-size:4.4vw}
+  .bpf_container{height:auto;position:relative;margin-top:14vw}
+  .bpf_blocks{position:relative;inset:auto;margin-bottom:6vw}
+  .bfp_loc-list{row-gap:2vw}
+  .bpf_city .h-h6{font-size:4vw}
+  .body-10.is-white.is--loc{font-size:3vw}
+  .bpf_logo_wrap{position:relative;margin-top:4vw}
+  .bpf_logo.is-left{width:66vw}
+  .bpf_logo.is-right{width:64vw}
+  .div-block-5{position:relative;padding:6vw 0 2vw;flex-flow:column;align-items:flex-start;row-gap:2vw}
+
+  .cookie-banner{right:3vw;left:3vw;bottom:3vw;width:auto;min-width:0}
+  .cookie-banner__title{font-size:3.4vw}
+  .cookie-banner__desc{font-size:3vw}
+  .cookie-btn{font-size:2.8vw}
+}
