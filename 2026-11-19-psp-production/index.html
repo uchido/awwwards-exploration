@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Production Portugal: Your trusted film production company in Portugal and Spain</title>
+  <meta content="Dive into cinematic excellence with expert location scouting. Explore possibilities with Production Portugal - Your Trusted film production company in the Iberian Peninsula." name="description"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Webflow" name="generator"/>
+
+  <!-- Fonts: Lato from Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --psp-stage-height: 100dvh;
+      --psp-stage-bottom-inset: 0px;
+      --psp-intro-height: 100vh;
+    }
+
+    @supports (height: 100lvh) {
+      :root {
+        --psp-intro-height: 100lvh;
+      }
+    }
+
+    body.home-intro-lock {
+      height: var(--psp-viewport-height, 100dvh) !important;
+    }
+
+    .home__loader,
+    .home-intro__cut-screen {
+      height: var(--psp-intro-height) !important;
+      min-height: var(--psp-intro-height) !important;
+    }
+
+    .master-pin-wrap {
+      overflow: hidden;
+    }
+
+    .home__hero,
+    .home__about,
+    .home__brands,
+    .footer {
+      height: var(--psp-viewport-height, 100dvh) !important;
+      min-height: var(--psp-viewport-height, 100dvh) !important;
+    }
+
+    .footer {
+      padding-bottom: 0 !important;
+    }
+
+    .footer > .w-embed:has(.footer__video) {
+      height: 100% !important;
+      margin-bottom: 0 !important;
+      flex-shrink: 0;
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      .home__hero {
+        padding-bottom: max(5px, env(safe-area-inset-bottom, 0px)) !important;
+      }
+
+      .home__about__bottom-part,
+      .home__brands .link-4,
+      .home__brands .link-5,
+      .footer__links {
+        bottom: max(10px, env(safe-area-inset-bottom, 0px)) !important;
+      }
+
+      .home__brands__list {
+        bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .footer > .w-embed:has(.footer__video) {
+        height: 50% !important;
+        flex-shrink: 1;
+      }
+
+      .footer__info {
+        height: auto !important;
+        flex: 0 0 50%;
+      }
+    }
+
+    /* Custom cursor */
+    #custom-cursor {
+      position: fixed;
+      width: 28px;
+      height: 28px;
+      pointer-events: none;
+      z-index: 99;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+    }
+
+    body #custom-cursor {
+      transition: opacity 240ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    body #custom-cursor.is-hold-morphing {
+      transition: none;
+    }
+
+    .cursor-frame {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform: translate(-50%, -50%);
+      will-change: width, height, transform, opacity;
+      transition:
+        width 720ms cubic-bezier(0.16, 1, 0.3, 1),
+        height 720ms cubic-bezier(0.16, 1, 0.3, 1),
+        transform 720ms cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 280ms ease;
+    }
+
+    #custom-cursor.is-interactive .cursor-frame {
+      width: 52px;
+      height: 32px;
+      transform: translate(-50%, -50%);
+    }
+
+    #custom-cursor.is-hold-morphing .cursor-frame {
+      width: 100%;
+      height: 100%;
+    }
+
+    #custom-cursor.is-hold-morphing .cursor-frame,
+    #custom-cursor.is-hold-morphing .corner,
+    #custom-cursor.is-hold-morphing .line,
+    #hold-frame-cursor .cursor-frame,
+    #hold-frame-cursor .corner,
+    #hold-frame-cursor .line {
+      transition: none;
+    }
+
+    #custom-cursor.is-pressed .cursor-frame {
+      width: 44px;
+      height: 28px;
+      transition-duration: 180ms;
+    }
+
+    #custom-cursor.is-suppressed .cursor-frame {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.35);
+    }
+
+    .cursor-hover-text {
+      position: absolute;
+      right: 22px;
+      top: -12px;
+      white-space: pre;
+      pointer-events: none;
+      color: #fff;
+      font-size: 12px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      will-change: transform;
+    }
+
+    .cursor-char {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: top;
+    }
+
+    .cursor-char > span {
+      display: block;
+      transform: translateY(110%);
+      transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .cursor-char:nth-child(odd) > span {
+      transform: translateY(-110%);
+    }
+
+    .cursor-hover-text.is-revealed .cursor-char > span {
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #custom-cursor,
+      .cursor-frame,
+      .cursor-frame > .corner,
+      .cursor-frame > .line,
+      .cursor-char > span {
+        transition: none !important;
+      }
+    }
+
+    .cursor-hover-timing {
+      position: absolute;
+      right: 22px;
+      top: -12px;
+      white-space: nowrap;
+      pointer-events: none;
+      color: #fff;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        top 0.2s ease-out,
+        opacity 0.2s ease-out,
+        visibility 0.2s ease-out;
+    }
+
+    .cursor-hover-timing::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background-color: #3ffbbf;
+      display: inline-block;
+      margin: 0 4px 1.5px 0;
+    }
+
+    #custom-cursor.is-video-timing-visible .cursor-hover-timing {
+      opacity: 1;
+      visibility: visible;
+      top: -28px;
+    }
+
+    #custom-cursor.is-video-timing-visible .cursor-hover-text {
+      top: -12px;
+    }
+
+    .corner {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border: 1px solid #ff004d;
+      transition:
+        width 520ms cubic-bezier(0.16, 1, 0.3, 1),
+        height 520ms cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 360ms ease,
+        background-color 360ms ease,
+        transform 620ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .corner.top-left { top: 0; left: 0; }
+    .corner.top-right { top: 0; right: 0; }
+    .corner.bottom-left { bottom: 0; left: 0; }
+    .corner.bottom-right { bottom: 0; right: 0; }
+
+    .line {
+      position: absolute;
+      background-color: white;
+      transition:
+        opacity 220ms ease,
+        transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #custom-cursor.is-interactive .corner {
+      width: 8px;
+      height: 8px;
+      border-color: #ff004d;
+      background-color: transparent;
+    }
+
+    #custom-cursor.is-interactive .line {
+      opacity: 0;
+    }
+
+    #custom-cursor.is-interactive .corner.top-left {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    #custom-cursor.is-interactive .corner.top-right {
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    #custom-cursor.is-interactive .corner.bottom-left {
+      border-top-color: transparent;
+      border-right-color: transparent;
+    }
+
+    #custom-cursor.is-interactive .corner.bottom-right {
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+
+    .line.vertical {
+      width: 1px;
+      height: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .line.horizontal {
+      height: 1px;
+      width: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .line.top { top: 5px; }
+    .line.bottom { bottom: 5px; }
+    .line.left { left: 5px; }
+    .line.right { right: 5px; }
+
+    @media (hover: none), (pointer: coarse) {
+      #custom-cursor { display: none !important; }
+    }
+
+    /* Selection */
+    ::selection {
+      background: #ce0758;
+      color: #72f9c8;
+      text-shadow: none;
+    }
+
+    ::-moz-selection {
+      background: #ce0758;
+      color: #72f9c8;
+      text-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Intro Loader -->
+  <div class="home__loader">
+    <div class="w-embed" style="--home-intro-vignette-opacity: 1">
+      <style>
+        .blobs {
+          --base-bg: #ff0080;
+          --blob-1: #ff126f;
+          --blob-2: #a3003f;
+          --vignette: #590224d9;
+
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          perspective: 1000px;
+          inset: 0;
+          background: #ff0063;
+        }
+
+        .blobs::after {
+          content: '';
+          position: fixed;
+          inset: 0;
+          background: radial-gradient(circle at center, transparent 30%, var(--vignette) 130%);
+          pointer-events: none;
+          z-index: 2;
+        }
+
+        .blob {
+          position: absolute;
+          border-radius: 43% 57% 65% 35% / 55% 45% 61% 39%;
+          opacity: 0.85;
+          will-change: transform;
+          backface-visibility: hidden;
+          animation: sweep infinite alternate ease-in-out;
+        }
+
+        .blob:nth-child(1) {
+          width: 90vw;
+          height: 90vh;
+          background: var(--blob-1);
+          top: -10vh;
+          left: -10vw;
+          filter: blur(80px);
+          animation-duration: 25s;
+        }
+
+        .blob:nth-child(2) {
+          width: 45vw;
+          height: 45vw;
+          background: var(--blob-2);
+          top: 10vh;
+          left: 10vw;
+          filter: blur(50px);
+          animation-duration: 15s;
+        }
+
+        .blob:nth-child(3) {
+          width: 25vw;
+          height: 30vw;
+          background: var(--blob-1);
+          bottom: 0;
+          right: 10vw;
+          filter: blur(40px);
+          animation-duration: 8s;
+          animation-direction: alternate-reverse;
+        }
+
+        .blob:nth-child(4) {
+          width: 60vw;
+          height: 50vh;
+          background: var(--blob-2);
+          top: 40vh;
+          right: -10vw;
+          filter: blur(60px);
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+          animation: fig8 20s infinite linear;
+        }
+
+        .blob:nth-child(5) {
+          width: 35vw;
+          height: 35vw;
+          background: var(--blob-1);
+          top: 50vh;
+          left: 50vw;
+          filter: blur(45px);
+          animation-duration: 11s;
+        }
+
+        .d-container {
+          position: fixed;
+          inset: 0;
+          z-index: 10;
+          display: flex;
+          flex-direction: column;
+          pointer-events: none;
+        }
+
+        .sec {
+          flex: 1;
+          background-color: var(--sec-bg);
+        }
+
+        .sec:last-child {
+          border-bottom: none;
+        }
+
+        @keyframes sweep {
+          0% { transform: translate3d(0, 0, 0) scale(0.8) rotate(0deg); }
+          50% { transform: translate3d(30vw, 20vh, 0) scale(1.5) rotate(90deg); }
+          100% { transform: translate3d(-20vw, 40vh, 0) scale(0.9) rotate(180deg); }
+        }
+
+        @keyframes fig8 {
+          0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+          25% { transform: translate3d(-40vw, -30vh, 0) scale(1.2); }
+          50% { transform: translate3d(-80vw, 0, 0) scale(0.9); }
+          75% { transform: translate3d(-40vw, 30vh, 0) scale(1.3); }
+        }
+      </style>
+
+      <div class="blobs">
+        <div class="blob" style="opacity: 0; visibility: hidden"></div>
+        <div class="blob" style="opacity: 0; visibility: hidden"></div>
+        <div class="blob" style="opacity: 0; visibility: hidden"></div>
+        <div class="blob" style="opacity: 0; visibility: hidden"></div>
+        <div class="blob" style="opacity: 0; visibility: hidden"></div>
+
+        <div class="d-container" style="opacity: 0; visibility: hidden">
+          <div class="sec"></div>
+          <div class="sec"></div>
+          <div class="sec"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="transition">
+    <div class="transition__line"></div>
+    <div class="transition__line"></div>
+    <div class="transition__line"></div>
+    <div class="transition__line"></div>
+    <div class="transition__line"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" aria-hidden="true">
+    <div class="cursor-frame">
+      <div class="corner top-left"></div>
+      <div class="corner top-right"></div>
+      <div class="corner bottom-left"></div>
+      <div class="corner bottom-right"></div>
+
+      <div class="line vertical top"></div>
+      <div class="line vertical bottom"></div>
+      <div class="line horizontal left"></div>
+      <div class="line horizontal right"></div>
+    </div>
+    <span class="cursor-hover-text" id="cursor-hover-text" aria-hidden="true"></span>
+    <span class="cursor-hover-timing" id="cursor-hover-timing" aria-hidden="true"></span>
+  </div>
+
+  <!-- Page Sections -->
+  <main>
+    <!-- Home Intro / Hero -->
+    <section class="home__hero">
+      <div class="home__hero__video-wrapper">
+        <video class="home__hero__video" muted loop playsinline>
+          <source src="assets/videos/hero1.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="home__hero__content">
+        <div class="home__hero__projects-list-wrapper">
+          <div class="home__hero__projects-list">
+            <div class="home__hero__projects-list-item selected" data-preview="Project 1">
+              <div class="home-hero-intro__line"><span class="home-hero-intro__count">[ 01 ]</span><span class="home-hero-intro__content">Aegean Airlines</span></div>
+              <div class="home-hero-intro__mask"></div>
+            </div>
+            <div class="home__hero__projects-list-item" data-preview="Project 2">
+              <div class="home-hero-intro__line"><span class="home-hero-intro__count">[ 02 ]</span><span class="home-hero-intro__content">Iberia</span></div>
+              <div class="home-hero-intro__mask"></div>
+            </div>
+            <div class="home__hero__projects-list-item" data-preview="Project 3">
+              <div class="home-hero-intro__line"><span class="home-hero-intro__count">[ 03 ]</span><span class="home-hero-intro__content">Renault</span></div>
+              <div class="home-hero-intro__mask"></div>
+            </div>
+            <div class="home__hero__projects-list-item" data-preview="Project 4">
+              <div class="home-hero-intro__line"><span class="home-hero-intro__count">[ 04 ]</span><span class="home-hero-intro__content">Volkswagen</span></div>
+              <div class="home-hero-intro__mask"></div>
+            </div>
+          </div>
+        </div>
+        <div class="home__hero__projects-current">
+          <div class="home__hero__projects-current__left">
+            <h4 class="home__hero__projects-current__title">Lisbon Studios</h4>
+            <div class="home__hero__projects-current__made-by">Production Portugal</div>
+            <div class="home__hero__projects-current__director">João Silva</div>
+          </div>
+          <div class="home__hero__projects-current__right">
+            <span class="home-hero-intro__line"><span class="home-hero-intro__content">New Project</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home__about">
+      <div class="home__about__container">
+        <div class="home__about__text">
+          <h2>About Production Portugal</h2>
+          <p>We are a full-scale production service partner in Portugal and Spain, offering location scouting, casting, logistics, and on-set coordination for film and commercial production. Our expertise spans across the Iberian Peninsula, providing local knowledge and international production standards.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="home__brands">
+      <div class="home__brands__container">
+        <ul class="home__brands__list">
+          <li class="home__brands__list-item"><span>Volkswagen</span></li>
+          <li class="home__brands__list-item"><span>Audi</span></li>
+          <li class="home__brands__list-item"><span>Renault</span></li>
+          <li class="home__brands__list-item"><span>Iberia</span></li>
+          <li class="home__brands__list-item"><span>Volkswagen Abt E-Line</span></li>
+          <li class="home__brands__list-item"><span>Hinge</span></li>
+          <li class="home__brands__list-item"><span>Uber</span></li>
+          <li class="home__brands__list-item"><span>Volvo</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__info">
+        <div class="footer__contact">
+          <h3>Contact</h3>
+          <address>
+            Rua Pereira Henriques Nr 1, Armazém 9<br/>
+            Lisboa, 1950-242, Portugal<br/>
+            +351 218 610 660
+          </address>
+        </div>
+        <div class="footer__links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>2026 Production Portugal. All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
