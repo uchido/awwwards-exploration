@@ -1,0 +1,34 @@
+/* Base reset */
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  color:#111111;
+  background:#FAFAFA;
+  line-height:1.6
+}/* Navbar */
+#navbar{
+  position:fixed;top:0;right:0;left:0;z-index:9999;padding:1rem 0;background:#FAFAFA;transition:opacity .5s ease}
+#navbar.opaque{opacity:1}
+#navbar .container{max-width:68ch;margin:0 auto;padding:0 1rem;display:grid;grid-template-columns:1fr auto;align-items:center}
+#navbar .logo{display:flex;align-items:center;gap:.5rem;font-size:.75rem;text-decoration:none;color:#111111}
+#navbar .nav{display:flex;gap:1rem;margin-left:1.5rem;font-size:.75rem;text-transform:uppercase;color:#111111}
+#navbar .nav a{position:relative;color:#111111;text-decoration:none;margin-left:1rem;font-size:.75rem}
+#navbar .nav a::after{content:'';position:absolute;width:0;height:2px;bottom:-4px;left:0;background:#111111;transition:width .3s ease}
+#navbar .nav a:hover::after{width:100%}
+#navbar .nav a span{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-flexbox;display:flex;gap:.25rem}
+#navbar .nav a span::before{content:'[';margin-right:.25rem}
+#navbar .nav a span::after{content:']';margin-left:.25rem}
+#navbar .menu-btn{display:none;margin-left:1rem;color:#111111;font-size:1rem;text-decoration:none}
+@media(min-width:768px){#navbar .nav{display:flex}!important}.md\:hidden{display:none!important}
+@media(min-width:768px){#navbar .menu-btn{display:none}.md\:block{display:block}.md\:grid-cols-3{grid-template-columns:repeat(3,1fr)}.md\:max-w-[54ch]{max-width:54ch}}
+/* Hero / Main content */
+.main{min-height:100vh;padding-top:80px;padding-bottom:40px}.hero-text{max-width:54ch;margin:0 auto;padding:2rem;text-align:center}.hero-text p{font-size:.875rem;margin:.5rem 0}.number{font-variant-numbers:tabular-nums;font-feature-settings:"tnum";font-size:12rem;line-height:1;display:block;margin:2rem 0}.number span{display:block}.pnl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}.pnl p{max-width:54ch;font-size:.875rem;margin:.5rem 0}.skip-link{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);padding:.75rem 1.5rem;background:#111111;color:#fff;border-radius:9999px;font-size:.75rem;text-transform:uppercase;text-decoration:none;transition:opacity .3s}
+.skip-link:hover{opacity:.9}
+/* Language switcher */
+.language-switcher{
+  position:fixed;right:1rem;bottom:1rem;display:flex;gap:.5rem;font-size:.75rem;color:#111111;mix-blend-mode:difference}
+.language-switcher a{color:#111111;text-decoration:none;font-size:.75rem}.language-switcher a:hover{color:#FAFAFA}
+/* Reveal animations via GSAP */
+.reveal{opacity:0;transition:opacity 1s ease}.reveal.visible{opacity:1}.invisible{opacity:0}
+/* Typography utilities */
+.uppercase{text-transform:uppercase}.text-sm{font-size:.875rem}.text-background{color:#111111}.mix-blend-difference{mix-blend-mode:difference}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4,0,0.2,1)}.duration-1000{transition-duration:1s}.duration-500{transition-duration:.5s}.opacity-0{opacity:0}.opacity-100{opacity:1}.fixed{position:fixed}.inset-0{top:0;right:0;bottom:0;left:0}.z-9999{z-index:9999}.inline-block{display:inline-block}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.justify-self-end{justify-self:end}.gap-4{gap:1rem}.gap-1_5{gap:.25rem}.py-4{padding-block:1rem}.px-global{padding-left:0;padding-right:0}.text-box-cap{display:inline-block}.tabular-nums{font-variant-numbers:tabular-nums;font-feature-settings:"tnum"}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:clip;clip:rect(0,0,0,0);white-space:nowrap;border:0}.block{display:block}.group:hover\:after\:scale-x-100:after{transform:scaleX(1)}.group-hover\:after\:scale-x-100:after{transform:scaleX(1)}.group-hover\:text-inherit{color:inherit!important}.group-hover\:text-black{color:#000!important}
